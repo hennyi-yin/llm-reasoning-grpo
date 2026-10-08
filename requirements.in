@@ -13,3 +13,7 @@ pyyaml
 pytest
 psutil
 huggingface-hub
+# FlashInfer JIT needs a compiler matching torch's CUDA 13.0 runtime headers.
+nvidia-cuda-nvcc==13.0.88
+nvidia-cuda-crt==13.0.88
+nvidia-nvvm==13.0.88

@@ -34,7 +34,7 @@ try {
         $runState.status = 'running'
         $runState | ConvertTo-Json | Set-Content -LiteralPath $hostState -Encoding utf8
     }
-    $linuxCommand = 'source "$HOME/.venvs/llm-reasoning-grpo/bin/activate" && exec python -u -m src.pipeline --through ' + $Through
+    $linuxCommand = 'source "$HOME/.venvs/llm-reasoning-grpo/bin/activate" && source scripts/runtime_env.sh && exec python -u -m src.pipeline --through ' + $Through
     & wsl.exe -d Ubuntu-24.04 -- bash -lc $linuxCommand
     $runExitCode = $LASTEXITCODE
     if ($runExitCode -eq 0 -and $Through -eq 'final') {

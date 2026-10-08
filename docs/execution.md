@@ -46,9 +46,23 @@ and retains adapter hashes under `results/compatibility/`.
 No test scores were used for these repairs. Smoke correctness rewards are retained in the
 training logs but model-size selection reads only runtime success, GPU peak and median step time.
 
+## Recovery after completed SFT
+
+Both SFT epochs completed (872 optimizer steps). The first dev worker then failed during
+vLLM engine startup, before any dev answer generation: FlashInfer could not find `nvcc`.
+The existing dev ledger has no in-flight or committed generations and is retained for recovery.
+The pip-installed compiler also used CUDA 13.4 with runtime headers from CUDA 13.0, which
+FlashInfer's CCCL compatibility check rejects. Pin compiler, CRT and NVVM to 13.0.88,
+retain the torch runtime at 13.0.96, and source `scripts/runtime_env.sh` to expose the toolkit.
+`scripts/check_cuda_runtime.py` compiles and executes a synthetic sampler with no dataset
+access; its evidence is recorded in `results/compatibility/cuda_sampler_gpu.json` on success.
+All frozen files remain identical. The complete test suite passed 105 tests before recovery.
+
 ## Run and recover
 
-Activate `~/.venvs/llm-reasoning-grpo`, then use `python -m src.pipeline` from the repository.
+Activate `~/.venvs/llm-reasoning-grpo`, source `scripts/runtime_env.sh`, then use
+`python -m src.pipeline` from the repository. The runtime setup discovers pip's bundled
+CUDA toolkit, exports its compiler/library paths and limits JIT build parallelism to two jobs.
 The quantization interpreter defaults to `~/.venvs/llm-reasoning-grpo-quant/bin/python`.
 On Windows, `scripts/run_project.ps1` starts this WSL pipeline and holds a temporary
 system-awake request while it runs, then releases it. It does not alter power settings

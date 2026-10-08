@@ -1,0 +1,102 @@
+2026-10-08 18:21:42,849 - INFO - core.py:564 - flashinfer.jit: Building JIT module sampling; this can take several minutes on first use.
+Traceback (most recent call last):
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/jit/cpp_ext.py", line 406, in run_ninja
+    subprocess.run(
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ninja', '-v', '-C', '/home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling', '-f', '/home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/build.ninja', '-j', '2']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/scripts/check_cuda_runtime.py", line 34, in <module>
+    main()
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/scripts/check_cuda_runtime.py", line 19, in main
+    sampled = flashinfer.sampling.top_k_top_p_sampling_from_logits(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/api_logging.py", line 2348, in _auto_dump_wrapper
+    return _inner(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/sampling.py", line 1547, in top_k_top_p_sampling_from_logits
+    masked_logits = top_k_mask_logits(logits, top_k)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/api_logging.py", line 2348, in _auto_dump_wrapper
+    return _inner(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/sampling.py", line 1974, in top_k_mask_logits
+    return get_sampling_module().top_k_mask_logits(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/sampling.py", line 68, in get_sampling_module
+    module = gen_sampling_module().build_and_load()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/jit/core.py", line 335, in build_and_load
+    self.build()
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/jit/core.py", line 569, in build
+    run_ninja(self.build_dir, self.ninja_path, verbose)
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/jit/cpp_ext.py", line 418, in run_ninja
+    raise RuntimeError(msg) from e
+RuntimeError: Ninja build failed. Ninja output:
+ninja: Entering directory `/home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling'
+[1/4]  /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/bin/nvcc --generate-dependencies-with-compile -MF /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_renorm.cuda.o.d -DPy_LIMITED_API=0x03090000 -D_GLIBCXX_USE_CXX11_ABI=1 -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/cub -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/libcudacxx/include -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/thrust -isystem /usr/include/python3.12 -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/tvm_ffi/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/tvm_ffi/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/csrc -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cutlass/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cutlass/tools/util/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/spdlog/include --compiler-options=-fPIC --expt-relaxed-constexpr -static-global-template-stub=false -gencode=arch=compute_120f,code=sm_120f -DFLASHINFER_ENABLE_FP8_E8M0 -DFLASHINFER_ENABLE_FP4_E2M1 -std=c++17 --threads=1 -use_fast_math -Xfatbin=-compress-all --compress-mode=size -DFLASHINFER_ENABLE_F16 -DFLASHINFER_ENABLE_BF16 -DFLASHINFER_ENABLE_FP8_E4M3 -DFLASHINFER_ENABLE_FP8_E5M2 -DNDEBUG -O3 -c /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/csrc/renorm.cu -o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_renorm.cuda.o 
+[2/4]  /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/bin/nvcc --generate-dependencies-with-compile -MF /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_flashinfer_sampling_binding.cuda.o.d -DPy_LIMITED_API=0x03090000 -D_GLIBCXX_USE_CXX11_ABI=1 -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/cub -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/libcudacxx/include -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/thrust -isystem /usr/include/python3.12 -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/tvm_ffi/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/tvm_ffi/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/csrc -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cutlass/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cutlass/tools/util/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/spdlog/include --compiler-options=-fPIC --expt-relaxed-constexpr -static-global-template-stub=false -gencode=arch=compute_120f,code=sm_120f -DFLASHINFER_ENABLE_FP8_E8M0 -DFLASHINFER_ENABLE_FP4_E2M1 -std=c++17 --threads=1 -use_fast_math -Xfatbin=-compress-all --compress-mode=size -DFLASHINFER_ENABLE_F16 -DFLASHINFER_ENABLE_BF16 -DFLASHINFER_ENABLE_FP8_E4M3 -DFLASHINFER_ENABLE_FP8_E5M2 -DNDEBUG -O3 -c /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/csrc/flashinfer_sampling_binding.cu -o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_flashinfer_sampling_binding.cuda.o 
+[3/4]  /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/bin/nvcc --generate-dependencies-with-compile -MF /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_sampling.cuda.o.d -DPy_LIMITED_API=0x03090000 -D_GLIBCXX_USE_CXX11_ABI=1 -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/cub -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/libcudacxx/include -I/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cccl/thrust -isystem /usr/include/python3.12 -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/tvm_ffi/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/tvm_ffi/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/csrc -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cutlass/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/cutlass/tools/util/include -isystem /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/spdlog/include --compiler-options=-fPIC --expt-relaxed-constexpr -static-global-template-stub=false -gencode=arch=compute_120f,code=sm_120f -DFLASHINFER_ENABLE_FP8_E8M0 -DFLASHINFER_ENABLE_FP4_E2M1 -std=c++17 --threads=1 -use_fast_math -Xfatbin=-compress-all --compress-mode=size -DFLASHINFER_ENABLE_F16 -DFLASHINFER_ENABLE_BF16 -DFLASHINFER_ENABLE_FP8_E4M3 -DFLASHINFER_ENABLE_FP8_E5M2 -DNDEBUG -O3 -c /home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/data/csrc/sampling.cu -o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_sampling.cuda.o 
+[4/4] c++ /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_sampling.cuda.o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_renorm.cuda.o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_flashinfer_sampling_binding.cuda.o -shared -L/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/lib64 -L/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/lib64/stubs -lcudart -lcuda -o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/sampling.so
+FAILED: [code=1] /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/sampling.so 
+c++ /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_sampling.cuda.o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_renorm.cuda.o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_flashinfer_sampling_binding.cuda.o -shared -L/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/lib64 -L/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/lib64/stubs -lcudart -lcuda -o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/sampling.so
+/usr/bin/ld: cannot find -lcudart: No such file or directory
+/usr/bin/ld: cannot find -lcuda: No such file or directory
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+2026-10-08 18:23:16,523 - INFO - core.py:564 - flashinfer.jit: Building JIT module sampling; this can take several minutes on first use.
+Traceback (most recent call last):
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/jit/cpp_ext.py", line 406, in run_ninja
+    subprocess.run(
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ninja', '-v', '-C', '/home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling', '-f', '/home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/build.ninja', '-j', '2']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/scripts/check_cuda_runtime.py", line 34, in <module>
+    main()
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/scripts/check_cuda_runtime.py", line 19, in main
+    sampled = flashinfer.sampling.top_k_top_p_sampling_from_logits(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/api_logging.py", line 2348, in _auto_dump_wrapper
+    return _inner(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/sampling.py", line 1547, in top_k_top_p_sampling_from_logits
+    masked_logits = top_k_mask_logits(logits, top_k)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/api_logging.py", line 2348, in _auto_dump_wrapper
+    return _inner(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/sampling.py", line 1974, in top_k_mask_logits
+    return get_sampling_module().top_k_mask_logits(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/sampling.py", line 68, in get_sampling_module
+    module = gen_sampling_module().build_and_load()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/jit/core.py", line 335, in build_and_load
+    self.build()
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/jit/core.py", line 569, in build
+    run_ninja(self.build_dir, self.ninja_path, verbose)
+  File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/flashinfer/jit/cpp_ext.py", line 418, in run_ninja
+    raise RuntimeError(msg) from e
+RuntimeError: Ninja build failed. Ninja output:
+ninja: Entering directory `/home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling'
+[1/1] c++ /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_sampling.cuda.o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_renorm.cuda.o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_flashinfer_sampling_binding.cuda.o -shared -L/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/lib64 -L/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/lib64/stubs -lcudart -lcuda -o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/sampling.so
+FAILED: [code=1] /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/sampling.so 
+c++ /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_sampling.cuda.o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_renorm.cuda.o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/csrc_flashinfer_sampling_binding.cuda.o -shared -L/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/lib64 -L/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/nvidia/cu13/lib64/stubs -lcudart -lcuda -o /home/hengyi/.cache/flashinfer/0.7.0.post1/120f/cached_ops/sampling/sampling.so
+/usr/bin/ld: cannot find -lcudart: No such file or directory
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+2026-10-08 18:23:45,365 - INFO - core.py:564 - flashinfer.jit: Building JIT module sampling; this can take several minutes on first use.
+FlashInfer CUDA sampler compiled and executed successfully

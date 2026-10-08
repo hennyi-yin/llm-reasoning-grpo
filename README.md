@@ -64,6 +64,8 @@ Install these Ubuntu packages before creating the Python environment.
 uv venv ~/.venvs/llm-reasoning-grpo --python python3.12
 source ~/.venvs/llm-reasoning-grpo/bin/activate
 uv pip sync requirements-lock.txt
+source scripts/runtime_env.sh
+python -m scripts.check_cuda_runtime
 python -m src.environment
 python -m src.prepare
 pytest -q
