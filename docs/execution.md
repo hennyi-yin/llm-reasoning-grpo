@@ -58,6 +58,14 @@ retain the torch runtime at 13.0.96, and source `scripts/runtime_env.sh` to expo
 access; its evidence is recorded in `results/compatibility/cuda_sampler_gpu.json` on success.
 All frozen files remain identical. The complete test suite passed 105 tests before recovery.
 
+Recovery succeeded: both SFT checkpoints generated all 500 dev answers, with no lost
+in-flight generations. Checkpoint-436 scored 369/500 (73.8%) and checkpoint-872 scored
+340/500 (68.0%); the frozen rule selected checkpoint-436. The selected adapter was
+merged and these measurements committed as `8ac51b4`. The formal 600-step GRPO run
+started at 2026-10-08T22:30:48Z and completed its first ten optimizer steps successfully.
+Its first logged loss and gradient norm were finite; no completion in that logged window
+was truncated. This is startup evidence, not evidence of final improvement.
+
 ## Run and recover
 
 Activate `~/.venvs/llm-reasoning-grpo`, source `scripts/runtime_env.sh`, then use

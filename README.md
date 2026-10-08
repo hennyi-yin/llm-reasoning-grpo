@@ -6,7 +6,9 @@ recorded evidence; missing experiments remain `Pending`.
 
 The actual RTX5070 passed the 20-step R12 smoke test with plan B: Qwen2.5-1.5B,
 Transformers continuous batching, median 64.913 seconds/step and 11.299 GiB device peak.
-The synthetic W4A16 GPU kernel check also passed. Formal SFT/GRPO and final measurements
+The synthetic W4A16 GPU kernel check also passed. SFT completed both epochs: checkpoint-436
+was selected with 369/500 correct on dev (73.8%), versus 340/500 (68.0%) for checkpoint-872.
+These are dev selection scores, not final test results. GRPO and final measurements
 are executed by the guarded pipeline; see `python -m src.progress` for current status and
 [`docs/execution.md`](docs/execution.md) for the execution record.
 
