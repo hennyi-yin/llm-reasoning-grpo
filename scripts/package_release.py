@@ -23,6 +23,10 @@ def package(root: Path, output: Path) -> dict:
     summary = json.loads((root / "results/summary.json").read_text())
     if summary["status"] != "measured":
         raise RuntimeError("Finish all measured experiments before packaging final Release artifacts")
+    decision = json.loads((root / "configs/memory_decision.json").read_text())
+    license_path = root / "licenses" / (decision["model_id"].replace("/", "--") + "-LICENSE")
+    if not license_path.is_file():
+        raise FileNotFoundError(f"Missing pinned upstream model license: {license_path}")
     manifest_path = output / "manifest.json"
     if manifest_path.exists():
         manifest = json.loads(manifest_path.read_text())
@@ -73,11 +77,16 @@ def package(root: Path, output: Path) -> dict:
                 records.append({"path": path.relative_to(root).as_posix(), "bytes": path.stat().st_size,
                                 "sha256": hash_file(path)})
                 tar.add(path, arcname=path.relative_to(directory))
+            records.append({"path": license_path.relative_to(root).as_posix(), "bytes": license_path.stat().st_size,
+                            "sha256": hash_file(license_path), "archive_path": "UPSTREAM_MODEL_LICENSE"})
+            tar.add(license_path, arcname="UPSTREAM_MODEL_LICENSE")
         os.replace(temporary, archive)
         archives.append({"name": archive.name, "bytes": archive.stat().st_size,
                          "sha256": hash_file(archive), "source_files": records})
     manifest = {"uploaded": False, "artifacts": archives, "resume_values": summary["resume_values"],
-                "summary_sha256": hash_file(root / "results/summary.json")}
+                "summary_sha256": hash_file(root / "results/summary.json"),
+                "upstream_model": {"model_id": decision["model_id"], "revision": decision["revision"],
+                                   "license_sha256": hash_file(license_path)}}
     temporary = manifest_path.with_suffix(".json.tmp")
     temporary.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     os.replace(temporary, manifest_path)

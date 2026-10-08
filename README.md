@@ -132,6 +132,8 @@ three merged BF16 models and W4A16 checkpoint with a SHA256 manifest under ignor
 It verifies the final report, ledgers and source artifacts first. Existing complete archives are
 verified on rerun; partial archives are preserved for inspection. The Windows launcher includes
 this final packaging step. `results/release_package.json` records archive hashes; no files are uploaded.
+Each archive includes the selected base model's upstream license; the manifest records its
+model revision and license hash. Source license files and provenance are in `licenses/`.
 
 ## Environment compatibility
 

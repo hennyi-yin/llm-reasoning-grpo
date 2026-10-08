@@ -9,6 +9,10 @@ from scripts.package_release import hash_file, package
 def fixture(root):
     (root / "results").mkdir()
     (root / "results/summary.json").write_text(json.dumps({"status": "measured", "resume_values": {"A": 1}}))
+    (root / "configs").mkdir()
+    (root / "configs/memory_decision.json").write_text(json.dumps({"model_id": "Qwen/test", "revision": "a" * 40}))
+    (root / "licenses").mkdir()
+    (root / "licenses/Qwen--test-LICENSE").write_text("fixture upstream license")
     for stage in ("sft", "grpo", "ablation"):
         directory = root / "checkpoints" / stage / "checkpoint-50"
         directory.mkdir(parents=True)
@@ -33,7 +37,7 @@ def test_all_selected_and_merged_models_packaged_without_optimizer(tmp_path):
     assert len(manifest["artifacts"]) == 7
     assert manifest["uploaded"] is False
     with tarfile.open(output / "grpo-adapter.tar.gz") as archive:
-        assert set(archive.getnames()) == {"adapter_config.json", "adapter_model.safetensors"}
+        assert set(archive.getnames()) == {"adapter_config.json", "adapter_model.safetensors", "UPSTREAM_MODEL_LICENSE"}
     assert package(tmp_path, output) == manifest
 
 
