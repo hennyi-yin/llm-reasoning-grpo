@@ -1,0 +1,17 @@
+gsm8k:
+  repo: openai/gsm8k
+  subset: main
+  counts:
+    train: 7473
+    test: 1319
+  revision: 740312add88f781978c0658806c59bc2815b9866
+  files:
+    train: main/train-00000-of-00001.parquet
+    test: main/test-00000-of-00001.parquet
+math500:
+  repo: HuggingFaceH4/MATH-500
+  counts:
+    test: 500
+  revision: 6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be
+  files:
+    test: test.jsonl

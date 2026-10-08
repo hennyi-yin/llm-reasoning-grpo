@@ -1,0 +1,15 @@
+# Exact requested primary versions; install TRL WITHOUT its vllm extra.
+# TRL's extra declares vllm<=0.30.0; 0.31.0 therefore needs runtime verification.
+vllm==0.31.0
+trl==1.14.2
+peft
+datasets
+accelerate
+math-verify
+scipy
+pandas
+matplotlib
+pyyaml
+pytest
+psutil
+huggingface-hub

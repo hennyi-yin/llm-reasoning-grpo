@@ -1,0 +1,19 @@
+protocol_version: 1
+seed: 0
+temperature: 0.0
+top_p: 1.0
+top_k: -1
+n: 1
+dtype: bfloat16
+max_tokens:
+  gsm8k: 1024
+  math500: 2048
+numeric_tolerance: 0.000001
+answer_extraction: last_boxed_balanced_braces
+math_judge: math_verify_last_boxed_only
+bootstrap_resamples: 10000
+bootstrap_seed: 0
+ci_level: 0.95
+batch_size: 32
+gpu_memory_utilization: 0.65
+max_model_len: 4096

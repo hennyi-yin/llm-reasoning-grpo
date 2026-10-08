@@ -1,0 +1,15 @@
+.venv*/
+__pycache__/
+.pytest_cache/
+*.pyc
+checkpoints/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.tmp
+results/eval_cache/
+logs/*.pid
+logs/*.console.log
+.env

@@ -1,0 +1,41 @@
+# R12 uses only these declared memory/time limits; no dev or test evaluation.
+grpo_config: configs/grpo.yaml
+models_config: configs/models.yaml
+output_dir: results/smoke
+log_dir: logs/smoke
+checkpoint_dir: checkpoints/smoke
+max_steps: 20
+max_median_step_seconds: 180.0
+max_gpu_memory_fraction: 0.98
+process_timeout_seconds: 5400
+gpu_index: 0
+poll_interval_seconds: 0.1
+plans:
+  - plan: A
+    model_key: 1.5B
+    grpo_overrides:
+      use_vllm: true
+      vllm_mode: colocate
+      vllm_gpu_memory_utilization: 0.4
+      vllm_enable_sleep_mode: true
+      use_transformers_continuous_batching: false
+      transformers_continuous_batching_config: null
+  - plan: B
+    model_key: 1.5B
+    grpo_overrides:
+      use_vllm: false
+      vllm_mode: colocate
+      vllm_gpu_memory_utilization: 0.4
+      vllm_enable_sleep_mode: false
+      use_transformers_continuous_batching: true
+      transformers_continuous_batching_config:
+        max_memory_percent: 0.5
+  - plan: C
+    model_key: 0.5B
+    grpo_overrides:
+      use_vllm: true
+      vllm_mode: colocate
+      vllm_gpu_memory_utilization: 0.4
+      vllm_enable_sleep_mode: true
+      use_transformers_continuous_batching: false
+      transformers_continuous_batching_config: null
