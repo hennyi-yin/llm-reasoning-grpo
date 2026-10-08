@@ -127,8 +127,11 @@ and excludes old scores, selections and ledgers. It creates no remote and leaves
 Checkpoints, merged models and quantized weights are excluded from Git. Release upload and public
 repository publication require a separate reviewed publishing step; this checkout has no remote.
 The automated local commits are attributed to `Codex <codex@local>`.
-After all measurements, `python scripts/package_release.py` packages the three selected adapters
-and W4A16 checkpoint with a SHA256 manifest under ignored `release_assets/`; it never uploads them.
+After all measurements, `python -m scripts.package_release` packages the three selected adapters,
+three merged BF16 models and W4A16 checkpoint with a SHA256 manifest under ignored `release_assets/`.
+It verifies the final report, ledgers and source artifacts first. Existing complete archives are
+verified on rerun; partial archives are preserved for inspection. The Windows launcher includes
+this final packaging step. `results/release_package.json` records archive hashes; no files are uploaded.
 
 ## Environment compatibility
 

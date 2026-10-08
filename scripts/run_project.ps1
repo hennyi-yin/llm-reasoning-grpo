@@ -37,6 +37,10 @@ try {
     $linuxCommand = 'source "$HOME/.venvs/llm-reasoning-grpo/bin/activate" && exec python -u -m src.pipeline --through ' + $Through
     & wsl.exe -d Ubuntu-24.04 -- bash -lc $linuxCommand
     $runExitCode = $LASTEXITCODE
+    if ($runExitCode -eq 0 -and $Through -eq 'final') {
+        & wsl.exe -d Ubuntu-24.04 -- bash -lc 'source "$HOME/.venvs/llm-reasoning-grpo/bin/activate" && exec python -u -m scripts.package_release'
+        $runExitCode = $LASTEXITCODE
+    }
     $runState.status = if ($runExitCode -eq 0) { 'complete' } else { 'failed' }
     $runState.exit_code = $runExitCode
 } catch {

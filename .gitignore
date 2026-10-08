@@ -16,4 +16,6 @@ logs/*.console.log
 logs/*.lock
 logs/project-runner*.log
 logs/windows_runner.json
+logs/release_runner.json
+logs/release-runner*.log
 .env
