@@ -10,6 +10,60 @@ import subprocess
 import sys
 import tarfile
 
+RELEASE_PART_BYTES = 1024 ** 3
+
+
+def upload_files(archive: Path) -> list[dict]:
+    """Keep each upload below GitHub's 2 GiB limit; retain the local archive."""
+    if archive.stat().st_size <= RELEASE_PART_BYTES:
+        paths = [archive]
+    else:
+        paths = []
+        with archive.open("rb") as source:
+            remaining = archive.stat().st_size
+            index = 1
+            while remaining:
+                path = archive.with_name(f"{archive.name}.part{index:03d}")
+                temporary = path.with_suffix(path.suffix + ".tmp")
+                if path.exists() or temporary.exists():
+                    raise FileExistsError(f"Preserve existing Release part: {path}")
+                length = min(remaining, RELEASE_PART_BYTES)
+                with temporary.open("xb") as output:
+                    written = 0
+                    while written < length:
+                        chunk = source.read(min(1024 ** 2, length - written))
+                        if not chunk:
+                            raise RuntimeError("Release archive changed while splitting")
+                        output.write(chunk)
+                        written += len(chunk)
+                os.replace(temporary, path)
+                paths.append(path)
+                remaining -= length
+                index += 1
+    return [{"name": path.name, "bytes": path.stat().st_size, "sha256": hash_file(path)}
+            for path in paths]
+
+
+def verify_upload_files(output: Path, row: dict) -> None:
+    records = row.get("upload_files")
+    if not records:
+        raise RuntimeError("Release manifest is missing upload file records")
+    combined = hashlib.sha256()
+    total = 0
+    for record in records:
+        path = output / record["name"]
+        if path.name != record["name"] or path.is_symlink():
+            raise RuntimeError("Invalid Release upload file path")
+        if (not path.is_file() or path.stat().st_size != record["bytes"]
+                or record["bytes"] > RELEASE_PART_BYTES or hash_file(path) != record["sha256"]):
+            raise RuntimeError("Release upload file changed or exceeds the size limit")
+        with path.open("rb") as source:
+            for chunk in iter(lambda: source.read(1024 ** 2), b""):
+                combined.update(chunk)
+        total += record["bytes"]
+    if total != row["bytes"] or combined.hexdigest() != row["sha256"]:
+        raise RuntimeError("Release upload parts do not reconstruct the original archive")
+
 
 def hash_file(path):
     digest = hashlib.sha256()
@@ -38,6 +92,7 @@ def package(root: Path, output: Path) -> dict:
         for row in manifest["artifacts"]:
             if hash_file(output / row["name"]) != row["sha256"]:
                 raise RuntimeError("Existing Release archive changed; preserve it for inspection")
+            verify_upload_files(output, row)
             for record in row["source_files"]:
                 source = (root / record["path"]).resolve()
                 if not source.is_relative_to(root.resolve()) or hash_file(source) != record["sha256"]:
@@ -82,7 +137,9 @@ def package(root: Path, output: Path) -> dict:
             tar.add(license_path, arcname="UPSTREAM_MODEL_LICENSE")
         os.replace(temporary, archive)
         archives.append({"name": archive.name, "bytes": archive.stat().st_size,
-                         "sha256": hash_file(archive), "source_files": records})
+                         "sha256": hash_file(archive), "source_files": records,
+                         "upload_files": upload_files(archive)})
+        verify_upload_files(output, archives[-1])
     manifest = {"uploaded": False, "artifacts": archives, "resume_values": summary["resume_values"],
                 "summary_sha256": hash_file(root / "results/summary.json"),
                 "upstream_model": {"model_id": decision["model_id"], "revision": decision["revision"],

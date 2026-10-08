@@ -136,6 +136,11 @@ verified on rerun; partial archives are preserved for inspection. The Windows la
 this final packaging step. `results/release_package.json` records archive hashes; no files are uploaded.
 Each archive includes the selected base model's upstream license; the manifest records its
 model revision and license hash. Source license files and provenance are in `licenses/`.
+GitHub [limits each Release upload to less than 2 GiB](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases).
+Archives larger than 1 GiB also produce ordered `.part001`, `.part002`, etc. Upload the files
+listed under each artifact's `upload_files` in the manifest, together with `manifest.json`.
+Join all parts in their listed order to reconstruct the archive and verify its SHA256 before
+extraction. The packager checks every part and the reconstructed archive on reuse.
 
 ## Environment compatibility
 

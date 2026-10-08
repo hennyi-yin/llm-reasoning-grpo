@@ -66,3 +66,33 @@ def test_pending_results_cannot_be_packaged_as_complete(tmp_path):
     (tmp_path / "results/summary.json").write_text('{"status":"pending_gpu_execution"}')
     with pytest.raises(RuntimeError, match="Finish all measured"):
         package(tmp_path, tmp_path / "release_assets")
+
+
+def test_large_archive_parts_reconstruct_exact_bytes_and_detect_tampering(tmp_path, monkeypatch):
+    import scripts.package_release as release
+    fixture(tmp_path)
+    monkeypatch.setattr(release, "RELEASE_PART_BYTES", 100)
+    output = tmp_path / "release_assets"
+    manifest = package(tmp_path, output)
+    for row in manifest["artifacts"]:
+        parts = row["upload_files"]
+        assert len(parts) > 1
+        assert all(part["bytes"] <= 100 for part in parts)
+        reconstructed = b"".join((output / part["name"]).read_bytes() for part in parts)
+        assert reconstructed == (output / row["name"]).read_bytes()
+    assert package(tmp_path, output) == manifest
+    part = output / manifest["artifacts"][0]["upload_files"][0]["name"]
+    part.write_bytes(b"corrupt")
+    with pytest.raises(RuntimeError, match="upload file changed"):
+        package(tmp_path, output)
+
+
+def test_missing_upload_part_is_rejected(tmp_path, monkeypatch):
+    import scripts.package_release as release
+    fixture(tmp_path)
+    monkeypatch.setattr(release, "RELEASE_PART_BYTES", 100)
+    output = tmp_path / "release_assets"
+    manifest = package(tmp_path, output)
+    (output / manifest["artifacts"][0]["upload_files"][0]["name"]).unlink()
+    with pytest.raises(RuntimeError, match="upload file changed"):
+        package(tmp_path, output)
