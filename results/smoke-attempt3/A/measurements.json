@@ -1,0 +1,56 @@
+{
+  "plan": "A",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "grpo_overrides": {
+    "use_vllm": true,
+    "vllm_mode": "colocate",
+    "vllm_gpu_memory_utilization": 0.4,
+    "vllm_enable_sleep_mode": true,
+    "use_transformers_continuous_batching": false,
+    "transformers_continuous_batching_config": null
+  },
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "nvml_gpu_capacity_bytes": 12820938752,
+  "nvml_device_baseline_used_bytes": 3095609344,
+  "nvml_device_peak_used_bytes": 10141442048,
+  "nvml_process_tree_peak_used_bytes": null,
+  "nvml_process_tree_ids": [
+    568,
+    572,
+    610,
+    1109,
+    1149,
+    1151,
+    1231,
+    1238,
+    1248,
+    1270,
+    1272
+  ],
+  "nvml_other_process_ids": [],
+  "nvml_process_query_errors": [],
+  "nvml_samples": 1985,
+  "memory_selection_metric": "nvml_device_peak_used_bytes",
+  "memory_measurement_note": "Device total includes display/other processes; process-tree peak includes vLLM workers where NVML exposes per-process memory.",
+  "status": "runtime_error",
+  "returncode": 1,
+  "elapsed_seconds": 200.96971272400003,
+  "evaluated_accuracy": false,
+  "timestamp_utc": "2026-10-08T19:17:20.603818+00:00",
+  "package_versions": {
+    "torch": "2.13.0",
+    "transformers": "5.17.0",
+    "trl": "1.14.2",
+    "vllm": "0.31.0",
+    "peft": "0.21.2",
+    "datasets": "5.1.0",
+    "accelerate": "1.15.0"
+  },
+  "console_log": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/results/smoke-attempt3/A/console.log",
+  "selection_thresholds": {
+    "max_median_step_seconds": 180.0,
+    "max_gpu_memory_fraction": 0.98,
+    "process_timeout_seconds": 5400
+  }
+}

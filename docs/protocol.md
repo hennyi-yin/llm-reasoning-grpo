@@ -90,4 +90,7 @@ and the limited ability of an output format reward to distinguish reasoning qual
 
 ## R12 decision
 
-Pending: no model-size decision has been made and no dev/test evaluation is permitted.
+Selected plan B: `Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306`.
+20 training-only steps; median step 64.913s; device peak 11.299GiB.
+Evidence: `results/smoke-attempt5/B/measurements.json`. No accuracy was inspected.
+

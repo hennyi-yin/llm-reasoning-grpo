@@ -1,0 +1,6 @@
+{
+  "status": "interrupted_before_model_choice",
+  "reason": "Memory-only microbatch adjustment8to2withaccumulation4to16; preserve generation batch32.",
+  "timestamp_utc": "2026-10-08T19:35:31.829203+00:00",
+  "evaluation_used": false
+}

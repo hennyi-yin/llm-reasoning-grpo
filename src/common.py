@@ -17,7 +17,7 @@ def resolve(path: str | Path) -> Path:
 def load_config(path: str | Path) -> dict:
     import yaml
     with resolve(path).open(encoding="utf-8") as stream:
-        value = yaml.safe_load(stream)
+        value = json.load(stream) if resolve(path).suffix == ".json" else yaml.safe_load(stream)
     if not isinstance(value, dict):
         raise ValueError(f"Expected a mapping in {path}")
     return value

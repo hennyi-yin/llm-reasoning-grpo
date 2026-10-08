@@ -1,0 +1,15 @@
+{
+  "plan": "B",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "grpo_overrides": {
+    "use_vllm": false,
+    "vllm_mode": "colocate",
+    "vllm_gpu_memory_utilization": 0.4,
+    "vllm_enable_sleep_mode": false,
+    "use_transformers_continuous_batching": true,
+    "transformers_continuous_batching_config": {
+      "max_memory_percent": 0.5
+    }
+  }
+}

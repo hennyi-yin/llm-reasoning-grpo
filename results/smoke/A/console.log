@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 85, in <module>
+    main()
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 81, in main
+    train(args.config, args.resume, smoke_candidate=candidate)
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 41, in train
+    raise ValueError(f"Protocol requires GRPO {key}={value}")
+ValueError: Protocol requires GRPO learning_rate=1e-05

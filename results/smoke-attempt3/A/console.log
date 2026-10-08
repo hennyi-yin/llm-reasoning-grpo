@@ -1,0 +1,254 @@
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/__init__.py:22: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_client.py:43: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_client.py:49: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  _HAS_STATEFUL_TRAINER_ENGINE = is_vllm_available(min_version="0.28.0")
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_client.py:58: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  _HAS_WEIGHT_UPDATE_LIFECYCLE = is_vllm_available(min_version="0.21.0")
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_client.py:62: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  _HAS_RESET_PREFIX_CACHE_SUCCESS = is_vllm_available(min_version="0.26.0")
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_generation.py:42: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 7 files:  43%|████▎     | 3/7 [00:00<00:00, 28.10it/s]Fetching 7 files:  86%|████████▌ | 6/7 [00:00<00:00, 29.03it/s]Fetching 7 files:  86%|████████▌ | 6/7 [00:21<00:00, 29.03it/s]Fetching 7 files: 100%|██████████| 7/7 [02:44<00:00, 35.97s/it]Fetching 7 files: 100%|██████████| 7/7 [02:44<00:00, 23.50s/it]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   9%|▉         | 31/338 [00:00<00:00, 309.88it/s]Loading weights:  36%|███▋      | 123/338 [00:00<00:00, 624.03it/s]Loading weights:  55%|█████▍    | 185/338 [00:00<00:00, 406.93it/s]Loading weights:  69%|██████▊   | 232/338 [00:00<00:00, 425.16it/s]Loading weights:  83%|████████▎ | 279/338 [00:00<00:00, 421.70it/s]Loading weights:  96%|█████████▌| 324/338 [00:00<00:00, 293.72it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 368.71it/s]
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_generation.py:294: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if not is_vllm_available():
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  1.01it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  1.01it/s]
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 85, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 81, in main
+[rank0]:     train(args.config, args.resume, smoke_candidate=candidate)
+[rank0]:   File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 62, in train
+[rank0]:     trainer = GRPOTrainer(model=local_model, reward_funcs=[correctness_reward, format_reward], args=args,
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1080, in __init__
+[rank0]:     self.vllm_generation = VLLMGeneration(
+[rank0]:                            ^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_generation.py", line 287, in __init__
+[rank0]:     self._init_vllm()
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_generation.py", line 347, in _init_vllm
+[rank0]:     self.llm = LLM(
+[rank0]:                ^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 344, in __init__
+[rank0]:     self.llm_engine = LLMEngine.from_engine_args(
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 185, in from_engine_args
+[rank0]:     return cls(
+[rank0]:            ^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 111, in __init__
+[rank0]:     self.engine_core = EngineCoreClient.make_client(
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 133, in make_client
+[rank0]:     return InprocClient(vllm_config, executor_class, log_stats)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 363, in __init__
+[rank0]:     self.engine_core = EngineCore(
+[rank0]:                        ^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 151, in __init__
+[rank0]:     kv_cache_config = self._initialize_kv_caches(vllm_config)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 309, in _initialize_kv_caches
+[rank0]:     available_gpu_memory = self.model_executor.determine_available_memory()
+[rank0]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 201, in determine_available_memory
+[rank0]:     memory = super().determine_available_memory()
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/executor/abstract.py", line 150, in determine_available_memory
+[rank0]:     return self.collective_rpc("determine_available_memory")
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 103, in collective_rpc
+[rank0]:     result = run_method(self.driver_worker, method, args, kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/serial_utils.py", line 508, in run_method
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 626, in determine_available_memory
+[rank0]:     self.model_runner.profile_run(randomize_inputs=self.randomize_dummy_inputs)
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 973, in profile_run
+[rank0]:     hidden_states, sample_hidden_states = self._dummy_run(
+[rank0]:                                           ^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/worker/gpu/eplb_utils.py", line 27, in wrapper
+[rank0]:     result = fn(self, *args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 861, in _dummy_run
+[rank0]:     self.execute_model(
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 2007, in execute_model
+[rank0]:     model_output = self.model(**model_inputs)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/model_executor/models/qwen2.py", line 507, in forward
+[rank0]:     hidden_states = self.model(
+[rank0]:                     ^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/decorators.py", line 672, in __call__
+[rank0]:     self.aot_compiled_fn = self.aot_compile(*args, **kwargs)
+[rank0]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/wrapper.py", line 168, in aot_compile
+[rank0]:     return self._compiled_callable.aot_compile((args, kwargs))
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 964, in aot_compile
+[rank0]:     return aot_compile_fullgraph(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_dynamo/aot_compile.py", line 396, in aot_compile_fullgraph
+[rank0]:     compiled_fn = backend(
+[rank0]:                   ^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/__init__.py", line 2568, in __call__
+[rank0]:     return self.compiler_fn(model_, inputs_, **self.kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+[rank0]:     return func(*args, **kwds)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/backends.py", line 1218, in __call__
+[rank0]:     PiecewiseCompileInterpreter(
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/backends.py", line 724, in run
+[rank0]:     return super().run(*args)
+[rank0]:            ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/fx/interpreter.py", line 197, in run
+[rank0]:     self.env[node] = self.run_node(node)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/fx/interpreter.py", line 294, in run_node
+[rank0]:     return getattr(self, n.op)(n.target, args, kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/backends.py", line 751, in call_module
+[rank0]:     piecewise_backend = PiecewiseBackend(
+[rank0]:                         ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/piecewise_backend.py", line 189, in __init__
+[rank0]:     self.compile_all_ranges()
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/piecewise_backend.py", line 265, in compile_all_ranges
+[rank0]:     range_entry.runnable = self.vllm_backend.compiler_manager.compile(
+[rank0]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/tracing/otel.py", line 175, in sync_wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/backends.py", line 351, in compile
+[rank0]:     compiled_graph, handle = self.compiler.compile(
+[rank0]:                              ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/vllm/compilation/compiler_interface.py", line 370, in compile
+[rank0]:     compiled_graph = standalone_compile(graph, example_inputs, **compile_kwargs)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/__init__.py", line 452, in standalone_compile
+[rank0]:     return standalone_compile(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/standalone_compile.py", line 510, in standalone_compile
+[rank0]:     compiled_fn = compile_fx(
+[rank0]:                   ^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 2723, in compile_fx
+[rank0]:     return compile_fx(
+[rank0]:            ^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 2782, in compile_fx
+[rank0]:     return _maybe_wrap_and_compile_fx_main(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 2863, in _maybe_wrap_and_compile_fx_main
+[rank0]:     return _compile_fx_main(
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 3076, in _compile_fx_main
+[rank0]:     raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1
+[rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1020, in _compile_fx_inner
+[rank0]:     raise InductorError(e, currentframe()).with_traceback(
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1004, in _compile_fx_inner
+[rank0]:     mb_compiled_graph = fx_codegen_and_compile(
+[rank0]:                         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1847, in fx_codegen_and_compile
+[rank0]:     return scheme.codegen_and_compile(gm, example_inputs, inputs_to_check, graph_kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/compile_fx.py", line 1608, in codegen_and_compile
+[rank0]:     compiled_module = graph.compile_to_module()
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/graph.py", line 2669, in compile_to_module
+[rank0]:     return self._compile_to_module()
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/graph.py", line 2675, in _compile_to_module
+[rank0]:     self.codegen_with_cpp_wrapper() if self.cpp_wrapper else self.codegen()
+[rank0]:                                                              ^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/graph.py", line 2607, in codegen
+[rank0]:     self._update_scheduler()
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/graph.py", line 2601, in _update_scheduler
+[rank0]:     self.scheduler = Scheduler(self.operations)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/scheduler.py", line 4036, in __init__
+[rank0]:     self._init(nodes)
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/scheduler.py", line 4165, in _init
+[rank0]:     self.create_combo_kernel_nodes(num_ck_nodes=None)
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/scheduler.py", line 6141, in create_combo_kernel_nodes
+[rank0]:     if len(window) < 2 or not self.speedup_by_combo_kernel(window):
+[rank0]:                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/scheduler.py", line 9592, in speedup_by_combo_kernel
+[rank0]:     ms, path = self.benchmark_fused_nodes(node_list)
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/scheduler.py", line 5048, in benchmark_fused_nodes
+[rank0]:     return backend.benchmark_fused_nodes(nodes)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/codegen/cuda_combined_scheduling.py", line 169, in benchmark_fused_nodes
+[rank0]:     return self._triton_scheduling.benchmark_fused_nodes(nodes)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/codegen/triton.py", line 7325, in benchmark_fused_nodes
+[rank0]:     src_code = self.generate_kernel_code_from_nodes(nodes, benchmark_kernel=True)
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/codegen/simd.py", line 4510, in generate_kernel_code_from_nodes
+[rank0]:     src_code = kernel.codegen_kernel()
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/codegen/triton.py", line 6477, in codegen_kernel
+[rank0]:     **self.inductor_meta_common(),
+[rank0]:       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/_inductor/codegen/triton.py", line 6187, in inductor_meta_common
+[rank0]:     "backend_hash": torch.utils._triton.triton_hash_with_backend(),
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/utils/_triton.py", line 253, in triton_hash_with_backend
+[rank0]:     backend = triton_backend()
+[rank0]:               ^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/torch/utils/_triton.py", line 223, in triton_backend
+[rank0]:     target = driver.active.get_current_target()
+[rank0]:              ^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/triton/runtime/driver.py", line 39, in active
+[rank0]:     self._active = self.default
+[rank0]:                    ^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/triton/runtime/driver.py", line 33, in default
+[rank0]:     self._default = _create_driver()
+[rank0]:                     ^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/triton/runtime/driver.py", line 21, in _create_driver
+[rank0]:     return active_drivers[0]()
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/triton/backends/nvidia/driver.py", line 336, in __init__
+[rank0]:     self.utils = CudaUtils()  # TODO: make static
+[rank0]:                  ^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/triton/backends/nvidia/driver.py", line 66, in __init__
+[rank0]:     mod = compile_module_from_src(
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/triton/runtime/build.py", line 93, in compile_module_from_src
+[rank0]:     so = _build(name, src_path, tmpdir, library_dirs or [], include_dirs or [], libraries or [], ccflags or [])
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/triton/runtime/build.py", line 32, in _build
+[rank0]:     raise RuntimeError(
+[rank0]: torch._inductor.exc.InductorError: RuntimeError: Failed to find C compiler. Please specify via CC environment variable or set triton.knobs.build.impl.
+[rank0]:[W1008 15:17:19.227041980 ProcessGroupNCCL.cpp:1624] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

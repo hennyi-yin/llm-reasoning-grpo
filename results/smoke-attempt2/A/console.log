@@ -1,0 +1,24 @@
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/__init__.py:22: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_client.py:43: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_client.py:49: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  _HAS_STATEFUL_TRAINER_ENGINE = is_vllm_available(min_version="0.28.0")
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_client.py:58: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  _HAS_WEIGHT_UPDATE_LIFECYCLE = is_vllm_available(min_version="0.21.0")
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_client.py:62: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  _HAS_RESET_PREFIX_CACHE_SUCCESS = is_vllm_available(min_version="0.26.0")
+/home/hengyi/.venvs/llm-reasoning-grpo/lib/python3.12/site-packages/trl/generation/vllm_generation.py:42: UserWarning: TRL currently supports vLLM versions from 0.20.0 to 0.30.0. You have version 0.31.0 installed. We recommend installing a supported version to avoid compatibility issues.
+  if is_vllm_available():
+Build training-only GRPO data:   0%|          | 0/6973 [00:00<?, ? examples/s]Build training-only GRPO data:  40%|████      | 2802/6973 [00:00<00:00, 27738.04 examples/s]Build training-only GRPO data:  80%|████████  | 5600/6973 [00:00<00:00, 27850.35 examples/s]Build training-only GRPO data: 100%|██████████| 6973/6973 [00:00<00:00, 26984.63 examples/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 85, in <module>
+    main()
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 81, in main
+    train(args.config, args.resume, smoke_candidate=candidate)
+  File "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/src/train_grpo.py", line 58, in train
+    args = GRPOConfig(**values)
+           ^^^^^^^^^^^^^^^^^^^^
+TypeError: GRPOConfig.__init__() got an unexpected keyword argument 'logging_dir'

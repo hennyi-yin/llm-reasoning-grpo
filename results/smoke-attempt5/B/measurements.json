@@ -1,0 +1,80 @@
+{
+  "plan": "B",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "grpo_overrides": {
+    "use_vllm": false,
+    "vllm_mode": "colocate",
+    "vllm_gpu_memory_utilization": 0.4,
+    "vllm_enable_sleep_mode": false,
+    "use_transformers_continuous_batching": true,
+    "transformers_continuous_batching_config": {
+      "max_memory_percent": 0.5
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "nvml_gpu_capacity_bytes": 12820938752,
+  "nvml_device_baseline_used_bytes": 2265137152,
+  "nvml_device_peak_used_bytes": 12131897344,
+  "nvml_process_tree_peak_used_bytes": null,
+  "nvml_process_tree_ids": [
+    4130,
+    4132,
+    4134,
+    4180,
+    4236,
+    4395
+  ],
+  "nvml_other_process_ids": [],
+  "nvml_process_query_errors": [],
+  "nvml_samples": 12724,
+  "memory_selection_metric": "nvml_device_peak_used_bytes",
+  "memory_measurement_note": "Device total includes display/other processes; process-tree peak includes vLLM workers where NVML exposes per-process memory.",
+  "steps_completed": 20,
+  "step_seconds": [
+    57.106090346999736,
+    32.9758736939998,
+    42.56050155599996,
+    70.91155012700028,
+    59.45484275700028,
+    59.080671252999764,
+    72.81278015199996,
+    79.37739249700007,
+    67.91633579999962,
+    72.98516806800035,
+    65.49369617999992,
+    63.45610895999971,
+    68.04945801199983,
+    55.813879961999646,
+    62.11016106699981,
+    64.33277381299968,
+    58.87553478499967,
+    73.96762937299991,
+    66.04635860100007,
+    89.19707610400019
+  ],
+  "median_step_seconds": 64.9132349964998,
+  "mean_step_seconds": 64.12619415539992,
+  "torch_peak_allocated_bytes": 5694087680,
+  "torch_peak_reserved_bytes": 6452936704,
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 1295.3908350730003,
+  "evaluated_accuracy": false,
+  "timestamp_utc": "2026-10-08T20:00:44.801544+00:00",
+  "package_versions": {
+    "torch": "2.13.0",
+    "transformers": "5.17.0",
+    "trl": "1.14.2",
+    "vllm": "0.31.0",
+    "peft": "0.21.2",
+    "datasets": "5.1.0",
+    "accelerate": "1.15.0"
+  },
+  "console_log": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/results/smoke-attempt5/B/console.log",
+  "selection_thresholds": {
+    "max_median_step_seconds": 180.0,
+    "max_gpu_memory_fraction": 0.98,
+    "process_timeout_seconds": 5400
+  }
+}
