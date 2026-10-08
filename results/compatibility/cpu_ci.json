@@ -1,0 +1,19 @@
+{
+  "status": "local_workflow_dependency_test_passed",
+  "timestamp_utc": "2026-10-08T21:54:22.688953+00:00",
+  "tested_source_commit": "a5dce7af8e790b60447386752e24c1dda21fa2c4",
+  "python": "3.12.3",
+  "environment": "fresh CPU environment without torch or training packages",
+  "dependencies": {
+    "pytest": "9.1.1",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "PyYAML": "6.0.3",
+    "math-verify": "0.9.0"
+  },
+  "pytest_passed": 104,
+  "pytest_skipped": 1,
+  "skipped_reason": "optional torch/TRL SFT integration test",
+  "remote_github_actions_executed": false,
+  "test_dataset_accessed": false
+}

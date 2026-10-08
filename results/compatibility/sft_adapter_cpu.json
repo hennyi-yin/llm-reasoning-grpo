@@ -1,0 +1,22 @@
+{
+  "status": "cpu_adapter_loading_verified",
+  "timestamp_utc": "2026-10-08T21:53:30.649065+00:00",
+  "checkpoint": "checkpoints/sft/checkpoint-436",
+  "artifact_sha256": {
+    "adapter_config.json": "484e0251a13898c2566024e8f3d878368fa9eaa03725a665ab074afa57ae185f",
+    "adapter_model.safetensors": "b49727d257f5bc602522efc4839ce0cf7833938f8085f11758825f34c4469a21"
+  },
+  "rank": 16,
+  "loaded_layers": 196,
+  "devices": [
+    "cpu"
+  ],
+  "versions": {
+    "vllm": "0.31.0",
+    "peft": "0.21.2",
+    "torch": "2.13.0"
+  },
+  "generated_answers": false,
+  "test_dataset_accessed": false,
+  "gpu_kernels_tested": false
+}
