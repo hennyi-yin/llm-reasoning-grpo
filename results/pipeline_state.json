@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "stages": {
+    "memory": {
+      "status": "complete",
+      "started_at": "2026-10-08T20:00:54.500011+00:00",
+      "pid": 5726,
+      "ended_at": "2026-10-08T20:01:00.014752+00:00"
+    },
+    "quantization_compatibility": {
+      "status": "complete",
+      "started_at": "2026-10-08T20:01:00.022683+00:00",
+      "pid": 5726,
+      "ended_at": "2026-10-08T20:03:32.501667+00:00"
+    },
+    "sft_train": {
+      "status": "complete",
+      "started_at": "2026-10-08T20:03:32.509822+00:00",
+      "pid": 5726,
+      "ended_at": "2026-10-08T22:05:06.991855+00:00"
+    },
+    "sft_select": {
+      "status": "complete",
+      "started_at": "2026-10-08T22:24:08.671889+00:00",
+      "pid": 327,
+      "ended_at": "2026-10-08T22:29:24.826215+00:00"
+    },
+    "sft_merge": {
+      "status": "complete",
+      "started_at": "2026-10-08T22:29:24.832326+00:00",
+      "pid": 327,
+      "ended_at": "2026-10-08T22:30:12.127225+00:00"
+    }
+  }
+}
