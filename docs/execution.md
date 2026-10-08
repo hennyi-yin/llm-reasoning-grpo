@@ -35,7 +35,7 @@ Before SFT, vLLM generated four tokens from the synthetic W4A16 checkpoint on th
 It establishes that this quantization kernel can execute on the device; it does not measure
 the real project's accuracy, throughput, or weight-size reduction.
 
-The local CPU CI replication used exactly the workflow's six primary dependencies in a fresh
+The local CPU CI replication used exactly the workflow's five primary dependencies in a fresh
 environment without torch, TRL, transformers or vLLM: 104 tests passed and the optional training
 integration test was skipped. This verifies the local workflow command, not a remote Actions run.
 During formal SFT, its completed first-epoch adapter (`checkpoint-436`) was read through
