@@ -1,0 +1,48 @@
+{
+  "status": "pending_gpu_execution",
+  "accuracy": [],
+  "comparisons": [],
+  "statistics": {
+    "status": "incomplete",
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 0,
+    "ci_level": 0.95,
+    "difference_direction": "b minus a in percentage points"
+  },
+  "offline": {
+    "hf": null,
+    "vllm": null
+  },
+  "online": [],
+  "quantization": null,
+  "vllm_weight_memory_gib": {
+    "bf16": null,
+    "w4a16": null
+  },
+  "resume_values": {
+    "A": null,
+    "B": null,
+    "C": null,
+    "D": null,
+    "E": null,
+    "F": null,
+    "G": null
+  },
+  "resume_value_units": {
+    "A": "%",
+    "B": "%",
+    "C": "%",
+    "D": "%",
+    "E": "ratio",
+    "F": "percentage points (GRPO bf16 minus W4A16)",
+    "G": "weight-file size ratio"
+  },
+  "quantization_mcnemar_p": null,
+  "sources": {
+    "per_problem_csv": "results/per_problem.csv",
+    "offline_hf": "results/offline_hf.json",
+    "offline_vllm": "results/offline_vllm.json",
+    "quantization": "results/quantization.json"
+  },
+  "figures": []
+}

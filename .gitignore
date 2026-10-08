@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 checkpoints/
 models/
+release_assets/
 *.safetensors
 *.bin
 *.pt
@@ -12,4 +13,7 @@ models/
 results/eval_cache/
 logs/*.pid
 logs/*.console.log
+logs/*.lock
+logs/project-runner*.log
+logs/windows_runner.json
 .env

@@ -1,0 +1,19 @@
+{
+  "status": "synthetic_gpu_kernel_check_passed",
+  "timestamp_utc": "2026-10-08T20:03:27.368281+00:00",
+  "scope": "one-layer random Qwen2; synthetic token IDs; no project score or speedup",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "versions": {
+    "vllm": "0.31.0",
+    "compressed-tensors": "0.17.0",
+    "torch": "2.13.0"
+  },
+  "scheme": "W4A16",
+  "output_tokens": 4,
+  "real_checkpoint_tested": false,
+  "test_dataset_accessed": false
+}

@@ -1,0 +1,19 @@
+seed: 42
+model: models/final-bf16
+num_prompts: 512
+output_tokens: 256
+warmup_runs: 1
+repeats: 3
+hf_batch_sizes: [1, 8, 16, 32]
+hf_attention: sdpa
+vllm_gpu_memory_utilization: 0.65
+vllm_max_model_len: 2048
+online:
+  num_prompts: 500
+  input_tokens: 256
+  output_tokens: 256
+  bf16_concurrency: [1, 8, 32]
+  w4a16_concurrency: [1, 32]
+  warmup_requests: 1
+  temperature: 0.0
+  random_range_ratio: 0.0

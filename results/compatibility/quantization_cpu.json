@@ -1,0 +1,173 @@
+{
+  "status": "cpu_serialization_compatibility_verified",
+  "scope": "random tiny Qwen2 model; synthetic tokens; CPU only; no project result",
+  "gpu_kernels_tested": false,
+  "real_checkpoint_tested": false,
+  "test_dataset_accessed": false,
+  "seed": 13,
+  "producer_versions": {
+    "llmcompressor": "0.14.0",
+    "compressed-tensors": "0.19.0",
+    "torch": "2.13.0",
+    "transformers": "5.17.0"
+  },
+  "consumer_versions": {
+    "vllm": "0.31.0",
+    "compressed-tensors": "0.17.0",
+    "torch": "2.13.0",
+    "transformers": "5.17.0"
+  },
+  "recipe": {
+    "targets": "Linear",
+    "scheme": "W4A16",
+    "ignore": [
+      "lm_head"
+    ],
+    "group_size": 128,
+    "actorder": "static"
+  },
+  "model_config": {
+    "hidden_size": 128,
+    "intermediate_size": 256,
+    "num_hidden_layers": 1,
+    "num_attention_heads": 2,
+    "num_key_value_heads": 1,
+    "vocab_size": 64
+  },
+  "calibration": {
+    "source": "synthetic random token ids",
+    "samples": 4,
+    "tokens_per_sample": 16
+  },
+  "vllm_config_parse": "passed",
+  "ct017_config_parse": "passed",
+  "lm_head_unquantized": true,
+  "module_checks": [
+    {
+      "module": "model.layers.0.mlp.down_proj",
+      "weight_shape": [
+        128,
+        256
+      ],
+      "packed_shape": [
+        128,
+        32
+      ],
+      "packed_dtype": "torch.int32",
+      "scale_shape": [
+        128,
+        2
+      ],
+      "scale_dtype": "torch.bfloat16",
+      "bitwise_dequantization_match": true
+    },
+    {
+      "module": "model.layers.0.mlp.gate_proj",
+      "weight_shape": [
+        256,
+        128
+      ],
+      "packed_shape": [
+        256,
+        16
+      ],
+      "packed_dtype": "torch.int32",
+      "scale_shape": [
+        256,
+        1
+      ],
+      "scale_dtype": "torch.bfloat16",
+      "bitwise_dequantization_match": true
+    },
+    {
+      "module": "model.layers.0.mlp.up_proj",
+      "weight_shape": [
+        256,
+        128
+      ],
+      "packed_shape": [
+        256,
+        16
+      ],
+      "packed_dtype": "torch.int32",
+      "scale_shape": [
+        256,
+        1
+      ],
+      "scale_dtype": "torch.bfloat16",
+      "bitwise_dequantization_match": true
+    },
+    {
+      "module": "model.layers.0.self_attn.k_proj",
+      "weight_shape": [
+        64,
+        128
+      ],
+      "packed_shape": [
+        64,
+        16
+      ],
+      "packed_dtype": "torch.int32",
+      "scale_shape": [
+        64,
+        1
+      ],
+      "scale_dtype": "torch.bfloat16",
+      "bitwise_dequantization_match": true
+    },
+    {
+      "module": "model.layers.0.self_attn.o_proj",
+      "weight_shape": [
+        128,
+        128
+      ],
+      "packed_shape": [
+        128,
+        16
+      ],
+      "packed_dtype": "torch.int32",
+      "scale_shape": [
+        128,
+        1
+      ],
+      "scale_dtype": "torch.bfloat16",
+      "bitwise_dequantization_match": true
+    },
+    {
+      "module": "model.layers.0.self_attn.q_proj",
+      "weight_shape": [
+        128,
+        128
+      ],
+      "packed_shape": [
+        128,
+        16
+      ],
+      "packed_dtype": "torch.int32",
+      "scale_shape": [
+        128,
+        1
+      ],
+      "scale_dtype": "torch.bfloat16",
+      "bitwise_dequantization_match": true
+    },
+    {
+      "module": "model.layers.0.self_attn.v_proj",
+      "weight_shape": [
+        64,
+        128
+      ],
+      "packed_shape": [
+        64,
+        16
+      ],
+      "packed_dtype": "torch.int32",
+      "scale_shape": [
+        64,
+        1
+      ],
+      "scale_dtype": "torch.bfloat16",
+      "bitwise_dequantization_match": true
+    }
+  ]
+}

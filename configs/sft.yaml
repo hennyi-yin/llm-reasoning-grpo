@@ -1,0 +1,58 @@
+stage: sft
+model: base
+output_dir: checkpoints/sft
+log_dir: logs/sft
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: all-linear
+  task_type: CAUSAL_LM
+  bias: none
+trainer:
+  num_train_epochs: 2
+  max_steps: -1
+  learning_rate: 0.0001
+  # Same effective batch of 16 as 8 x 2; one sequence per microbatch fits 12 GB.
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16
+  bf16: true
+  fp16: false
+  gradient_checkpointing: true
+  gradient_checkpointing_kwargs:
+    use_reentrant: false
+  completion_only_loss: true
+  assistant_only_loss: false
+  max_length: 1024
+  truncation_mode: keep_start
+  packing: false
+  padding_free: false
+  shuffle_dataset: false
+  loss_type: chunked_nll
+  optim: adamw_torch
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 0.00000001
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  lr_scheduler_type: linear
+  warmup_steps: 0
+  logging_strategy: steps
+  logging_steps: 10
+  save_strategy: epoch
+  save_total_limit: null
+  eval_strategy: 'no'
+  load_best_model_at_end: false
+  report_to: []
+  dataloader_num_workers: 0
+  seed: 42
+  data_seed: 42
+  trust_remote_code: false
+  model_init_kwargs:
+    dtype: bfloat16
+    attn_implementation: sdpa
+selection:
+  eval_config: configs/eval.yaml
+  result_dir: results/dev/sft
+  output_path: results/selected_sft.json
+  tie_break: earliest_step
