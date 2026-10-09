@@ -307,8 +307,34 @@ def plot_measured(summary: dict) -> list[str]:
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     figures = []
+    if reward_series:
+        fig, axes = plt.subplots(2, 2, figsize=(10, 7.5), sharex=True)
+        panels = (
+            ("rewards/correctness_reward/mean", "Correctness reward", "Mean reward"),
+            ("reward", "Total reward", "Mean reward"),
+            ("completions/clipped_ratio", "Truncated completions", "Fraction"),
+            ("frac_reward_zero_std", "Groups with zero reward variance", "Fraction"),
+        )
+        stage_labels = {"grpo": "SFT + GRPO", "grpo_no_sft": "GRPO without SFT"}
+        for ax, (key, title, y_label) in zip(axes.flat, panels):
+            for label, points in reward_series:
+                stage, metric = label.split(": ", 1)
+                if metric != key:
+                    continue
+                points = sorted(points)
+                ax.plot([p[0] for p in points], [p[1] for p in points],
+                        linewidth=1.2, marker="o", markersize=2,
+                        label=stage_labels.get(stage, stage))
+            ax.set(title=title, xlabel="Optimizer step", ylabel=y_label)
+            ax.grid(alpha=.25)
+            ax.legend(fontsize=8)
+        fig.tight_layout()
+        relative = "figures/training_metrics.png"
+        (ROOT / "figures").mkdir(exist_ok=True)
+        fig.savefig(ROOT / relative, dpi=160)
+        plt.close(fig)
+        figures.append(relative)
     for name, series, x_label, y_label in (
-        ("training_metrics", reward_series, "Optimizer step", "Logged metric"),
         ("dev_accuracy", dev_series, "Checkpoint step", "Dev accuracy (%)"),
         ("throughput_concurrency", throughput_series, "Concurrency", "Output tokens / second")):
         if not series:
