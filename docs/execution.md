@@ -90,6 +90,14 @@ to the uninterrupted update. The repair does not modify checkpoint files or hype
 The plotted training path now excludes discarded unsaved log suffixes after a rollback;
 the complete original JSONL logs remain intact.
 
+The repaired full training environment passed all 109 tests. A newly created CPU environment
+using exactly the workflow's five primary dependencies passed 107 tests and skipped the two
+optional training integrations; both CLI help checks also passed. This environment contains
+no torch or training packages. `results/compatibility/cpu_ci_resume.json` and its JUnit XML
+retain the source commit and evidence; the earlier CPU CI record is preserved separately.
+This is a local workflow replication, not a remote GitHub Actions run. Main GRPO successfully
+resumed and wrote complete checkpoints at steps 100, 150, 200, 250, 300 and 350.
+
 ## Run and recover
 
 Activate `~/.venvs/llm-reasoning-grpo`, source `scripts/runtime_env.sh`, then use

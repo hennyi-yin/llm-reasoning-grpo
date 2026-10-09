@@ -1,0 +1,24 @@
+{
+  "status": "local_workflow_dependency_test_passed",
+  "timestamp_utc": "2026-10-09T06:42:34.328499+00:00",
+  "tested_source_commit": "f0478a0ff5c952ca549619f06fcf9bd76a66be0f",
+  "python": "3.12.3",
+  "environment": "fresh CPU environment without torch or training packages",
+  "dependencies": {
+    "pytest": "9.1.1",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "PyYAML": "6.0.3",
+    "math-verify": "0.9.0"
+  },
+  "pytest_passed": 107,
+  "pytest_skipped": 2,
+  "skipped_reason": "optional PEFT/Adam resume and TRL SFT integration tests require training packages",
+  "junit_xml": "results/compatibility/cpu_ci_resume.xml",
+  "cli_help_checks_passed": [
+    "src.evaluate",
+    "src.stats"
+  ],
+  "remote_github_actions_executed": false,
+  "test_dataset_accessed": false
+}
