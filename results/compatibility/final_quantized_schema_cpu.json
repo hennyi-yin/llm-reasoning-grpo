@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-10-09T15:23:59.451790+00:00",
+  "config_sha256": "309703efe8e1ca92d5eb6b0a781711080ccde9e4ed724e6d659da131a5564746",
+  "vllm_version": "0.31.0",
+  "compressed_tensors_version": "0.17.0",
+  "packed_linear_modules": 196,
+  "embedding_dtype": "BF16",
+  "lm_head_quantized": false,
+  "cuda_context_created": false,
+  "dataset_accessed": false,
+  "scope": "actual checkpoint header and serving-schema check; not GPU inference"
+}
