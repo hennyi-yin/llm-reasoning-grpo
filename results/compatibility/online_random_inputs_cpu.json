@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-10-09T15:46:09.858322+00:00",
+  "seed": 42,
+  "bench_config_sha256": "75f5b1e45d08ee89bdf168ab5bf05929ed7a74f4e8cf9649aef1d7aa8e9a5cd9",
+  "records": [
+    {
+      "precision": "bf16",
+      "count": 500,
+      "prompt_sha256": "8f5e8a76634975c7b917320d2b601cd60979079e902630a6952a576e2ff0db6c",
+      "input_tokens_min": 256,
+      "input_tokens_max": 256,
+      "expected_output_tokens": 256
+    },
+    {
+      "precision": "w4a16",
+      "count": 500,
+      "prompt_sha256": "8f5e8a76634975c7b917320d2b601cd60979079e902630a6952a576e2ff0db6c",
+      "input_tokens_min": 256,
+      "input_tokens_max": 256,
+      "expected_output_tokens": 256
+    }
+  ],
+  "identical_prompts_across_precisions": true,
+  "cuda_context_created": false,
+  "dataset_accessed": false,
+  "scope": "official synthetic client inputs; server usage still validated during measured runs"
+}
