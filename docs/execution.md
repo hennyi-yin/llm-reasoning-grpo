@@ -148,3 +148,25 @@ checks verified that all 221 main-environment packages and all 85 quantization p
 exactly match their respective lockfiles, with no missing or extra packages.
 `results/compatibility/current_training_lock.json` and `current_quantization_lock.json`
 record these checks without creating a CUDA context or accessing any dataset.
+
+## User monitoring and final verification
+
+The user requested continued supervision in this conversation and asked how to monitor
+the hidden Windows/WSL runner. `scripts/watch_project.ps1` now shows the runner's live
+process, current pipeline stage and recent log lines without starting or stopping work.
+A one-shot invocation was checked against the running HF benchmark. Instructions are
+in `docs/monitoring.md`. During formal HF timing, checks are limited to lightweight
+process, NVML and file reads; full tests and table re-derivation are deferred.
+
+`scripts.check_saved_report_cpu` provides a read-only final verification entry point:
+it reconstructs tables from saved raw answers, checks their hashes and frozen judgments,
+and compares the exact summary and Markdown against the completed report. Its CLI was
+checked in the independent CPU workflow environment; complete-data verification remains
+pending until final evaluation finishes. It does not regenerate answers or overwrite
+the report. The final verification record must describe the actual completed check.
+
+Release loading instructions in `docs/release_artifacts.md` explicitly resolve the
+main GRPO adapter against the selected merged SFT model. Its adapter configuration
+retains the original machine's absolute path as provenance; that configuration and
+the saved checkpoint hashes are not rewritten. Ready merged artifacts can be loaded
+directly after extraction into an empty directory.
