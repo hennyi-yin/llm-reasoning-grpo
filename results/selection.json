@@ -1,0 +1,565 @@
+{
+  "sft": {
+    "checkpoint": "checkpoints/sft/checkpoint-436",
+    "step": 436,
+    "split": "dev",
+    "task": "gsm8k",
+    "correct": 369,
+    "total": 500,
+    "accuracy": 0.738,
+    "raw_predictions": "results/dev/sft/checkpoint-436.csv",
+    "artifact_sha256": {
+      "adapter_config.json": "484e0251a13898c2566024e8f3d878368fa9eaa03725a665ab074afa57ae185f",
+      "adapter_model.safetensors": "b49727d257f5bc602522efc4839ce0cf7833938f8085f11758825f34c4469a21"
+    },
+    "raw_predictions_sha256": "b4428702fc89d0cd10aacd26a25d7e2dc9182ef2fde8638252bfece413253fc0",
+    "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+    "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "selection_rule": "maximum_dev_correct_then_earliest_step",
+    "candidates": [
+      {
+        "checkpoint": "checkpoints/sft/checkpoint-436",
+        "step": 436,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 369,
+        "total": 500,
+        "accuracy": 0.738,
+        "raw_predictions": "results/dev/sft/checkpoint-436.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "484e0251a13898c2566024e8f3d878368fa9eaa03725a665ab074afa57ae185f",
+          "adapter_model.safetensors": "b49727d257f5bc602522efc4839ce0cf7833938f8085f11758825f34c4469a21"
+        },
+        "raw_predictions_sha256": "b4428702fc89d0cd10aacd26a25d7e2dc9182ef2fde8638252bfece413253fc0",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/sft/checkpoint-872",
+        "step": 872,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 340,
+        "total": 500,
+        "accuracy": 0.68,
+        "raw_predictions": "results/dev/sft/checkpoint-872.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "484e0251a13898c2566024e8f3d878368fa9eaa03725a665ab074afa57ae185f",
+          "adapter_model.safetensors": "44744af71c8f4b63d9b44e68630479eb14fa8fd72089bb03569d116365993a18"
+        },
+        "raw_predictions_sha256": "8fb42962441ece80e6ecb6ae9cabd9f1db5e3e6a835263f69ed26d98a7d20c68",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      }
+    ],
+    "test_used": false
+  },
+  "grpo": {
+    "checkpoint": "checkpoints/grpo/checkpoint-600",
+    "step": 600,
+    "split": "dev",
+    "task": "gsm8k",
+    "correct": 382,
+    "total": 500,
+    "accuracy": 0.764,
+    "raw_predictions": "results/dev/grpo/checkpoint-600.csv",
+    "artifact_sha256": {
+      "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+      "adapter_model.safetensors": "60b8ceb55e850e46ffbfec1c39972be767fab4579e2a02f14cfa04cfa8d5bf93"
+    },
+    "raw_predictions_sha256": "d52ab4b020aa9dd480d8abd616ce25acaad7614c967b6cd5366be54ce97edf31",
+    "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+    "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+    "revision": null,
+    "selection_rule": "maximum_dev_correct_then_earliest_step",
+    "candidates": [
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-50",
+        "step": 50,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 371,
+        "total": 500,
+        "accuracy": 0.742,
+        "raw_predictions": "results/dev/grpo/checkpoint-50.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f6419fdc9de86113d0f04ac60d38a27673ff4cfc6625ac24d2e85675409947aa",
+          "adapter_model.safetensors": "f2a2bf6634a34d58f106dab55b3ff9a781d1da4c5ab30b5fa9e4dcda85c814bf"
+        },
+        "raw_predictions_sha256": "3bed36f7145da3d3918f7f0b7ec13613abdb1946a719171bc522ce6a69aae935",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-100",
+        "step": 100,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 369,
+        "total": 500,
+        "accuracy": 0.738,
+        "raw_predictions": "results/dev/grpo/checkpoint-100.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "29c2a842c4f2a2c30593e8febff31b96f948a13d9fe6de27fe0caeeeead08fdd"
+        },
+        "raw_predictions_sha256": "0751f2296156790eabb037a017ff56db3d532bcba6bdf2f00903c65d18543d9b",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-150",
+        "step": 150,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 371,
+        "total": 500,
+        "accuracy": 0.742,
+        "raw_predictions": "results/dev/grpo/checkpoint-150.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "80d3c197fb63ced3f0ce61ba0f5c0cc448b1048eacff8c6ec1ac96c3be912915"
+        },
+        "raw_predictions_sha256": "a7d5b0c5e049fb2d1a2b9f23d3eb2cf313d6f2d811f51f0507c72f24c6dde076",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-200",
+        "step": 200,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 369,
+        "total": 500,
+        "accuracy": 0.738,
+        "raw_predictions": "results/dev/grpo/checkpoint-200.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "5815a508915d8d7c2b6200cea31b6f3eabe320d62f880a0ed189787bdea8012c"
+        },
+        "raw_predictions_sha256": "bccc6770a3216f7c56d288b45fe19c56ed1cb7ccca7a4c0c199653c81831a014",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-250",
+        "step": 250,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 368,
+        "total": 500,
+        "accuracy": 0.736,
+        "raw_predictions": "results/dev/grpo/checkpoint-250.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "0705525f52295016d1a33cc9c5960a837937167fcb182cd169f539ec9fe571fb"
+        },
+        "raw_predictions_sha256": "cafea2b3c33f5e09d38eeea00cf6d9c6f5b98cf41dff058adb23dd53ae1cac91",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-300",
+        "step": 300,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 365,
+        "total": 500,
+        "accuracy": 0.73,
+        "raw_predictions": "results/dev/grpo/checkpoint-300.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "015a453f7fe4991cceb69b9edab6fe76babc181745fd405edef244c5071ff39b"
+        },
+        "raw_predictions_sha256": "bb76be1796b747c9bd17898644ed8dcadca622627c38f4fe2fec7161d14c35dd",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-350",
+        "step": 350,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 366,
+        "total": 500,
+        "accuracy": 0.732,
+        "raw_predictions": "results/dev/grpo/checkpoint-350.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "50f56445852135e40e898c49414e03949197f2c280769351cd025108280134fe"
+        },
+        "raw_predictions_sha256": "4f70374bd78caf2e404245f0843979ef3b543898fa6802bc754aea22105bc70f",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-400",
+        "step": 400,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 381,
+        "total": 500,
+        "accuracy": 0.762,
+        "raw_predictions": "results/dev/grpo/checkpoint-400.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "966548881658bfc18d97a13af55d0c0f98f9d858e0986ada17b5f5c726c1c300"
+        },
+        "raw_predictions_sha256": "dceccbadc3d5292a9244ef74858b567434491a12b6fddb7dc08abb7d3eb86afe",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-450",
+        "step": 450,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 376,
+        "total": 500,
+        "accuracy": 0.752,
+        "raw_predictions": "results/dev/grpo/checkpoint-450.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "f4b3c3e372d7d9201837c317faa3c580fcde5835a1abfa9555a2035da0daf27b"
+        },
+        "raw_predictions_sha256": "854ef9c52f673e01ea8cebd44bc48c4e297932249934dc3873bb7f1097bfa29f",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-500",
+        "step": 500,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 379,
+        "total": 500,
+        "accuracy": 0.758,
+        "raw_predictions": "results/dev/grpo/checkpoint-500.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "1f17ba6ec204e04062c39e368b6befb5f34b4646419dbe1515bd9683111f715e"
+        },
+        "raw_predictions_sha256": "49a09b8685e23f0928eec426bd059b7e81314b6d60ad43fe37d4d2a35428ad9f",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-550",
+        "step": 550,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 373,
+        "total": 500,
+        "accuracy": 0.746,
+        "raw_predictions": "results/dev/grpo/checkpoint-550.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "f57c64b02d93b80d1eed98a236ef2b48725d02a9007a1d007816853247a34fc5"
+        },
+        "raw_predictions_sha256": "5c901530117d705607fde588e064df4470723624329f95a3fde881ab81116e6b",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-600",
+        "step": 600,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 382,
+        "total": 500,
+        "accuracy": 0.764,
+        "raw_predictions": "results/dev/grpo/checkpoint-600.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "60b8ceb55e850e46ffbfec1c39972be767fab4579e2a02f14cfa04cfa8d5bf93"
+        },
+        "raw_predictions_sha256": "d52ab4b020aa9dd480d8abd616ce25acaad7614c967b6cd5366be54ce97edf31",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      }
+    ],
+    "test_used": false
+  },
+  "ablation": {
+    "checkpoint": "checkpoints/grpo_no_sft/checkpoint-400",
+    "step": 400,
+    "split": "dev",
+    "task": "gsm8k",
+    "correct": 434,
+    "total": 500,
+    "accuracy": 0.868,
+    "raw_predictions": "results/dev/grpo_no_sft/checkpoint-400.csv",
+    "artifact_sha256": {
+      "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+      "adapter_model.safetensors": "635475ad306b12ad229cc0a3bf847f4095c01de20ca959b7c9ac63696e6727d2"
+    },
+    "raw_predictions_sha256": "5bb9d7070124acf9789bbf1043bb2ce76696bc20cd02af01fdb432ae42c0aa43",
+    "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+    "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "selection_rule": "maximum_dev_correct_then_earliest_step",
+    "candidates": [
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-50",
+        "step": 50,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 427,
+        "total": 500,
+        "accuracy": 0.854,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-50.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "c071b28530317cd2ce0968172803b2e4df036b70fb41752bf7081dbec2f1107b"
+        },
+        "raw_predictions_sha256": "afbf19e9a376878d8def2882fad9ac34c79a47462337442c42b9f68e43f72586",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-100",
+        "step": 100,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 425,
+        "total": 500,
+        "accuracy": 0.85,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-100.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "6dfea775e772f66ddfc46b5b0248aacdbb825d4095ac00bca2ce4023dcb5d8f1"
+        },
+        "raw_predictions_sha256": "9f17bef5b2249763ebee595a03de1cf248934362682220eaa59f433675070a6a",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-150",
+        "step": 150,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 427,
+        "total": 500,
+        "accuracy": 0.854,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-150.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "c4f2d6648101f5eba00f1e4876be0ff38629f72ccb498abd260382a6007bbf96"
+        },
+        "raw_predictions_sha256": "357b64f0f0c968684b4158bd86fb1b047327c53a952640a2e560bab33c7280b4",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-200",
+        "step": 200,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 429,
+        "total": 500,
+        "accuracy": 0.858,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-200.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "c7bcaf3df4cb142f49ea93f45fd7084e048d2abef0dc4b20df321aa8bcd7010a"
+        },
+        "raw_predictions_sha256": "facd6856e9f3d97b1cf7f1ac19d2a77f68fb66298e3cf639d525a3fc497f2b2b",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-250",
+        "step": 250,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 423,
+        "total": 500,
+        "accuracy": 0.846,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-250.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "9951feaca74794cb2290ab1442a5fe7657d8a345d8df464bb625e021e0a762ed"
+        },
+        "raw_predictions_sha256": "ed47cc89a26d2842acf079aa1f6289f539e30ab775590f229817d1e47b2e44e5",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-300",
+        "step": 300,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 431,
+        "total": 500,
+        "accuracy": 0.862,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-300.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "566d5793f670cf72524769018fd0536ec2a3387db3124a3d0e3f6a208d2b111a"
+        },
+        "raw_predictions_sha256": "c7ccf6b934f0bc0c845b51592188f644a30ac93578805794f8b57d39e6beaab4",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-350",
+        "step": 350,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 427,
+        "total": 500,
+        "accuracy": 0.854,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-350.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "290215a7c73653268b957e1d3cda7c0bf08abe6478243875312fe4cdd614111a"
+        },
+        "raw_predictions_sha256": "e948d76ca8d5121f0a24786d4ac5f5a23b7157aab71ebe6039a8857fbb09be38",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-400",
+        "step": 400,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 434,
+        "total": 500,
+        "accuracy": 0.868,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-400.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "635475ad306b12ad229cc0a3bf847f4095c01de20ca959b7c9ac63696e6727d2"
+        },
+        "raw_predictions_sha256": "5bb9d7070124acf9789bbf1043bb2ce76696bc20cd02af01fdb432ae42c0aa43",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-450",
+        "step": 450,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 434,
+        "total": 500,
+        "accuracy": 0.868,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-450.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "c4194a5fbd1fb41601e3692fcf64478eb1c22f286bf32efc194655c1efd74967"
+        },
+        "raw_predictions_sha256": "c063d07ad3c1832e714bb3662385c78914f452888d91e0651d745c53eb92474f",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-500",
+        "step": 500,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 429,
+        "total": 500,
+        "accuracy": 0.858,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-500.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "7a50235c6bc7a6997cc169fabc8a81fb4fd2257b4522477e7dbb0bbabd6ed396"
+        },
+        "raw_predictions_sha256": "5381d4cef247487099715f1f2b8b5b8285981184e601595a677593bec3765d35",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-550",
+        "step": 550,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 428,
+        "total": 500,
+        "accuracy": 0.856,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-550.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "8a403daba6e1e907fd4a57b3f3f162f56210c32429a1f84cb44ec00b325047f4"
+        },
+        "raw_predictions_sha256": "9e7d168db1746c5424c09ae53b0da60c78b667c522c52fcddf03d1a1acbd47e0",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      },
+      {
+        "checkpoint": "checkpoints/grpo_no_sft/checkpoint-600",
+        "step": 600,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 432,
+        "total": 500,
+        "accuracy": 0.864,
+        "raw_predictions": "results/dev/grpo_no_sft/checkpoint-600.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+          "adapter_model.safetensors": "b9c74375596b2e6bed333249c6e66855dcf0b7e7d33778a35b826b2d40f430e8"
+        },
+        "raw_predictions_sha256": "be9fba7ed80b73157b6117d19cdfdb95e6bb93ffbac2a0372d811f91a7b60826",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+      }
+    ],
+    "test_used": false
+  }
+}

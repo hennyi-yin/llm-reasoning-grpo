@@ -1,0 +1,21 @@
+{
+  "models": {
+    "base": {
+      "path": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "sft": {
+      "path": "checkpoints/sft_merged"
+    },
+    "grpo": {
+      "path": "models/final-bf16"
+    },
+    "ablation": {
+      "path": "models/ablation-bf16"
+    },
+    "quantized": {
+      "path": "models/final-w4a16"
+    }
+  },
+  "selection_manifest": "results/selection.json"
+}
