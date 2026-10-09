@@ -120,3 +120,21 @@ supported final evaluation/recovery entry point.
 Inspect `RESULTS.md` and `results/summary.json` for evidence-derived values. A pending/null
 entry is an unmeasured result, not a zero score. Public repository publication, pinning and
 model Release uploads have not occurred during this local implementation.
+
+## Completed training and quantization recovery
+
+Main GRPO completed all 600 steps and evaluated every saved checkpoint on dev. The
+frozen rule selected checkpoint-600: 382/500 (76.4%). The matched no-SFT run also
+completed 600 steps and all dev candidates; checkpoint-400 and checkpoint-450 both
+scored 434/500 (86.8%), so the earlier checkpoint-400 was selected. Both selected
+adapters were merged. These are dev results, not final test results.
+
+The first GPTQ attempt calibrated all 256 training questions and wrote compressed
+weights, then failed while serializing tokenizer BatchEncoding objects for provenance.
+No final test generation had started. The failed model directory was preserved as
+`models/final-w4a16-failed-20261009T143745Z`, and its original log as
+`logs/pipeline/quantization-attempt1.log`. Calibration records now become plain
+mappings with unchanged token lists, and their digest is validated before GPU work.
+A regression check verifies that the provenance digest describes the exact Dataset
+records. Recovery reruns calibration from the same dev-selected main model; it does
+not change the source, recipe, sample IDs or frozen protocol.

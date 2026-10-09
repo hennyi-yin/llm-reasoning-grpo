@@ -16,13 +16,25 @@ def validate_config(config: dict) -> None:
             raise ValueError(f"Quantization protocol requires {key}={expected}")
 
 
+def calibration_records(tokenizer, rows: list[dict], max_seq_length: int) -> list[dict]:
+    from .prompts import build_messages
+    records = []
+    for row in rows:
+        text = tokenizer.apply_chat_template(build_messages(row["question"]), tokenize=False,
+                                             add_generation_prompt=True)
+        # BatchEncoding is a mapping, but the JSON provenance encoder requires
+        # plain dictionaries. Keep exactly the same token lists for calibration.
+        records.append(dict(tokenizer(text, add_special_tokens=False, padding=False,
+                                      truncation=True, max_length=max_seq_length)))
+    return records
+
+
 def run(config: dict) -> dict:
     validate_config(config)
     from .protocol import require_memory_decision, verify_frozen
     verify_frozen()
     require_memory_decision()
     from .data import load_items
-    from .prompts import build_messages
     import torch
     import llmcompressor
     if version("llmcompressor") != "0.14.0":
@@ -41,12 +53,9 @@ def run(config: dict) -> dict:
     rows = load_items(task="gsm8k", split="train")[:256]
     if len(rows) != 256 or len({r["id"] for r in rows}) != 256:
         raise ValueError("Calibration requires exactly 256 unique training questions")
-    records = []
-    for row in rows:
-        text = tok.apply_chat_template(build_messages(row["question"]), tokenize=False,
-                                       add_generation_prompt=True)
-        records.append(tok(text, add_special_tokens=False, padding=False, truncation=True,
-                           max_length=config["max_seq_length"]))
+    records = calibration_records(tok, rows, config["max_seq_length"])
+    # Validate provenance serialization before starting the expensive GPU work.
+    calibration_tokens_sha256 = digest(records)
     dataset = Dataset.from_list(records)
     torch.manual_seed(config["seed"])
     recipe = GPTQModifier(targets="Linear", scheme="W4A16", ignore=["lm_head"])
@@ -62,7 +71,7 @@ def run(config: dict) -> dict:
         "llmcompressor_version": getattr(llmcompressor, "__version__", "unknown"),
         "source": source_manifest, "compressed": compressed_manifest,
         "calibration_ids": calibration_ids, "calibration_ids_sha256": digest(calibration_ids),
-        "calibration_tokens_sha256": digest(records), "calibration_split": "train",
+        "calibration_tokens_sha256": calibration_tokens_sha256, "calibration_split": "train",
         "weight_size_ratio": source_manifest["weight_bytes"] / compressed_manifest["weight_bytes"],
         "size_definition": "referenced HF weight files only; excludes config, tokenizer and optimizer",
         "vllm_weight_memory_gib": {"bf16": None, "w4a16": None}}
