@@ -65,8 +65,15 @@ def run(config: dict) -> dict:
 
         torch.cuda.reset_peak_memory_stats()
         try:
+            print(f"HF batch {batch_size}: starting full-workload warmup", flush=True)
             warmup = trial()
-            trials = [trial() for _ in range(3)]
+            print(f"HF batch {batch_size}: warmup completed in {warmup['seconds']:.2f}s", flush=True)
+            trials = []
+            for repeat in range(3):
+                print(f"HF batch {batch_size}: starting measured trial {repeat + 1}/3", flush=True)
+                trials.append(trial())
+                print(f"HF batch {batch_size}: trial {repeat + 1}/3 completed in "
+                      f"{trials[-1]['seconds']:.2f}s", flush=True)
             row = {"batch_size": batch_size, "status": "measured", "warmup": warmup,
                    "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
                    **summarize_trials(trials)}

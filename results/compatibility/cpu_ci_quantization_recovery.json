@@ -1,0 +1,20 @@
+{
+  "status": "local_workflow_dependency_test_passed",
+  "timestamp_utc": "2026-10-09T15:00:28.1872823Z",
+  "tested_source_commit": "379a34c9588c5dbd770143c9d33add796c73a4a9",
+  "python": "3.12.3",
+  "environment": "fresh CPU environment without torch or training packages",
+  "dependencies": {
+    "pytest": "9.1.1",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "PyYAML": "6.0.3",
+    "math-verify": "0.9.0"
+  },
+  "pytest_passed": 107,
+  "pytest_skipped": 3,
+  "skipped_reason": "optional PEFT/Adam, TRL SFT and tokenizer calibration integration tests require training packages",
+  "remote_github_actions_executed": false,
+  "test_dataset_accessed": false,
+  "training_environment_pytest_passed": 110
+}
