@@ -68,11 +68,15 @@
       "ended_at": "2026-10-09T14:28:55.795981+00:00"
     },
     "quantization": {
-      "status": "failed",
-      "started_at": "2026-10-09T14:35:33.515798+00:00",
-      "pid": 380,
-      "error": "quantization failed with exit 1; inspect /mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/logs/pipeline/quantization.log",
-      "ended_at": "2026-10-09T14:37:45.260827+00:00"
+      "status": "complete",
+      "started_at": "2026-10-09T15:04:36.770692+00:00",
+      "pid": 590,
+      "ended_at": "2026-10-09T15:07:27.510734+00:00"
+    },
+    "offline_hf": {
+      "status": "running",
+      "started_at": "2026-10-09T15:07:27.516040+00:00",
+      "pid": 590
     }
   }
 }
