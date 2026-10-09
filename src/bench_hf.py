@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import gc
 import json
 import time
@@ -9,6 +10,46 @@ import time
 from .benchmark_common import (benchmark_inputs, checkpoint_manifest, evaluation_model_sha256, rooted,
                                measured_trial, summarize_trials, validate_config)
 from .common import load_config, write_json
+
+
+def completed_batches(saved: dict | None, current: dict) -> list[dict]:
+    """Retain whole measured groups only after checking their exact provenance."""
+    if saved is None:
+        return []
+    if saved.get("status") not in {"running", "measured", "failed"}:
+        raise ValueError("Unknown saved HF benchmark status")
+    for key, value in current.items():
+        if key not in {"status", "batch_results"} and saved.get(key) != value:
+            raise ValueError(f"Saved HF benchmark differs from current {key}")
+    rows = saved.get("batch_results")
+    if not isinstance(rows, list):
+        raise ValueError("Saved HF benchmark is missing completed batch results")
+    expected = current["config"]["hf_batch_sizes"]
+    if len(rows) > len(expected) or [r.get("batch_size") for r in rows] != expected[:len(rows)]:
+        raise ValueError("Saved HF batches are not a completed prefix of the required scan")
+    for row in rows:
+        if row.get("status") == "oom":
+            error = row.get("error", "").lower()
+            if "cuda" not in error or "out of memory" not in error:
+                raise ValueError("Saved excluded HF batch is missing a CUDA OOM record")
+            continue
+        if row.get("status") != "measured":
+            raise ValueError("Cannot reuse an unfinished HF batch")
+        warmup = row.get("warmup")
+        trials = row.get("trials")
+        if not isinstance(warmup, dict) or not isinstance(trials, list):
+            raise ValueError("Saved HF batch is missing full warmup/trials")
+        summary = summarize_trials(trials)
+        for item in [warmup, *trials]:
+            actual = measured_trial(item["seconds"], [256] * 512)
+            if any(item.get(key) != value for key, value in actual.items()):
+                raise ValueError("Saved HF trial counts or throughput do not match its measured time")
+        for key in ("median_seconds", "output_tokens_per_second"):
+            if row.get(key) != summary[key]:
+                raise ValueError("Saved HF batch summary differs from its three measured trials")
+        if type(row.get("peak_allocated_bytes")) is not int or row["peak_allocated_bytes"] <= 0:
+            raise ValueError("Saved HF batch is missing measured peak memory")
+    return copy.deepcopy(rows)
 
 
 def run(config: dict) -> dict:
@@ -29,9 +70,6 @@ def run(config: dict) -> dict:
     if tok.pad_token_id is None:
         tok.pad_token = tok.eos_token
     tokens, identity = benchmark_inputs(tok, config["num_prompts"])
-    model = AutoModelForCausalLM.from_pretrained(folder, dtype=torch.bfloat16,
-             attn_implementation=config.get("hf_attention", "sdpa"), local_files_only=True)
-    model.to("cuda").eval()
     result = {"status": "running", "engine": "hf", "precision": "bf16",
         "config": config, "model_manifest": manifest,
         "model_weights_sha256": manifest["weights_sha256"],
@@ -41,7 +79,18 @@ def run(config: dict) -> dict:
         "num_prompts": 512, "output_tokens": 256, "warmup_runs": 1,
         "repeats": 3, "timing_scope": "generation and host-to-device inputs; excludes tokenization",
         **identity, "batch_results": []}
+    saved_path = rooted("results/offline_hf.json")
+    saved = json.loads(saved_path.read_text(encoding="utf-8")) if saved_path.is_file() else None
+    result["batch_results"] = completed_batches(saved, result)
+    retained = {row["batch_size"] for row in result["batch_results"]}
+    for row in result["batch_results"]:
+        print(f"Reuse validated completed HF batch {row['batch_size']} ({row['status']})", flush=True)
+    model = AutoModelForCausalLM.from_pretrained(folder, dtype=torch.bfloat16,
+             attn_implementation=config.get("hf_attention", "sdpa"), local_files_only=True)
+    model.to("cuda").eval()
     for batch_size in config["hf_batch_sizes"]:
+        if batch_size in retained:
+            continue
         # Prepare left-padded CPU inputs before timing, equally excluding tokenization.
         batches = [tok.pad({"input_ids": tokens[i:i + batch_size]},
                           padding=True, return_tensors="pt")

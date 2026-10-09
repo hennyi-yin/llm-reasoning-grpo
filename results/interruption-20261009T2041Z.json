@@ -1,0 +1,19 @@
+{
+  "status": "interrupted",
+  "checked_at_utc": "2026-10-09T20:49:18.3878301Z",
+  "original_runner_pid": 19948,
+  "original_started_at_utc": "2026-10-09T14:58:44.6329911Z",
+  "reason": "Unknown: original Windows launcher and WSL jobs absent; new WSL uptime under one minute; Windows host did not reboot",
+  "exit_time_known": false,
+  "final_test_started": false,
+  "completed_hf_batches": [
+    1,
+    8
+  ],
+  "unfinished_hf_batches": [
+    16,
+    32
+  ],
+  "preserved_hf_file": "results/offline_hf-interrupted-20261009T2041Z.json",
+  "preserved_hf_sha256": "1980fcde0e74c87dbfd95a9534826f15948dbad01c9076949324e42e61fbdb06"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "completed_groups_validated_before_resume",
+  "checked_at_utc": "2026-10-09T20:59:41.537308+00:00",
+  "source_commit": "a5c05daa8fc1e1269a7059907a8e0d65c3e51060",
+  "preserved_hf_sha256": "1980fcde0e74c87dbfd95a9534826f15948dbad01c9076949324e42e61fbdb06",
+  "completed_batch_rows_sha256": "480eab86829e201f874ec5fb34422682533d06a33e313c2162c7f15052778e51",
+  "retained_batch_sizes": [
+    1,
+    8
+  ],
+  "remaining_batch_sizes": [
+    16,
+    32
+  ],
+  "full_warmup_and_three_trials_required_for_remaining": true,
+  "actual_model_protocol_config_gpu_torch_and_prompt_tokens_match": true,
+  "final_test_started": false,
+  "test_results": {
+    "training_env_passed": 125,
+    "minimal_cpu_env_passed": 122,
+    "minimal_cpu_env_skipped": 3
+  },
+  "new_generation": false,
+  "gpu_used_for_generation": false,
+  "gpu_device_query_only": true,
+  "source_files_sha256": {
+    "src/bench_hf.py": "b780edf05200ae436955a848147865380a528f75969b1536e0dc517878ed417c",
+    "tests/test_hf_resume.py": "e11f46c91b81f655ca5d2e9dac365b4c4c9eb872658e757a470181e0f884ca3a"
+  },
+  "source_files_were_uncommitted_at_check": true
+}

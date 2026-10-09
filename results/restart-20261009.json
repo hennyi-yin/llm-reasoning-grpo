@@ -1,0 +1,15 @@
+{
+  "status": "checked_after_user_reported_restart",
+  "checked_at_utc": "2026-10-09T20:59:32.0197489Z",
+  "windows_last_boot": "2026-10-09T16:49:54.5000000-04:00",
+  "prior_runner_pid": 19948,
+  "prior_runner_state_was_stale": true,
+  "completed_hf_batches": [
+    1,
+    8
+  ],
+  "remaining_hf_batches": [
+    16,
+    32
+  ]
+}

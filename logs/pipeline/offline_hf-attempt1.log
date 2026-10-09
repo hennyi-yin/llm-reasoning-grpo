@@ -1,0 +1,24 @@
+
+Started 2026-10-09T15:07:27.522907+00:00
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:  33%|███▎      | 110/338 [00:00<00:00, 1085.48it/s]Loading weights:  65%|██████▌   | 221/338 [00:00<00:00, 1098.74it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1179.87it/s]
+HF batch 1: starting full-workload warmup
+HF batch 1: warmup completed in 3992.20s
+HF batch 1: starting measured trial 1/3
+HF batch 1: trial 1/3 completed in 4327.27s
+HF batch 1: starting measured trial 2/3
+HF batch 1: trial 2/3 completed in 4117.86s
+HF batch 1: starting measured trial 3/3
+HF batch 1: trial 3/3 completed in 4171.17s
+{"batch_size": 1, "status": "measured", "warmup": {"seconds": 3992.2037061010005, "num_outputs": 512, "total_output_tokens": 131072, "min_output_tokens": 256, "max_output_tokens": 256, "output_tokens_per_second": 32.83199196466152}, "peak_allocated_bytes": 3142768128, "trials": [{"seconds": 4327.266516152, "num_outputs": 512, "total_output_tokens": 131072, "min_output_tokens": 256, "max_output_tokens": 256, "output_tokens_per_second": 30.28979137540045}, {"seconds": 4117.858954306001, "num_outputs": 512, "total_output_tokens": 131072, "min_output_tokens": 256, "max_output_tokens": 256, "output_tokens_per_second": 31.83013343935431}, {"seconds": 4171.172584020998, "num_outputs": 512, "total_output_tokens": 131072, "min_output_tokens": 256, "max_output_tokens": 256, "output_tokens_per_second": 31.423298211661855}], "median_seconds": 4171.172584020998, "output_tokens_per_second": 31.423298211661855}
+HF batch 8: starting full-workload warmup
+HF batch 8: warmup completed in 561.27s
+HF batch 8: starting measured trial 1/3
+HF batch 8: trial 1/3 completed in 580.65s
+HF batch 8: starting measured trial 2/3
+HF batch 8: trial 2/3 completed in 571.01s
+HF batch 8: starting measured trial 3/3
+HF batch 8: trial 3/3 completed in 571.35s
+{"batch_size": 8, "status": "measured", "warmup": {"seconds": 561.2741716839992, "num_outputs": 512, "total_output_tokens": 131072, "min_output_tokens": 256, "max_output_tokens": 256, "output_tokens_per_second": 233.52580006798237}, "peak_allocated_bytes": 3289375744, "trials": [{"seconds": 580.6536166510014, "num_outputs": 512, "total_output_tokens": 131072, "min_output_tokens": 256, "max_output_tokens": 256, "output_tokens_per_second": 225.7318240020196}, {"seconds": 571.0145629420003, "num_outputs": 512, "total_output_tokens": 131072, "min_output_tokens": 256, "max_output_tokens": 256, "output_tokens_per_second": 229.54230681033152}, {"seconds": 571.3465234040013, "num_outputs": 512, "total_output_tokens": 131072, "min_output_tokens": 256, "max_output_tokens": 256, "output_tokens_per_second": 229.4089394630279}], "median_seconds": 571.3465234040013, "output_tokens_per_second": 229.4089394630279}
+HF batch 16: starting full-workload warmup
+HF batch 16: warmup completed in 294.22s
+HF batch 16: starting measured trial 1/3

@@ -170,3 +170,34 @@ main GRPO adapter against the selected merged SFT model. Its adapter configurati
 retains the original machine's absolute path as provenance; that configuration and
 the saved checkpoint hashes are not rewritten. Ready merged artifacts can be loaded
 directly after extraction into an empty directory.
+
+## HF benchmark interruption and host restart
+
+The original Windows runner and WSL jobs disappeared during the first measured
+batch-16 trial on 2026-10-09. The cause was not established. The user subsequently
+reported restarting Windows; the next inspection found WSL stopped and no project
+job running. The old `windows_runner.json` still said `running`, which was stale
+process state, not evidence of a live job.
+
+The completed batch-1 and batch-8 groups are preserved in
+`results/offline_hf-interrupted-20261009T2041Z.json` with SHA-256
+`1980fcde0e74c87dbfd95a9534826f15948dbad01c9076949324e42e61fbdb06`.
+The original log is also preserved as `logs/pipeline/offline_hf-attempt1.log`.
+No final test evaluation had started. `results/interruption-20261009T2041Z.json`
+records the observation before the user-reported host restart.
+
+HF recovery now validates the exact saved model manifest, frozen protocol,
+configuration, GPU and Torch version, and training-prompt token identities before
+retaining complete batch groups. It checks each group's full 512-prompt warmup,
+three measured trials, fixed 256-token output counts, rates, median and peak
+allocation. The saved groups are copied without changing their measurements.
+Batch 16 and 32 each require a fresh full warmup and three complete trials; the
+unfinished batch-16 trial contributes no timing result. The timed generation code
+and frozen serving settings are unchanged.
+
+Recovery passed 125 tests in the main environment and 122 tests in the minimal
+CPU environment (three optional training integrations skipped).
+`results/compatibility/hf_resume_preflight.json` records the actual saved-group
+and current-artifact validation before resuming. Environment metadata was refreshed
+before any resumed timing; its prior version is preserved in
+`results/environment-before-cuda-repair.json`.
