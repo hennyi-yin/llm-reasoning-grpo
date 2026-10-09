@@ -138,3 +138,13 @@ mappings with unchanged token lists, and their digest is validated before GPU wo
 A regression check verifies that the provenance digest describes the exact Dataset
 records. Recovery reruns calibration from the same dev-selected main model; it does
 not change the source, recipe, sample IDs or frozen protocol.
+
+Recovery passed all 110 tests in the training environment and 107 tests in the fresh
+CPU workflow environment (three optional training integrations skipped). GPTQ then
+completed successfully: BF16 weight files total 3,087,467,144 bytes and W4A16 weight
+files total 1,142,692,360 bytes, a ratio of 2.7019233278. This is serialized weight
+size, not total serving VRAM. Before serving finished, CPU-only package inventory
+checks verified that all 221 main-environment packages and all 85 quantization packages
+exactly match their respective lockfiles, with no missing or extra packages.
+`results/compatibility/current_training_lock.json` and `current_quantization_lock.json`
+record these checks without creating a CUDA context or accessing any dataset.

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "timestamp_utc": "2026-10-09T15:19:33.305427+00:00",
+  "lock_sha256": "3beeea7cfb66a862989571d5452e4eef59b0d2c71f51b42c4a6bae5aa4bfd32b",
+  "locked_packages": 221,
+  "mismatches": {},
+  "extra_packages": {},
+  "cuda_context_created": false,
+  "dataset_accessed": false
+}
