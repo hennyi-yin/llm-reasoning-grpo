@@ -1,0 +1,268 @@
+
+Started 2026-10-09T14:26:22.741495+00:00
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:  31%|███       | 104/338 [00:00<00:00, 1029.88it/s]Loading weights:  61%|██████    | 207/338 [00:00<00:00, 988.35it/s] Loading weights:  91%|█████████ | 306/338 [00:00<00:00, 901.50it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1021.33it/s]
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:16<00:00, 16.00s/it]Writing model shards: 100%|██████████| 1/1 [00:16<00:00, 16.00s/it]
+{
+  "base": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+  "base_revision": null,
+  "adapter": "checkpoints/grpo/checkpoint-600",
+  "adapter_sha256": {
+    "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+    "adapter_model.safetensors": "60b8ceb55e850e46ffbfec1c39972be767fab4579e2a02f14cfa04cfa8d5bf93"
+  },
+  "selection": {
+    "checkpoint": "checkpoints/grpo/checkpoint-600",
+    "step": 600,
+    "split": "dev",
+    "task": "gsm8k",
+    "correct": 382,
+    "total": 500,
+    "accuracy": 0.764,
+    "raw_predictions": "results/dev/grpo/checkpoint-600.csv",
+    "artifact_sha256": {
+      "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+      "adapter_model.safetensors": "60b8ceb55e850e46ffbfec1c39972be767fab4579e2a02f14cfa04cfa8d5bf93"
+    },
+    "raw_predictions_sha256": "d52ab4b020aa9dd480d8abd616ce25acaad7614c967b6cd5366be54ce97edf31",
+    "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+    "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+    "revision": null,
+    "selection_rule": "maximum_dev_correct_then_earliest_step",
+    "candidates": [
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-50",
+        "step": 50,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 371,
+        "total": 500,
+        "accuracy": 0.742,
+        "raw_predictions": "results/dev/grpo/checkpoint-50.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f6419fdc9de86113d0f04ac60d38a27673ff4cfc6625ac24d2e85675409947aa",
+          "adapter_model.safetensors": "f2a2bf6634a34d58f106dab55b3ff9a781d1da4c5ab30b5fa9e4dcda85c814bf"
+        },
+        "raw_predictions_sha256": "3bed36f7145da3d3918f7f0b7ec13613abdb1946a719171bc522ce6a69aae935",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-100",
+        "step": 100,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 369,
+        "total": 500,
+        "accuracy": 0.738,
+        "raw_predictions": "results/dev/grpo/checkpoint-100.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "29c2a842c4f2a2c30593e8febff31b96f948a13d9fe6de27fe0caeeeead08fdd"
+        },
+        "raw_predictions_sha256": "0751f2296156790eabb037a017ff56db3d532bcba6bdf2f00903c65d18543d9b",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-150",
+        "step": 150,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 371,
+        "total": 500,
+        "accuracy": 0.742,
+        "raw_predictions": "results/dev/grpo/checkpoint-150.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "80d3c197fb63ced3f0ce61ba0f5c0cc448b1048eacff8c6ec1ac96c3be912915"
+        },
+        "raw_predictions_sha256": "a7d5b0c5e049fb2d1a2b9f23d3eb2cf313d6f2d811f51f0507c72f24c6dde076",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-200",
+        "step": 200,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 369,
+        "total": 500,
+        "accuracy": 0.738,
+        "raw_predictions": "results/dev/grpo/checkpoint-200.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "5815a508915d8d7c2b6200cea31b6f3eabe320d62f880a0ed189787bdea8012c"
+        },
+        "raw_predictions_sha256": "bccc6770a3216f7c56d288b45fe19c56ed1cb7ccca7a4c0c199653c81831a014",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-250",
+        "step": 250,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 368,
+        "total": 500,
+        "accuracy": 0.736,
+        "raw_predictions": "results/dev/grpo/checkpoint-250.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "0705525f52295016d1a33cc9c5960a837937167fcb182cd169f539ec9fe571fb"
+        },
+        "raw_predictions_sha256": "cafea2b3c33f5e09d38eeea00cf6d9c6f5b98cf41dff058adb23dd53ae1cac91",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-300",
+        "step": 300,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 365,
+        "total": 500,
+        "accuracy": 0.73,
+        "raw_predictions": "results/dev/grpo/checkpoint-300.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "015a453f7fe4991cceb69b9edab6fe76babc181745fd405edef244c5071ff39b"
+        },
+        "raw_predictions_sha256": "bb76be1796b747c9bd17898644ed8dcadca622627c38f4fe2fec7161d14c35dd",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-350",
+        "step": 350,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 366,
+        "total": 500,
+        "accuracy": 0.732,
+        "raw_predictions": "results/dev/grpo/checkpoint-350.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "50f56445852135e40e898c49414e03949197f2c280769351cd025108280134fe"
+        },
+        "raw_predictions_sha256": "4f70374bd78caf2e404245f0843979ef3b543898fa6802bc754aea22105bc70f",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-400",
+        "step": 400,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 381,
+        "total": 500,
+        "accuracy": 0.762,
+        "raw_predictions": "results/dev/grpo/checkpoint-400.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "966548881658bfc18d97a13af55d0c0f98f9d858e0986ada17b5f5c726c1c300"
+        },
+        "raw_predictions_sha256": "dceccbadc3d5292a9244ef74858b567434491a12b6fddb7dc08abb7d3eb86afe",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-450",
+        "step": 450,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 376,
+        "total": 500,
+        "accuracy": 0.752,
+        "raw_predictions": "results/dev/grpo/checkpoint-450.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "f4b3c3e372d7d9201837c317faa3c580fcde5835a1abfa9555a2035da0daf27b"
+        },
+        "raw_predictions_sha256": "854ef9c52f673e01ea8cebd44bc48c4e297932249934dc3873bb7f1097bfa29f",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-500",
+        "step": 500,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 379,
+        "total": 500,
+        "accuracy": 0.758,
+        "raw_predictions": "results/dev/grpo/checkpoint-500.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "1f17ba6ec204e04062c39e368b6befb5f34b4646419dbe1515bd9683111f715e"
+        },
+        "raw_predictions_sha256": "49a09b8685e23f0928eec426bd059b7e81314b6d60ad43fe37d4d2a35428ad9f",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-550",
+        "step": 550,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 373,
+        "total": 500,
+        "accuracy": 0.746,
+        "raw_predictions": "results/dev/grpo/checkpoint-550.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "f57c64b02d93b80d1eed98a236ef2b48725d02a9007a1d007816853247a34fc5"
+        },
+        "raw_predictions_sha256": "5c901530117d705607fde588e064df4470723624329f95a3fde881ab81116e6b",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      },
+      {
+        "checkpoint": "checkpoints/grpo/checkpoint-600",
+        "step": 600,
+        "split": "dev",
+        "task": "gsm8k",
+        "correct": 382,
+        "total": 500,
+        "accuracy": 0.764,
+        "raw_predictions": "results/dev/grpo/checkpoint-600.csv",
+        "artifact_sha256": {
+          "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+          "adapter_model.safetensors": "60b8ceb55e850e46ffbfec1c39972be767fab4579e2a02f14cfa04cfa8d5bf93"
+        },
+        "raw_predictions_sha256": "d52ab4b020aa9dd480d8abd616ce25acaad7614c967b6cd5366be54ce97edf31",
+        "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+        "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+        "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+        "revision": null
+      }
+    ],
+    "test_used": false
+  },
+  "selected_model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "selected_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "dtype": "bfloat16",
+  "output": "models/final-bf16"
+}

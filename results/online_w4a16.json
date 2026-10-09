@@ -1,0 +1,99 @@
+{
+  "status": "measured",
+  "precision": "w4a16",
+  "server_command": [
+    "/home/hengyi/.venvs/llm-reasoning-grpo/bin/vllm",
+    "serve",
+    "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/models/final-w4a16",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8000",
+    "--served-model-name",
+    "reasoning-w4a16",
+    "--dtype",
+    "bfloat16",
+    "--gpu-memory-utilization",
+    "0.65",
+    "--max-model-len",
+    "2048",
+    "--seed",
+    "42",
+    "--no-enable-prefix-caching"
+  ],
+  "model_manifest": {
+    "path": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/models/final-w4a16",
+    "files": [
+      {
+        "name": "model.safetensors",
+        "bytes": 1142692360,
+        "sha256": "51f64ac81ce3463b6225d26ed8c080f8bd42a4092a3e3a2a6bbfc26eed7b2c2b"
+      }
+    ],
+    "weight_bytes": 1142692360,
+    "weights_sha256": "181d862fc67700adfa9de0e51c205467b69162129451e54ff89c509831b7228b"
+  },
+  "model_weights_sha256": "181d862fc67700adfa9de0e51c205467b69162129451e54ff89c509831b7228b",
+  "model_sha256": "67bbd0e2cc0bd2b67eace061b881c6142d94ab6db4571806564c93dc570d6025",
+  "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+  "vllm_version": "0.31.0",
+  "config": {
+    "seed": 42,
+    "model": "models/final-bf16",
+    "num_prompts": 512,
+    "output_tokens": 256,
+    "warmup_runs": 1,
+    "repeats": 3,
+    "hf_batch_sizes": [
+      1,
+      8,
+      16,
+      32
+    ],
+    "hf_attention": "sdpa",
+    "vllm_gpu_memory_utilization": 0.65,
+    "vllm_max_model_len": 2048,
+    "online": {
+      "num_prompts": 500,
+      "input_tokens": 256,
+      "output_tokens": 256,
+      "bf16_concurrency": [
+        1,
+        8,
+        32
+      ],
+      "w4a16_concurrency": [
+        1,
+        32
+      ],
+      "warmup_requests": 1,
+      "temperature": 0.0,
+      "random_range_ratio": 0.0
+    }
+  },
+  "results": [
+    {
+      "concurrency": 1,
+      "raw_result": "results/serve/w4a16-c1-20261009-220435.json",
+      "raw_sha256": "cb5dfeb2a7a2f6785f504cb65d3ceb91ca38c04537735360cc4d09cdeb36fd4b",
+      "output_throughput": 217.17939855895557,
+      "p50_ttft_ms": 23.99416599973847,
+      "p99_ttft_ms": 31.936319479600574,
+      "p50_tpot_ms": 4.4742638823520915,
+      "p99_tpot_ms": 5.2033211523136975
+    },
+    {
+      "concurrency": 32,
+      "raw_result": "results/serve/w4a16-c32-20261009-220435.json",
+      "raw_sha256": "b177043d706605dbddcc8b8a0df1a50c98c3236cc08efe7acee6a47b90c5166c",
+      "output_throughput": 3956.958361752076,
+      "p50_ttft_ms": 231.42928849983946,
+      "p99_ttft_ms": 491.4135708199956,
+      "p50_tpot_ms": 7.105917686274944,
+      "p99_tpot_ms": 8.123996608275524
+    }
+  ],
+  "server_log": "logs/vllm-serve-w4a16-20261009-220435.log",
+  "server_log_sha256": "0bc30dfd80a24b9c479ebeb909d4e6e8a65b50245bba2831f2e9f3f98bd2009b",
+  "weight_memory_gib": 1.12
+}

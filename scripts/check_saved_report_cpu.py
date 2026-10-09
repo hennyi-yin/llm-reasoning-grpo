@@ -44,8 +44,16 @@ def main() -> None:
     actual["figures"] = expected["figures"]  # Preserve the saved figure list; do not rerender or modify files.
     if actual != expected:
         raise RuntimeError("Reproduced summary differs from the recorded final summary")
-    if render_markdown(actual) != (ROOT / "RESULTS.md").read_text(encoding="utf-8"):
+    markdown = render_markdown(actual)
+    if markdown != (ROOT / "RESULTS.md").read_text(encoding="utf-8"):
         raise RuntimeError("Reproduced result table differs from RESULTS.md")
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    begin, end = "<!-- BEGIN GENERATED RESULTS -->", "<!-- END GENERATED RESULTS -->"
+    if readme.count(begin) != 1 or readme.count(end) != 1:
+        raise RuntimeError("README must contain exactly one generated-results marker pair")
+    generated = readme.split(begin, 1)[1].split(end, 1)[0]
+    if generated != "\n\n" + markdown + "\n":
+        raise RuntimeError("README result block differs from the reproduced final tables")
 
     with (ROOT / "results/per_problem.csv").open(newline="", encoding="utf-8") as handle:
         counts = Counter((row["model"], row["task"]) for row in csv.DictReader(handle))
@@ -73,11 +81,13 @@ def main() -> None:
         "raw_final_outputs_rejudged_and_hash_checked": True,
         "summary_matches": True,
         "results_markdown_matches": True,
+        "readme_generated_results_match": True,
         "per_problem_rows": sum(counts.values()),
         "task_counts": [{"model": model, "task": task, "n": count}
                         for (model, task), count in sorted(counts.items())],
         "source_hashes": {str(path.relative_to(ROOT)): sha256_file(path)
-                          for path in (summary_path, ROOT / "RESULTS.md", ROOT / "results/per_problem.csv")},
+                          for path in (summary_path, ROOT / "RESULTS.md", ROOT / "README.md",
+                                       ROOT / "results/per_problem.csv")},
     }
     if args.record:
         record_path = args.record if args.record.is_absolute() else ROOT / args.record
