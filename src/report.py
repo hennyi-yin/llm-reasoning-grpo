@@ -264,12 +264,28 @@ def render_markdown(summary: dict) -> str:
     return "\n".join(lines)
 
 
+def retained_training_records(records: list[dict]) -> list[dict]:
+    """Plot the retained training path while leaving interrupted raw logs intact."""
+    by_step = {}
+    previous_step = -1
+    for row in records:
+        step = row["step"]
+        if step < previous_step:
+            # Resuming an older checkpoint discards the unsaved suffix. Its
+            # measurements remain in the source log, but are not the final path.
+            by_step = {key: value for key, value in by_step.items() if key < step}
+        by_step[step] = {**by_step.get(step, {}), **row}
+        previous_step = step
+    return [by_step[step] for step in sorted(by_step)]
+
+
 def plot_measured(summary: dict) -> list[str]:
     reward_series, dev_series = [], []
     for stage in ("sft", "grpo", "grpo_no_sft"):
         log = ROOT / "logs" / stage / "metrics.jsonl"
         if log.is_file():
-            records = [json.loads(line) for line in log.read_text(encoding="utf-8").splitlines() if line.strip()]
+            records = retained_training_records([
+                json.loads(line) for line in log.read_text(encoding="utf-8").splitlines() if line.strip()])
             for key in ("rewards/correctness_reward/mean", "reward", "completions/clipped_ratio", "frac_reward_zero_std"):
                 values = [(r["step"], r[key]) for r in records if key in r and isinstance(r[key], (int, float))]
                 if values:

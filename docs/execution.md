@@ -66,6 +66,30 @@ started at 2026-10-08T22:30:48Z and completed its first ten optimizer steps succ
 Its first logged loss and gradient norm were finite; no completion in that logged window
 was truncated. This is startup evidence, not evidence of final improvement.
 
+## Resume after requested pause
+
+The previous user-requested pause stopped main GRPO after optimizer step 69; the last
+durable checkpoint was step 50. `results/pause.json` remains the historical pause record.
+On 2026-10-09T04:52:10Z, the full pipeline resumed from `checkpoints/grpo/checkpoint-50`.
+Both adapter hashes matched that pause record, the frozen protocol verified, the selected
+SFT merge passed lineage validation, and all 107 tests passed before recovery.
+Optimizer, scheduler and RNG state are restored from the saved checkpoint. Unsaved updates
+51–69 are discarded and those steps run again; earlier log entries are retained as evidence
+of the interrupted attempt. The configured 600 optimizer steps, main/ablation parameters,
+training partition, and frozen evaluation protocol are unchanged. Final test evaluation
+had not started before this recovery.
+
+The first resume attempt failed before its first optimizer update: PEFT promotes restored
+LoRA weights to fp32; optimizer loading consequently promotes the saved bf16 moments,
+while TRL's continuous-batching generation later casts the model back to bf16. Adam's
+foreach update then rejects the mixed dtypes. Both the saved adapter and Adam moment
+tensors were verified to be bf16. The project trainer now restores the generation dtype
+immediately before loading optimizer state, retaining the saved moments' original dtype.
+An offline PEFT/Adam regression test verifies that the next resumed update is bit-identical
+to the uninterrupted update. The repair does not modify checkpoint files or hyperparameters.
+The plotted training path now excludes discarded unsaved log suffixes after a rollback;
+the complete original JSONL logs remain intact.
+
 ## Run and recover
 
 Activate `~/.venvs/llm-reasoning-grpo`, source `scripts/runtime_env.sh`, then use

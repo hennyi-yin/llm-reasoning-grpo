@@ -4,6 +4,17 @@ from src.benchmark_common import digest
 from src.report import complete_accuracy, render_markdown, validate_provenance, weight_ratio
 
 
+def test_training_curve_excludes_unsaved_suffix_after_checkpoint_resume():
+    from src.report import retained_training_records
+    interrupted = [{"step": step, "reward": .1} for step in (45, 50, 55, 60, 65)]
+    resumed = [{"step": 55, "reward": .8}, {"step": 60, "reward": .9},
+               {"step": 60, "train_runtime": 20}]
+    records = retained_training_records(interrupted + resumed)
+    assert [row["step"] for row in records] == [45, 50, 55, 60]
+    assert [row["reward"] for row in records] == [.1, .1, .8, .9]
+    assert records[-1]["train_runtime"] == 20
+
+
 def test_partial_accuracy_never_becomes_resume_value():
     summary = {"accuracy": [{"model": "base", "task": "gsm8k", "n": 10, "accuracy": 1.0}]}
     assert complete_accuracy(summary, "base", "gsm8k") is None

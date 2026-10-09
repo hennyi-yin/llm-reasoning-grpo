@@ -34,6 +34,58 @@ def test_protocol_rejects_changed_lora_rank():
         validate_lora(lora)
 
 
+def test_resumed_peft_adam_update_matches_uninterrupted_bf16_update(tmp_path):
+    torch = pytest.importorskip("torch")
+    peft = pytest.importorskip("peft")
+    from types import SimpleNamespace
+    from src.train_grpo import resume_safe_trainer
+
+    class Tiny(torch.nn.Module):
+        def __init__(self):
+            super().__init__()
+            self.proj = torch.nn.Linear(4, 4)
+
+    def new_model():
+        return peft.get_peft_model(Tiny().to(torch.bfloat16),
+                                  peft.LoraConfig(r=2, lora_alpha=4, target_modules=["proj"]))
+
+    def parameters(model):
+        return [p for p in model.parameters() if p.requires_grad]
+
+    def step(model, optimizer):
+        for parameter in parameters(model):
+            parameter.grad = torch.full_like(parameter, .1)
+        optimizer.step()
+        optimizer.zero_grad()
+
+    uninterrupted = new_model().to(torch.bfloat16)
+    first_optimizer = torch.optim.AdamW(parameters(uninterrupted), lr=.01, foreach=True)
+    step(uninterrupted, first_optimizer)
+    uninterrupted.save_pretrained(tmp_path)
+    torch.save(first_optimizer.state_dict(), tmp_path / "optimizer.pt")
+
+    resumed = new_model()
+    resumed.load_adapter(tmp_path, "default", is_trainable=True)
+    assert {p.dtype for p in parameters(resumed)} == {torch.float32}
+    restored_optimizer = torch.optim.AdamW(parameters(resumed), lr=.01, foreach=True)
+
+    class Loader:
+        def __init__(self):
+            self.model = resumed
+            self.args = SimpleNamespace(use_transformers_continuous_batching=True, bf16=True, fp16=False)
+
+        def _load_optimizer_and_scheduler(self, checkpoint):
+            restored_optimizer.load_state_dict(
+                torch.load(tmp_path / "optimizer.pt", map_location="cpu", weights_only=True))
+
+    resume_safe_trainer(Loader)()._load_optimizer_and_scheduler(str(tmp_path))
+    assert {state["exp_avg"].dtype for state in restored_optimizer.state.values()} == {torch.bfloat16}
+    step(resumed, restored_optimizer)
+    step(uninterrupted, first_optimizer)
+    for actual, expected in zip(parameters(resumed), parameters(uninterrupted)):
+        torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+
+
 def test_actual_trl_dataset_masks_every_prompt_token(tmp_path):
     # CI needs only extraction/reward dependencies. The full training environment
     # additionally runs this local, offline integration check without a CUDA context.

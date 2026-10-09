@@ -17,6 +17,24 @@ def to_rl(row: dict) -> dict:
     return {"prompt": build_messages(row["question"]), "gold": gsm8k_gold(row["answer"])}
 
 
+def resume_safe_trainer(base_trainer):
+    """Keep resumed Adam moments in the dtype used by TRL's generation path."""
+    class ResumeSafeGRPOTrainer(base_trainer):
+        def _load_optimizer_and_scheduler(self, checkpoint):
+            if checkpoint is not None and self.args.use_transformers_continuous_batching:
+                import torch
+                # PEFT checkpoint loading promotes adapters to fp32. TRL later
+                # casts the entire model to bf16/fp16 for generate_batch, so the
+                # optimizer must load its moments against that same dtype.
+                if self.args.bf16:
+                    self.model.to(torch.bfloat16)
+                elif self.args.fp16:
+                    self.model.to(torch.float16)
+            return super()._load_optimizer_and_scheduler(checkpoint)
+
+    return ResumeSafeGRPOTrainer
+
+
 def train(config_path: str, resume: str | None = None, *, smoke_candidate: dict | None = None) -> dict:
     assert_frozen()
     config = copy.deepcopy(load_config(project_path(config_path)))
@@ -59,7 +77,7 @@ def train(config_path: str, resume: str | None = None, *, smoke_candidate: dict 
     write_run_manifest(config, args, model, revision, decision)
     callback = logging_callbacks(config["log_dir"])
     local_model = pinned_local_model(model, revision)
-    trainer = GRPOTrainer(model=local_model, reward_funcs=[correctness_reward, format_reward], args=args,
+    trainer = resume_safe_trainer(GRPOTrainer)(model=local_model, reward_funcs=[correctness_reward, format_reward], args=args,
                           train_dataset=dataset, peft_config=LoraConfig(**config["lora"]), callbacks=[callback])
     trainer.train(resume_from_checkpoint=str(project_path(resume)) if resume else None)
     if not smoke:
