@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/grpo/checkpoint-50",
+    "task": "gsm8k",
+    "split": "dev",
+    "model_sha256": "cd110db9c90be0c3edd161debc8527c924aac97655213f38681a4e3764cb3256",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be"
+  },
+  "problem": {
+    "id": "train-7425",
+    "question": "Lars owns a bakeshop. She can bake 10 loaves of bread within an hour and 30 baguettes every 2 hours. If she bakes 6 hours a day, how many breads does she makes?",
+    "gold": "150",
+    "answer": "Lars can bake 10 x 6 = <<10*6=60>>60 loaves of bread every day.\nShe can also bake 30 x 3 = <<30*3=90>>90 baguettes every day.\nTherefore the total bread she can bake is 60 + 90 = <<60+90=150>>150.\n#### 150"
+  },
+  "generation": {
+    "text": "Lars can bake 10 x 6 = 60 loaves of bread in a day.\nThe final answer is \\boxed{60}.",
+    "token_ids": [
+      43,
+      1561,
+      646,
+      22544,
+      220,
+      16,
+      15,
+      856,
+      220,
+      21,
+      284,
+      220,
+      21,
+      15,
+      775,
+      4693,
+      315,
+      16002,
+      304,
+      264,
+      1899,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      21,
+      15,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/grpo/checkpoint-100",
+    "task": "gsm8k",
+    "split": "dev",
+    "model_sha256": "8117eb23cacfe74ff7ea70ec1baebb8cd8a5c0cf3d829bed5f31dd86bdd8ab9f",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be"
+  },
+  "problem": {
+    "id": "train-1315",
+    "question": "Marcus can fit 5 pies in his oven at once. He bakes 7 batches of pies, then slips and drops 8 of them. How many pies are left?",
+    "gold": "27",
+    "answer": "First find the total number of pies Marcus bakes: 5 pies/batch * 7 batches = <<5*7=35>>35 pies\nThen subtract the number of pies Marcus drops: 35 pies - 8 pies = <<35-8=27>>27 pies\n#### 27"
+  },
+  "generation": {
+    "text": "He bakes 5*7=35 pies\nSo he has 35-8=27 pies left\nThe final answer is \\boxed{27}.",
+    "token_ids": [
+      1519,
+      293,
+      2050,
+      220,
+      20,
+      9,
+      22,
+      28,
+      18,
+      20,
+      60677,
+      198,
+      4416,
+      566,
+      702,
+      220,
+      18,
+      20,
+      12,
+      23,
+      28,
+      17,
+      22,
+      60677,
+      2115,
+      198,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      17,
+      22,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

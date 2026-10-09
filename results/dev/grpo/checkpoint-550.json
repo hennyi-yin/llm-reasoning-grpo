@@ -1,0 +1,19 @@
+{
+  "checkpoint": "checkpoints/grpo/checkpoint-550",
+  "step": 550,
+  "split": "dev",
+  "task": "gsm8k",
+  "correct": 373,
+  "total": 500,
+  "accuracy": 0.746,
+  "raw_predictions": "results/dev/grpo/checkpoint-550.csv",
+  "artifact_sha256": {
+    "adapter_config.json": "f9b9d1436455cdcbf2f99d42305cdb47d522382b11be7de792e293af89a06ff7",
+    "adapter_model.safetensors": "f57c64b02d93b80d1eed98a236ef2b48725d02a9007a1d007816853247a34fc5"
+  },
+  "raw_predictions_sha256": "5c901530117d705607fde588e064df4470723624329f95a3fde881ab81116e6b",
+  "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+  "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+  "base_model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/sft_merged",
+  "revision": null
+}

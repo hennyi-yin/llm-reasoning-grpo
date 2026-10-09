@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "/mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/checkpoints/grpo/checkpoint-600",
+    "task": "gsm8k",
+    "split": "dev",
+    "model_sha256": "40a23045c5cff90e68222da18737136079ca310556ec178dbc8d1d59c19fef50",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be"
+  },
+  "problem": {
+    "id": "train-5764",
+    "question": "Two old ladies spent the afternoon walking through Central Park.  The first lady walked twice as far as the second lady.  If the second lady walked four miles, what is the combined total distance, in miles, the two ladies walked?",
+    "gold": "12",
+    "answer": "The first lady walked 2*4=<<2*4=8>>8 miles.\nIn total, the two ladies walked 4+8=<<4+8=12>>12 miles.\n#### 12"
+  },
+  "generation": {
+    "text": "The first lady walked 2*4=8 miles\nThe two ladies walked a combined total of 8+4=12 miles\nThe final answer is \\boxed{12}.",
+    "token_ids": [
+      785,
+      1156,
+      16820,
+      14858,
+      220,
+      17,
+      9,
+      19,
+      28,
+      23,
+      8756,
+      198,
+      785,
+      1378,
+      22786,
+      14858,
+      264,
+      10856,
+      2790,
+      315,
+      220,
+      23,
+      10,
+      19,
+      28,
+      16,
+      17,
+      8756,
+      198,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      16,
+      17,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

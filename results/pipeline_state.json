@@ -32,11 +32,40 @@
       "ended_at": "2026-10-08T22:30:12.127225+00:00"
     },
     "grpo_train": {
-      "status": "failed",
-      "started_at": "2026-10-09T04:52:09.789563+00:00",
-      "pid": 625,
-      "error": "grpo_train failed with exit 1; inspect /mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/logs/pipeline/grpo_train.log",
-      "ended_at": "2026-10-09T04:53:18.164607+00:00"
+      "status": "complete",
+      "started_at": "2026-10-09T04:56:41.089177+00:00",
+      "pid": 380,
+      "ended_at": "2026-10-09T07:51:55.194324+00:00"
+    },
+    "grpo_select": {
+      "status": "complete",
+      "started_at": "2026-10-09T07:51:55.200563+00:00",
+      "pid": 380,
+      "ended_at": "2026-10-09T08:20:00.311130+00:00"
+    },
+    "ablation_train": {
+      "status": "complete",
+      "started_at": "2026-10-09T08:20:00.316243+00:00",
+      "pid": 380,
+      "ended_at": "2026-10-09T13:57:01.817417+00:00"
+    },
+    "ablation_select": {
+      "status": "complete",
+      "started_at": "2026-10-09T13:57:01.822858+00:00",
+      "pid": 380,
+      "ended_at": "2026-10-09T14:26:22.729242+00:00"
+    },
+    "grpo_merge": {
+      "status": "complete",
+      "started_at": "2026-10-09T14:26:22.734443+00:00",
+      "pid": 380,
+      "ended_at": "2026-10-09T14:27:34.838424+00:00"
+    },
+    "ablation_merge": {
+      "status": "complete",
+      "started_at": "2026-10-09T14:27:34.843481+00:00",
+      "pid": 380,
+      "ended_at": "2026-10-09T14:28:55.795981+00:00"
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "checkpoint": "checkpoints/grpo_no_sft/checkpoint-200",
+  "step": 200,
+  "split": "dev",
+  "task": "gsm8k",
+  "correct": 429,
+  "total": 500,
+  "accuracy": 0.858,
+  "raw_predictions": "results/dev/grpo_no_sft/checkpoint-200.csv",
+  "artifact_sha256": {
+    "adapter_config.json": "732452b7a0fbfd0418bfb02ca05926178b6432573e8c42cc920cff35803061ea",
+    "adapter_model.safetensors": "c7bcaf3df4cb142f49ea93f45fd7084e048d2abef0dc4b20df321aa8bcd7010a"
+  },
+  "raw_predictions_sha256": "facd6856e9f3d97b1cf7f1ac19d2a77f68fb66298e3cf639d525a3fc497f2b2b",
+  "eval_config_sha256": "9ba31cbcb774e4d56749b6b105b742e6a536b6f4b1413cc62378fb6c9ea16418",
+  "frozen_manifest_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+}
