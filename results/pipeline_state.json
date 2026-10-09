@@ -30,6 +30,15 @@
       "started_at": "2026-10-08T22:29:24.832326+00:00",
       "pid": 327,
       "ended_at": "2026-10-08T22:30:12.127225+00:00"
+    },
+    "grpo_train": {
+      "status": "paused",
+      "started_at": "2026-10-08T22:30:48.370701+00:00",
+      "pid": 327,
+      "error": "grpo_train failed with exit -15; inspect /mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/logs/pipeline/grpo_train.log",
+      "ended_at": "2026-10-08T22:54:30.568905+00:00",
+      "previous_status": "failed",
+      "pause_record": "results/pause.json"
     }
   }
 }
