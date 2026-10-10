@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "quantized",
+    "task": "gsm8k",
+    "split": "test",
+    "model_sha256": "67bbd0e2cc0bd2b67eace061b881c6142d94ab6db4571806564c93dc570d6025",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-1183",
+    "question": "Two apples fell out of the tree, and one of them landed on Newton's head.  Newton picked up the two apples, put one in his pocket and threw the other apple into the tree, causing 5 more apples to fall out of the tree.  Newton picked up these apples, put all but one in his pocket and threw the remaining one at the tree.  This caused another 6 apples to fall out of the tree.  Newton picked up all of the remaining apples and went home to make a pie.  How many apples did he bring home?",
+    "gold": "11",
+    "answer": "Two apples fell out of the tree, and Newton threw one away, leaving him with 2-1=<<2-1=1>>1 apples.\n5 more apples fell out of the tree, bringing his total to 5+1=<<5+1=6>>6 apples.\nNewton threw one at the tree, leaving him with 6-1=<<6-1=5>>5 apples.\n6 more apples fell out of the tree, bringing Newton's apple collection to a total of 5+6=<<5+6=11>>11 apples.\n#### 11"
+  },
+  "generation": {
+    "text": "Newton picked up 5+6=11 apples.\nHe brought home 11-1=10 apples.\nThe final answer is \\boxed{10}.",
+    "token_ids": [
+      76377,
+      12771,
+      705,
+      220,
+      20,
+      10,
+      21,
+      28,
+      16,
+      16,
+      40676,
+      624,
+      1519,
+      7117,
+      2114,
+      220,
+      16,
+      16,
+      12,
+      16,
+      28,
+      16,
+      15,
+      40676,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      16,
+      15,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

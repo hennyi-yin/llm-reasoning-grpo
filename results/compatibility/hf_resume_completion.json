@@ -1,0 +1,18 @@
+{
+  "status": "verified",
+  "interrupted_source_sha256": "1980fcde0e74c87dbfd95a9534826f15948dbad01c9076949324e42e61fbdb06",
+  "completed_source_sha256": "3c5479f27c2aa6b8aa4c2a2ae116412edb0808d8b96c7f5bfee22177339397ed",
+  "completed_batch_1_8_preserved_exactly": true,
+  "all_batches": [
+    1,
+    8,
+    16,
+    32
+  ],
+  "full_warmups_per_batch": 1,
+  "formal_trials_per_batch": 3,
+  "prompts_per_trial": 512,
+  "output_tokens_per_prompt": 256,
+  "best_batch_size": 32,
+  "new_generation": false
+}

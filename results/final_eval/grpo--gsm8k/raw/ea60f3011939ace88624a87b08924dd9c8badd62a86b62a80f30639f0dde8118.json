@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "grpo",
+    "task": "gsm8k",
+    "split": "test",
+    "model_sha256": "2c1bd976198d53999f233923ca0cfea93206e9aee91cd54b1fe21df4737222a2",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-579",
+    "question": "A boy has 5 cards. His brother has 3 fewer cards than he has. How many cards do they have together?",
+    "gold": "7",
+    "answer": "His brother has 5 - 3 = <<5-3=2>>2 cards.\nTogether, they have 5 + 2 = <<5+2=7>>7 cards.\n#### 7"
+  },
+  "generation": {
+    "text": "The brother has 5 - 3 = 2 cards.\nTogether, they have 5 + 2 = 7 cards.\nThe final answer is \\boxed{7}.",
+    "token_ids": [
+      785,
+      10641,
+      702,
+      220,
+      20,
+      481,
+      220,
+      18,
+      284,
+      220,
+      17,
+      7411,
+      624,
+      80987,
+      11,
+      807,
+      614,
+      220,
+      20,
+      488,
+      220,
+      17,
+      284,
+      220,
+      22,
+      7411,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      22,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

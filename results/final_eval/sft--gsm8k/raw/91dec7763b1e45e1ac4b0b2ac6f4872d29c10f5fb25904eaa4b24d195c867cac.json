@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "sft",
+    "task": "gsm8k",
+    "split": "test",
+    "model_sha256": "91b780f4b304b486ba2e7a02d6ae4a20d25c590cc6e5a6e0b28b6911c85a2f30",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-695",
+    "question": "There are 50 deer in a field.  50 percent of them are bucks.  20 percent of the bucks are 8 points.  How many 8 point bucks are there?",
+    "gold": "5",
+    "answer": "Bucks:50(.50)=25\n8 Points:25(.20)=5 bucks\n#### 5"
+  },
+  "generation": {
+    "text": "There are 50*.5=25 bucks\nThere are 25*.2=5 8 point bucks\nThe final answer is \\boxed{5}.",
+    "token_ids": [
+      3862,
+      525,
+      220,
+      20,
+      15,
+      19922,
+      20,
+      28,
+      17,
+      20,
+      47334,
+      198,
+      3862,
+      525,
+      220,
+      17,
+      20,
+      19922,
+      17,
+      28,
+      20,
+      220,
+      23,
+      1459,
+      47334,
+      198,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      20,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

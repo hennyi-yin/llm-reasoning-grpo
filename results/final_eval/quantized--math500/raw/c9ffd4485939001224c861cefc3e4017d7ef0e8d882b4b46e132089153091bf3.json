@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "quantized",
+    "task": "math500",
+    "split": "test",
+    "model_sha256": "67bbd0e2cc0bd2b67eace061b881c6142d94ab6db4571806564c93dc570d6025",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-264",
+    "question": "In the figure below, quadrilateral $CDEG$ is a square with $CD = 3$, and quadrilateral $BEFH$ is a rectangle. If $BE = 5$, how many units is $BH$? Express your answer as a mixed number. [asy]\nunitsize(5mm);\ndefaultpen(linewidth(.7pt)+fontsize(8pt));\n\npair A=(0,0), B=(3,0), C=(6,0), D=(9,0), Ep=(9,3), G=(6,3);\npair F0=bisectorpoint(B,2*Ep-B), H0=bisectorpoint(Ep,2*B-Ep);\npair H=extension(B,H0,A,G);\npair F=extension(Ep,F0,A,G);\n\ndraw(H--B--Ep--F--A--D--Ep--G--C);\nlabel(\"$A$\",A,S);\nlabel(\"$B$\",B,S);\nlabel(\"$C$\",C,S);\nlabel(\"$D$\",D,S);\nlabel(\"$E$\",Ep,E);\nlabel(\"$F$\",F,N);\nlabel(\"$G$\",G,NW);\nlabel(\"$H$\",H,NW);\n[/asy]",
+    "gold": "1\\frac{4}{5}",
+    "answer": "Let $J$ be the intersection of $\\overline{BE}$ and $\\overline{GC}$. [asy]\nunitsize(5mm);\ndefaultpen(linewidth(.7pt)+fontsize(8pt));\npair A=(0,0), B=(3,0), C=(6,0), D=(9,0), Ep=(9,3), G=(6,3), K=(33/5,9/5);\npair F0=bisectorpoint(B,2*Ep-B), H0=bisectorpoint(Ep,2*B-Ep);\npair H=extension(B,H0,A,G);\npair F=extension(Ep,F0,A,G);\npair J=extension(B,Ep,G,C);\ndraw(H--B--Ep--F--A--D--Ep--G--C);\ndraw(G--K);\nlabel(\"$A$\",A,S);\nlabel(\"$B$\",B,S);\nlabel(\"$C$\",C,S);\nlabel(\"$D$\",D,S);\nlabel(\"$E$\",Ep,E);\nlabel(\"$F$\",F,N);\nlabel(\"$G$\",G,NW);\nlabel(\"$H$\",H,NW);\nlabel(\"$J$\",J,NW);\nlabel(\"$K$\",K,SE);[/asy]\n\nObserve that $BD=\\sqrt{BE^2-DE^2}=\\sqrt{5^2-3^2}=4$ units.  By the similarity of triangles $BCJ$ and $BDE$, we have  \\[\n\\frac{CJ}{BC}=\\frac{DE}{BD},\n\\] which after substituting becomes \\[\n\\frac{CJ}{4-3}=\\frac{3}{4}.\n\\] We solve to find $CJ=\\frac{3}{4}$, which implies that $GJ=3-\\frac{3}{4}=\\frac{9}{4}$.  Applying the Pythagorean theorem to triangle $GJE$, we find $EJ=\\sqrt{3^2+\\left(\\frac{9}{4}\\right)^2}=\\frac{15}{4}$.  Define $K$ to be the foot of the perpendicular from $G$ to side $EJ$.  By the similarity of triangles $GKJ$ and $EGJ$, we have  \\[\n\\frac{GK}{GJ}=\\frac{EG}{EJ} \\implies\n\\frac{GK}{\\frac{9}{4}}=\\frac{3}{\\frac{15}{4}},\n\\] which we solve to find $GK=\\frac{9}{5}$.  Since $GKBH$ is a rectangle, $BH=GK=\\frac{9}{5}=\\boxed{1\\frac{4}{5}}$ units.",
+    "subject": "Geometry",
+    "level": 5
+  },
+  "generation": {
+    "text": "Since $BE = 5$, $BH = 5 - 3 = \\boxed{3}$.",
+    "token_ids": [
+      12549,
+      400,
+      11594,
+      284,
+      220,
+      20,
+      54876,
+      400,
+      97151,
+      284,
+      220,
+      20,
+      481,
+      220,
+      18,
+      284,
+      1124,
+      79075,
+      90,
+      18,
+      92,
+      12947,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

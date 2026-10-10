@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "sft",
+    "task": "gsm8k",
+    "split": "test",
+    "model_sha256": "91b780f4b304b486ba2e7a02d6ae4a20d25c590cc6e5a6e0b28b6911c85a2f30",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-867",
+    "question": "Daisy bought a bag of potatoes that weighed 5 pounds. She also bought a bag of sweet potatoes that weighed 2 times as much as the potatoes and a bag of carrots that weighed 3 pounds fewer than the sweet potatoes. How many pounds of carrots did Daisy buy?",
+    "gold": "7",
+    "answer": "She bought 5 x 2 = <<5*2=10>>10 pounds of sweet potatoes.\nDaisy bought 10 - 3 = <<10-3=7>>7 pounds of carrots.\n#### 7"
+  },
+  "generation": {
+    "text": "The sweet potatoes weighed 5 x 2 = 10 pounds.\nThe carrots weighed 10 - 3 = 7 pounds.\nThe final answer is \\boxed{7}.",
+    "token_ids": [
+      785,
+      10226,
+      34167,
+      46612,
+      220,
+      20,
+      856,
+      220,
+      17,
+      284,
+      220,
+      16,
+      15,
+      16302,
+      624,
+      785,
+      61417,
+      46612,
+      220,
+      16,
+      15,
+      481,
+      220,
+      18,
+      284,
+      220,
+      22,
+      16302,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      22,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

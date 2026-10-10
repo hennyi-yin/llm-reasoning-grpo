@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "grpo",
+    "task": "gsm8k",
+    "split": "test",
+    "model_sha256": "2c1bd976198d53999f233923ca0cfea93206e9aee91cd54b1fe21df4737222a2",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-1104",
+    "question": "Caroline is three times older than Ben. Ben is two times older than Chris. If Chris is 4, how old is Caroline?",
+    "gold": "24",
+    "answer": "Ben is 4*2 = <<4*2=8>>8 years old\nCaroline is 8*3 = <<8*3=24>>24 years old\n#### 24"
+  },
+  "generation": {
+    "text": "Ben is 4*2=8 years old.\nCaroline is 8*3=24 years old.\nThe final answer is \\boxed{24}.",
+    "token_ids": [
+      24566,
+      374,
+      220,
+      19,
+      9,
+      17,
+      28,
+      23,
+      1635,
+      2310,
+      624,
+      8852,
+      21908,
+      374,
+      220,
+      23,
+      9,
+      18,
+      28,
+      17,
+      19,
+      1635,
+      2310,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      17,
+      19,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

@@ -1,55 +1,77 @@
 # Math Reasoning Post-Training and Efficient Serving on One 12 GB GPU
 
-Reproducible LoRA SFT → GRPO on Qwen2.5, with a dev-only checkpoint selection protocol,
-a no-SFT ablation, and HF/vLLM/W4A16 serving measurements. Tables below are generated from
-recorded evidence; missing experiments remain `Pending`.
+On one RTX 5070 (12 GB), SFT → GRPO reached 63.91% GSM8K accuracy versus the base
+model's 68.99%; the matched GRPO without SFT reached 74.37%. vLLM achieved 11.18×
+the strongest measured HF throughput, while W4A16 reduced weight-file size 2.70×
+at an 8.95 pp GSM8K accuracy cost. Every table below comes from saved evidence.
 
 <!-- BEGIN GENERATED RESULTS -->
 
-GPU experiments are pending. No accuracy, speedup, or memory reduction is claimed.
+GSM8K: base 68.99% → SFT + GRPO 63.91%; MATH-500: 55.20% → 36.00%. vLLM / strongest fitting HF throughput: 11.18×.
 
 | Model | GSM8K accuracy (95% CI) | MATH-500 accuracy (95% CI) | Boxed GSM / MATH | Mean tokens GSM / MATH | Truncated GSM / MATH |
 |---|---|---|---|---|---|
-| base | Pending | Pending | Pending / Pending | Pending / Pending | Pending / Pending |
-| sft | Pending | Pending | Pending / Pending | Pending / Pending | Pending / Pending |
-| grpo | Pending | Pending | Pending / Pending | Pending / Pending | Pending / Pending |
-| ablation | Pending | Pending | Pending / Pending | Pending / Pending | Pending / Pending |
-| quantized | Pending | Pending | Pending / Pending | Pending / Pending | Pending / Pending |
+| base | 68.99% [66.49, 71.49] | 55.20% [50.80, 59.60] | 91.36% / 95.20% | 303.61 / 598.23 | 0.53% / 4.20% |
+| sft | 59.67% [57.01, 62.24] | 34.20% [30.00, 38.40] | 99.55% / 91.20% | 102.19 / 339.33 | 0.38% / 8.40% |
+| grpo | 63.91% [61.26, 66.41] | 36.00% [31.80, 40.20] | 99.62% / 91.80% | 102.51 / 334.82 | 0.30% / 8.00% |
+| ablation | 74.37% [71.95, 76.72] | 57.20% [52.80, 61.40] | 99.62% / 96.00% | 300.32 / 575.87 | 0.38% / 4.00% |
+| quantized | 54.97% [52.24, 57.62] | 22.20% [18.60, 25.80] | 99.17% / 84.40% | 108.52 / 439.70 | 0.83% / 15.00% |
 
 Bootstrap: 10,000 resamples, seed 0. Each complete task uses 1,319 GSM8K or 500 MATH-500 questions.
 
 | Comparison (b - a) | Task | n | Difference (pp) | Exact McNemar p | n01 / n10 |
 |---|---|---:|---:|---:|---:|
-| Pending | — | — | — | — | — |
+| sft - base | gsm8k | 1319 | -9.33 | 1.94516e-09 | 148 / 271 |
+| grpo - sft | gsm8k | 1319 | 4.25 | 2.49154e-06 | 98 / 42 |
+| grpo - base | gsm8k | 1319 | -5.08 | 0.000848553 | 163 / 230 |
+| grpo - ablation | gsm8k | 1319 | -10.46 | 2.26229e-13 | 110 / 248 |
+| grpo - quantized | gsm8k | 1319 | 8.95 | 5.70345e-11 | 222 / 104 |
+| sft - base | math500 | 500 | -21.00 | 1.12239e-16 | 32 / 137 |
+| grpo - sft | math500 | 500 | 1.80 | 0.232693 | 27 / 18 |
+| grpo - base | math500 | 500 | -19.20 | 3.39096e-15 | 30 / 126 |
+| grpo - ablation | math500 | 500 | -21.20 | 1.53189e-18 | 25 / 131 |
+| grpo - quantized | math500 | 500 | 13.80 | 2.91236e-10 | 96 / 27 |
 
 | Engine | Precision | Batch / concurrency | Output tok/s | TTFT p50 / p99 (ms) | TPOT p50 / p99 (ms) |
 |---|---|---:|---:|---:|---:|
-| HF offline (best of 1 / 8 / 16 / 32) | bf16 | Pending | Pending | — | — |
-| vLLM offline | bf16 | continuous batching | Pending | — | — |
-| vLLM online | bf16 / W4A16 | Pending | Pending | Pending | Pending |
+| HF offline | bf16 | batch 1 | 31.42 | — | — |
+| HF offline | bf16 | batch 8 | 229.41 | — | — |
+| HF offline | bf16 | batch 16 | 470.07 | — | — |
+| HF offline | bf16 | batch 32 | 912.04 | — | — |
+| vLLM offline | bf16 | continuous batching | 10196.52 | — | — |
+| vLLM online | bf16 | 1 | 123.76 | 24.69 / 37.97 | 7.88 / 10.19 |
+| vLLM online | bf16 | 8 | 906.20 | 99.18 / 135.40 | 8.42 / 9.04 |
+| vLLM online | bf16 | 32 | 2883.76 | 231.44 / 448.82 | 10.01 / 11.17 |
+| vLLM online | w4a16 | 1 | 217.18 | 23.99 / 31.94 | 4.47 / 5.20 |
+| vLLM online | w4a16 | 32 | 3956.96 | 231.43 / 491.41 | 7.11 / 8.12 |
 
 Offline: identical 512 training prompts, exactly 256 output tokens, one warmup and median of three runs. Online: official vLLM CLI, 500 synthetic requests, exactly 256 input / output tokens.
 
-E = Pending×; G = Pending× (checkpoint weight files only); F = Pending pp; quantization McNemar p = Pending.
+E = 11.18×; G = 2.70× (checkpoint weight files only); F = 8.95 pp; quantization McNemar p = 5.70345e-11.
 
 G measures serialized weight-file size. vLLM weight memory below is read separately from startup logs.
 
 | Precision | Checkpoint weight bytes | vLLM loaded-weight GiB |
 |---|---:|---:|
-| bf16 | Pending | Pending |
-| w4a16 | Pending | Pending |
+| bf16 | 3087467144 | 2.980 |
+| w4a16 | 1142692360 | 1.120 |
 
 | Resume value | A (%) | B (%) | C (%) | D (%) | E (×) | F (pp) | G (×) |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Measured | Pending | Pending | Pending | Pending | Pending | Pending | Pending |
+| Measured | 68.99 | 63.91 | 55.20 | 36.00 | 11.18 | 8.95 | 2.70 |
 
 ![Measured experiment curve](figures/training_metrics.png)
 
 ![Measured experiment curve](figures/dev_accuracy.png)
 
+![Measured experiment curve](figures/throughput_concurrency.png)
+
 Generated by `python -m src.report` from measured result files. Missing data stays `null` in `results/summary.json`.
 
 <!-- END GENERATED RESULTS -->
+
+See [results interpretation and truthful resume wording](docs/results_interpretation.md)
+for the negative main result, format/length observations, and quantization tradeoffs.
 
 ## Training and dev selection
 
@@ -60,7 +82,7 @@ was selected with 369/500 correct on dev (73.8%), versus 340/500 (68.0%) for che
 Both GRPO runs completed 600 optimizer steps. Main GRPO selected checkpoint-600 with
 382/500 correct on dev (76.4%); the matched no-SFT ablation selected checkpoint-400 with
 434/500 (86.8%), using the earliest-step tie rule. These are dev selection scores.
-Final test and deployment measurements are executed by the guarded pipeline;
+All ten final model/task evaluations and the deployment measurements are complete;
 see `python -m src.progress` for current status and
 [`docs/execution.md`](docs/execution.md) for the execution record.
 
@@ -136,20 +158,21 @@ and excludes old scores, selections and ledgers. It creates no remote and leaves
 - `configs/`: versioned hyperparameters, immutable Hub revisions and R12 decision.
 - `splits/gsm8k_split.json`: all original train IDs, partitioned 6,973/500 with seed42.
 - `docs/protocol.md`: evaluation, selection, memory and benchmark protocol.
-- `results/per_problem.csv`: real final-only per-problem results, when produced.
+- `results/per_problem.csv`: 9,095 final per-problem records, with immutable raw-output provenance.
 - `results/summary.json`, `RESULTS.md`: generated tables, paired statistics and resume values.
 - `results/serve/`, `results/offline_*.json`, `results/quantization.json`: raw measurement evidence.
 - `logs/`: training metrics, smoke attempts and run manifests.
 - `.github/workflows/cpu-tests.yml`: CPU parser/reward/statistics tests.
 
-Checkpoints, merged models and quantized weights are excluded from Git. Release upload and public
-repository publication require a separate reviewed publishing step; this checkout has no remote.
+Checkpoints, merged models and quantized weights are excluded from Git. The public repository is
+[`hennyi-yin/llm-reasoning-grpo`](https://github.com/hennyi-yin/llm-reasoning-grpo).
 The automated local commits are attributed to `Codex <codex@local>`.
 After all measurements, `python -m scripts.package_release` packages the three selected adapters,
 three merged BF16 models and W4A16 checkpoint with a SHA256 manifest under ignored `release_assets/`.
 It verifies the final report, ledgers and source artifacts first. Existing complete archives are
 verified on rerun; partial archives are preserved for inspection. The Windows launcher includes
-this final packaging step. `results/release_package.json` records archive hashes; no files are uploaded.
+this final packaging step. `results/release_package.json` records local archive hashes;
+the packager itself does not upload files.
 Each archive includes the selected base model's upstream license; the manifest records its
 model revision and license hash. Source license files and provenance are in `licenses/`.
 See [`docs/release_artifacts.md`](docs/release_artifacts.md) for extraction paths and loading
@@ -159,6 +182,11 @@ Archives larger than 1 GiB also produce ordered `.part001`, `.part002`, etc. Upl
 listed under each artifact's `upload_files` in the manifest, together with `manifest.json`.
 Join all parts in their listed order to reconstruct the archive and verify its SHA256 before
 extraction. The packager checks every part and the reconstructed archive on reuse.
+
+Model downloads are published under [Release v1.0.0](https://github.com/hennyi-yin/llm-reasoning-grpo/releases/tag/v1.0.0).
+`results/publication.json` records the uploaded files and their GitHub SHA256 digests after publication.
+`release_assets/manifest.json` keeps the original local packaging record (`uploaded: false`);
+publication status is recorded separately so its verified hashes remain stable.
 
 ## Environment compatibility
 

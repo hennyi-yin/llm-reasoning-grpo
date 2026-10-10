@@ -1,0 +1,15 @@
+{
+  "status": "paused",
+  "user_requested": true,
+  "recorded_at_utc": "2026-10-08T22:57:24.156944+00:00",
+  "stage": "grpo_train",
+  "last_completed_step": 69,
+  "resume_checkpoint": "checkpoints/grpo/checkpoint-50",
+  "saved_step": 50,
+  "checkpoint_adapter_sha256": {
+    "adapter_config.json": "f6419fdc9de86113d0f04ac60d38a27673ff4cfc6625ac24d2e85675409947aa",
+    "adapter_model.safetensors": "f2a2bf6634a34d58f106dab55b3ff9a781d1da4c5ab30b5fa9e4dcda85c814bf"
+  },
+  "training_process_exited": true,
+  "pipeline_process_exited": true
+}

@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "grpo",
+    "task": "gsm8k",
+    "split": "test",
+    "model_sha256": "2c1bd976198d53999f233923ca0cfea93206e9aee91cd54b1fe21df4737222a2",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-96",
+    "question": "Harry slept 9 hours last night. His friend James slept only 2/3 of what Harry slept. How many more hours did Harry sleep than James?",
+    "gold": "3",
+    "answer": "James slept 9 hours * 2/3 = <<9*2/3=6>>6 hours.\nSo, Harry slept 9 - 6 = <<9-6=3>>3 hours more than James.\n#### 3"
+  },
+  "generation": {
+    "text": "James slept 2/3 * 9 = 6 hours.\nHarry slept 9 - 6 = 3 hours more than James.\nThe final answer is \\boxed{3}.",
+    "token_ids": [
+      28084,
+      45398,
+      220,
+      17,
+      14,
+      18,
+      353,
+      220,
+      24,
+      284,
+      220,
+      21,
+      4115,
+      624,
+      41298,
+      45398,
+      220,
+      24,
+      481,
+      220,
+      21,
+      284,
+      220,
+      18,
+      4115,
+      803,
+      1091,
+      7801,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      18,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

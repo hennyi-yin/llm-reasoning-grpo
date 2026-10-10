@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "quantized",
+    "task": "math500",
+    "split": "test",
+    "model_sha256": "67bbd0e2cc0bd2b67eace061b881c6142d94ab6db4571806564c93dc570d6025",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-338",
+    "question": "What is the base six equivalent of $999_{10}$?",
+    "gold": "4343_6",
+    "answer": "We know that $6^{4}>999_{10}>6^{3}$. So, we can tell that $999_{10}$ in base six will have four digits. $6^{3}=216$, which can go into 999 four times at most, leaving $999-4\\cdot216 = 135$ for the next three digits. $6^{2}=36$ goes into 135 three times at most, leaving us with $135-3\\cdot36 = 27$. Then, $6^{1}=6$ goes into 27 four times at most, leaving $27-4\\cdot6 = 3$ for the ones digit. All together, the base six equivalent of $999_{10}$ is $\\boxed{4343_6}$.",
+    "subject": "Number Theory",
+    "level": 3
+  },
+  "generation": {
+    "text": "$999_{10} = 1503_{6}$.\nThe final answer is \\boxed{1503}.",
+    "token_ids": [
+      3,
+      24,
+      24,
+      24,
+      15159,
+      16,
+      15,
+      92,
+      284,
+      220,
+      16,
+      20,
+      15,
+      18,
+      15159,
+      21,
+      31716,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      16,
+      20,
+      15,
+      18,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

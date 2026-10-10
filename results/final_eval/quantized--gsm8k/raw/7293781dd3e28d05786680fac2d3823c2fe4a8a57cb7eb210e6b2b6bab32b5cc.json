@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "quantized",
+    "task": "gsm8k",
+    "split": "test",
+    "model_sha256": "67bbd0e2cc0bd2b67eace061b881c6142d94ab6db4571806564c93dc570d6025",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-656",
+    "question": "Mike's teacher, leaves as homework the reading of a 200-page book. The assignment is to be completed within 30 days. Mike plans to read 10 pages a day. How many days before the deadline will Mike finish his reading?",
+    "gold": "10",
+    "answer": "Reading 10 pages per day, Mike finishes reading his book in 200 ÷ 10 = <<200/10=20>>20 days.\nMike finishes reading his book 30 - 20 = <<30-20=10>>10 days before the deadline.\n#### 10"
+  },
+  "generation": {
+    "text": "The number of days Mike will finish his reading is 200 / 10 = 20 days.\nThe final answer is \\boxed{20}.",
+    "token_ids": [
+      785,
+      1372,
+      315,
+      2849,
+      11268,
+      686,
+      6248,
+      806,
+      5290,
+      374,
+      220,
+      17,
+      15,
+      15,
+      608,
+      220,
+      16,
+      15,
+      284,
+      220,
+      17,
+      15,
+      2849,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      17,
+      15,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

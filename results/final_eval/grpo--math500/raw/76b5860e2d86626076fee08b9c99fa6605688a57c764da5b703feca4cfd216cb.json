@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "grpo",
+    "task": "math500",
+    "split": "test",
+    "model_sha256": "2c1bd976198d53999f233923ca0cfea93206e9aee91cd54b1fe21df4737222a2",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-89",
+    "question": "Find the greatest common divisor of $3339$, $2961$, and $1491$.",
+    "gold": "21",
+    "answer": "We can perform the Euclidean Algorithm two times.\n\nFirst, we use it for $3339$ and $2961$. \\begin{align*}\n\\text{gcd}\\,(3339,2961) &=\\text{gcd}\\,(3339-2961,2961)\\\\\n&=\\text{gcd}\\,(378,2961)\\\\\n&=\\text{gcd}\\,(378,2961-378 \\cdot 7)\\\\\n&=\\text{gcd}\\,(378,315)\\\\\n&=\\text{gcd}\\,(378-315,315)\\\\\n&=\\text{gcd}\\,(63,315)\\\\\n\\end{align*}Since $63$ is a divisor of $315$, the greatest common divisor of $3339$ and $2961$ is $63$.\n\nNext, we can find the greatest common divisor of $63$ and $1491$, also using the Euclidean Algorithm. \\begin{align*}\n\\text{gcd}\\,(63,1491) &=\\text{gcd}\\,(63,1491-63 \\cdot 23)\\\\\n&=\\text{gcd}\\,(63,42)\\\\\n\\end{align*}Since $63=3 \\cdot 21$ and $42=2 \\cdot 21$, the greatest common divisor is $\\boxed{21}$.",
+    "subject": "Number Theory",
+    "level": 4
+  },
+  "generation": {
+    "text": "The greatest common divisor of $3339$, $2961$, and $1491$ is $\\boxed{3}$.",
+    "token_ids": [
+      785,
+      12196,
+      4185,
+      49109,
+      315,
+      400,
+      18,
+      18,
+      18,
+      24,
+      54876,
+      400,
+      17,
+      24,
+      21,
+      16,
+      54876,
+      323,
+      400,
+      16,
+      19,
+      24,
+      16,
+      3,
+      374,
+      57960,
+      79075,
+      90,
+      18,
+      92,
+      12947,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

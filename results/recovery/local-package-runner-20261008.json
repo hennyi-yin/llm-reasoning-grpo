@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "pid": 35696,
+  "runner_pid": 14480,
+  "started_at_utc": "2026-10-08T20:16:29.6028811Z",
+  "uploaded": false,
+  "error": "The expected measured pipeline did not finish successfully; Release packaging was not started.",
+  "ended_at_utc": "2026-10-08T22:08:54.2677566Z"
+}

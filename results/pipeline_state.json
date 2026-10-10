@@ -158,11 +158,16 @@
       "ended_at": "2026-10-09T23:25:39.520192+00:00"
     },
     "final_quantized_math500": {
-      "status": "failed",
-      "started_at": "2026-10-09T23:25:45.289127+00:00",
-      "pid": 503,
-      "error": "final_quantized_math500 failed with exit 1; inspect /mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/logs/pipeline/final_quantized_math500.log",
-      "ended_at": "2026-10-09T23:26:14.857024+00:00"
+      "status": "complete",
+      "started_at": "2026-10-10T07:30:24.598701+00:00",
+      "pid": 500,
+      "ended_at": "2026-10-10T07:35:51.349762+00:00"
+    },
+    "report": {
+      "status": "complete",
+      "started_at": "2026-10-10T07:35:51.355648+00:00",
+      "pid": 500,
+      "ended_at": "2026-10-10T07:37:56.085829+00:00"
     }
   }
 }

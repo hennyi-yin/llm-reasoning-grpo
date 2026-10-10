@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "quantized",
+    "task": "math500",
+    "split": "test",
+    "model_sha256": "67bbd0e2cc0bd2b67eace061b881c6142d94ab6db4571806564c93dc570d6025",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-139",
+    "question": "Find the maximum value of\n\\[f(x,y) = x \\sqrt{1 - y^2} + y \\sqrt{1 - x^2},\\]where $-1 \\le x,$ $y \\le 1.$",
+    "gold": "1",
+    "answer": "Let $a$ and $b$ be real numbers.  Then $(a - b)^2 \\ge 0,$ which is equivalent to\n\\[ab \\le \\frac{a^2 + b^2}{2}.\\](This looks like AM-GM, but here, we want to show that it holds for all real numbers, not just nonnegative real numbers.)\n\nSetting $a = x$ and $b = \\sqrt{1 - y^2},$ we get\n\\[x \\sqrt{1 - y^2} \\le \\frac{x^2 + 1 - y^2}{2}.\\]Setting $a = y$ and $b = \\sqrt{1 - x^2},$ we get\n\\[y \\sqrt{1 - x^2} \\le \\frac{y^2 + 1 - x^2}{2}.\\]Therefore,\n\\[x \\sqrt{1 - y^2} +y \\sqrt{1 - x^2} \\le \\frac{x^2 + 1 - y^2}{2} + \\frac{y^2 + 1 - x^2}{2} = 1.\\]Since $f(1,0) = 1,$ the maximum value is $\\boxed{1}.$",
+    "subject": "Intermediate Algebra",
+    "level": 3
+  },
+  "generation": {
+    "text": "The maximum value of $f(x,y)$ is attained when $x = y = 0,$ so the maximum value is $\\boxed{0}.$.",
+    "token_ids": [
+      785,
+      7192,
+      897,
+      315,
+      400,
+      69,
+      2075,
+      7358,
+      15087,
+      374,
+      62160,
+      979,
+      400,
+      87,
+      284,
+      379,
+      284,
+      220,
+      15,
+      4779,
+      773,
+      279,
+      7192,
+      897,
+      374,
+      57960,
+      79075,
+      90,
+      15,
+      92,
+      85387,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "sft",
+    "task": "math500",
+    "split": "test",
+    "model_sha256": "91b780f4b304b486ba2e7a02d6ae4a20d25c590cc6e5a6e0b28b6911c85a2f30",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-392",
+    "question": "The distances from a point $P$ to five of the vertices of a regular octahedron are 3, 7, 8, 9, and 11.  Find the distance from $P$ to the sixth vertex.\n\n[asy]\nimport three;\n\nsize(125);\ncurrentprojection = perspective(6,3,1);\n\ntriple A, B, C, D, E, F, P;\n\nA = (1,0,0);\nB = (-1,0,0);\nC = (0,1,0);\nD = (0,-1,0);\nE = (0,0,1);\nF = (0,0,-1);\nP = (1.2,1.5,1);\n\ndraw(A--P,red);\ndraw(B--P,red);\ndraw(C--P,red);\ndraw(D--P,red);\ndraw(E--P,red);\ndraw(F--P,red);\n\ndraw(A--C);\ndraw(A--D);\ndraw(A--E);\ndraw(A--F);\ndraw(C--E--D--F--cycle);\ndraw(D--B--C,dashed);\ndraw(B--C,dashed);\ndraw(B--D,dashed);\ndraw(B--E,dashed);\ndraw(B--F,dashed);\n\nlabel(\"$P$\", P, NE);\n[/asy]",
+    "gold": "\\sqrt{66}",
+    "answer": "Let $P = (x,y,z),$ and let the vertices of the octahedron be $A = (a,0,0),$ $B = (-a,0,0),$ $C = (0,a,0),$ $D = (0,-a,0),$ $E = (0,0,a),$ and $F = (0,0,-a).$  Then the squares of the distances from $P$ to the vertices are\n\\begin{align*}\nd_A^2 &= (x - a)^2 + y^2 + z^2, \\\\\nd_B^2 &= (x + a)^2 + y^2 + z^2, \\\\\nd_C^2 &= x^2 + (y - a)^2 + z^2, \\\\\nd_D^2 &= x^2 + (y + a)^2 + z^2, \\\\\nd_E^2 &= x^2 + y^2 + (z - a)^2, \\\\\nd_F^2 &= x^2 + y^2 + (z + a)^2.\n\\end{align*}Note that\n\\[d_A^2 + d_B^2 = d_C^2 + d_D^2 = d_E^2 + d_F^2 = 2x^2 + 2y^2 + 2z^2 + 2a^2.\\]Among the distances 3, 7, 8, 9, and 11, we check the sum of their squares in pairs:\n\\begin{align*}\n3^2 + 7^2 &= 58, \\\\\n3^2 + 8^2 &= 73, \\\\\n3^2 + 9^2 &= 90, \\\\\n3^2 + 11^2 &= 130, \\\\\n7^2 + 8^2 &= 113, \\\\\n7^2 + 9^2 &= 130, \\\\\n7^2 + 11^2 &= 170, \\\\\n8^2 + 9^2 &= 145, \\\\\n8^2 + 11^2 &= 185, \\\\\n9^2  + 11^2 &= 202.\n\\end{align*}We see only one repeated value, namely $3^2 + 11^2 = 7^2 + 9^2 = 130.$  Therefore, the sixth distance must be $\\sqrt{130 - 8^2} = \\boxed{\\sqrt{66}}.$",
+    "subject": "Precalculus",
+    "level": 5
+  },
+  "generation": {
+    "text": "The distance from $P$ to the sixth vertex is 6.\nThe final answer is \\boxed{6}.",
+    "token_ids": [
+      785,
+      6010,
+      504,
+      400,
+      47,
+      3,
+      311,
+      279,
+      25031,
+      11936,
+      374,
+      220,
+      21,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      21,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

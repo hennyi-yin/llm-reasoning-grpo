@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "sft",
+    "task": "math500",
+    "split": "test",
+    "model_sha256": "91b780f4b304b486ba2e7a02d6ae4a20d25c590cc6e5a6e0b28b6911c85a2f30",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-86",
+    "question": "You have 5 shirts, 6 pairs of pants, and 8 hats.  How many outfits can you make consisting of one shirt, one pair of pants, and one hat?",
+    "gold": "240",
+    "answer": "There are 5 options for shirts, 6 options for pants, and 8 options for hats, for a total of $5 \\times 6 \\times 8 = \\boxed{240}$ outfits.",
+    "subject": "Prealgebra",
+    "level": 1
+  },
+  "generation": {
+    "text": "You can make 5 shirts + 6 pants + 8 hats = 19 outfits.\nThe final answer is \\boxed{19}.",
+    "token_ids": [
+      2610,
+      646,
+      1281,
+      220,
+      20,
+      36724,
+      488,
+      220,
+      21,
+      24549,
+      488,
+      220,
+      23,
+      44426,
+      284,
+      220,
+      16,
+      24,
+      47274,
+      624,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      16,
+      24,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}

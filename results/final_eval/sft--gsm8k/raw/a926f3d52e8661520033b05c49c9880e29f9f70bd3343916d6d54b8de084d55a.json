@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "sft",
+    "task": "gsm8k",
+    "split": "test",
+    "model_sha256": "91b780f4b304b486ba2e7a02d6ae4a20d25c590cc6e5a6e0b28b6911c85a2f30",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "problem": {
+    "id": "test-139",
+    "question": "In a candy machine, there are 22 more than four times the number of pink gumballs as there are blue gumballs. If there are 12 blue gumballs how many pink ones are there?",
+    "gold": "70",
+    "answer": "Four times the number of blue gumballs is 12*4=<<12*4=48>>48 gumballs\nThere are 48+22=<<48+22=70>>70 pink gumballs\n#### 70"
+  },
+  "generation": {
+    "text": "The number of pink gumballs is 22 + 4*12 = 62\nThe final answer is \\boxed{62}.",
+    "token_ids": [
+      785,
+      1372,
+      315,
+      18217,
+      342,
+      3551,
+      5583,
+      374,
+      220,
+      17,
+      17,
+      488,
+      220,
+      19,
+      9,
+      16,
+      17,
+      284,
+      220,
+      21,
+      17,
+      198,
+      785,
+      1590,
+      4226,
+      374,
+      1124,
+      79075,
+      90,
+      21,
+      17,
+      7810,
+      151645
+    ],
+    "finish_reason": "stop",
+    "stop_reason": null
+  }
+}
