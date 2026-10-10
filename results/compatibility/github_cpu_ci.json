@@ -1,0 +1,17 @@
+{
+  "status": "verified",
+  "repository": "hennyi-yin/llm-reasoning-grpo",
+  "workflow": "CPU protocol tests",
+  "run_id": 38035543533,
+  "head_sha": "9a685470df2a7a7966109dc07ae859f62982880d",
+  "conclusion": "success",
+  "url": "https://github.com/hennyi-yin/llm-reasoning-grpo/actions/runs/38035543533",
+  "created_at": "2026-10-10T07:45:53Z",
+  "updated_at": "2026-10-10T07:46:42Z",
+  "checks": [
+    "CPU unit tests",
+    "CPU command-line help",
+    "rejudge and hash all 9095 saved outputs",
+    "reproduce exact summary, RESULTS.md and README block"
+  ]
+}
