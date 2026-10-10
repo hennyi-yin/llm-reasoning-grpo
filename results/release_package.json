@@ -1,0 +1,134 @@
+{
+  "uploaded": false,
+  "resume_values": {
+    "A": 68.99166034874905,
+    "B": 63.91205458680819,
+    "C": 55.2,
+    "D": 36.0,
+    "E": 11.179881718938292,
+    "F": 8.946171341925702,
+    "G": 2.701923327815021
+  },
+  "summary_sha256": "a5f6c93a8b550d51f48607c2c64e660f08e793540b4b64e90d8d6c65fb84333d",
+  "upstream_model": {
+    "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "license_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+  },
+  "artifacts": [
+    {
+      "name": "sft-adapter.tar.gz",
+      "bytes": 71141838,
+      "sha256": "93b16de4c5c012769fc1e06daeaeb9d17a9f6c877693586fffdd6d3f39932e72",
+      "upload_files": [
+        {
+          "name": "sft-adapter.tar.gz",
+          "bytes": 71141838,
+          "sha256": "93b16de4c5c012769fc1e06daeaeb9d17a9f6c877693586fffdd6d3f39932e72"
+        }
+      ]
+    },
+    {
+      "name": "grpo-adapter.tar.gz",
+      "bytes": 31849948,
+      "sha256": "56ba5a0b24251e017a482cecac32c7c783d2768be2b3c92df4c79dad91a9dbd2",
+      "upload_files": [
+        {
+          "name": "grpo-adapter.tar.gz",
+          "bytes": 31849948,
+          "sha256": "56ba5a0b24251e017a482cecac32c7c783d2768be2b3c92df4c79dad91a9dbd2"
+        }
+      ]
+    },
+    {
+      "name": "ablation-adapter.tar.gz",
+      "bytes": 31833469,
+      "sha256": "adc0d5f049b03623cf1f368307e01dbe156705bea1e717bdf8c91c98233ffe25",
+      "upload_files": [
+        {
+          "name": "ablation-adapter.tar.gz",
+          "bytes": 31833469,
+          "sha256": "adc0d5f049b03623cf1f368307e01dbe156705bea1e717bdf8c91c98233ffe25"
+        }
+      ]
+    },
+    {
+      "name": "sft-bf16.tar.gz",
+      "bytes": 2482042209,
+      "sha256": "1327b1f1376bb9e7b9b7cd2b51a662fb17fadfa8a5438bd3afc2bb7e3d7243f7",
+      "upload_files": [
+        {
+          "name": "sft-bf16.tar.gz.part001",
+          "bytes": 1073741824,
+          "sha256": "e2fb1fde1f73546800b073220ad1ad2f26c5be7e1ead31ff5b63ef4d52dad2d5"
+        },
+        {
+          "name": "sft-bf16.tar.gz.part002",
+          "bytes": 1073741824,
+          "sha256": "d5b36d83f20a566053905d832a71640872f705fd7b17989d8b13c76a811e202b"
+        },
+        {
+          "name": "sft-bf16.tar.gz.part003",
+          "bytes": 334558561,
+          "sha256": "1adf2fb650f72956ca192c18cec2dfbbdb019e98b80a2c3c61ffed6f331f7eac"
+        }
+      ]
+    },
+    {
+      "name": "final-bf16.tar.gz",
+      "bytes": 2482104187,
+      "sha256": "864878464319320ff1c48932a3650fb15d56f400ed5984666b197116f728a88a",
+      "upload_files": [
+        {
+          "name": "final-bf16.tar.gz.part001",
+          "bytes": 1073741824,
+          "sha256": "a8d5926b43e4c7bef647fecb3641215df9e0cea352363453efdbe12ce4552c7d"
+        },
+        {
+          "name": "final-bf16.tar.gz.part002",
+          "bytes": 1073741824,
+          "sha256": "64d7919a0c41d4346170483bee64de5b9bde73b91604df405676c8fd0fe6c1fd"
+        },
+        {
+          "name": "final-bf16.tar.gz.part003",
+          "bytes": 334620539,
+          "sha256": "98d3d7a96468917aa0a7a439edce0022db0207c43a27cd03559dbe8c39c39f0b"
+        }
+      ]
+    },
+    {
+      "name": "ablation-bf16.tar.gz",
+      "bytes": 2482078070,
+      "sha256": "389f68ace22851826ab3219b622ddc3893fb5f13afcf6a3c7034af6ed33f7afd",
+      "upload_files": [
+        {
+          "name": "ablation-bf16.tar.gz.part001",
+          "bytes": 1073741824,
+          "sha256": "00349e56edf89e4d12d74db731c3344bf1296fd440e341e0f9ebbf74a7629b8f"
+        },
+        {
+          "name": "ablation-bf16.tar.gz.part002",
+          "bytes": 1073741824,
+          "sha256": "e07f6a49ab3674629576a33fe949f01749f11134f4827ad33cade94534b8427a"
+        },
+        {
+          "name": "ablation-bf16.tar.gz.part003",
+          "bytes": 334594422,
+          "sha256": "40479fe380c79f4fda107fb112a7f4e4de270ab33dfea48458d3f02411dc2cca"
+        }
+      ]
+    },
+    {
+      "name": "final-w4a16.tar.gz",
+      "bytes": 963247722,
+      "sha256": "af66d4c916ca02ef8510a76329f890374e413afeb66a77edfdac240f408ff05b",
+      "upload_files": [
+        {
+          "name": "final-w4a16.tar.gz",
+          "bytes": 963247722,
+          "sha256": "af66d4c916ca02ef8510a76329f890374e413afeb66a77edfdac240f408ff05b"
+        }
+      ]
+    }
+  ]
+}
