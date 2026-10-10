@@ -74,9 +74,95 @@
       "ended_at": "2026-10-09T15:07:27.510734+00:00"
     },
     "offline_hf": {
-      "status": "running",
-      "started_at": "2026-10-09T15:07:27.516040+00:00",
-      "pid": 590
+      "status": "complete",
+      "started_at": "2026-10-09T21:06:29.998470+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T21:36:12.446339+00:00"
+    },
+    "offline_vllm": {
+      "status": "complete",
+      "started_at": "2026-10-09T21:36:12.452416+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T21:41:15.397993+00:00"
+    },
+    "online_bf16": {
+      "status": "complete",
+      "started_at": "2026-10-09T21:41:15.404550+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T22:04:22.255905+00:00"
+    },
+    "online_w4a16": {
+      "status": "complete",
+      "started_at": "2026-10-09T22:04:22.261638+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T22:16:30.265403+00:00"
+    },
+    "registry": {
+      "status": "complete",
+      "started_at": "2026-10-09T22:16:39.175014+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T22:21:19.993407+00:00"
+    },
+    "final_base_gsm8k": {
+      "status": "complete",
+      "started_at": "2026-10-09T22:25:01.368761+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T22:30:53.332842+00:00"
+    },
+    "final_base_math500": {
+      "status": "complete",
+      "started_at": "2026-10-09T22:30:53.903276+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T22:36:45.534749+00:00"
+    },
+    "final_sft_gsm8k": {
+      "status": "complete",
+      "started_at": "2026-10-09T22:37:08.693243+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T22:42:44.645156+00:00"
+    },
+    "final_sft_math500": {
+      "status": "complete",
+      "started_at": "2026-10-09T22:42:59.053383+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T22:49:46.144489+00:00"
+    },
+    "final_grpo_gsm8k": {
+      "status": "complete",
+      "started_at": "2026-10-09T22:50:09.515368+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T22:55:47.384602+00:00"
+    },
+    "final_grpo_math500": {
+      "status": "complete",
+      "started_at": "2026-10-09T22:56:02.471666+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T23:04:19.120586+00:00"
+    },
+    "final_ablation_gsm8k": {
+      "status": "complete",
+      "started_at": "2026-10-09T23:04:42.038461+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T23:12:30.310595+00:00"
+    },
+    "final_ablation_math500": {
+      "status": "complete",
+      "started_at": "2026-10-09T23:12:43.685647+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T23:20:20.718702+00:00"
+    },
+    "final_quantized_gsm8k": {
+      "status": "complete",
+      "started_at": "2026-10-09T23:20:29.487502+00:00",
+      "pid": 503,
+      "ended_at": "2026-10-09T23:25:39.520192+00:00"
+    },
+    "final_quantized_math500": {
+      "status": "failed",
+      "started_at": "2026-10-09T23:25:45.289127+00:00",
+      "pid": 503,
+      "error": "final_quantized_math500 failed with exit 1; inspect /mnt/c/Users/25696/Downloads/LLM Post Training&Inference/llm-reasoning-grpo/logs/pipeline/final_quantized_math500.log",
+      "ended_at": "2026-10-09T23:26:14.857024+00:00"
     }
   }
 }
