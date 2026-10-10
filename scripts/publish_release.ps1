@@ -99,6 +99,15 @@ try {
     }
     $published = Gh-Json "repos/$Repository/releases/tags/$Tag"
     if ($published.draft -or @($published.assets).Count -ne $files.Count) { throw 'Release publication verification failed' }
+    # GitHub replaces draft `untagged-*` download URLs when publishing. Rebuild
+    # receipts from the public response and verify its assets again.
+    $receipts = @()
+    foreach ($file in $files) {
+        $publicAsset = @($published.assets | Where-Object name -EQ $file.name)
+        if ($publicAsset.Count -ne 1) { throw "Missing public asset: $($file.name)" }
+        Verify-Asset $publicAsset[0] $file
+        $receipts += [ordered]@{name=$file.name; id=$publicAsset[0].id; bytes=$file.bytes; sha256=$file.sha256; remote_digest=$publicAsset[0].digest; url=$publicAsset[0].browser_download_url}
+    }
     $evidence = [ordered]@{status='published'; uploaded=$true; repository=$Repository; url=$published.html_url; tag=$Tag; commit=$localCommit; checked_at_utc=[DateTime]::UtcNow.ToString('o'); summary_sha256=$summaryHash; assets=$receipts}
     $evidence | ConvertTo-Json -Depth 10 | Set-Content results\publication.json -Encoding utf8
     $runState.status = 'complete'

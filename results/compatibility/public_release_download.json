@@ -1,0 +1,17 @@
+{
+  "status": "verified",
+  "authenticated_download": false,
+  "checked_at_utc": "2026-10-10T15:36:38.8093212Z",
+  "release_url": "https://github.com/hennyi-yin/llm-reasoning-grpo/releases/tag/v1.0.0",
+  "tag": "v1.0.0",
+  "tag_commit": "047f0267230f8dd004e4051f0c7155e86eff5eb5",
+  "public": true,
+  "assets": 14,
+  "remote_asset_hashes_match": true,
+  "total_upload_bytes": 8544311857.0,
+  "manifest_url": "https://github.com/hennyi-yin/llm-reasoning-grpo/releases/download/v1.0.0/manifest.json",
+  "manifest_sha256": "4b946895a4fc9f1c91fd9282dcb1453cc38ea36e501055bcaf6cc04fbcbf4d7d",
+  "manifest_bytes": 14414,
+  "model_archives": 7,
+  "summary_sha256": "a5f6c93a8b550d51f48607c2c64e660f08e793540b4b64e90d8d6c65fb84333d"
+}

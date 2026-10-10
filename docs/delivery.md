@@ -44,6 +44,10 @@ python -m scripts.check_saved_report_cpu --require-minimal-env
 
 ## 发布记录
 
+公开发布与下载核验已完成：七套模型以 14 个文件上传，总计 8,544,311,857 字节。
+所有远端文件的大小、状态和 SHA256 与本地清单一致；不带认证凭据的清单下载也通过校验。
+验证记录见 [public_release_download.json](../results/compatibility/public_release_download.json)。
+
 `results/release_package.json` 记录七套模型归档的大小和 SHA256；原始清单的 `uploaded: false` 表示本地打包时状态。
 `results/publication.json` 单独记录实际公开发布状态、14 个上传文件、GitHub 返回的 SHA256 和下载地址。公开交付完成以该记录的 `status: published` 及 Release 可见性为准。
 v1.0.0 标签固定实验发布版本；随后提交到 main 的发布回执记录远端上传结果，不移动已有标签。

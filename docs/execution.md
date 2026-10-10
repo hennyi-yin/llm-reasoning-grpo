@@ -269,3 +269,18 @@ The initial failure evidence is preserved in
 `results/recovery/release_draft_lookup_20261010.json`.
 
 The requirements and their evidence are indexed in `docs/delivery.md`.
+
+Release v1.0.0 was published on 2026-10-10 with all 14 expected upload files
+(8,544,311,857 bytes in total). Each asset's uploaded state, exact byte count
+and GitHub SHA256 digest matched the original local manifest. The public
+manifest was downloaded without authentication and matched its saved SHA256;
+the seven model archives and unchanged summary hash were checked again.
+The evidence is in `results/compatibility/public_release_download.json`.
+
+The first receipt captured draft `untagged-*` download URLs. The public-download
+check caught those obsolete addresses, and the publisher was updated to rebuild
+and verify receipts from the published release response. A verification-only
+rerun reused all 14 uploaded assets; no file was replaced or uploaded again.
+The superseded receipt is retained in
+`results/recovery/publication_draft_urls_20261010.json`. The current
+`results/publication.json` contains the verified public URLs.
