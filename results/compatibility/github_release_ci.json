@@ -1,0 +1,22 @@
+{
+  "status": "verified",
+  "tag": "v1.0.0",
+  "head_sha": "047f0267230f8dd004e4051f0c7155e86eff5eb5",
+  "checked_at_utc": "2026-10-10T15:27:08.2546386Z",
+  "runs": [
+    {
+      "id": 38063405539,
+      "event": "push",
+      "conclusion": "success",
+      "html_url": "https://github.com/hennyi-yin/llm-reasoning-grpo/actions/runs/38063405539",
+      "head_sha": "047f0267230f8dd004e4051f0c7155e86eff5eb5"
+    },
+    {
+      "id": 38063404467,
+      "event": "push",
+      "conclusion": "success",
+      "html_url": "https://github.com/hennyi-yin/llm-reasoning-grpo/actions/runs/38063404467",
+      "head_sha": "047f0267230f8dd004e4051f0c7155e86eff5eb5"
+    }
+  ]
+}

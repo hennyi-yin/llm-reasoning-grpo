@@ -66,7 +66,10 @@ try {
     if (-not $release.Count) {
         & $GitHubCli release create $Tag --repo $Repository --verify-tag --draft --title 'Frozen post-training and serving experiments on RTX 5070' --notes-file docs\release_notes.md
         if ($LASTEXITCODE -ne 0) { throw 'Could not create draft release' }
-        $release = @(Gh-Json "repos/$Repository/releases/tags/$Tag")
+        # The tag endpoint returns published releases; drafts must be found in
+        # the authenticated release inventory, just as on a resumed upload.
+        $release = @(Gh-Json "repos/$Repository/releases?per_page=100" | Where-Object tag_name -EQ $Tag)
+        if ($release.Count -ne 1) { throw 'Could not identify the newly created draft release' }
     }
     $release = $release[0]
     $receipts = @()

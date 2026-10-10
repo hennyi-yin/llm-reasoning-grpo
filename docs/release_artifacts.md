@@ -20,6 +20,55 @@
 
 大于 1 GiB 的归档另有 `.part001`、`.part002` 等分片。发布时采用清单中该归档的 `upload_files`；下载后按清单顺序拼接，核对完整归档的 `sha256`，再解压。不要把单个分片当成可独立解压的模型。完整 `.tar.gz` 也保留在本地。
 
+## 从公开 Release 下载并校验
+
+以下命令适用于 Linux / WSL 中的新克隆。先安装 GitHub CLI；也可以在上面的 Release 页面手动下载相同文件。只使用主 BF16 模型时，下载清单和三个对应分片即可，不必下载全部模型：
+
+```bash
+mkdir -p release_assets
+gh release download v1.0.0 --repo hennyi-yin/llm-reasoning-grpo \
+  --pattern manifest.json --pattern 'final-bf16.tar.gz.part*' \
+  --dir release_assets
+```
+
+在项目根目录执行以下标准库脚本。它先逐个核对下载分片，再按清单顺序拼接，并核对完整归档哈希。目标归档已存在时会停止，避免覆盖本地文件。
+
+```bash
+python - <<'PY'
+import hashlib
+import json
+from pathlib import Path
+
+root = Path('release_assets')
+manifest = json.loads((root / 'manifest.json').read_text())
+artifact = next(a for a in manifest['artifacts'] if a['name'] == 'final-bf16.tar.gz')
+
+def digest(path):
+    h = hashlib.sha256()
+    with path.open('rb') as f:
+        for chunk in iter(lambda: f.read(8 * 1024 * 1024), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+for part in artifact['upload_files']:
+    path = root / part['name']
+    if path.stat().st_size != part['bytes'] or digest(path) != part['sha256']:
+        raise RuntimeError(f"Invalid download: {part['name']}")
+
+archive = root / artifact['name']
+with archive.open('xb') as out:
+    for part in artifact['upload_files']:
+        with (root / part['name']).open('rb') as src:
+            for chunk in iter(lambda: src.read(8 * 1024 * 1024), b''):
+                out.write(chunk)
+if archive.stat().st_size != artifact['bytes'] or digest(archive) != artifact['sha256']:
+    raise RuntimeError('Reconstructed archive does not match the manifest')
+print('Verified:', archive)
+PY
+```
+
+清单文件自身的 SHA256 可与 `results/publication.json` 中 `manifest.json` 的发布记录核对。其他 BF16 模型使用各自的归档名称和分片；`final-w4a16.tar.gz` 小于 1 GiB，可直接下载完整归档并按清单校验。然后按下面的目录说明解压和启动服务。
+
 ## 直接加载合并模型
 
 用于部署或使用这次实验的实际模型时，优先选择已合并归档；不需要重新应用 LoRA。使用 README 中的锁定环境，在完整流水线结束后再启动额外 GPU 进程。

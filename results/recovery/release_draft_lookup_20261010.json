@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "pid": 17536,
+  "repository": "hennyi-yin/llm-reasoning-grpo",
+  "tag": "v1.0.0",
+  "started_at_utc": "2026-10-10T15:24:15.9936093Z",
+  "total_assets": 14,
+  "completed_assets": 0,
+  "error": "GitHub API failed: repos/hennyi-yin/llm-reasoning-grpo/releases/tags/v1.0.0",
+  "ended_at_utc": "2026-10-10T15:24:28.8226335Z",
+  "recovery": "Reuse existing draft release 409030101; query authenticated release inventory instead of the published-tag endpoint"
+}

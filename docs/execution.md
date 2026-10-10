@@ -257,3 +257,15 @@ a pushed immutable tag, and successful CPU CI; it uploads without overwriting
 existing assets and verifies each remote SHA256 before publishing the draft.
 The original local archive manifest is preserved, while public upload receipts
 are recorded separately in `results/publication.json`.
+
+The v1.0.0 tag points to `047f0267230f8dd004e4051f0c7155e86eff5eb5`.
+Both branch and tag CPU workflows passed for this commit, including the full
+saved-answer report reproduction. The first publication attempt created draft
+release 409030101, then stopped before uploading because the published-tag API
+did not return the draft. The publisher now identifies new drafts from the
+authenticated release inventory, matching its existing resume path. The retry
+reused the same draft; no model, report, tag or previously uploaded file changed.
+The initial failure evidence is preserved in
+`results/recovery/release_draft_lookup_20261010.json`.
+
+The requirements and their evidence are indexed in `docs/delivery.md`.
