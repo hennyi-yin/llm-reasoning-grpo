@@ -205,6 +205,8 @@ def accuracy_cell(row: dict | None) -> str:
 
 def render_markdown(summary: dict) -> str:
     values = summary["resume_values"]
+    quantization_p = summary["quantization_mcnemar_p"]
+    quantization_p_text = "Pending" if quantization_p is None else f"{quantization_p:.6g}"
     if summary["status"] == "measured":
         opening = (f"GSM8K: base {fmt(values['A'])}% → SFT + GRPO {fmt(values['B'])}%; "
                    f"MATH-500: {fmt(values['C'])}% → {fmt(values['D'])}%. "
@@ -247,7 +249,7 @@ def render_markdown(summary: dict) -> str:
     lines += ["", "Offline: identical 512 training prompts, exactly 256 output tokens, one warmup and median of three runs. "
               "Online: official vLLM CLI, 500 synthetic requests, exactly 256 input / output tokens.", "",
               f"E = {fmt(values['E'])}×; G = {fmt(values['G'])}× (checkpoint weight files only); "
-              f"F = {fmt(values['F'])} pp; quantization McNemar p = {fmt(summary['quantization_mcnemar_p'], 6)}.", "",
+              f"F = {fmt(values['F'])} pp; quantization McNemar p = {quantization_p_text}.", "",
               "G measures serialized weight-file size. vLLM weight memory below is read separately from startup logs.", "",
               "| Precision | Checkpoint weight bytes | vLLM loaded-weight GiB |",
               "|---|---:|---:|"]

@@ -1,0 +1,203 @@
+{
+  "status": "bounded_event_log_inspection",
+  "checked_at_utc": "2026-10-09T21:10:33.3364755Z",
+  "start_local": "2026-10-09T16:35:00.0000000",
+  "end_local": "2026-10-09T16:49:54.0000000",
+  "events": [
+    {
+      "time_utc": "2026-10-09T20:41:26.7807781Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 LKD_0x1A8_KEYBD_HOTKEY_GraphicsDriver_NV_DriverBandwidthLinkLimited_dxgkrnl!DISPLAYSTATECHECKER::CreateBlackScreenLiveDump，类型 0",
+        "事件名称: LiveKernelEvent",
+        "P1: 1a8",
+        "P2: aaaaaaaaaaaaaaaa",
+        "P3: aaaaaaaaaaaaaaaa",
+        "P4: aaaaaaaaaaaaaaaa",
+        "P5: aaaaaaaaaaaaaaaa",
+        "P6: 10_0_26200"
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:41:14.8279460Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 LKD_0x1B8_NV_Blackscreen_Blackbox_dxgkrnl!DxgCreateLiveDumpWithDriverBlob，类型 0",
+        "事件名称: LiveKernelEvent",
+        "P1: 1b8",
+        "P2: aaaaaaaaaaaaaaaa",
+        "P3: aaaaaaaaaaaaaaaa",
+        "P4: aaaaaaaaaaaaaaaa",
+        "P5: aaaaaaaaaaaaaaaa",
+        "P6: 10_0_26200"
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:41:00.2356360Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 2238699397442234149，类型 5",
+        "事件名称: WindowsBlackScreenDiagnosticsV1",
+        "P1: Unknown",
+        "P2: Unknown",
+        "P3: Unknown",
+        "P4: Hotkey_Explorer",
+        "P5: 10.0.26100.9444",
+        "P6: "
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:40:08.0918177Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 1833093240550499715，类型 5",
+        "事件名称: WindowsBlackScreenDiagnosticsV1",
+        "P1: DWM",
+        "P2: Unknown",
+        "P3: ColorBits",
+        "P4: Hotkey",
+        "P5: 10.0.26100.9278",
+        "P6: "
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:39:47.2626371Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 1427395589111342263，类型 5",
+        "事件名称: WindowsBlackScreenDiagnosticsV1",
+        "P1: Unknown",
+        "P2: TRUE",
+        "P3: Unknown",
+        "P4: Hotkey_LogonUI",
+        "P5: 10.0.26100.9278",
+        "P6: "
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:39:44.4855495Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 ，类型 0",
+        "事件名称: WindowsBlackScreenDiagnosticsV1",
+        "P1: Unknown",
+        "P2: Unknown",
+        "P3: Unknown",
+        "P4: Hotkey_Explorer",
+        "P5: 10.0.26100.9444",
+        "P6: "
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:39:42.6786686Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 ，类型 0",
+        "事件名称: LiveKernelEvent",
+        "P1: 1a8",
+        "P2: aaaaaaaaaaaaaaaa",
+        "P3: aaaaaaaaaaaaaaaa",
+        "P4: aaaaaaaaaaaaaaaa",
+        "P5: aaaaaaaaaaaaaaaa",
+        "P6: 10_0_26200"
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:39:42.6682522Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 ，类型 0",
+        "事件名称: LiveKernelEvent",
+        "P1: 1b8",
+        "P2: aaaaaaaaaaaaaaaa",
+        "P3: aaaaaaaaaaaaaaaa",
+        "P4: aaaaaaaaaaaaaaaa",
+        "P5: aaaaaaaaaaaaaaaa",
+        "P6: 10_0_26200"
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:39:41.3349328Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 ，类型 0",
+        "事件名称: WindowsBlackScreenDiagnosticsV1",
+        "P1: DWM",
+        "P2: Unknown",
+        "P3: ColorBits",
+        "P4: Hotkey",
+        "P5: 10.0.26100.9278",
+        "P6: "
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:39:41.2307568Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 1178341743861548841，类型 5",
+        "事件名称: WindowsBlackScreenDiagnosticsV1",
+        "P1: RDP",
+        "P2: Low",
+        "P3: TRUE",
+        "P4: FALSE",
+        "P5: 10.0.26100.8737",
+        "P6: "
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:39:40.0130376Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 ，类型 0",
+        "事件名称: WindowsBlackScreenDiagnosticsV1",
+        "P1: Unknown",
+        "P2: TRUE",
+        "P3: Unknown",
+        "P4: Hotkey_LogonUI",
+        "P5: 10.0.26100.9278",
+        "P6: "
+      ]
+    },
+    {
+      "time_utc": "2026-10-09T20:39:38.7321301Z",
+      "id": 1001,
+      "provider": "Windows Error Reporting",
+      "level": "信息",
+      "diagnostic_lines": [
+        "故障存储段 ，类型 0",
+        "事件名称: WindowsBlackScreenDiagnosticsV1",
+        "P1: RDP",
+        "P2: Low",
+        "P3: TRUE",
+        "P4: FALSE",
+        "P5: 10.0.26100.8737",
+        "P6: "
+      ]
+    }
+  ],
+  "established_root_cause": false,
+  "dump_files_read": false,
+  "system_configuration_changed": false
+}

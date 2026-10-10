@@ -1,0 +1,22 @@
+{
+  "status": "safe_to_continue_unstarted_quantized_math500",
+  "checked_at_utc": "2026-10-10T07:05:43.739115+00:00",
+  "failure": "network unreachable while loading pinned dataset, before generator construction",
+  "prior_quantized_math500_items": null,
+  "prior_quantized_math500_generated_outputs": 0,
+  "prior_in_flight_claims": 0,
+  "reloaded_dataset_count": 500,
+  "reloaded_question_gold_digest": "5db2dc9fd5f77e2c05e5e6962d8dbb64d43c0351e31c87b285b9839d4bfde3eb",
+  "matches_saved_question_and_gold_hashes_and_order_for_models": {
+    "base": 500,
+    "sft": 500,
+    "grpo": 500,
+    "ablation": 500
+  },
+  "frozen_protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+  "final_registry_sha256": "6af12f5631d5c531b75a831c1a4a781c538339901ae77ece5ebc26de364fc522",
+  "failure_log_sha256": "e82ea7b14a1878512b1877f0f07e6484f388c355f2a09718517780559b845d7c",
+  "original_manifest_sha256": "a8f9bc61072557582650f415044953850c08c637cd778fb73e1fcb038b88f7f5",
+  "new_generation_during_check": false,
+  "source_or_frozen_settings_changed": false
+}

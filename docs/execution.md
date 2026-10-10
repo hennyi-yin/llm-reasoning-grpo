@@ -201,3 +201,40 @@ CPU environment (three optional training integrations skipped).
 and current-artifact validation before resuming. Environment metadata was refreshed
 before any resumed timing; its prior version is preserved in
 `results/environment-before-cuda-repair.json`.
+
+A bounded Windows event-log inspection later found black-screen diagnostics
+around 16:39–16:41 Eastern, including RDP/DWM records and LiveKernelEvent codes
+1a8 and 1b8. The selected event fields are saved in
+`results/compatibility/host_display_interruption_events.json`; no memory dump was
+opened and no system configuration was changed. Microsoft describes
+[1a8](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x1a8--video-dxgkrnl-black-screen-livedump)
+and [1b8](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x1b8--video-miniport-black-screen-livedump)
+as live dumps for black-screen diagnostics, including hotkey-triggered captures.
+These records establish that display diagnostics occurred near the interruption;
+they do not establish the cause of the disappearing project/WSL processes or a
+hardware failure. Recovery therefore retains the interruption cause as unknown.
+
+## Final dataset-loading recovery
+
+The resumed pipeline completed all serving measurements and nine final model/task
+evaluations. The quantized MATH-500 stage stopped on 2026-10-09 at 23:26 UTC when
+the Hub connection became unreachable while loading the pinned dataset. Its
+durable ledger contained `items: null`, no in-flight claims and no raw outputs;
+the exception occurred before generator construction. The failure log and original
+ledger are preserved as `logs/pipeline/final_quantized_math500-attempt1.log` and
+`results/recovery/quantized-math500-manifest-before-network.json`.
+
+On 2026-10-10 the network connection was available again. A read-only preflight
+verified the unchanged frozen protocol, an empty quantized MATH-500 ledger, and
+the exact question hashes, gold-answer hashes and order of all 500 reloaded items
+against the four completed MATH-500 ledgers. The evidence is saved in
+`results/recovery/quantized_math500_network_preflight.json`. Recovery continues
+only this not-yet-generated group; the nine completed groups retain their original
+answers. No frozen source, model registry, dataset revision or evaluation setting
+was changed. Before continuation, 125 main-environment tests and 122 minimal CPU
+tests passed, with three optional integrations skipped in the CPU environment.
+
+The report now renders the quantization McNemar probability with six significant
+digits, matching its comparison table, so a measured small positive probability
+is not printed as `0.000000`. This presentation change does not change statistics
+or any frozen evaluator behavior.

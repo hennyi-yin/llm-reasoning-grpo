@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "identity": {
+    "model": "quantized",
+    "task": "math500",
+    "split": "test",
+    "model_sha256": "67bbd0e2cc0bd2b67eace061b881c6142d94ab6db4571806564c93dc570d6025",
+    "protocol_sha256": "aee049ead5449ed9d47ad0a9aa550abd40664c76312b78e4d134cee14720f2be",
+    "registry_sha256": "7e388b430f2d344d59839cf3e24d671e36ea309972db99ef54f606d63dd19744"
+  },
+  "started_at": "2026-10-09T23:26:01.374930+00:00",
+  "status": "started",
+  "items": null,
+  "in_flight": [],
+  "raw_sha256": {}
+}
