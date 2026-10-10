@@ -1,0 +1,631 @@
+{
+  "status": "derived_from_saved_results",
+  "new_generation": false,
+  "interpretation": "Descriptive post-hoc format analysis; not a causal decomposition or new selection rule",
+  "source_sha256": {
+    "results/per_problem.csv": "c36d11b7c26b3f4ffcfb2cd9a87aa3618d6ef2a09c825e849cc1307aa9030987",
+    "results/summary.json": "a5f6c93a8b550d51f48607c2c64e660f08e793540b4b64e90d8d6c65fb84333d",
+    "logs/grpo/metrics.jsonl": "6bb7714ab2ef0f36a37eb4e1352e362e71d10e52b399bd09afc8cc2164c36a96",
+    "logs/grpo_no_sft/metrics.jsonl": "5ad3bedd13807f58131de892cb39e669e8d74da94a3e97972a93c8c7339e0824"
+  },
+  "comparisons": [
+    {
+      "task": "gsm8k",
+      "a": "base",
+      "b": "sft",
+      "n": 1319,
+      "n01": 148,
+      "n10": 271,
+      "difference_pp": -9.325246398786959,
+      "p_value": 1.9451578143599527e-09,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 66
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 82
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 4
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 267
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 48
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 2
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 850
+        }
+      ]
+    },
+    {
+      "task": "gsm8k",
+      "a": "sft",
+      "b": "grpo",
+      "n": 1319,
+      "n01": 98,
+      "n10": 42,
+      "difference_pp": 4.245640636846096,
+      "p_value": 2.4915373480835904e-06,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 1
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 97
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 1
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 41
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": false,
+          "n": 3
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 2
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 1
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 1173
+        }
+      ]
+    },
+    {
+      "task": "gsm8k",
+      "a": "base",
+      "b": "grpo",
+      "n": 1319,
+      "n01": 163,
+      "n10": 230,
+      "difference_pp": -5.079605761940864,
+      "p_value": 0.0008485530218125193,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 68
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 95
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 4
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 226
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 46
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 1
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 879
+        }
+      ]
+    },
+    {
+      "task": "gsm8k",
+      "a": "ablation",
+      "b": "grpo",
+      "n": 1319,
+      "n01": 110,
+      "n10": 248,
+      "difference_pp": -10.462471569370736,
+      "p_value": 2.2622858245095614e-13,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 110
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 4
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 244
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 5
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 1
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 955
+        }
+      ]
+    },
+    {
+      "task": "gsm8k",
+      "a": "quantized",
+      "b": "grpo",
+      "n": 1319,
+      "n01": 222,
+      "n10": 104,
+      "difference_pp": 8.946171341925702,
+      "p_value": 5.703452957442413e-11,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 2
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 220
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 2
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 102
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 9
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 3
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 981
+        }
+      ]
+    },
+    {
+      "task": "math500",
+      "a": "base",
+      "b": "sft",
+      "n": 500,
+      "n01": 32,
+      "n10": 137,
+      "difference_pp": -21.0,
+      "p_value": 1.1223949781577776e-16,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 4
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 28
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 5
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 132
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": false,
+          "n": 9
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 11
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 30
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 281
+        }
+      ]
+    },
+    {
+      "task": "math500",
+      "a": "sft",
+      "b": "grpo",
+      "n": 500,
+      "n01": 27,
+      "n10": 18,
+      "difference_pp": 1.8,
+      "p_value": 0.23269319190831084,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 3
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 24
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 4
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 14
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": false,
+          "n": 24
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 17
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 13
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 401
+        }
+      ]
+    },
+    {
+      "task": "math500",
+      "a": "base",
+      "b": "grpo",
+      "n": 500,
+      "n01": 30,
+      "n10": 126,
+      "difference_pp": -19.2,
+      "p_value": 3.3909644797850766e-15,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 5
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 25
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 9
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 117
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": false,
+          "n": 7
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 12
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 25
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 300
+        }
+      ]
+    },
+    {
+      "task": "math500",
+      "a": "ablation",
+      "b": "grpo",
+      "n": 500,
+      "n01": 25,
+      "n10": 131,
+      "difference_pp": -21.2,
+      "p_value": 1.5318895672120165e-18,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 2
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 23
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 10
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 121
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": false,
+          "n": 5
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 13
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 26
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 300
+        }
+      ]
+    },
+    {
+      "task": "math500",
+      "a": "quantized",
+      "b": "grpo",
+      "n": 500,
+      "n01": 96,
+      "n10": 27,
+      "difference_pp": 13.8,
+      "p_value": 2.912355660156406e-10,
+      "boxed_transitions": [
+        {
+          "outcome": "gain",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 9
+        },
+        {
+          "outcome": "gain",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 87
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 2
+        },
+        {
+          "outcome": "loss",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 25
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": false,
+          "n": 20
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": false,
+          "b_has_boxed": true,
+          "n": 49
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": false,
+          "n": 19
+        },
+        {
+          "outcome": "unchanged",
+          "a_has_boxed": true,
+          "b_has_boxed": true,
+          "n": 289
+        }
+      ]
+    }
+  ],
+  "descriptive_training_windows": [
+    {
+      "stage": "grpo",
+      "windows": {
+        "steps_5_100": {
+          "records": 20,
+          "means": {
+            "rewards/correctness_reward/mean": 0.5353125,
+            "reward": 0.6349375227093697,
+            "completions/clipped_ratio": 0.0009375000000000001,
+            "frac_reward_zero_std": 0.2275
+          }
+        },
+        "steps_505_600": {
+          "records": 20,
+          "means": {
+            "rewards/correctness_reward/mean": 0.619375,
+            "reward": 0.7191875231266022,
+            "completions/clipped_ratio": 0.000625,
+            "frac_reward_zero_std": 0.2125
+          }
+        }
+      }
+    },
+    {
+      "stage": "grpo_no_sft",
+      "windows": {
+        "steps_5_100": {
+          "records": 20,
+          "means": {
+            "rewards/correctness_reward/mean": 0.746875,
+            "reward": 0.8386562651395798,
+            "completions/clipped_ratio": 0.0415625,
+            "frac_reward_zero_std": 0.3925
+          }
+        },
+        "steps_505_600": {
+          "records": 20,
+          "means": {
+            "rewards/correctness_reward/mean": 0.8434375,
+            "reward": 0.9411562675237656,
+            "completions/clipped_ratio": 0.0175,
+            "frac_reward_zero_std": 0.585
+          }
+        }
+      }
+    }
+  ]
+}

@@ -238,3 +238,22 @@ The report now renders the quantization McNemar probability with six significant
 digits, matching its comparison table, so a measured small positive probability
 is not printed as `0.000000`. This presentation change does not change statistics
 or any frozen evaluator behavior.
+
+## Final measured report and publication preparation
+
+On 2026-10-10 the retained nine model/task ledgers passed their recovery checks.
+The remaining quantized MATH-500 group then generated its first 500 answers;
+its ledger completed with no in-flight claims. The final CSV contains 9,095
+unique model/task/problem records, and the generated summary status is `measured`.
+Quantized MATH-500 accuracy is 111/500 (22.20%), with CI [18.60%, 25.80%].
+The original frozen manifest and final model registry remain unchanged.
+
+The user explicitly requested GitHub repository creation during this continuation.
+The existing authenticated account is `hennyi-yin`; the public repository is
+https://github.com/hennyi-yin/llm-reasoning-grpo and is pinned on that profile.
+Publishing is separate from local experiment execution and archive generation.
+The release publisher requires a complete report, matching CPU reproduction proof,
+a pushed immutable tag, and successful CPU CI; it uploads without overwriting
+existing assets and verifies each remote SHA256 before publishing the draft.
+The original local archive manifest is preserved, while public upload receipts
+are recorded separately in `results/publication.json`.

@@ -2,6 +2,10 @@
 
 在 PowerShell 中切换到项目目录，再运行只读监测脚本。它每 10 秒刷新后台进程、当前阶段和最近日志；不会启动、停止或恢复实验。
 
+发布模型时，同一脚本还显示 GitHub 发布状态、当前上传文件和已核验文件数。
+发布状态来自 `logs/release_runner.json`；`complete` 表示全部远端文件的大小与 SHA256 已核验并正式发布。
+实验后台的 `complete` 只表示流水线和本地打包完成，应分别查看这两个状态。
+
 ```powershell
 Set-Location -LiteralPath 'C:\Users\25696\Downloads\LLM Post Training&Inference\llm-reasoning-grpo'
 pwsh -NoProfile -File .\scripts\watch_project.ps1

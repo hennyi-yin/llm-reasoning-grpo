@@ -1,5 +1,9 @@
 # 本地发布包与模型加载
 
+公开下载入口：[Release v1.0.0](https://github.com/hennyi-yin/llm-reasoning-grpo/releases/tag/v1.0.0)。
+下载使用该 Release 附带的 `manifest.json`；实际发布与远端校验记录见 `results/publication.json`。
+本地打包清单保留生成时的 `uploaded: false`，发布凭据另存，不覆盖原始清单的哈希。
+
 完整流水线成功后，`scripts.package_release` 在 `release_assets/` 生成下列七个归档和 SHA256 清单。打包不上传文件；实际完成状态、归档哈希和分片名称见 `results/release_package.json` 与 `release_assets/manifest.json`。
 
 | 归档 | 内容 | 建议解压目录 |

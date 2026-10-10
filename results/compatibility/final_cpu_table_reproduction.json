@@ -1,0 +1,82 @@
+{
+  "status": "verified",
+  "checked_at_utc": "2026-10-10T07:40:33.355979+00:00",
+  "source_commit": "e1acdaad17f27f6a0e8050011279eddb774b4e3d",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "python_executable": "/home/hengyi/.venvs/llm-reasoning-grpo-ci/bin/python",
+  "primary_dependency_versions": {
+    "pytest": "9.1.1",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "PyYAML": "6.0.3",
+    "math-verify": "0.9.0"
+  },
+  "installed_model_packages": {},
+  "imported_model_packages": [],
+  "gpu_used": false,
+  "new_generation": false,
+  "hub_dataset_access": false,
+  "raw_final_outputs_rejudged_and_hash_checked": true,
+  "summary_matches": true,
+  "results_markdown_matches": true,
+  "readme_generated_results_match": true,
+  "per_problem_rows": 9095,
+  "task_counts": [
+    {
+      "model": "ablation",
+      "task": "gsm8k",
+      "n": 1319
+    },
+    {
+      "model": "ablation",
+      "task": "math500",
+      "n": 500
+    },
+    {
+      "model": "base",
+      "task": "gsm8k",
+      "n": 1319
+    },
+    {
+      "model": "base",
+      "task": "math500",
+      "n": 500
+    },
+    {
+      "model": "grpo",
+      "task": "gsm8k",
+      "n": 1319
+    },
+    {
+      "model": "grpo",
+      "task": "math500",
+      "n": 500
+    },
+    {
+      "model": "quantized",
+      "task": "gsm8k",
+      "n": 1319
+    },
+    {
+      "model": "quantized",
+      "task": "math500",
+      "n": 500
+    },
+    {
+      "model": "sft",
+      "task": "gsm8k",
+      "n": 1319
+    },
+    {
+      "model": "sft",
+      "task": "math500",
+      "n": 500
+    }
+  ],
+  "source_hashes": {
+    "results/summary.json": "a5f6c93a8b550d51f48607c2c64e660f08e793540b4b64e90d8d6c65fb84333d",
+    "RESULTS.md": "e8bd2e32a7d66ffa348ce7604509844c03f0df14704bf64389b6b56158698a5b",
+    "README.md": "7357d9bcdb3d8bb3419c800db9f963845b341a3d1a9de5a17f129215b29daf0a",
+    "results/per_problem.csv": "c36d11b7c26b3f4ffcfb2cd9a87aa3618d6ef2a09c825e849cc1307aa9030987"
+  }
+}

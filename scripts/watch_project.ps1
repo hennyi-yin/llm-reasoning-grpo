@@ -10,6 +10,7 @@ $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $runnerPath = Join-Path $projectRoot 'logs/windows_runner.json'
 $pipelinePath = Join-Path $projectRoot 'results/pipeline_state.json'
+$releaseRunnerPath = Join-Path $projectRoot 'logs/release_runner.json'
 
 do {
     if (-not $Once -and -not [Console]::IsOutputRedirected) { Clear-Host }
@@ -23,6 +24,18 @@ do {
             if ($runner.error) { Write-Output ('后台错误: ' + $runner.error) }
         } else {
             Write-Output '尚无后台运行状态文件。'
+        }
+
+        if (Test-Path -LiteralPath $releaseRunnerPath) {
+            $release = Get-Content -LiteralPath $releaseRunnerPath -Raw -Encoding utf8 | ConvertFrom-Json
+            $releaseAlive = [bool](Get-Process -Id $release.pid -ErrorAction SilentlyContinue)
+            if ($release.repository) {
+                Write-Output ('GitHub 发布: {0} | PID: {1} | 存活: {2} | 已核验文件: {3}/{4}' -f $release.status, $release.pid, $releaseAlive, $release.completed_assets, $release.total_assets)
+            } else {
+                Write-Output ('旧本地打包记录: {0} | PID: {1} | 存活: {2}' -f $release.status, $release.pid, $releaseAlive)
+            }
+            if ($release.asset) { Write-Output ('当前上传文件: ' + $release.asset) }
+            if ($release.error) { Write-Output ('发布错误: ' + $release.error) }
         }
 
         if (Test-Path -LiteralPath $pipelinePath) {
@@ -43,10 +56,15 @@ do {
                 }
             }
             foreach ($stage in $failed) {
-                Write-Output ('失败阶段: {0} | {1}' -f $stage.Name, $stage.Value.error)
+                $failureLabel = if ($runnerProcess -and $runner.status -eq 'running') { '保留的先前失败记录' } else { '失败阶段' }
+                Write-Output ('{0}: {1} | {2}' -f $failureLabel, $stage.Name, $stage.Value.error)
             }
             if (-not $active.Count) {
-                Write-Output '没有标记为运行中的流水线阶段；最终打包状态请看上面的后台状态。'
+                Write-Output '没有标记为运行中的实验阶段；后台可能在核验旧记录或本地打包。'
+                $latestConsole = Get-ChildItem -LiteralPath (Join-Path $projectRoot 'logs') -Filter 'project-runner*.console.log' |
+                    Where-Object { $_.Name -notlike '*.error.console.log' } |
+                    Sort-Object LastWriteTime -Descending | Select-Object -First 1
+                if ($latestConsole) { Get-Content -LiteralPath $latestConsole.FullName -Tail 3 -Encoding utf8 }
             }
         }
     } catch {
