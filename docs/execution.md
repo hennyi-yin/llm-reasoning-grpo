@@ -284,3 +284,11 @@ rerun reused all 14 uploaded assets; no file was replaced or uploaded again.
 The superseded receipt is retained in
 `results/recovery/publication_draft_urls_20261010.json`. The current
 `results/publication.json` contains the verified public URLs.
+
+At the user's request, README now includes the saved-answer format breakdown
+for base versus no-SFT GRPO. This is a separate post-hoc descriptive comparison;
+the original ten comparisons, judge, test answers and final result tables are
+unchanged. The release-era CPU verification receipt is preserved as
+`results/compatibility/final_cpu_table_reproduction_release_v1.json`; the current
+receipt is refreshed after verifying the updated README. No new training or
+test generation was started for this documentation update.
