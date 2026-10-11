@@ -9,6 +9,35 @@ from src.stats import COMPARISONS, EXPECTED_COUNTS, MODEL_LABELS, paired_compari
 from src.report import retained_training_records
 
 
+def describe_format_strata(left, right):
+    """Describe one paired comparison without adding a significance test."""
+    if not left or set(left) != set(right):
+        raise ValueError("Format strata require the same nonempty problem IDs")
+    strata = {(a, b): {"a_has_boxed": a, "b_has_boxed": b, "n": 0,
+                       "correct_a": 0, "correct_b": 0, "gain": 0, "loss": 0}
+              for a in (False, True) for b in (False, True)}
+    for identity, x in left.items():
+        y = right[identity]
+        if x["question_sha256"] != y["question_sha256"]:
+            raise ValueError("Format strata cannot pair different questions")
+        a, b = parse_bool(x["correct"]), parse_bool(y["correct"])
+        row = strata[parse_bool(x["has_boxed"]), parse_bool(y["has_boxed"])]
+        row["n"] += 1
+        row["correct_a"] += int(a)
+        row["correct_b"] += int(b)
+        row["gain"] += int(not a and b)
+        row["loss"] += int(a and not b)
+    for row in strata.values():
+        row["net_correct"] = row["correct_b"] - row["correct_a"]
+        row["difference_pp_full_test_denominator"] = 100 * row["net_correct"] / len(left)
+    correct_a = sum(row["correct_a"] for row in strata.values())
+    correct_b = sum(row["correct_b"] for row in strata.values())
+    return {"n": len(left), "correct_a": correct_a, "correct_b": correct_b,
+            "net_correct": correct_b - correct_a,
+            "difference_pp": 100 * (correct_b - correct_a) / len(left),
+            "strata": list(strata.values())}
+
+
 def main():
     path = ROOT / "results/per_problem.csv"
     summary_path = ROOT / "results/summary.json"
@@ -66,7 +95,13 @@ def main():
                 "interpretation": "Descriptive post-hoc format analysis; not a causal decomposition or new selection rule",
                 "source_sha256": {"results/per_problem.csv": sha256_file(path),
                                   "results/summary.json": sha256_file(summary_path), **log_hashes},
-                "comparisons": observations, "descriptive_training_windows": training}
+                "comparisons": observations,
+                "posthoc_descriptive_comparisons": [
+                    {"task": "gsm8k", "a": "base", "b": "ablation",
+                     "posthoc": True, "significance_test_added": False,
+                     **describe_format_strata(groups["base", "gsm8k"],
+                                              groups["ablation", "gsm8k"])}],
+                "descriptive_training_windows": training}
     write_json("results/format_analysis.json", evidence)
     print(json.dumps(evidence, indent=2))
 
