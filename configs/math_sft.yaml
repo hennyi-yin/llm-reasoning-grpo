@@ -1,0 +1,14 @@
+seed: 42
+per_subject: 48
+min_solution_tokens: 120
+max_sequence_tokens: 1024
+batch_accumulation: 8
+learning_rate: 0.00005
+checkpoint_steps: 14
+max_gpu_used_fraction: 0.95
+memory_grace_seconds: 12
+gate:
+  min_gain_vs_base_pp: 2.0
+  min_gain_vs_short_pp: 2.0
+  max_unresolved_fraction: 0.25
+  max_extra_unresolved_pp: 3.0

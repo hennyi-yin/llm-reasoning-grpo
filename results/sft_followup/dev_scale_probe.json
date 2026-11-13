@@ -1,0 +1,3966 @@
+{
+  "split": "dev",
+  "scale_relative_to_trained_adapter": 0.25,
+  "adapter_weights_sha256": "d8420a3b745b5b020bfac9d2b259e23e384153c3442c08f8348be70f881b3b77",
+  "local_raw_sha256": "b58de5161250c256bf2ee60baec2cf44dad6180d390a71275a52a218787997e7",
+  "comparisons": {
+    "correct": {
+      "left": 120,
+      "right": 114,
+      "delta_pp": -3.061224489795918,
+      "gains": 6,
+      "losses": 12,
+      "ci_pp": [
+        -7.653061224489796,
+        1.0204081632653061
+      ],
+      "mcnemar_p": 0.237884521484375
+    },
+    "previous": {
+      "left": 119,
+      "right": 114,
+      "delta_pp": -2.5510204081632653,
+      "gains": 6,
+      "losses": 11,
+      "ci_pp": [
+        -6.63265306122449,
+        1.530612244897959
+      ],
+      "mcnemar_p": 0.332305908203125
+    },
+    "strict": {
+      "left": 119,
+      "right": 114,
+      "delta_pp": -2.5510204081632653,
+      "gains": 6,
+      "losses": 11,
+      "ci_pp": [
+        -6.63265306122449,
+        1.530612244897959
+      ],
+      "mcnemar_p": 0.332305908203125
+    }
+  },
+  "paired": [
+    {
+      "id": "algebra-1524",
+      "question_sha256": "61bca58110a951bd7df9676c9944996c130c0f7b84e6f8a34878b83642c75055",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 826
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 577
+      }
+    },
+    {
+      "id": "algebra-928",
+      "question_sha256": "b2044d8bb468cb7397b9bea3fc201e140a9a1887b262581325ea8707d2649bd0",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 496
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 473
+      }
+    },
+    {
+      "id": "algebra-1005",
+      "question_sha256": "2820605df48e1e90d97d5fbbf1efcabaa493b076a7cd4194d21f1942819ee6e1",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 647
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 767
+      }
+    },
+    {
+      "id": "algebra-267",
+      "question_sha256": "81690e4a7f2f05431ab0c06d4304b8ddd0a827f1c2ac8a813c17c144404dd4bd",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 553
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 248
+      }
+    },
+    {
+      "id": "algebra-534",
+      "question_sha256": "e0e39c41ab07e01b49f8c5a47c78bd69af8e88dd69f9a58a6d93cd5b706a8e4f",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 354
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 446
+      }
+    },
+    {
+      "id": "algebra-1390",
+      "question_sha256": "5657eddb505f9a3235889011b0a24c87c6fe34b6505ed41db799dc653730b310",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 352
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 387
+      }
+    },
+    {
+      "id": "algebra-34",
+      "question_sha256": "c3cb95ce1146714c370dfb4910fad7d2326617dc278e88f27605302459cc9a78",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 257
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 257
+      }
+    },
+    {
+      "id": "algebra-178",
+      "question_sha256": "99c98cc4512f4b0bbd887edc565c71a3824444c65ebe29bd482d2dfbc61950ac",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 278
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 281
+      }
+    },
+    {
+      "id": "algebra-1091",
+      "question_sha256": "6c49a1984048a694faee41b2c6b0f969102847042c1903384aaa14f7cc31001c",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 462
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 527
+      }
+    },
+    {
+      "id": "algebra-353",
+      "question_sha256": "48b5cea10e62f5d353eb5a28fadab4e161e096d09276f8222be8020672ddd346",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 403
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 410
+      }
+    },
+    {
+      "id": "algebra-713",
+      "question_sha256": "f328f1bb2cef502268320b9c5fbf8758a671c200dbc2d4bd89f82a9c73086954",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 302
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 313
+      }
+    },
+    {
+      "id": "algebra-788",
+      "question_sha256": "f8b64235facbc56953747f0fdcf91610f8aa175455be023dd77351e642f56a9d",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "algebra-77",
+      "question_sha256": "33cf4c667d8907c742522024eb26c11f8c608c0f702d6ffc6099744fda6c30b6",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 303
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 262
+      }
+    },
+    {
+      "id": "algebra-160",
+      "question_sha256": "4b2e4f95bfef0bfcaefde63ff8740a973be8f9d182eb0721a01aa86af1dc97bb",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 496
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 501
+      }
+    },
+    {
+      "id": "algebra-499",
+      "question_sha256": "ce0135f488b727fb4146646590838a1ab2fb73713210a2b0397f7c261cc6b470",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 272
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 270
+      }
+    },
+    {
+      "id": "algebra-1160",
+      "question_sha256": "44383d79ab18f213c52c46271cc66147baec489c3f82fc8d1da2732be186efdb",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 292
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 292
+      }
+    },
+    {
+      "id": "algebra-708",
+      "question_sha256": "49bffc26176340bb81daca41e66b5c93963a12cdf540dc066110fa5ffa5c68d2",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 481
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 546
+      }
+    },
+    {
+      "id": "algebra-1397",
+      "question_sha256": "a759b0d04c7ca06a435045c5b908cf0379937184f16ac1f8faa523326e07b22a",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 292
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 292
+      }
+    },
+    {
+      "id": "algebra-1379",
+      "question_sha256": "c8d04e79d73b1dbdd547d6bcd1361219a3fa87dd46aa0e777d5cc55db676cd09",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 207
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 209
+      }
+    },
+    {
+      "id": "algebra-999",
+      "question_sha256": "bf41904f205e4c77d93d5d48ef23d10acf8e7d2e3b81b6cb3a231a6b8d785672",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 491
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 502
+      }
+    },
+    {
+      "id": "algebra-1185",
+      "question_sha256": "dd66378f238f5bdc14d65d47f38ef8c1a69ee8900eda74ac39d7973fada2f388",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 482
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 516
+      }
+    },
+    {
+      "id": "algebra-463",
+      "question_sha256": "0b3d528108b43aa2c272067ebaa52a89613e5e2487aa2f304f85e5ec04a5ed71",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 441
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 346
+      }
+    },
+    {
+      "id": "algebra-900",
+      "question_sha256": "1a763c591aee62d4620ddac9d31a4e8d63279cb37b52bcb7be5accfa700237a0",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 533
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 631
+      }
+    },
+    {
+      "id": "algebra-1449",
+      "question_sha256": "9aded09416b39083b973ebc9691ba0db4b9c2d0e97b7d8fad29ee2b88d4ba74b",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 254
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 254
+      }
+    },
+    {
+      "id": "algebra-1057",
+      "question_sha256": "43af196b13d57f48a620687c303b77734e5eeb78820e8f0aad1a5cdc9bb52f48",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 262
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 310
+      }
+    },
+    {
+      "id": "algebra-1271",
+      "question_sha256": "1450b677cd94e33121586a9668e1dcb212d75c565a5fdda865c9dbc6f44c1290",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 241
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 242
+      }
+    },
+    {
+      "id": "algebra-1646",
+      "question_sha256": "2d098d6777db9396c9c84e87e5072344cc8005feb97e75d677f75a443285f586",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 480
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 472
+      }
+    },
+    {
+      "id": "algebra-987",
+      "question_sha256": "310fe9a90901dee14cc98c1a7d1fe497a87001ebede214989b9cf3306188556f",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 575
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 523
+      }
+    },
+    {
+      "id": "counting_and_probability-519",
+      "question_sha256": "7806726ba2dcf971fa3c38153d66d3fa4d38efbf28df355f5406d35ad2abacb0",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 346
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 347
+      }
+    },
+    {
+      "id": "counting_and_probability-766",
+      "question_sha256": "4cdd93fc06db70b1b3ad3282bfbd9d0744747e40069dd16695ef4f92162085f2",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 342
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 407
+      }
+    },
+    {
+      "id": "counting_and_probability-363",
+      "question_sha256": "debe7c37eb99739ea91d8f9a6cbd20e66d02ed29fcd9c47f5e2cdaefbd8963d4",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 666
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 484
+      }
+    },
+    {
+      "id": "counting_and_probability-100",
+      "question_sha256": "e0bd6237ea059d23bfaf1c6bb6c7c2be7dd895c1dcf2c2e0683da941a8cacfb3",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 660
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 615
+      }
+    },
+    {
+      "id": "counting_and_probability-719",
+      "question_sha256": "603b76696d901671aaf209900da9ca8f0fd811c65688bee17c3654d45b685969",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 302
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 302
+      }
+    },
+    {
+      "id": "counting_and_probability-194",
+      "question_sha256": "b06bffbeb5e1f6a4f352eabd4485271a87f0646ad2b8aece4b6474b6b6e41865",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 294
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 319
+      }
+    },
+    {
+      "id": "counting_and_probability-770",
+      "question_sha256": "19a8f2694fda82d18129fdc8e90ae2951385027a02712ab6aad0805a10a49830",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 450
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 433
+      }
+    },
+    {
+      "id": "counting_and_probability-101",
+      "question_sha256": "eae8f8008987435059bf6de99b4b148ce78c0da2452c8950d3a060cb07157dbc",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 239
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 482
+      }
+    },
+    {
+      "id": "counting_and_probability-590",
+      "question_sha256": "ebe5cbc3a912e1371981f2f8213028ae2e24ce37c3bf69d253900f2f38246c4c",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 300
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 300
+      }
+    },
+    {
+      "id": "counting_and_probability-374",
+      "question_sha256": "b6671228f71c7517b7baed7d604cf2f9b5325a501bf90a32a1e6cc58ddd5ad71",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 445
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 446
+      }
+    },
+    {
+      "id": "counting_and_probability-6",
+      "question_sha256": "7934462870e501dd5c059ec695314559781daace1b2683bf0a363fdd7489abb9",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 393
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 404
+      }
+    },
+    {
+      "id": "counting_and_probability-122",
+      "question_sha256": "bf340cb6870b2a3b678073b212ae75c481711c24decc52ccb19ccc3e83f3597d",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 242
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 242
+      }
+    },
+    {
+      "id": "counting_and_probability-49",
+      "question_sha256": "3834c6bb5e42584072979b75a6a1b7b15d315dcf18ff6fee7fb94a857a1219ab",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 904
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1232
+      }
+    },
+    {
+      "id": "counting_and_probability-648",
+      "question_sha256": "827223ba8b36d7aeb530d22c0ebf3620430856371e0d6c0cc2a9dfc4e22ee303",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 618
+      }
+    },
+    {
+      "id": "counting_and_probability-287",
+      "question_sha256": "10dcc9e66ddc9a9e3372a1bc98193c5177ee60d46321d26b5f0215d706c39ebd",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 413
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 441
+      }
+    },
+    {
+      "id": "counting_and_probability-339",
+      "question_sha256": "08bfb5e77e04b75092caf607f79af5adb68e77105bf33928250f7a16a14de632",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 314
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 403
+      }
+    },
+    {
+      "id": "counting_and_probability-286",
+      "question_sha256": "1fe484c1f3b34d26609019a97a154b39e34af82d5ea3fd666baf3852bca3bf73",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 251
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 251
+      }
+    },
+    {
+      "id": "counting_and_probability-537",
+      "question_sha256": "e67a0708ba59d83043263edc08d45a7363b33c569c0ceac4cbc4ef2e5a353ac2",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 165
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 164
+      }
+    },
+    {
+      "id": "counting_and_probability-23",
+      "question_sha256": "ce488d8d556cd24792255f882ed359a020adead020a05a5ffbd4b58460fa4f64",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 503
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 485
+      }
+    },
+    {
+      "id": "counting_and_probability-213",
+      "question_sha256": "752c601c90ab90afebd78a727d7d95ceaa6a2b753787b36f7541965599bf62b9",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 834
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 830
+      }
+    },
+    {
+      "id": "counting_and_probability-338",
+      "question_sha256": "bd8f420a751cbc2341762d5af0f45a443e0a34fbf8b512c7ff20d0a27760a58d",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 278
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 264
+      }
+    },
+    {
+      "id": "counting_and_probability-769",
+      "question_sha256": "ccc8bdfbc10047486f4ca067a263fd307582761353b68d686b7d69fee25d6221",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 652
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 646
+      }
+    },
+    {
+      "id": "counting_and_probability-221",
+      "question_sha256": "f5a9e197b17e407cc61c6a99016a009c9ab81be9511c56393f0fe3ff6fc1d143",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 329
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 340
+      }
+    },
+    {
+      "id": "counting_and_probability-641",
+      "question_sha256": "c19214bc64e6150ac3e20eb1a9f2ae3fda31d94683b2fdf24ebaceff5bd382f0",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 401
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 330
+      }
+    },
+    {
+      "id": "counting_and_probability-239",
+      "question_sha256": "71c120c71342fd479fdaa5f023ac6da2491dbf237e8ef21246c4914301ef3abd",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 697
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 548
+      }
+    },
+    {
+      "id": "counting_and_probability-422",
+      "question_sha256": "65dbccec8e77245250d1f9e678836a4f772eab56bfb47fc1b8ac582de816929d",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 974
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 952
+      }
+    },
+    {
+      "id": "counting_and_probability-144",
+      "question_sha256": "62a0f3a03dfea0d455b6b1b2b5a0cf6d3af4336db06cf55eb9a89433f65f31aa",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 511
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 400
+      }
+    },
+    {
+      "id": "counting_and_probability-208",
+      "question_sha256": "227ced03283e780d967e726d20f7b96cd846dd031106cd9114a517ba21eaab56",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 751
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 675
+      }
+    },
+    {
+      "id": "geometry-736",
+      "question_sha256": "408de91e472cc92370e1626ebd5e51a7d3208107fd406cf7240f00f557bc35a7",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 343
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 342
+      }
+    },
+    {
+      "id": "geometry-39",
+      "question_sha256": "b5ed16deae81935073217f529e372ced766a5ca479c8e8c5810a52f4622dd82c",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 278
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 278
+      }
+    },
+    {
+      "id": "geometry-190",
+      "question_sha256": "96633a783e571e69c36d926b7c61b8baebe98ad659c5e9921eb86e4a0515d7c8",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 224
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 224
+      }
+    },
+    {
+      "id": "geometry-549",
+      "question_sha256": "aaef130b0cfcf930abfd42d48e844c12932756d5fd06ef015cd7b66bb88a7c44",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 739
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 756
+      }
+    },
+    {
+      "id": "geometry-413",
+      "question_sha256": "5acff1b1edc1a1f05880bbef94a3250acdc08fcad160229262f12f203c6d096e",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1027
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1562
+      }
+    },
+    {
+      "id": "geometry-671",
+      "question_sha256": "45ba266dfcb69af180b44604ba6d352f48b9b4ca15116e1ae4a5cfa8301251ec",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 452
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 410
+      }
+    },
+    {
+      "id": "geometry-452",
+      "question_sha256": "883eeb14f3b06dfaad171f0ac84228278288f306ee83e9213428a99538b52e6b",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 480
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 480
+      }
+    },
+    {
+      "id": "geometry-706",
+      "question_sha256": "ed634f1d5ababe151ecd33f7e8b09a21a5395383b89bbcae23c092b34cac0f37",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 309
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 394
+      }
+    },
+    {
+      "id": "geometry-477",
+      "question_sha256": "7e6e64f1fd5932f9bc77e45be5f4263acec4bf9aaece4a016ebec25b630bc8d0",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 648
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 641
+      }
+    },
+    {
+      "id": "geometry-184",
+      "question_sha256": "da03859e49b406c1c9d22ea9b487a403ce88e31d11b57640961e95bc66dea486",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 378
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 378
+      }
+    },
+    {
+      "id": "geometry-679",
+      "question_sha256": "04c60304ee7642a3cd0f789f5f3ce4e9c6539876200e5bf9be55f87b1e4f272d",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 468
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 373
+      }
+    },
+    {
+      "id": "geometry-251",
+      "question_sha256": "b0b65074991e04a6e70e30cdc01155c4db86564d1df78515dab6219c11a12d12",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 252
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 257
+      }
+    },
+    {
+      "id": "geometry-215",
+      "question_sha256": "0203e97cf2059af478a76a768e8cd246681e536cc59265bfa345294c17fab7b4",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 145
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 914
+      }
+    },
+    {
+      "id": "geometry-652",
+      "question_sha256": "9d883ea8b86f5ce30cd7f80a01f10d8fa16c19299dcbe5c5a1935aaf79b110da",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 336
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 357
+      }
+    },
+    {
+      "id": "geometry-85",
+      "question_sha256": "462ae1c71dcc4e86e98cd0a48f1bbb4e56d1688fb8e029df002c6fe3dc5d89ee",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 598
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 518
+      }
+    },
+    {
+      "id": "geometry-718",
+      "question_sha256": "3634ba2c9cb655b53c7010e0a482abb1621b3717c318ca7919da4f7d0a86fd63",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 295
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 295
+      }
+    },
+    {
+      "id": "geometry-491",
+      "question_sha256": "b419e6e2d99c6b981d10e360f8b530faf8790ea4bdf2ec17a30fe9d29a36d449",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "geometry-420",
+      "question_sha256": "69b90f362e48e67099bc0a3edd1a408a320e39ae6504bef17dcd0f7083c0c19e",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "geometry-789",
+      "question_sha256": "950febb65da91b0be1c7aee1487d0d666a0c17f130d60f4af8556843633c8b18",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 448
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 448
+      }
+    },
+    {
+      "id": "geometry-614",
+      "question_sha256": "2616ec6ec417b725280dbcffde6728b92f51bee04c3b376d39c4c2c958da07dc",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 294
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 341
+      }
+    },
+    {
+      "id": "geometry-384",
+      "question_sha256": "3929704bf5a3ac5731f5e5178260fa3533638ec5ee8f98435511f075789cb8b5",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1322
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1584
+      }
+    },
+    {
+      "id": "geometry-42",
+      "question_sha256": "564bf4959f297ff7b23b47f94e4b76d69b613f5b7c2c00f100f8fd67ab22010a",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 568
+      }
+    },
+    {
+      "id": "geometry-116",
+      "question_sha256": "f90801fabd88658aeb5e8ffcf58a75d418c75b17a85d1b4a065c2441d3113abb",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 462
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 274
+      }
+    },
+    {
+      "id": "geometry-447",
+      "question_sha256": "253d415d56c2793f6f0b6593a24af9686640db25724a6a83f076ce758c3e5a31",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 174
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 174
+      }
+    },
+    {
+      "id": "geometry-24",
+      "question_sha256": "b61d2340eaf44dd371c0b28ac0ef97b523aa28e4700efa8c3c6b5249913c6591",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 421
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 363
+      }
+    },
+    {
+      "id": "geometry-602",
+      "question_sha256": "a4cc6625ef639b31e8dc38e2bfb28cbbc9acecbefb2d1703eee3e0753dec8c7b",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 399
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 279
+      }
+    },
+    {
+      "id": "geometry-659",
+      "question_sha256": "e9a07a2aaaeba6f55182631c0ebfbf1af2dae60c4715dd099723b1bb105f968a",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "geometry-356",
+      "question_sha256": "702b3cd7c7ab0418809ede4147a4b0dac213082c0120a7f11f0f016ad3b82bb2",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 330
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 336
+      }
+    },
+    {
+      "id": "intermediate_algebra-191",
+      "question_sha256": "1b68512d85d549587869067b389f81aa1b7d793db9ca627fb5e494f443f055e1",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1675
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1309
+      }
+    },
+    {
+      "id": "intermediate_algebra-1084",
+      "question_sha256": "f9047875f94810034b938e0d70dd4cde0715439c0d1e4109f31ac4abe8136a9a",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1300
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1294
+      }
+    },
+    {
+      "id": "intermediate_algebra-156",
+      "question_sha256": "bda7975bdb0ce68fa3867c2cef9d51a4189d17f01a1039fda581f4f8ae23c3f2",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "intermediate_algebra-1019",
+      "question_sha256": "95081d7d05cddddbfca86090df39df89e7c1b5480a41792e16dcf9c72746e7d6",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1463
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1464
+      }
+    },
+    {
+      "id": "intermediate_algebra-426",
+      "question_sha256": "45734b559ff7ee4c99bc765a2e64cd410a9f25ff42365b3886e52cfeb1fb957d",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 403
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "intermediate_algebra-984",
+      "question_sha256": "2af29d2a37df8443a5eeaffe31421388aef8a1eac58ac9facb7d68b952d6dac6",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 388
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 377
+      }
+    },
+    {
+      "id": "intermediate_algebra-234",
+      "question_sha256": "443c2c285c0f1d50c533bb68909cb0a99e5fc4b54dce5ee585dc44cec8943751",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 712
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 758
+      }
+    },
+    {
+      "id": "intermediate_algebra-926",
+      "question_sha256": "d9eef96d46c90080543f558b38a4698c8bd9313f4bec9388253ba54166ef9ac0",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 806
+      }
+    },
+    {
+      "id": "intermediate_algebra-176",
+      "question_sha256": "a6bbd627226c187416702d7468acc04dd50b4815cb34a3c895d04bd0795416ae",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 861
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 861
+      }
+    },
+    {
+      "id": "intermediate_algebra-990",
+      "question_sha256": "fcb0a88f3f604d469dc89c777b8d6ada77dcfe1cc99762dcffe01c16652161fe",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 340
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 340
+      }
+    },
+    {
+      "id": "intermediate_algebra-498",
+      "question_sha256": "7c0ebb17a2c7f0662456b0b4e02e1917de652c8f0f19d9c9461d49c14db59dbc",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1542
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1601
+      }
+    },
+    {
+      "id": "intermediate_algebra-373",
+      "question_sha256": "b49fd01ae182800f84ed30d2843746983b3cc764d1ea89daf2c520148339671c",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 887
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 901
+      }
+    },
+    {
+      "id": "intermediate_algebra-37",
+      "question_sha256": "bbcef0306209ab4ccc4b9286a419e90b1992ca14ea6567902c00b730a792966d",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1373
+      }
+    },
+    {
+      "id": "intermediate_algebra-719",
+      "question_sha256": "5be15be536c2e1e6f1ec22d432a76b5baad5fb5fececa250ea66a85bfee74dfc",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 408
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 399
+      }
+    },
+    {
+      "id": "intermediate_algebra-118",
+      "question_sha256": "68724b2435853a8c0dd1f508c570c2d4c4b917e20966f279a113eb726a5498bf",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 384
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 363
+      }
+    },
+    {
+      "id": "intermediate_algebra-527",
+      "question_sha256": "d39b3e6eebe1e5553eb4aff1ac128fb9237f1bfa00a0b759d3118c3e7a260bae",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "intermediate_algebra-500",
+      "question_sha256": "2106d789c6b74ac7ee5d7db9ce3e3c2bde3658b4250dccc43747d89a1031c3ed",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 453
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 479
+      }
+    },
+    {
+      "id": "intermediate_algebra-861",
+      "question_sha256": "f4240446f1fcbac0eb47a978a007d97e05ec6a1c10cf3deba3be1adaab448d3b",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1079
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1057
+      }
+    },
+    {
+      "id": "intermediate_algebra-1249",
+      "question_sha256": "d572cb431639c2f2a8cbb1691c7a9a32af2d44a217ac547e00e05c0be00226fb",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 951
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 943
+      }
+    },
+    {
+      "id": "intermediate_algebra-1209",
+      "question_sha256": "d6f0df8ae4d8882ca91d721c447f9666df3d6201394908caf17376e0d271bc1e",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 532
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 561
+      }
+    },
+    {
+      "id": "intermediate_algebra-1278",
+      "question_sha256": "b88960368785d1bb98a56c4e369118165b89527b8a53c0483621d622ee27580b",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 345
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 301
+      }
+    },
+    {
+      "id": "intermediate_algebra-515",
+      "question_sha256": "476b8b26f8b1906614469cf3b8c1697ca73bd42020dccf1f75e5fe9569059dd5",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 886
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1015
+      }
+    },
+    {
+      "id": "intermediate_algebra-97",
+      "question_sha256": "64c96204798768f751b080b82516e008629d65df9533754042a6ba56f1b72f89",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1187
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "intermediate_algebra-212",
+      "question_sha256": "37eb3add20a8aed9611aa1df6292c591401cda6e7f0af211c15736cab447fa8b",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 319
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 180
+      }
+    },
+    {
+      "id": "intermediate_algebra-983",
+      "question_sha256": "76d19f71d5b39acc00231ebc126dc83a35085cfae6a3f396f3017b42ad065bda",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 481
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 613
+      }
+    },
+    {
+      "id": "intermediate_algebra-1200",
+      "question_sha256": "1971e82a2370bd3b31c72fcb7b24e76d5f0ca8cf3674285500222da9f47fa11f",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 952
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 825
+      }
+    },
+    {
+      "id": "intermediate_algebra-12",
+      "question_sha256": "9c7eaddb14936704e33afa1aa1248cd0582c268037e2d7ebb26dc23129bc76f6",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1499
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 330
+      }
+    },
+    {
+      "id": "intermediate_algebra-1136",
+      "question_sha256": "ddf1adcc2cb6fd9503ce958ca6f8d82fa020b8caa29823e0525fb089527e2c04",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 938
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 751
+      }
+    },
+    {
+      "id": "number_theory-552",
+      "question_sha256": "4bdc6d72c7091ec49d636c484464f28310293a4c42a311127a52b398c05e8250",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 889
+      }
+    },
+    {
+      "id": "number_theory-27",
+      "question_sha256": "dbb01b1e05a7bea15d330cda2d3709b9dab9eccc0397a6a91f8fbbcf3fa00db3",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 544
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 541
+      }
+    },
+    {
+      "id": "number_theory-78",
+      "question_sha256": "9c533290bad0b0f9eda1cd601b0b013267363474928a40653967b5f0adcf0d97",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 844
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 816
+      }
+    },
+    {
+      "id": "number_theory-173",
+      "question_sha256": "c2dd4d2a8c37cac994eaf00772e97c8bb8d6be0bac56bfebb31010f48d3c6e62",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 508
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 198
+      }
+    },
+    {
+      "id": "number_theory-774",
+      "question_sha256": "40536daa0130f04f1fd59a475cf2b9d662d0c2cca5abaacbd7480e04580f8939",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 507
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 507
+      }
+    },
+    {
+      "id": "number_theory-314",
+      "question_sha256": "6b8ab1fa517f999f4661bf1e29ba7fab00c339b3412f2e569dd1feecee50163a",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 172
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 172
+      }
+    },
+    {
+      "id": "number_theory-20",
+      "question_sha256": "1c701a7bbb00b37d3b2933c504b963bb820c9c46222c14ee3bf9bf893f9a5003",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "number_theory-117",
+      "question_sha256": "f69074277e5398e06ca7c19e39261684c8360a3b7f4171552622e6e1e9456517",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 455
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 455
+      }
+    },
+    {
+      "id": "number_theory-43",
+      "question_sha256": "856628750e92fdaf1900823908ffd48100b741b18c635a8f505b598ba6bbe282",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 187
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 350
+      }
+    },
+    {
+      "id": "number_theory-349",
+      "question_sha256": "b6693577bdfa5f7329051a89d04236cc4ff5d30b6854a1a96b908d596f7ca09d",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1058
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1058
+      }
+    },
+    {
+      "id": "number_theory-79",
+      "question_sha256": "eb946aae551d057d317dc55092d96edc4b5fc5bee2a95b87199a1b561f771bd7",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 411
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "number_theory-584",
+      "question_sha256": "c37050902a7613424a9ca14d11898e64b80d9969d0278106a064a33fbf8e1d56",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1179
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1395
+      }
+    },
+    {
+      "id": "number_theory-762",
+      "question_sha256": "3de463e120ac9f74728079ba1d16ea9f160b27618d15a4c5d7d0fd3521d6a43c",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 646
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1622
+      }
+    },
+    {
+      "id": "number_theory-414",
+      "question_sha256": "48ec7a77f3a124458fa95c88d87b1f7f7d69af49b75de0544967ee70943bbe0f",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 378
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 273
+      }
+    },
+    {
+      "id": "number_theory-156",
+      "question_sha256": "8828be983a9da94a787205e9f86fb0f784d71fcd677454fba05b4fa21131cf79",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "number_theory-221",
+      "question_sha256": "5e1a53d272eaaaf22e9c4d5f43280b4c6e62e442f675a22e4b320a06dc90a2dd",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 321
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 292
+      }
+    },
+    {
+      "id": "number_theory-855",
+      "question_sha256": "94807e36d84f9f0f112e3ed1dd55e0113048013449bb87d9c0d9421c8971bc15",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 256
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 256
+      }
+    },
+    {
+      "id": "number_theory-111",
+      "question_sha256": "7ad5b7f86e701de5d069137679149c5d8833c512eea3d89c96b1ba1a339475b2",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 736
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 658
+      }
+    },
+    {
+      "id": "number_theory-682",
+      "question_sha256": "2c788a1a457c459e6a5f575aaf63b37a5031dde9147ea6715b9716ac9238e64c",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 406
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 360
+      }
+    },
+    {
+      "id": "number_theory-603",
+      "question_sha256": "8a5730c14bdcc283cc96fa31e35537ab450125a520312ff49284a17f4c9cf274",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 912
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1080
+      }
+    },
+    {
+      "id": "number_theory-750",
+      "question_sha256": "de04722c6c1a5be30482c02b63a323143d2207c2ffc4d23a8bb58228aa8fe94c",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 550
+      }
+    },
+    {
+      "id": "number_theory-47",
+      "question_sha256": "1442c28ffcd52505ab1ed789c5d221d765bc571799d05384ac226514a82f7404",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "number_theory-514",
+      "question_sha256": "2d1024e8314cf143b642d21494d076d82bcd42e364280a846462d136b98409e2",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 304
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 296
+      }
+    },
+    {
+      "id": "number_theory-360",
+      "question_sha256": "e06d7ffe2c6a410ba6c9af4ac59aa6530bec1d3d3017b9fedd2f07a341581a86",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1243
+      }
+    },
+    {
+      "id": "number_theory-699",
+      "question_sha256": "5d72e94fb1349606fbcf29b4430b882c2e4d39c3645b800a080f6e1422977450",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 346
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 384
+      }
+    },
+    {
+      "id": "number_theory-511",
+      "question_sha256": "15b510874af572135e0596a676785cad0173899b1c31b23b85ac18eaef30ecf1",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 348
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 297
+      }
+    },
+    {
+      "id": "number_theory-240",
+      "question_sha256": "ceec06e82d9cbfba0d401d01d64c9176a35ac6ee1d436c5802b3a3dd9d438552",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 397
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 579
+      }
+    },
+    {
+      "id": "number_theory-118",
+      "question_sha256": "4f43a5d4939a4cc00c4f86d307bb81e2fcd9c9580b77646f1a507a90cce7b47d",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 547
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 547
+      }
+    },
+    {
+      "id": "prealgebra-1142",
+      "question_sha256": "243568032f0e9d20940980b1ad640166e886540ee285dee686b7406f7add4e25",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 549
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 549
+      }
+    },
+    {
+      "id": "prealgebra-537",
+      "question_sha256": "42bc06da9aa5d27fa5a2795fb5c6a8c081ee9062e1a3c3d04ae2be55b740a8ab",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 401
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 350
+      }
+    },
+    {
+      "id": "prealgebra-687",
+      "question_sha256": "23768e32dee996ccef26edb41e117c3883638b026a7e9409bada96091a70efe5",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 384
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 308
+      }
+    },
+    {
+      "id": "prealgebra-731",
+      "question_sha256": "e23941dd8ddfde5d6ab7035f9526c13ad51d23197fd5180823a4d5df4e4ae7b1",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 417
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 247
+      }
+    },
+    {
+      "id": "prealgebra-434",
+      "question_sha256": "06fcbe46a92d063592e32816c67494d83255f0260d5c179bbcf2852a33077d6c",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 462
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 463
+      }
+    },
+    {
+      "id": "prealgebra-47",
+      "question_sha256": "102554c6d5c4e072f09a6fb7bda8b602f8fc809cce0b974a1f4bd8a45564a93a",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 227
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 207
+      }
+    },
+    {
+      "id": "prealgebra-149",
+      "question_sha256": "614240f064eb42ada74742122be6bd43a3549755262452f7831e95a234383cb7",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 227
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 233
+      }
+    },
+    {
+      "id": "prealgebra-1197",
+      "question_sha256": "b1a1cb4ca488e1cf3fe6a1b5fcecc8adef5773a0f86a636412cb871b57878a15",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 457
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 372
+      }
+    },
+    {
+      "id": "prealgebra-262",
+      "question_sha256": "b42ce03c65635d8e8809eb8461f6e38e11fb821d2c894460a7994c7d273ff912",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 212
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 212
+      }
+    },
+    {
+      "id": "prealgebra-92",
+      "question_sha256": "cd06380ab5fc62fc4de50b40400de3c7c6871965ef8b705b5697b5e258cba71e",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 264
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 262
+      }
+    },
+    {
+      "id": "prealgebra-341",
+      "question_sha256": "adef047a8956b9fc88420e1ee58ba62339195689bec4a0de8616eeefcd17e9e6",
+      "base": {
+        "correct": true,
+        "previous": false,
+        "strict": false,
+        "source": "terminal_prose_number",
+        "truncated": false,
+        "n_tokens": 438
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "terminal_prose_number",
+        "truncated": false,
+        "n_tokens": 430
+      }
+    },
+    {
+      "id": "prealgebra-851",
+      "question_sha256": "c54ffc8f46fa2635ee22b42dcba58b1d2c9ca942d3db56a60403ab8268853402",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 250
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 305
+      }
+    },
+    {
+      "id": "prealgebra-42",
+      "question_sha256": "b3487ff79fa377951d0cdd7cdb1f7de49a8b0e99f667b8fbb6bd5dc70eab7213",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 341
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 333
+      }
+    },
+    {
+      "id": "prealgebra-911",
+      "question_sha256": "f8da60b636ef0885e9f5d9273444a3821699353ccd491decd11593d0adb3fa77",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 251
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 251
+      }
+    },
+    {
+      "id": "prealgebra-6",
+      "question_sha256": "8b3cb68f7b1caaeee93431e557e9332180f6fb8c1731f5f82787bbe8f747a5fa",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 501
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 661
+      }
+    },
+    {
+      "id": "prealgebra-905",
+      "question_sha256": "123458eea87a0698f51763f9500f972c8f912a23dde549e168b4ca939e502183",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 256
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 256
+      }
+    },
+    {
+      "id": "prealgebra-747",
+      "question_sha256": "7af145b94233f00662f3c4476bc7c8f52274f5a175cc67cece8d617aca603871",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 308
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 308
+      }
+    },
+    {
+      "id": "prealgebra-306",
+      "question_sha256": "45cbbbba677e73a4893c38dc292c9b039614d352cb5ba009de5d59eaadf9ad45",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 330
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 330
+      }
+    },
+    {
+      "id": "prealgebra-150",
+      "question_sha256": "bfc4252a4a008020abcdf63911f8a5581a765a1476f0a4f7a7884d627842d3a4",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 368
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 368
+      }
+    },
+    {
+      "id": "prealgebra-1107",
+      "question_sha256": "c0dd859ffb676cb3e685660b42e9c0a3c6319046e9ff481dfa8cab8b8baf5700",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 188
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 188
+      }
+    },
+    {
+      "id": "prealgebra-1203",
+      "question_sha256": "1cd60762e77cf352fe15c879f8e36213b87dedd0d4e9e1d9ebb55928096f4941",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 259
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 279
+      }
+    },
+    {
+      "id": "prealgebra-662",
+      "question_sha256": "7e3ee31e9a34d1893e0ec4aab19eedcbff77482a2f4d67daee44a9a2683da8b5",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 227
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 256
+      }
+    },
+    {
+      "id": "prealgebra-98",
+      "question_sha256": "ad6adfc03d023bace6077ba3841f5042abd477202bc28e5cfa4cd31cc5e1a851",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 417
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 442
+      }
+    },
+    {
+      "id": "prealgebra-1005",
+      "question_sha256": "c04e5dbe6ae5157b09d4b6831014f1f37859f5538f0acb4ef8d518d7b2650583",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 258
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 300
+      }
+    },
+    {
+      "id": "prealgebra-844",
+      "question_sha256": "14253d628f26de7ee251a53b18c04d4824fdde7e3bf8277addbcf7aa020a7edb",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 300
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 324
+      }
+    },
+    {
+      "id": "prealgebra-648",
+      "question_sha256": "7e2a4d6b6c428e7c298abdb0fe9ac999513265ef97d21a6d05fde144bc8a9a97",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 492
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 492
+      }
+    },
+    {
+      "id": "prealgebra-1024",
+      "question_sha256": "7dfc5789950ef242686aa0f77e457b2b0b5d4a4fd2e308839aa3aefaee55a36d",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 324
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 324
+      }
+    },
+    {
+      "id": "prealgebra-872",
+      "question_sha256": "8f5b86b90cafcac6fdf496776885d0f77a0a9a84600f9ea96490fbcc10b29f34",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 279
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 168
+      }
+    },
+    {
+      "id": "precalculus-189",
+      "question_sha256": "4a0c60d15c165c9eda5081042ff6e7b840e81d28e511a36b63ae81de485c716b",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      }
+    },
+    {
+      "id": "precalculus-649",
+      "question_sha256": "92cd621d4d2c47106da2ad75080c75774841b7b8260872a9727e08eb0da88880",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1272
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1133
+      }
+    },
+    {
+      "id": "precalculus-440",
+      "question_sha256": "4e6ec498b70029f821c3eed4699d6cc2f85178e2ac01dd6f96d7034a1b081119",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 744
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 698
+      }
+    },
+    {
+      "id": "precalculus-298",
+      "question_sha256": "9c1697483612b8efdaa6d96c126ecf19cf204440af8859910eb926d43753f4e3",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 565
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 720
+      }
+    },
+    {
+      "id": "precalculus-499",
+      "question_sha256": "8b0750b300c08e5c2a4a1a2e934c1372da9431d1de17a560ab0c14de4b57dddc",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "unresolved",
+        "truncated": true,
+        "n_tokens": 2048
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1125
+      }
+    },
+    {
+      "id": "precalculus-103",
+      "question_sha256": "29dd3f689f13a2c3179096e56e132fe371e6d5df8a77d15e3b31b5f0ad213e37",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 991
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1016
+      }
+    },
+    {
+      "id": "precalculus-745",
+      "question_sha256": "74ca5485d0a8b080ba5d0f6fdc937046cd1694e9ecbac3a21af3289d30a1cb65",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 759
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 744
+      }
+    },
+    {
+      "id": "precalculus-551",
+      "question_sha256": "247bc8dadd84d11d40f2892db945116cfd2d227978762a0787d0482fce65da4d",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 651
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 544
+      }
+    },
+    {
+      "id": "precalculus-325",
+      "question_sha256": "fcd1a8aa993b8702059625a491308894c4971c10ca24339a7e7de66d3ab2a56b",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 825
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 825
+      }
+    },
+    {
+      "id": "precalculus-403",
+      "question_sha256": "e8bc887fc1d9d7944ed0bdaa92dced74ffa2ae82833dc3ca1d5f72c566fe6126",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 354
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 365
+      }
+    },
+    {
+      "id": "precalculus-184",
+      "question_sha256": "5a150c004f6a02d85f13bbd6936cb139438ce23d11a1c5a3a26239a4cfceb144",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 466
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 798
+      }
+    },
+    {
+      "id": "precalculus-668",
+      "question_sha256": "3f6e6a8b7ce9fcdfc86bbd85488bcae5de3116eca2e5209c9d794e8564c7f5d1",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 421
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 452
+      }
+    },
+    {
+      "id": "precalculus-610",
+      "question_sha256": "5ed7ad2c1bf7f1e85eaec34c38c4938c2608a4ece3963d8209c1c943d87b6873",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 657
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 657
+      }
+    },
+    {
+      "id": "precalculus-356",
+      "question_sha256": "b6f0495c0de0cbf55f0ad045d3f3f801f8684325e5f97ce4e31bd5a89fb437d0",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 356
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 350
+      }
+    },
+    {
+      "id": "precalculus-565",
+      "question_sha256": "640caefcb93ec5bd84cd5a5a49007c27e03c4bb9d3ee108617f7f99787ad8573",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 241
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 484
+      }
+    },
+    {
+      "id": "precalculus-524",
+      "question_sha256": "442b6f7a1f11996b52ff6b480b10f24d0468b9c38d04aefcacdca9d100f8bfaa",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 971
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 897
+      }
+    },
+    {
+      "id": "precalculus-708",
+      "question_sha256": "e48e1e095b7c9d6bffacea7c6ec5e66a8024bc67616ef6e1dd4cd95bab349ae1",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 505
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 505
+      }
+    },
+    {
+      "id": "precalculus-513",
+      "question_sha256": "d987f56fae15124694864b6e53f55564f792e31cb0b02fed0e5427048a386b7e",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 869
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1015
+      }
+    },
+    {
+      "id": "precalculus-111",
+      "question_sha256": "deb6e65d4fb11d948729f8651e94d83d1e0877877b7b7a7be38b54ba1e692f96",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1040
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 1027
+      }
+    },
+    {
+      "id": "precalculus-315",
+      "question_sha256": "349d075914ae1b28cc9d15b607f7480733aa068147dffb1db0212c774ea260db",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 547
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 547
+      }
+    },
+    {
+      "id": "precalculus-387",
+      "question_sha256": "764360bbaf32789fb8e1ee361651aadb8d22d6362989f19c0253ffbf1255e6cc",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 496
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 496
+      }
+    },
+    {
+      "id": "precalculus-426",
+      "question_sha256": "5113bab5203b3e0d11830a18d2b62eec6b97826814b5903868d85782991ef89f",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 709
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 596
+      }
+    },
+    {
+      "id": "precalculus-407",
+      "question_sha256": "20ffef0ebab5339d22274d7f31115f0ecb8c15bee45735655bea310e12722072",
+      "base": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 333
+      },
+      "quarter": {
+        "correct": true,
+        "previous": true,
+        "strict": true,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 326
+      }
+    },
+    {
+      "id": "precalculus-19",
+      "question_sha256": "d9d5e3ddbb77ccb968d339d7004c8877f4f006f1720d2789a5412822237524c4",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 658
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 684
+      }
+    },
+    {
+      "id": "precalculus-632",
+      "question_sha256": "98034c52eb7aba579855eb1cb724ea9da08ed8f485b113d2ee087aba14c379d3",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 486
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 486
+      }
+    },
+    {
+      "id": "precalculus-84",
+      "question_sha256": "ff8316a64cac6838b45d1d527272bb543898384ef22654987adac866a1ff6c86",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 707
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 815
+      }
+    },
+    {
+      "id": "precalculus-740",
+      "question_sha256": "0c729678469c72657edcfe317a283422d76522099ce315d7e97893004ce51c4b",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 398
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 903
+      }
+    },
+    {
+      "id": "precalculus-92",
+      "question_sha256": "37f313a141fafa6fdb7cd7203fdc61df178a740883016793ce25dfa44c7869f6",
+      "base": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 471
+      },
+      "quarter": {
+        "correct": false,
+        "previous": false,
+        "strict": false,
+        "source": "boxed",
+        "truncated": false,
+        "n_tokens": 515
+      }
+    }
+  ]
+}

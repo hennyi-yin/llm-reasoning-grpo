@@ -1,0 +1,26 @@
+{
+  "review_scope": "Fixed stratified sample of 3 training references per subject; checked argument and answer without viewing SFT evaluation.",
+  "reviews": {
+    "algebra-126": {"accept": true, "note": "Match the constant and linear coefficients; the negative sign fixes the root."},
+    "algebra-522": {"accept": true, "note": "Both differences are positive on their half-lines; the negative-side vertex gives the minimum."},
+    "algebra-944": {"accept": true, "note": "Linear system gives refill 0.05 and pen 1.05."},
+    "counting_and_probability-59": {"accept": true, "note": "Check distinct-square sums of 50; 1236 exceeds the other feasible increasing numbers."},
+    "counting_and_probability-392": {"accept": true, "note": "Exclude 99 multiples of ten and 81 tens-zero numbers on each side; overlaps already counted are multiples of 100."},
+    "counting_and_probability-555": {"accept": true, "note": "Average the three conditional probabilities, yielding 5/9."},
+    "geometry-530": {"accept": true, "note": "Equal rolling distance; radius ratio is 30/4 after aligning units."},
+    "geometry-675": {"accept": true, "note": "Cylinder volume increases by a factor of six."},
+    "geometry-759": {"accept": false, "note": "The text refers to a missing fold diagram; the flap shape cannot be audited from this input."},
+    "intermediate_algebra-614": {"accept": true, "note": "Shift the Fibonacci generating series by one and two powers of ten."},
+    "intermediate_algebra-705": {"accept": true, "note": "Rationalize both conjugate denominators; x=101/20 also satisfies the unsquared condition."},
+    "intermediate_algebra-1054": {"accept": true, "note": "Weighted Cauchy-Schwarz gives a constant bound and x=9 attains it."},
+    "number_theory-259": {"accept": true, "note": "Invert 4 modulo 9, then check 13*7-1=90."},
+    "number_theory-579": {"accept": true, "note": "Harmonic-mean equation gives a positive factor pair; remove the square root and divide divisor count by two."},
+    "number_theory-701": {"accept": true, "note": "Solve the exact rational equation for a=173."},
+    "prealgebra-18": {"accept": true, "note": "Prime list and sum are correct; 'units sum' should read 'digit sum'."},
+    "prealgebra-51": {"accept": true, "note": "Cayenne alone caps uncovered pies at 9 and all other ingredients can be nested within those 27 pies."},
+    "prealgebra-1034": {"accept": true, "note": "Reduce 8/10 and add with denominator 35."},
+    "precalculus-83": {"accept": true, "note": "Factor into the two given polynomials; add the three positive-imaginary root arguments."},
+    "precalculus-197": {"accept": true, "note": "Even binomial terms give the real part; angle 119400 degrees reduces to 240 degrees."},
+    "precalculus-648": {"accept": true, "note": "A uniquely identified function determines x; the two ambiguous cards must agree. Enumerating equal pairs yields the stated sum."}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "Post-hoc final-answer review of all 21 complete worked-reference dev outputs left unresolved by the fixed judge. Does not change the primary result or reopen the confirmation set.",
+  "reviews": {
+    "algebra-353": {"matches": false, "finding": "Interval [-4,2] reverses the intended sign change."},
+    "algebra-463": {"matches": true, "finding": "Correct slope-intercept equation in inline math."},
+    "algebra-1160": {"matches": true, "finding": "Final equality gives the correct ratio 1/8."},
+    "counting_and_probability-100": {"matches": false, "finding": "States 2/15 instead of 11/15."},
+    "counting_and_probability-213": {"matches": false, "finding": "States 12/25 instead of 91/100."},
+    "counting_and_probability-221": {"matches": false, "finding": "States 5/26 and omits Y."},
+    "counting_and_probability-339": {"matches": false, "finding": "Concludes one order rather than 704."},
+    "counting_and_probability-766": {"matches": false, "finding": "Counts 120 arrangements by treating the two O letters as distinct."},
+    "counting_and_probability-769": {"matches": false, "finding": "Ends with 31/128 instead of 1/2."},
+    "geometry-447": {"matches": true, "finding": "States 24 sides in prose after a calculation."},
+    "intermediate_algebra-990": {"matches": false, "finding": "The final polynomial has an incorrect term and coefficient."},
+    "number_theory-20": {"matches": false, "finding": "Concludes no solution instead of the digit difference 3."},
+    "number_theory-349": {"matches": false, "finding": "Uses the wrong last three digits and concludes 6."},
+    "number_theory-511": {"matches": false, "finding": "Gives 1414 in base 6 instead of 1242."},
+    "prealgebra-92": {"matches": false, "finding": "Lists three days, but the maximum is attained uniquely on Wednesday."},
+    "prealgebra-1005": {"matches": true, "finding": "Correct fraction 1/4 at the end of an align environment."},
+    "precalculus-189": {"matches": true, "finding": "Final inline expression matches, although the derivation contains a sign error."},
+    "precalculus-403": {"matches": true, "finding": "Correct period 2 pi in inline math."},
+    "precalculus-426": {"matches": true, "finding": "Final unboxed matrix correctly stacks the three vectors as columns."},
+    "precalculus-499": {"matches": false, "finding": "Incorrect final projection vector."},
+    "precalculus-708": {"matches": false, "finding": "Subtracting 2 pi from the third coordinate leaves it out of range."}
+  }
+}

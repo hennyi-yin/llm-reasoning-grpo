@@ -124,6 +124,13 @@ questions yielded **119/196 (60.71%) before and after training** under shared
 final-answer scoring. The pilot fell short of its +2 pp development gate;
 the reserved confirmation set was left unused.
 
+**Matched MATH SFT follow-up:** on 196 held-out dev problems, the base model
+scored **120/196** under the revised final-answer judge. SFT on 335 worked
+references reached **69/196**, compared with **31/196** for answer-only SFT on
+the same questions. The worked references mitigated the regression relative
+to answer-only training, but did not clear the base-model gate. See the
+[matched SFT report and error audit](docs/worked-sft.md).
+
 Evidence: [`results/format_analysis.json`](results/format_analysis.json)
 (`posthoc_descriptive_comparisons` contains the base/ablation split;
 `comparisons` retains the ten prespecified comparisons),

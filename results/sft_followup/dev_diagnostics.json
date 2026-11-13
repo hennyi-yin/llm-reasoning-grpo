@@ -1,0 +1,174 @@
+{
+  "by_level_descriptive": {
+    "Level 1": {
+      "n": 8,
+      "base": 7,
+      "short": 4,
+      "worked": 3
+    },
+    "Level 2": {
+      "n": 46,
+      "base": 41,
+      "short": 14,
+      "worked": 27
+    },
+    "Level 3": {
+      "n": 35,
+      "base": 28,
+      "short": 5,
+      "worked": 18
+    },
+    "Level 4": {
+      "n": 42,
+      "base": 26,
+      "short": 6,
+      "worked": 14
+    },
+    "Level 5": {
+      "n": 65,
+      "base": 18,
+      "short": 2,
+      "worked": 7
+    }
+  },
+  "by_subject_descriptive": {
+    "algebra": {
+      "n": 28,
+      "base": 25,
+      "short": 3,
+      "worked": 14
+    },
+    "counting_and_probability": {
+      "n": 28,
+      "base": 16,
+      "short": 4,
+      "worked": 8
+    },
+    "geometry": {
+      "n": 28,
+      "base": 14,
+      "short": 5,
+      "worked": 10
+    },
+    "intermediate_algebra": {
+      "n": 28,
+      "base": 11,
+      "short": 3,
+      "worked": 6
+    },
+    "number_theory": {
+      "n": 28,
+      "base": 13,
+      "short": 4,
+      "worked": 5
+    },
+    "prealgebra": {
+      "n": 28,
+      "base": 26,
+      "short": 10,
+      "worked": 20
+    },
+    "precalculus": {
+      "n": 28,
+      "base": 15,
+      "short": 2,
+      "worked": 6
+    }
+  },
+  "common_resolved_unclipped": {
+    "n": 136,
+    "base": 97,
+    "short": 23,
+    "worked": 68
+  },
+  "answer_only_vs_base": {
+    "left": 120,
+    "right": 31,
+    "delta_pp": -45.40816326530612,
+    "gains": 4,
+    "losses": 93,
+    "ci_pp": [
+      -52.55102040816327,
+      -37.755102040816325
+    ],
+    "mcnemar_p": 4.5653387447282835e-23
+  },
+  "recovered_by_new_judge": {
+    "base": 1,
+    "short": 0,
+    "worked": 0
+  },
+  "worked_vs_base_changed_ids": {
+    "gained": [
+      "counting_and_probability-101",
+      "counting_and_probability-648",
+      "geometry-706",
+      "geometry-477",
+      "number_theory-314",
+      "number_theory-221",
+      "prealgebra-687",
+      "precalculus-632"
+    ],
+    "lost": [
+      "algebra-1524",
+      "algebra-534",
+      "algebra-1390",
+      "algebra-353",
+      "algebra-77",
+      "algebra-160",
+      "algebra-1160",
+      "algebra-1185",
+      "algebra-463",
+      "algebra-1057",
+      "algebra-1646",
+      "counting_and_probability-519",
+      "counting_and_probability-766",
+      "counting_and_probability-194",
+      "counting_and_probability-770",
+      "counting_and_probability-374",
+      "counting_and_probability-49",
+      "counting_and_probability-287",
+      "counting_and_probability-23",
+      "counting_and_probability-769",
+      "counting_and_probability-221",
+      "geometry-736",
+      "geometry-184",
+      "geometry-679",
+      "geometry-652",
+      "geometry-116",
+      "geometry-447",
+      "intermediate_algebra-1019",
+      "intermediate_algebra-984",
+      "intermediate_algebra-990",
+      "intermediate_algebra-373",
+      "intermediate_algebra-118",
+      "number_theory-27",
+      "number_theory-774",
+      "number_theory-117",
+      "number_theory-349",
+      "number_theory-79",
+      "number_theory-855",
+      "number_theory-111",
+      "number_theory-514",
+      "number_theory-699",
+      "number_theory-511",
+      "prealgebra-149",
+      "prealgebra-42",
+      "prealgebra-306",
+      "prealgebra-150",
+      "prealgebra-1005",
+      "prealgebra-844",
+      "prealgebra-1024",
+      "precalculus-103",
+      "precalculus-745",
+      "precalculus-325",
+      "precalculus-403",
+      "precalculus-565",
+      "precalculus-524",
+      "precalculus-513",
+      "precalculus-111",
+      "precalculus-387",
+      "precalculus-426"
+    ]
+  }
+}

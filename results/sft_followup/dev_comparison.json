@@ -1,0 +1,111 @@
+{
+  "split": "dev",
+  "n": 196,
+  "counts": {
+    "base": {
+      "correct": 120,
+      "strict": 119,
+      "previous": 119,
+      "truncated": 18,
+      "unresolved": 18,
+      "mean_tokens": 656.6326530612245
+    },
+    "short": {
+      "correct": 31,
+      "strict": 31,
+      "previous": 31,
+      "truncated": 1,
+      "unresolved": 2,
+      "mean_tokens": 23.872448979591837
+    },
+    "worked": {
+      "correct": 69,
+      "strict": 68,
+      "previous": 69,
+      "truncated": 26,
+      "unresolved": 47,
+      "mean_tokens": 423.83673469387753
+    }
+  },
+  "worked_vs": {
+    "correct": {
+      "base": {
+        "left": 120,
+        "right": 69,
+        "delta_pp": -26.020408163265305,
+        "gains": 8,
+        "losses": 59,
+        "ci_pp": [
+          -33.16326530612245,
+          -18.877551020408163
+        ],
+        "mcnemar_p": 1.0167485039666578e-10
+      },
+      "short": {
+        "left": 31,
+        "right": 69,
+        "delta_pp": 19.387755102040817,
+        "gains": 53,
+        "losses": 15,
+        "ci_pp": [
+          11.73469387755102,
+          27.040816326530614
+        ],
+        "mcnemar_p": 4.11597033439493e-06
+      }
+    },
+    "previous": {
+      "base": {
+        "left": 119,
+        "right": 69,
+        "delta_pp": -25.510204081632654,
+        "gains": 9,
+        "losses": 59,
+        "ci_pp": [
+          -32.6530612244898,
+          -17.857142857142858
+        ],
+        "mcnemar_p": 3.914123197106857e-10
+      },
+      "short": {
+        "left": 31,
+        "right": 69,
+        "delta_pp": 19.387755102040817,
+        "gains": 53,
+        "losses": 15,
+        "ci_pp": [
+          11.73469387755102,
+          27.040816326530614
+        ],
+        "mcnemar_p": 4.11597033439493e-06
+      }
+    },
+    "strict": {
+      "base": {
+        "left": 119,
+        "right": 68,
+        "delta_pp": -26.020408163265305,
+        "gains": 9,
+        "losses": 60,
+        "ci_pp": [
+          -33.673469387755105,
+          -18.367346938775512
+        ],
+        "mcnemar_p": 2.2444496451277593e-10
+      },
+      "short": {
+        "left": 31,
+        "right": 68,
+        "delta_pp": 18.877551020408163,
+        "gains": 53,
+        "losses": 16,
+        "ci_pp": [
+          11.224489795918368,
+          26.53061224489796
+        ],
+        "mcnemar_p": 9.095063055186201e-06
+      }
+    }
+  },
+  "decision": "stop"
+}
