@@ -1,0 +1,31 @@
+data:
+  repo: EleutherAI/hendrycks_math
+  revision: 21a5633873b6a120296cce3e2df9d5550074f4a3
+  subjects: [algebra, counting_and_probability, geometry, intermediate_algebra, number_theory, prealgebra, precalculus]
+  train_count: 7500
+  screening_count: 128
+  dev_count: 196
+  confirmation_count: 350
+  seed: 42
+sampling:
+  n: 8
+  temperature: 1.0
+  max_tokens: 1024
+  seed: 42
+  min_mixed_prompts: 24
+  max_truncation_fraction: 0.40
+  min_judge_coverage: 0.90
+training:
+  max_steps: 50
+  generation_batch_size: 16
+  gradient_accumulation_steps: 8
+  save_steps: 10
+  max_completion_length: 1024
+  max_gpu_used_fraction: 0.96
+  memory_grace_seconds: 12
+evaluation:
+  max_tokens: 2048
+  seed: 0
+  min_dev_gain_pp: 2.0
+  max_unknown_delta_pp: 3.0
+  max_unresolved_fraction: 0.25

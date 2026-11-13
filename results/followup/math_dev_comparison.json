@@ -1,0 +1,39 @@
+{
+  "n": 196,
+  "split": "dev",
+  "metrics": {
+    "correct": {
+      "base": 119,
+      "pilot": 119,
+      "delta_pp": 0.0,
+      "gains": 5,
+      "losses": 5,
+      "paired_bootstrap_95_ci_pp": [
+        -3.061224489795918,
+        3.061224489795918
+      ],
+      "paired_p_descriptive": 1.0
+    },
+    "strict": {
+      "base": 119,
+      "pilot": 120,
+      "delta_pp": 0.5102040816326531,
+      "gains": 6,
+      "losses": 5,
+      "paired_bootstrap_95_ci_pp": [
+        -2.5510204081632653,
+        4.081632653061225
+      ],
+      "paired_p_descriptive": 1.0
+    }
+  },
+  "unresolved_base_pilot": [
+    19,
+    17
+  ],
+  "truncated_base_pilot": [
+    18,
+    16
+  ],
+  "decision": "stop"
+}

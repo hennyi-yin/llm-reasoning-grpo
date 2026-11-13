@@ -1,0 +1,29 @@
+{
+  "run_date": "2026-11-10",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "peak_device_memory_mib_sampled": 10290,
+  "steps_with_no_reward_variation": 2,
+  "optimizer_steps_with_logged_group_metrics": 50,
+  "mean_logged_fraction_zero_variance_groups": 0.17,
+  "mean_logged_fraction_clipped_completions": 0.06375,
+  "local_raw_sha256": {
+    "base": "f19a60977a7520016eb7b46d54a4edf76452287d32cab33e830e885e672b466b",
+    "pilot": "2a1633049ac35e6faf487eebcf452781409334418ac30145ec37401b8d33d416"
+  },
+  "local_train_metrics_sha256": "3240ba9f4c7f10c61ee6790c0a59c4ba294558cb88f3e5939d5ba9dc84f91665",
+  "local_final_adapter_sha256": "3e927579d1a5e377a3a22e6d39266e58067b404c442f1a22bd8827e46295f7fd",
+  "post_hoc_review_of_unclipped_unresolved": [
+    {
+      "id": "prealgebra-341",
+      "label": "base",
+      "finding": "The final prose explicitly states 60 inches. The extractor did not recognize the final answer."
+    },
+    {
+      "id": "precalculus-189",
+      "label": "pilot",
+      "finding": "The extracted symbolic answer matches the reference. The conservative parser returned no expression. The strict judge counted it as correct."
+    }
+  ],
+  "post_hoc_review_corrected_totals": {"base": 120, "pilot": 120},
+  "confirmation_evaluated": false
+}

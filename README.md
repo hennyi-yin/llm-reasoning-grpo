@@ -113,6 +113,17 @@ That improvement cannot be explained by missing boxes alone, and it still
 does not establish a causal improvement in reasoning. The main model remains
 below base on both final tasks.
 
+**Follow-up on the same saved answers:** a shared final-answer rule that accepts
+unboxed answers, plus review of 117 ambiguous completions, reduces the
+base → no-SFT GRPO difference from **+5.38 pp** to **+0.30 pp** (paired 95%
+bootstrap interval: −1.82 to +2.35 pp). The v1 scores above are unchanged.
+See the [follow-up protocol and evidence](docs/followup.md).
+
+**Harder-problem pilot:** 50 steps of no-SFT GRPO on 72 screened MATH training
+questions yielded **119/196 (60.71%) before and after training** under shared
+final-answer scoring. The pilot fell short of its +2 pp development gate;
+the reserved confirmation set was left unused.
+
 Evidence: [`results/format_analysis.json`](results/format_analysis.json)
 (`posthoc_descriptive_comparisons` contains the base/ablation split;
 `comparisons` retains the ten prespecified comparisons),

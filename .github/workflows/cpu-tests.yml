@@ -14,3 +14,4 @@ jobs:
       - run: python -m pytest -q
       - run: python -m src.evaluate --help && python -m src.stats --help
       - run: python -m scripts.check_saved_report_cpu --require-minimal-env
+      - run: python -m scripts.verify_math_pilot

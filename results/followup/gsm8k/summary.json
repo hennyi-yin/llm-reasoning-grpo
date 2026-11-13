@@ -1,0 +1,33 @@
+{
+  "n_pairs": 1319,
+  "pending_unique_reviews": 0,
+  "manual_reviews": 117,
+  "strict": {
+    "base_correct": 910,
+    "grpo_correct": 981,
+    "base_pct": 68.99166034874905,
+    "grpo_pct": 74.37452615617892,
+    "delta_pp": 5.382865807429871,
+    "gains": 162,
+    "losses": 91,
+    "paired_bootstrap_95_ci_pp": [
+      3.10841546626232,
+      7.733131159969674
+    ],
+    "mcnemar_p_descriptive": 9.4999257280733e-06
+  },
+  "regraded": {
+    "base_correct": 977,
+    "grpo_correct": 981,
+    "base_pct": 74.07126611068992,
+    "grpo_pct": 74.37452615617892,
+    "delta_pp": 0.3032600454890068,
+    "gains": 101,
+    "losses": 97,
+    "paired_bootstrap_95_ci_pp": [
+      -1.819560272934041,
+      2.350265352539803
+    ],
+    "mcnemar_p_descriptive": 0.8312377211582064
+  }
+}

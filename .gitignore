@@ -11,6 +11,11 @@ release_assets/
 *.pth
 *.tmp
 results/eval_cache/
+results/followup/work/
+results/followup/math_status.json
+results/followup/math_train_manifest.json
+results/followup/gsm8k/paired_rows.json
+results/followup/gsm8k/review_queue.json
 logs/*.pid
 logs/*.console.log
 logs/*.lock
