@@ -1,0 +1,62 @@
+{
+  "split": "dev",
+  "n": 196,
+  "comparisons": {
+    "correct": {
+      "left": 120,
+      "right": 118,
+      "delta_pp": -1.0204081632653061,
+      "gains": 6,
+      "losses": 8,
+      "ci_pp": [
+        -4.591836734693878,
+        2.5510204081632653
+      ],
+      "mcnemar_p": 0.79052734375
+    },
+    "previous": {
+      "left": 119,
+      "right": 118,
+      "delta_pp": -0.5102040816326531,
+      "gains": 7,
+      "losses": 8,
+      "ci_pp": [
+        -4.591836734693878,
+        3.5714285714285716
+      ],
+      "mcnemar_p": 1.0
+    },
+    "strict": {
+      "left": 119,
+      "right": 118,
+      "delta_pp": -0.5102040816326531,
+      "gains": 7,
+      "losses": 8,
+      "ci_pp": [
+        -4.591836734693878,
+        3.5714285714285716
+      ],
+      "mcnemar_p": 1.0
+    }
+  },
+  "counts": {
+    "base": {
+      "unresolved": 18,
+      "truncated": 18,
+      "mean_tokens": 656.6326530612245
+    },
+    "conservative": {
+      "unresolved": 12,
+      "truncated": 12,
+      "mean_tokens": 618.6122448979592
+    }
+  },
+  "common_complete_resolved_descriptive": {
+    "n": 174,
+    "base": 120,
+    "conservative": 117
+  },
+  "preservation_supported": false,
+  "improvement_gate": false,
+  "decision": "stop"
+}

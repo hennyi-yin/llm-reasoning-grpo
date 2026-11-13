@@ -16,3 +16,4 @@ jobs:
       - run: python -m scripts.check_saved_report_cpu --require-minimal-env
       - run: python -m scripts.verify_math_pilot
       - run: python -m scripts.verify_math_sft
+      - run: python -m src.math_sft_conservative verify

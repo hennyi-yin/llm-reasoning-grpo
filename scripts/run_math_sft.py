@@ -13,13 +13,15 @@ from src.common import ROOT, load_config, write_json
 from src.math_sft import ARMS, CONFIG, OUT
 
 
-def run(probe=False):
+def run(probe=False, conservative=False):
     cfg = load_config(CONFIG)
     state = {"status": "running", "completed": []}
 
     def publish(**values):
         state.update(values, updated_utc=datetime.now(timezone.utc).isoformat())
         write_json(OUT / ("probe_status.json" if probe else "status.json"), state)
+
+    module = "src.math_sft_conservative" if conservative else "src.math_sft"
 
     def stage(name, args, output, *, gpu=False):
         if output.is_file():
@@ -31,7 +33,7 @@ def run(probe=False):
         with logfile.open("ab") as log:
             log.write((f"\n--- {state['updated_utc']} ---\n").encode())
             log.flush()
-            p = subprocess.Popen([sys.executable, "-u", "-m", "src.math_sft", *args],
+            p = subprocess.Popen([sys.executable, "-u", "-m", module, *args],
                                  cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
             try:
                 while p.poll() is None:
@@ -65,12 +67,15 @@ def run(probe=False):
 
     signal.signal(signal.SIGTERM, interrupted)
     try:
+        if conservative:
+            stage("prepare", ["prepare"], OUT / "plan.json")
         if probe:
             stage("dev_scale_probe", ["probe-scale"], OUT / "dev_scale_probe.json", gpu=True)
             publish(status="complete", stage="finished", decision="exploratory_only")
             return
-        stage("dev_base", ["eval"], OUT / "dev_base.json")
-        for label in ("short", "worked"):
+        stage("dev_base", ["eval", "--arm", "base"], OUT / "dev_base.json")
+        arms = ("worked",) if conservative else ("short", "worked")
+        for label in arms:
             checkpoints = sorted((OUT / label).glob("checkpoint-*"), key=lambda p: int(p.name.split("-")[-1]))
             resume = next((p for p in reversed(checkpoints) if all((p / f).is_file() for f in
                           ("trainer_state.json", "optimizer.pt", "scheduler.pt", "rng_state.pth",
@@ -83,7 +88,7 @@ def run(probe=False):
         stage("compare_dev", ["compare"], OUT / "dev_comparison.json")
         decision = load_config(OUT / "dev_comparison.json")["decision"]
         if decision == "confirm":
-            for label in ARMS:
+            for label in ("base", "worked") if conservative else ARMS:
                 stage(f"confirmation_{label}", ["eval", "--split", "confirmation", "--arm", label],
                       OUT / f"confirmation_{label}.json", gpu=True)
             stage("compare_confirmation", ["compare", "--split", "confirmation"], OUT / "confirmation_comparison.json")
@@ -96,9 +101,11 @@ def run(probe=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--probe-scale", action="store_true")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--probe-scale", action="store_true")
+    group.add_argument("--conservative", action="store_true")
     args = parser.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     with (OUT / "runner.lock").open("w") as handle:
         fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        run(args.probe_scale)
+        run(args.probe_scale, args.conservative)

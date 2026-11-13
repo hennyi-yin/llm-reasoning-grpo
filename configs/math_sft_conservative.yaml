@@ -1,0 +1,5 @@
+learning_rate: 0.000005
+preservation_margin_pp: 3.0
+min_gain_pp: 2.0
+max_unresolved_fraction: 0.25
+max_extra_unresolved_pp: 3.0

@@ -94,6 +94,9 @@ confirmation set. Its
 [paired evidence](../results/sft_followup/dev_scale_probe.json) is kept
 separate from the original stopping decision.
 
+The [lower-learning-rate follow-up](conservative-sft.md) tested a smaller
+update during training, rather than scaling this adapter at inference.
+
 Recompute the report from the [paired outcomes](../results/sft_followup/dev_paired.json)
 without a GPU:
 

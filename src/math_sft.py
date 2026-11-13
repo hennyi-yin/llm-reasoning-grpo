@@ -168,7 +168,7 @@ def reviewed_data():
     return [x for x in rows if x["id"] not in reviews or reviews[x["id"]]["accept"]]
 
 
-def train(label, resume=None):
+def train(label, resume=None, *, learning_rate=None):
     from datasets import Dataset
     from peft import LoraConfig
     import torch
@@ -186,7 +186,8 @@ def train(label, resume=None):
         raise FileExistsError(f"Existing checkpoints in {arm}; explicitly resume")
     template = load_config("configs/sft.yaml")
     values = dict(template["trainer"])
-    values.update(output_dir=str(arm), num_train_epochs=1, learning_rate=cfg["learning_rate"],
+    values.update(output_dir=str(arm), num_train_epochs=1,
+                  learning_rate=cfg["learning_rate"] if learning_rate is None else learning_rate,
                   gradient_accumulation_steps=cfg["batch_accumulation"],
                   max_length=cfg["max_sequence_tokens"], logging_steps=2,
                   save_strategy="steps", save_steps=cfg["checkpoint_steps"], save_total_limit=2)

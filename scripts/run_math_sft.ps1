@@ -1,4 +1,4 @@
-param([switch]$ProbeScale)
+param([switch]$ProbeScale, [switch]$Conservative)
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath (Split-Path -Parent $PSScriptRoot)
 Add-Type -Namespace MathSft -Name Awake -MemberDefinition @'
@@ -9,6 +9,9 @@ public static extern uint SetThreadExecutionState(uint flags);
 try {
     $linux = 'source ~/.venvs/llm-reasoning-grpo/bin/activate && source scripts/runtime_env.sh && exec python -u -m scripts.run_math_sft'
     if ($ProbeScale) { $linux += ' --probe-scale' }
+    if ($Conservative) {
+        $linux = 'export LLM_MATH_SFT_OUT=results/followup/work/math_sft_conservative; ' + $linux + ' --conservative'
+    }
     & wsl.exe -d Ubuntu-24.04 -- bash -lc $linux
     $runCode = $LASTEXITCODE
 } finally {

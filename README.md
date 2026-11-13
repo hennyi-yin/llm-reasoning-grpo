@@ -131,6 +131,11 @@ the same questions. The worked references mitigated the regression relative
 to answer-only training, but did not clear the base-model gate. See the
 [matched SFT report and error audit](docs/worked-sft.md).
 
+**Lower-rate SFT:** reducing the learning rate tenfold on the same 335 worked
+references recovered **118/196** versus **120/196** for base (−1.02 pp; paired
+95% interval −4.59 to +2.55 pp). Neither the preservation nor improvement gate
+was met. See the [controlled follow-up](docs/conservative-sft.md).
+
 Evidence: [`results/format_analysis.json`](results/format_analysis.json)
 (`posthoc_descriptive_comparisons` contains the base/ablation split;
 `comparisons` retains the ten prespecified comparisons),
