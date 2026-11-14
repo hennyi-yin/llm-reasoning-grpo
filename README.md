@@ -157,6 +157,13 @@ Reproduce the split with `python -m scripts.analyze_saved_results`; it reads
 saved results and training logs, generates no new answers, and adds no
 post-hoc significance test. The frozen result tables above are unchanged.
 
+The **MATH multi-sample follow-up** covered 200 fresh test questions with eight
+samples per model. Pass@8 was **80.5% for base and 83.0% for 50-step no-SFT GRPO**
+(+2.5 pp, paired 95% interval −0.5 to +6.0 pp), with identical results under
+strict boxed scoring. Reference-blind voting scored **68.5% for base and 67.0%
+for GRPO**. The vote recovered only one of the eight questions on which GRPO alone
+produced a correct sample. See the [coverage curves, vote analysis, and output costs](docs/math-multisample.md).
+
 ## Training and dev selection
 
 The actual RTX5070 passed the 20-step R12 smoke test with plan B: Qwen2.5-1.5B,

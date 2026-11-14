@@ -1,0 +1,103 @@
+{
+  "n": 200,
+  "coverage": {
+    "pass@1": {
+      "base_pct": 55.1875,
+      "grpo_pct": 55.0625,
+      "delta_pp": -0.125,
+      "paired_95_ci_pp": [
+        -2.0,
+        1.7500000000000002
+      ]
+    },
+    "pass@2": {
+      "base_pct": 66.46428571428571,
+      "grpo_pct": 65.92857142857143,
+      "delta_pp": -0.5357142857142858,
+      "paired_95_ci_pp": [
+        -2.5357142857142856,
+        1.4464285714285714
+      ]
+    },
+    "pass@4": {
+      "base_pct": 74.80000000000001,
+      "grpo_pct": 75.46428571428572,
+      "delta_pp": 0.6642857142857141,
+      "paired_95_ci_pp": [
+        -1.6571428571428575,
+        2.9642857142857144
+      ]
+    },
+    "pass@8": {
+      "base_pct": 80.5,
+      "grpo_pct": 83.0,
+      "delta_pp": 2.5,
+      "paired_95_ci_pp": [
+        -0.5,
+        6.0
+      ],
+      "gains": 8.0,
+      "losses": 3.0,
+      "mcnemar_p_descriptive": 0.2265625
+    }
+  },
+  "vote_at_8": {
+    "base_pct": 68.5,
+    "grpo_pct": 67.0,
+    "delta_pp": -1.5,
+    "paired_95_ci_pp": [
+      -5.512499999999989,
+      2.5
+    ],
+    "gains": 8,
+    "losses": 11,
+    "mcnemar_p_descriptive": 0.6476058959960938
+  },
+  "arms": {
+    "base": {
+      "correct_samples": 883,
+      "samples": 1600,
+      "unresolved": 45,
+      "truncated": 36,
+      "mean_tokens_per_sample": 591.854375,
+      "vote_abstentions": 0,
+      "coverage_n": 161,
+      "vote_correct": 137,
+      "covered_but_not_selected": 24
+    },
+    "grpo": {
+      "correct_samples": 881,
+      "samples": 1600,
+      "unresolved": 54,
+      "truncated": 45,
+      "mean_tokens_per_sample": 596.455,
+      "vote_abstentions": 0,
+      "coverage_n": 166,
+      "vote_correct": 134,
+      "covered_but_not_selected": 32
+    }
+  },
+  "strict": {
+    "pass@1": {
+      "base_pct": 55.0625,
+      "grpo_pct": 55.00000000000001,
+      "delta_pp": -0.0625,
+      "paired_95_ci_pp": [
+        -1.9375,
+        1.8124999999999998
+      ]
+    },
+    "pass@8": {
+      "base_pct": 80.5,
+      "grpo_pct": 83.0,
+      "delta_pp": 2.5,
+      "paired_95_ci_pp": [
+        -0.5,
+        6.0
+      ],
+      "gains": 8.0,
+      "losses": 3.0,
+      "mcnemar_p_descriptive": 0.2265625
+    }
+  }
+}

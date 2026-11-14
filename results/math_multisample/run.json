@@ -1,0 +1,103 @@
+{
+  "protocol_sha256": "0e59bc9370f73f03c97da5867fb11cd537f07e7998a826b9ded09d8290ad9023",
+  "arms": {
+    "base": {
+      "raw_shards": [
+        {
+          "path": "raw_base_00.json",
+          "sha256": "5055649a387940cc9ea0666c9b1a01cebc831da1c65d4a51efb9d8a6555c7f79",
+          "offline_seconds": 52.416178507
+        },
+        {
+          "path": "raw_base_01.json",
+          "sha256": "b9bcdcdf0e3d208b2f81a7012184dc78cc8a5fcb7e84970f360d5cf19fa33e59",
+          "offline_seconds": 78.03682064300001
+        },
+        {
+          "path": "raw_base_02.json",
+          "sha256": "43266b61a460670c6d1632b6d85e6084c6e4e63d11e4382161e043e4ac312081",
+          "offline_seconds": 79.68132134899997
+        },
+        {
+          "path": "raw_base_03.json",
+          "sha256": "becb8e1a1b9c58bb83027db586b28fb3456018b333ac4c7864fb95118bbd1597",
+          "offline_seconds": 74.893194687
+        },
+        {
+          "path": "raw_base_04.json",
+          "sha256": "9ca1701f746fc31e7ce3770c2c2f8f73c6429060c27eb4c2b7fd45dc505313f1",
+          "offline_seconds": 75.17102873000005
+        },
+        {
+          "path": "raw_base_05.json",
+          "sha256": "244e1a0df3bd08c061a009e069d089d784715418c19c505e18fc18b0816f3679",
+          "offline_seconds": 81.00059636399999
+        },
+        {
+          "path": "raw_base_06.json",
+          "sha256": "d235d218df937da419bd59ffd3977595ca2c32fdb6e5a66cd6720dd197c0e7f9",
+          "offline_seconds": 80.241171882
+        },
+        {
+          "path": "raw_base_07.json",
+          "sha256": "41859767442631576e3f3d40937640c5740ca2f1690bb1848789594a1f97ae24",
+          "offline_seconds": 75.58425244299997
+        }
+      ],
+      "peak_device_memory_mib": 8997
+    },
+    "grpo": {
+      "raw_shards": [
+        {
+          "path": "raw_grpo_00.json",
+          "sha256": "bb761800f3dac08b429feba41e96297725ce2e1d940b1043f7cb9f6f7bb1bb0f",
+          "offline_seconds": 126.17863721599997
+        },
+        {
+          "path": "raw_grpo_01.json",
+          "sha256": "49ad0af6f4b63f5d0ee1e7cd3fc50c25fb717d3fef9b72ec0f4a22a7f8f1d59c",
+          "offline_seconds": 136.639172036
+        },
+        {
+          "path": "raw_grpo_02.json",
+          "sha256": "0f46b5bb59398d08b4720d9126ce94b8f6f9d35ff23a345bb2b1055aff43bf8a",
+          "offline_seconds": 140.57073166400005
+        },
+        {
+          "path": "raw_grpo_03.json",
+          "sha256": "0ef72493eaaa4fed0d444d5480adb9ef524400d1726f0e5c17fa99f88d7c3d11",
+          "offline_seconds": 131.483615763
+        },
+        {
+          "path": "raw_grpo_04.json",
+          "sha256": "d5f035b2eef8c94313c508352dd7bd82081e01b332d586f79815a479b955bb57",
+          "offline_seconds": 145.31693480800004
+        },
+        {
+          "path": "raw_grpo_05.json",
+          "sha256": "1d11483c7175c74b19073caad96ae152405e0e89458e2a51157ed890d16d9586",
+          "offline_seconds": 126.6430715219999
+        },
+        {
+          "path": "raw_grpo_06.json",
+          "sha256": "c2aad3f66fdb155b32e2987c37282f0eeab8d40ca9b57160117ca980e358e2bb",
+          "offline_seconds": 145.12528387600014
+        },
+        {
+          "path": "raw_grpo_07.json",
+          "sha256": "c7fd1532fb14ad314473a2f5ddab542daa657349f48611e4437cb97a3a54f5b3",
+          "offline_seconds": 138.53737395000007
+        }
+      ],
+      "peak_device_memory_mib": 8994
+    }
+  },
+  "versions": {
+    "torch": "2.13.0",
+    "vllm": "0.31.0",
+    "transformers": "5.17.0",
+    "math-verify": "0.9.0",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  }
+}

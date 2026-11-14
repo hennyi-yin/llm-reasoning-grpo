@@ -1,0 +1,1269 @@
+{
+  "config": {
+    "selection_seed": 314159,
+    "questions": 200,
+    "expected_test_rows": 5000,
+    "sampling": {
+      "n": 8,
+      "seed": 7021,
+      "temperature": 0.7,
+      "top_p": 1.0,
+      "max_tokens": 2048,
+      "max_model_len": 4096,
+      "max_num_seqs": 96,
+      "gpu_memory_utilization": 0.6,
+      "shard_size": 25
+    },
+    "analysis": {
+      "k": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 0
+    }
+  },
+  "adapter": {
+    "weights": "3e927579d1a5e377a3a22e6d39266e58067b404c442f1a22bd8827e46295f7fd",
+    "config": "53705d92c0b61b6a8a710b3e564dcdd4bf8af2ffebe0ce188994c80eb7a9dd6f"
+  },
+  "source_hashes": {
+    "src/math_multisample.py": "1b00ed3a67efb917e68792626741fc3eaad7417cb0303b959daf55f9ee0fcb77",
+    "src/math_independent.py": "f1b10f052dd8e2ea584799675437963c0ec26645816258904e291e8dba2e3842",
+    "src/math_sft.py": "d283d063529ac77ebb0f0a4b10057fccefb8c4c06ac958dd8a67a9d17a6d949d",
+    "src/math_pilot.py": "85251d5bdd80253a82303d4ac258ecaf4ceea401334cd310e985d774bd7fb5d2",
+    "src/followup_answers.py": "c9c61c620bfb9696682e8c2cd3df99f6627ad0f1ec1a45aed81d74ec011ea154",
+    "src/extract.py": "b15953d7cf22915bd916ba7161b2de3f6cecb289fc123d3c78299fb496405797",
+    "src/evaluate.py": "22b6620ead8e01fef85e0fc12b77cbd4f2d94e4cef33fd5ec0d03a47291565df",
+    "src/prompts.py": "cd0aac9701332c290c583c193a7d928b967ea530d095d1519939c1149d4b28e0",
+    "src/math_pilot_data.py": "d800794477cd90fcdaf5281e20f071a7e42535914c11f4fb2d7000ffbede178b",
+    "src/stats.py": "98b83a53ba37061dd1148119824d18c01ca4723189f1cfd9fb14ac3f763aca25"
+  },
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "counts": {
+    "excluded_train_or_previously_used": 1902,
+    "excluded_reference_or_diagram": 768,
+    "excluded_context": 0,
+    "official_test_rows": 5000,
+    "unique_eligible": 2330
+  },
+  "items_sha256": "bbbc82c04633fa21ade136ed4cf06cfeb72c0dd397de317107f33f5196f987c4",
+  "dataset": "EleutherAI/hendrycks_math",
+  "dataset_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+  "test_file_sha256": {
+    "algebra/test-00000-of-00001.parquet": "0e04a850dac9cfc758eac0c80afd2d0cc65e29ea72f916c8ac1045b12af937f5",
+    "counting_and_probability/test-00000-of-00001.parquet": "c324818949c75a6227c0328a8499d58023cbbf6757cfc1736f5ab24cc8d87966",
+    "geometry/test-00000-of-00001.parquet": "98720f3a8134ad9784fd8951195245264495df03ffc5c9485a9a54ff5ae2431a",
+    "intermediate_algebra/test-00000-of-00001.parquet": "e859f72486c951c2017da880541ca729940eaa986b0364eb23e238983df9bfeb",
+    "number_theory/test-00000-of-00001.parquet": "ba156c9c9fa2040836ba12135fd964e6e67d6bccd8c469ec4a3ad941f8f6fbe9",
+    "prealgebra/test-00000-of-00001.parquet": "301e5d8ade5c7b5038032532e498bdc9dca799e7f1061a63f2e7d980803240cc",
+    "precalculus/test-00000-of-00001.parquet": "da37474ba3761ae5727af3844a7ba963a735bd6a14c65e6137593669a4fe3b9c"
+  },
+  "prior_test_protocol_sha256": "20ed5b730346347814c8d4ad0c07766210b01eedbb4efeb9e59595187f4303c8",
+  "primary": "paired answer pass@8 under src.math_sft.score_v2",
+  "items": [
+    {
+      "id": "algebra-test-1075",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "6ba46ac30d6be32bd14c5c1069b4857a90c3b4633f71fb431d9464f01991af27"
+    },
+    {
+      "id": "algebra-test-977",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "872d143659bb2bfcb025dff817a9d924636237331185bb7d13780e244aebf034"
+    },
+    {
+      "id": "counting_and_probability-test-362",
+      "subject": "counting_and_probability",
+      "level": "Level 4",
+      "question_sha256": "04257152b5dfe3d555c3aeec09884aa223073756f987645ad48083053c1ad3ee"
+    },
+    {
+      "id": "algebra-test-244",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "45c5fa792f102effc88e1b442b561c061e31a740b8f4bf89d4562a348b1281a5"
+    },
+    {
+      "id": "precalculus-test-489",
+      "subject": "precalculus",
+      "level": "Level 4",
+      "question_sha256": "c92c49789c153e5e21813f8aac48b09f78ee91e107f497bdfa06bc6ba8e63a95"
+    },
+    {
+      "id": "algebra-test-104",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "6f9a652f0139d42b831bd4b03232d4c61aee1243ad6cdcd2024dad9afe022eaa"
+    },
+    {
+      "id": "counting_and_probability-test-11",
+      "subject": "counting_and_probability",
+      "level": "Level 2",
+      "question_sha256": "0a84cdea55799309d3b067bf80038f041f2f2a17fff364a4dfa44161bff01d31"
+    },
+    {
+      "id": "intermediate_algebra-test-294",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "43b4a728f513295623da461bb2deec07f641813b18a456aa3291d16794c0c0b1"
+    },
+    {
+      "id": "intermediate_algebra-test-570",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "4aa6ff7b744f463bbae1bebb7cc0ff0c3f8cef6d48b4cd2fb1837d81425f5672"
+    },
+    {
+      "id": "number_theory-test-50",
+      "subject": "number_theory",
+      "level": "Level 4",
+      "question_sha256": "814f705af659bbc9622a63ebb704febdc231b3a63820dfb2c4cf87e59eb3d81b"
+    },
+    {
+      "id": "prealgebra-test-512",
+      "subject": "prealgebra",
+      "level": "Level 1",
+      "question_sha256": "82399fc0bfb3d5c38f84f66975cddddac1d827a131dfba8ea4d5d631349149aa"
+    },
+    {
+      "id": "geometry-test-297",
+      "subject": "geometry",
+      "level": "Level 1",
+      "question_sha256": "a716c7edf0c7e2f954a2d1f01ce1cee82690f68a29d91b5c510ba9a5888876c6"
+    },
+    {
+      "id": "algebra-test-872",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "7b52a82dedce3ea6cd95b81e14fb61e9ad0e43ca58f11385897586fdf2dfc938"
+    },
+    {
+      "id": "algebra-test-249",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "93469eef79956732a9fc5bd174e4d116361c185a3943623b2ad948629ca4cfb1"
+    },
+    {
+      "id": "precalculus-test-113",
+      "subject": "precalculus",
+      "level": "Level 2",
+      "question_sha256": "4d7ccb0d75c550fc1f0451598739a2948acec769adbf4f3c5c3b7dbe217e7b91"
+    },
+    {
+      "id": "intermediate_algebra-test-386",
+      "subject": "intermediate_algebra",
+      "level": "Level 2",
+      "question_sha256": "ef5cdf53a6ca1ecd036247f1666c9f118311a3e68ad3f8e2242e2e2307268c84"
+    },
+    {
+      "id": "prealgebra-test-469",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "0aefbf77469f84fa8d830a0051d22ee21b086f27a06dbbfeff13df4fbee881e1"
+    },
+    {
+      "id": "algebra-test-252",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "2c9a376e903e5c7631a0f03d4e9b3b17be66511c6d6996387dafc9020a6192ff"
+    },
+    {
+      "id": "counting_and_probability-test-99",
+      "subject": "counting_and_probability",
+      "level": "Level 3",
+      "question_sha256": "055548c359bb740d88660526981a5b201b65c8662bf3b4f427c80b0bd31754f9"
+    },
+    {
+      "id": "prealgebra-test-357",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "3fb9c0176c6bdc6b9eb0d132c23304e3b25cdfeaaa0973fda9ddc897006d2bc8"
+    },
+    {
+      "id": "algebra-test-621",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "5c4b97932863cc6595ddb566e9d84c6f5c1b98343e216f772d0f1a8702b828c1"
+    },
+    {
+      "id": "prealgebra-test-238",
+      "subject": "prealgebra",
+      "level": "Level 2",
+      "question_sha256": "269234cb191abffc4f87498c5c151c5e1b91a445d96528173ad903ab46048303"
+    },
+    {
+      "id": "prealgebra-test-108",
+      "subject": "prealgebra",
+      "level": "Level 2",
+      "question_sha256": "c0c40b121c786bb6c8acd314652c65291f539081c56aa7b791b162c8ae10263d"
+    },
+    {
+      "id": "number_theory-test-198",
+      "subject": "number_theory",
+      "level": "Level 3",
+      "question_sha256": "68eec2a13f7aa959eb27f2cc020f899bb9ee15347d5fda5f49a539a4668a51b4"
+    },
+    {
+      "id": "algebra-test-603",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "1bb8d0bb2cf0f04f671e030ffa420539040365241f539c0cece769015cbde5a1"
+    },
+    {
+      "id": "algebra-test-677",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "3226f6c0d06a56f5fb8453222c28198199652ada80b798a5a82213faa9442467"
+    },
+    {
+      "id": "geometry-test-192",
+      "subject": "geometry",
+      "level": "Level 3",
+      "question_sha256": "cc91ce9debe663c019b2264a0955b37f164a24468709502af0b57009b2d2b9f2"
+    },
+    {
+      "id": "number_theory-test-283",
+      "subject": "number_theory",
+      "level": "Level 4",
+      "question_sha256": "a1192d7cf76c0a54a85d70a8e2c29aa08348f75d57f29b50ea06dc6b13f8c200"
+    },
+    {
+      "id": "precalculus-test-209",
+      "subject": "precalculus",
+      "level": "Level 1",
+      "question_sha256": "3909cff1464f0b70fe0f94493ce51c5b147082ed5ee075e99cc6e5667d720f83"
+    },
+    {
+      "id": "intermediate_algebra-test-104",
+      "subject": "intermediate_algebra",
+      "level": "Level 1",
+      "question_sha256": "c170247f2aa937e430a1cb3efdedf22c8d11ab05097c67b8d8cd385ca3414486"
+    },
+    {
+      "id": "algebra-test-1130",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "11ebe4c10ee428ec0e389817b1f815f998decc2e4b35acbe4f28f77a0685d718"
+    },
+    {
+      "id": "algebra-test-331",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "22b80cfbf3566d73eb0145e4ccee8131512bba6b9d5d5cdbf53d592e5cc29d1c"
+    },
+    {
+      "id": "prealgebra-test-25",
+      "subject": "prealgebra",
+      "level": "Level 4",
+      "question_sha256": "5667dbfadc88348fbc88cbecc60559200f30cc72518d7ed6bb765f2343319d60"
+    },
+    {
+      "id": "intermediate_algebra-test-564",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "93abc000c91e57678364ac649497fba4bda650ff3bdbdd2999d9c48653df5806"
+    },
+    {
+      "id": "algebra-test-527",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "c77c699a51a3d0560ad9f8715f68de6e6f56024617dd4c1bd4b0d06a72fb4178"
+    },
+    {
+      "id": "precalculus-test-230",
+      "subject": "precalculus",
+      "level": "Level 2",
+      "question_sha256": "6b61674ebb4564d9d6e9eb7a305e5d1397267ba7bafe5ded6e26410292a12a3f"
+    },
+    {
+      "id": "geometry-test-355",
+      "subject": "geometry",
+      "level": "Level 5",
+      "question_sha256": "25028fa8ef8fb22411559914bb46756781b743c97181d37b4799e54f2d5936dc"
+    },
+    {
+      "id": "prealgebra-test-331",
+      "subject": "prealgebra",
+      "level": "Level 4",
+      "question_sha256": "e40a170d4a0f825dcf44e4f0ab21af7a4a0519b6be94b467fa649f41af7505d3"
+    },
+    {
+      "id": "counting_and_probability-test-51",
+      "subject": "counting_and_probability",
+      "level": "Level 5",
+      "question_sha256": "6e24a968ec1bf5738813b0e9318f54c6706c6405198c87b3df9a204e5e3b2454"
+    },
+    {
+      "id": "number_theory-test-367",
+      "subject": "number_theory",
+      "level": "Level 4",
+      "question_sha256": "e6dedb36074669cd7b3cb83302e56935a70dec7ba90912bc1aecd683dec3ad09"
+    },
+    {
+      "id": "algebra-test-964",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "14e09be203e63a64145f4bb473645b979437f6ccba95be9121e89820e4bf2a9d"
+    },
+    {
+      "id": "intermediate_algebra-test-313",
+      "subject": "intermediate_algebra",
+      "level": "Level 3",
+      "question_sha256": "a19c50c1e5cd2b0ee2be403cfc8b07bf658cde7cbed9173424aaa1bc3e1abacc"
+    },
+    {
+      "id": "geometry-test-136",
+      "subject": "geometry",
+      "level": "Level 4",
+      "question_sha256": "66bf4c152bf5fee94fe782bed3239994bb723914ecc120d771572739e054e270"
+    },
+    {
+      "id": "number_theory-test-395",
+      "subject": "number_theory",
+      "level": "Level 3",
+      "question_sha256": "8b9b3cda12a042246b60410f31928fd604d92144a0720894e08fb6582e71e3d2"
+    },
+    {
+      "id": "counting_and_probability-test-449",
+      "subject": "counting_and_probability",
+      "level": "Level 3",
+      "question_sha256": "3ca69b245773c0a85d17a6492f5d0312401b30acf1653e81fe24aac2d2e7f72d"
+    },
+    {
+      "id": "prealgebra-test-449",
+      "subject": "prealgebra",
+      "level": "Level 4",
+      "question_sha256": "67573c5576c12202a1c408a1292325062485578cde743693e572487799ac8c47"
+    },
+    {
+      "id": "number_theory-test-224",
+      "subject": "number_theory",
+      "level": "Level 5",
+      "question_sha256": "1cffefd86cf792a12bcaf15a380f27ed9af1b8a95da45697e366ac9a5f9257f3"
+    },
+    {
+      "id": "intermediate_algebra-test-43",
+      "subject": "intermediate_algebra",
+      "level": "Level 3",
+      "question_sha256": "387c8e1ffcbb5f2ee8f001adecf273ba214deed4861300aa330cea2866c47e80"
+    },
+    {
+      "id": "number_theory-test-58",
+      "subject": "number_theory",
+      "level": "Level 3",
+      "question_sha256": "1535c1d282dfc4ccbd6a804d4e5a85e929cb85b43b07905629450b8e70761fc5"
+    },
+    {
+      "id": "algebra-test-165",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "3c5054b89df44f6da0e34b5a7cdd0f060a88213adbe848403ece4d60fad69ca2"
+    },
+    {
+      "id": "number_theory-test-403",
+      "subject": "number_theory",
+      "level": "Level 5",
+      "question_sha256": "bdfae6498e59c88e56580542b43d8f50f95d59479ecf6ba6127486b5480a0f75"
+    },
+    {
+      "id": "algebra-test-386",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "a4c2e57f0d24ec6e7bbbd6c272a9507330a609af9e0d6f06c255f166f9816b6f"
+    },
+    {
+      "id": "number_theory-test-350",
+      "subject": "number_theory",
+      "level": "Level 3",
+      "question_sha256": "24853438e704c19d43f2f69d66ee69b4088c16deac13d89b56f816d94a3606b7"
+    },
+    {
+      "id": "algebra-test-497",
+      "subject": "algebra",
+      "level": "Level 1",
+      "question_sha256": "19eadded264afab6b1b3b02f70f5666bd1244e661e35aa7366a99744ab2f6d53"
+    },
+    {
+      "id": "intermediate_algebra-test-495",
+      "subject": "intermediate_algebra",
+      "level": "Level 3",
+      "question_sha256": "f7ad30bcf2a0d8f27654c04c5fc9d4f072c91f03886388e5bb0657bbdf938751"
+    },
+    {
+      "id": "algebra-test-403",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "209f6d67b14759c34900102b1251aa582537f30fe91f44d42bb37c07bb5a74fe"
+    },
+    {
+      "id": "number_theory-test-186",
+      "subject": "number_theory",
+      "level": "Level 2",
+      "question_sha256": "15d6107b34caf223a7a9fdc1e367db3c4a383fae38a82ed0704e38e7a566b76a"
+    },
+    {
+      "id": "prealgebra-test-628",
+      "subject": "prealgebra",
+      "level": "Level 5",
+      "question_sha256": "2d6ba1dad8b30b1644b10b915a38860bc518cf4de7a6819a07b3b77d8f4f7321"
+    },
+    {
+      "id": "counting_and_probability-test-396",
+      "subject": "counting_and_probability",
+      "level": "Level 4",
+      "question_sha256": "cddc181b1e36b246ca7ec11ea49ec89376ed875ad730dbc5c2f602cc2ad6c3a8"
+    },
+    {
+      "id": "precalculus-test-239",
+      "subject": "precalculus",
+      "level": "Level 3",
+      "question_sha256": "64a462b997aa9285e9e988f1c9b51ced76d6f578c2a6f774a7d42038137fd652"
+    },
+    {
+      "id": "algebra-test-525",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "51cca11bfa6e3613a94bf507f27463457b429cfc3075870a0400a849f0e6c76e"
+    },
+    {
+      "id": "number_theory-test-178",
+      "subject": "number_theory",
+      "level": "Level 2",
+      "question_sha256": "edeb238df8963acaf2abe0d416438a2b0cff9d39c46e006d8adffe5c4c05e887"
+    },
+    {
+      "id": "intermediate_algebra-test-476",
+      "subject": "intermediate_algebra",
+      "level": "Level 2",
+      "question_sha256": "d84cc836b738e440ceb4056e952ac5cd15015db8d66594951dec3e9d38cd2356"
+    },
+    {
+      "id": "geometry-test-421",
+      "subject": "geometry",
+      "level": "Level 4",
+      "question_sha256": "3c0698601871f819e702b341c564a8296146ff95729bebcdcf2e2620fac8c650"
+    },
+    {
+      "id": "algebra-test-517",
+      "subject": "algebra",
+      "level": "Level 1",
+      "question_sha256": "b0b83ce60dc0798fb9f412da298353533db96f7775c6eb54941801a907c60e74"
+    },
+    {
+      "id": "intermediate_algebra-test-661",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "1e36912a07bcd64aad3fdeb815b06279b50aec312e29c1882916aaf47da5e37c"
+    },
+    {
+      "id": "prealgebra-test-335",
+      "subject": "prealgebra",
+      "level": "Level 4",
+      "question_sha256": "a4e5c6ad228b7e5472bbc50c64c232ffc72782d148b3ab36ba39cfac0adf0d0b"
+    },
+    {
+      "id": "intermediate_algebra-test-790",
+      "subject": "intermediate_algebra",
+      "level": "Level 3",
+      "question_sha256": "16dfe136a176129c08379911c2e562d2daea4dc3244dcfe70f3401a76c6f72a9"
+    },
+    {
+      "id": "counting_and_probability-test-200",
+      "subject": "counting_and_probability",
+      "level": "Level 5",
+      "question_sha256": "b633fa7cc6bf384ca8efaa004b888eb25a4bffb59eb0488cf1701ee3fcdbe720"
+    },
+    {
+      "id": "precalculus-test-248",
+      "subject": "precalculus",
+      "level": "Level 1",
+      "question_sha256": "88460accb8d115a0e64f2bd1151fab80df0c4f49d6b52b49444657b9c168fec2"
+    },
+    {
+      "id": "algebra-test-432",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "395f9b1d03f33bb07416fc6b85468eaaf323cc9b8402a5f7735f5de383854b67"
+    },
+    {
+      "id": "intermediate_algebra-test-607",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "f4ecfb007b00623b8cc934b83b3c1c2f6635ff56c273f056f7147db15896396e"
+    },
+    {
+      "id": "precalculus-test-279",
+      "subject": "precalculus",
+      "level": "Level 5",
+      "question_sha256": "a9aaeb54538ec4b448ad5a0c3345ec4be5b7811255c337dfc6d8fc88a1d5ec5a"
+    },
+    {
+      "id": "intermediate_algebra-test-174",
+      "subject": "intermediate_algebra",
+      "level": "Level 3",
+      "question_sha256": "5b28cce61c0b4bc9b4b6c0e107743abb29f5ada7c8876fdbb2af42e9f733a450"
+    },
+    {
+      "id": "precalculus-test-318",
+      "subject": "precalculus",
+      "level": "Level 4",
+      "question_sha256": "f32390d254e56765ef3108d0dd5a63545402db51166e882963951d6667ecb052"
+    },
+    {
+      "id": "counting_and_probability-test-253",
+      "subject": "counting_and_probability",
+      "level": "Level 5",
+      "question_sha256": "a03fc9fcd7b6532824f6c3bb1c3af2a3b3e3b77f8af40cc203736be4a41ceb02"
+    },
+    {
+      "id": "prealgebra-test-82",
+      "subject": "prealgebra",
+      "level": "Level 2",
+      "question_sha256": "3c18ab867fcf2a05c29128b0efc891802a96196b5b5680473d54229b653c3579"
+    },
+    {
+      "id": "precalculus-test-83",
+      "subject": "precalculus",
+      "level": "Level 3",
+      "question_sha256": "344981aa83462377849276f6dff28fc00f8e7f13ac03e965d0d5aa41bc403dfa"
+    },
+    {
+      "id": "number_theory-test-411",
+      "subject": "number_theory",
+      "level": "Level 2",
+      "question_sha256": "462dfe4701edbb4ec3f50a9d77e09307f0c5c72bb52b6ef2d652472cf5c0d6a9"
+    },
+    {
+      "id": "algebra-test-504",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "9b3fa8f4b5fbea02eddbcca7e56b9c611453f100a2bd30dd342cfdd9ef848521"
+    },
+    {
+      "id": "prealgebra-test-445",
+      "subject": "prealgebra",
+      "level": "Level 4",
+      "question_sha256": "b75890d4bbb4c2208f62efe676d8ab47291602a259f81afa4db34b6e005a1907"
+    },
+    {
+      "id": "algebra-test-267",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "25c09726c8813aa52d5c90c48fffae38b5013826e2a32182247a235b5cba9c63"
+    },
+    {
+      "id": "intermediate_algebra-test-852",
+      "subject": "intermediate_algebra",
+      "level": "Level 2",
+      "question_sha256": "113d56581cc28d159a1bbacadb9ceb0b5bef1a1d7b9a197e87a05ca8a8ef3b4d"
+    },
+    {
+      "id": "number_theory-test-232",
+      "subject": "number_theory",
+      "level": "Level 5",
+      "question_sha256": "8810ae628d76549f5270d9c68668942698f43e620fe18a2e6246789ca5f80132"
+    },
+    {
+      "id": "algebra-test-1039",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "fa0586e7dc0e6679e2fac3ec7d4eed953223fd3e32efbe8cfccf9da074815acd"
+    },
+    {
+      "id": "counting_and_probability-test-149",
+      "subject": "counting_and_probability",
+      "level": "Level 5",
+      "question_sha256": "e6f2c14b945559dd0e93ad8edc93b1c88847c23d307c31c53c12aec684dbee9f"
+    },
+    {
+      "id": "intermediate_algebra-test-7",
+      "subject": "intermediate_algebra",
+      "level": "Level 3",
+      "question_sha256": "8f001dd768238c536739a3a0d5715386c50dde488a23d433c4bc919925e92762"
+    },
+    {
+      "id": "number_theory-test-292",
+      "subject": "number_theory",
+      "level": "Level 3",
+      "question_sha256": "9ec5a9ceb9bd08780c92193efdc50364b14ddc5e532e31a58ffee64da37c5da0"
+    },
+    {
+      "id": "algebra-test-970",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "009be09fcf2f507419d766abe583da7767bc1c01a01363618b1ee0491e2d5bb9"
+    },
+    {
+      "id": "intermediate_algebra-test-118",
+      "subject": "intermediate_algebra",
+      "level": "Level 1",
+      "question_sha256": "22ea01b59ec7ac1017a8a0363aa275ac5b9ba73f5fcdac9d0de14f8675dbf1b4"
+    },
+    {
+      "id": "number_theory-test-516",
+      "subject": "number_theory",
+      "level": "Level 4",
+      "question_sha256": "b8c0babc48ccebfef7fd9442db16b4de441c6536a8986d2bbed01bdf8d0d56e5"
+    },
+    {
+      "id": "algebra-test-458",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "8affb2a6677e414f1e557c0e573a419ea409013d547419432c2fc0813672d3d6"
+    },
+    {
+      "id": "prealgebra-test-423",
+      "subject": "prealgebra",
+      "level": "Level 1",
+      "question_sha256": "930e043009702715e3744752fe9d6a0aa40342fa1d83e107427dddad7acc21d7"
+    },
+    {
+      "id": "algebra-test-288",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "3f68d5ed6d1891d9679f06b3a436c6e784b8b4da61e5aee82e4c4859eaea7090"
+    },
+    {
+      "id": "prealgebra-test-869",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "28cd4d003e46bffabf87c1532b8ba7c7caaaaba29a4f7e5cb049d792e270b580"
+    },
+    {
+      "id": "intermediate_algebra-test-664",
+      "subject": "intermediate_algebra",
+      "level": "Level 3",
+      "question_sha256": "f8dc91f643992eeefbcb71f522ca73b9a8134abbd4b217a9b2efcc77037ed0ce"
+    },
+    {
+      "id": "intermediate_algebra-test-361",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "60ea83f48eb8f450911701fadb9cbf34d9daad64dc5598c71ed1a6d7174e6e31"
+    },
+    {
+      "id": "prealgebra-test-631",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "9757a02bdca2cee6095a066c6af1fc9e08e36812f2d50c8a876ed1df7790aaa0"
+    },
+    {
+      "id": "algebra-test-1114",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "c040afe9819da2777e97153493f81cef30922f3b7ac209364d158f5d15420d9b"
+    },
+    {
+      "id": "prealgebra-test-406",
+      "subject": "prealgebra",
+      "level": "Level 1",
+      "question_sha256": "dac420c853f8cf56ea8ebaf6a742c5110b4fb180f24430c2e034f4318185d041"
+    },
+    {
+      "id": "intermediate_algebra-test-329",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "7587c50f55f1fe0af4871da7ec595a980b5a8c3d58c837190babe5b8d66530c5"
+    },
+    {
+      "id": "intermediate_algebra-test-600",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "e3d028716f7fc4c84bf7db27a853929ff860bea73e9977a8c02eeb498252afce"
+    },
+    {
+      "id": "precalculus-test-543",
+      "subject": "precalculus",
+      "level": "Level 4",
+      "question_sha256": "356489d3c21d72177adceab8cf84f4b4a0f9c8adf420d6c10672c4bb68869811"
+    },
+    {
+      "id": "algebra-test-982",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "757d096a66565abae612881f51a8e38e692e2548981487f40a7cbe28c9363432"
+    },
+    {
+      "id": "number_theory-test-487",
+      "subject": "number_theory",
+      "level": "Level 5",
+      "question_sha256": "c7dc37d9c21eea8cbba6d51f947824b341e05f84b8b52346546b7b6e0219f4be"
+    },
+    {
+      "id": "number_theory-test-123",
+      "subject": "number_theory",
+      "level": "Level 5",
+      "question_sha256": "20438567a21ebbc64fa83ae7e0d22746e6caf3d706e576ed1df826e1cd6f4ecb"
+    },
+    {
+      "id": "algebra-test-784",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "cb410a0fc6e1bc011020a91f708ae97dd43b90858963e3416d4ddac300c6ca29"
+    },
+    {
+      "id": "counting_and_probability-test-191",
+      "subject": "counting_and_probability",
+      "level": "Level 2",
+      "question_sha256": "4bae9dfe3ae6f4170ad7752e414d54618f3d0dd92d76f22fe1cc5f19fd87224c"
+    },
+    {
+      "id": "prealgebra-test-353",
+      "subject": "prealgebra",
+      "level": "Level 5",
+      "question_sha256": "c57c7dd9945ab89d3d2ab6e3f0e17a3e36fc952b4761c313eff8d9df83fd4c79"
+    },
+    {
+      "id": "prealgebra-test-676",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "b104eb91987cc598c95138f75cc667eee5b6c70f64f7d624d283ea48e45d6e39"
+    },
+    {
+      "id": "prealgebra-test-148",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "667160159f19cee35d1294162248a4a217ef76304cc8292bdfe5e4ee85a088e9"
+    },
+    {
+      "id": "prealgebra-test-501",
+      "subject": "prealgebra",
+      "level": "Level 2",
+      "question_sha256": "973d62a412f58a312079052c7f775a1ee5e7ed16ea16307cd92e992444a16b8b"
+    },
+    {
+      "id": "algebra-test-478",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "5a14c88dbe6c1dca38a3bfc3055292894961beca740b161054932f91b956fd15"
+    },
+    {
+      "id": "number_theory-test-145",
+      "subject": "number_theory",
+      "level": "Level 2",
+      "question_sha256": "36a56016a1ede7f2d3f967481f13576046dab3381879274207cf8d3af5ee4f65"
+    },
+    {
+      "id": "algebra-test-1125",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "f29a155ab62d9dd8731fbc11f358a4104ca6703cd6782cba3b346e971dbae5b1"
+    },
+    {
+      "id": "prealgebra-test-605",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "c94064d5ca445e0c885db714fd1b133b5dd2d92316c8e5878899795218abb2c3"
+    },
+    {
+      "id": "prealgebra-test-346",
+      "subject": "prealgebra",
+      "level": "Level 2",
+      "question_sha256": "90c633d8557c7ebba301b1638cbeb0d93bb92d07e17b63406ae13acc700d2caf"
+    },
+    {
+      "id": "algebra-test-354",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "fbff20ed472593b62f4275d08a8ee0fd175bfcf4318d29d93492904da0f1da30"
+    },
+    {
+      "id": "prealgebra-test-115",
+      "subject": "prealgebra",
+      "level": "Level 5",
+      "question_sha256": "e9295b4c13c0e84ee1310f416496c4ff231bca14f7936b2f8295646347b47d24"
+    },
+    {
+      "id": "prealgebra-test-773",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "466d7d4d5fda751daac1085bbad5fb124aeeb47ebbde0f94efcffbbdeaf9493b"
+    },
+    {
+      "id": "algebra-test-660",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "107fd5933967da019d77a428c21b125ebb1fbce474f29ed2d3fa5aef05edea4b"
+    },
+    {
+      "id": "algebra-test-539",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "7c64ed456407cf2eafe63e445c62a005444ffd2a21379d1ba574d6f93562bd03"
+    },
+    {
+      "id": "counting_and_probability-test-143",
+      "subject": "counting_and_probability",
+      "level": "Level 2",
+      "question_sha256": "b488ffea63044caa42ef53d197b15f5efa0edab5311f0a2bcb3b62e327af7869"
+    },
+    {
+      "id": "precalculus-test-423",
+      "subject": "precalculus",
+      "level": "Level 3",
+      "question_sha256": "84c7d96d832a42308656bf76f51326c544b0fe43b5e1b1d974acaa95aff49971"
+    },
+    {
+      "id": "intermediate_algebra-test-490",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "dd0762f5ab52ddbad4364fa51a82e291e1f9117929db62f7ff69f666df1fd0f9"
+    },
+    {
+      "id": "prealgebra-test-97",
+      "subject": "prealgebra",
+      "level": "Level 4",
+      "question_sha256": "0bfe7ea193d512821ad1ea3ed5f1ef34217fe71d364de6a7247e6daa870cd32d"
+    },
+    {
+      "id": "precalculus-test-88",
+      "subject": "precalculus",
+      "level": "Level 2",
+      "question_sha256": "644225dc6412c02e27b9c1664d7eb5309fd28e89890343da6f74af8ff6c5f16b"
+    },
+    {
+      "id": "counting_and_probability-test-166",
+      "subject": "counting_and_probability",
+      "level": "Level 2",
+      "question_sha256": "4feb9ae6f861852554effba95aded02bc4f174e33042dec0d8f9402eb99735b0"
+    },
+    {
+      "id": "prealgebra-test-580",
+      "subject": "prealgebra",
+      "level": "Level 5",
+      "question_sha256": "0c6343315caad89102634229f3e9e1d85ce0250b873c86bcc1a38c3b79b3e1fa"
+    },
+    {
+      "id": "intermediate_algebra-test-642",
+      "subject": "intermediate_algebra",
+      "level": "Level 2",
+      "question_sha256": "36daaad50fff954a643f9e5da9819749ee67a3d2aedb3370520981dbc38b06c8"
+    },
+    {
+      "id": "algebra-test-1083",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "2098af123cf2c648d17043da46caa5364abca57de7d11880f60e9f36461ff282"
+    },
+    {
+      "id": "precalculus-test-263",
+      "subject": "precalculus",
+      "level": "Level 2",
+      "question_sha256": "f79a9fac9bd928ae4317d474e71fd60770c0c1ff446e846e01c8cc4ba53a412a"
+    },
+    {
+      "id": "algebra-test-1069",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "94c03fd1c0cad89a25aa48d820108469ed798727b5de207822d48d0bf1054c81"
+    },
+    {
+      "id": "intermediate_algebra-test-628",
+      "subject": "intermediate_algebra",
+      "level": "Level 3",
+      "question_sha256": "79d30d7e6569d9842c5126d5cda097b50df080d35ad138dd3ee8f790d383f80a"
+    },
+    {
+      "id": "prealgebra-test-486",
+      "subject": "prealgebra",
+      "level": "Level 2",
+      "question_sha256": "c3be4111e9e680620e3405126b265f2ffff9deb836bc7618937f32f4cccb1079"
+    },
+    {
+      "id": "intermediate_algebra-test-420",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "484b9ea3b8dd3f227ccf656245fe21276615b3b97389244851f665bc1a915cee"
+    },
+    {
+      "id": "precalculus-test-8",
+      "subject": "precalculus",
+      "level": "Level 5",
+      "question_sha256": "bcdc26bc14fd5533cfb3e37c8345c1d85eef0876a75a1f36738b30f37943ac29"
+    },
+    {
+      "id": "algebra-test-346",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "2e7f8e00b154b134c74133f5c129386431e2aefffb2ef0b352029f043ef581ed"
+    },
+    {
+      "id": "prealgebra-test-282",
+      "subject": "prealgebra",
+      "level": "Level 1",
+      "question_sha256": "0332af24d115242c35f630209f8ce3c962286c39ac3480c8fb4279b7829ace32"
+    },
+    {
+      "id": "number_theory-test-520",
+      "subject": "number_theory",
+      "level": "Level 3",
+      "question_sha256": "758ed3c8052835ec76bed3d2d9a9b943af32cc3b097c85ff050e9717e736db9c"
+    },
+    {
+      "id": "algebra-test-272",
+      "subject": "algebra",
+      "level": "Level 1",
+      "question_sha256": "df84d45e662eca125acb5ba970b7420e6b2f59aeef49086b6ef502f8689c0d99"
+    },
+    {
+      "id": "algebra-test-238",
+      "subject": "algebra",
+      "level": "Level 1",
+      "question_sha256": "64209f1152f73a836ec735aa3c22eedd76a8c902e062dadcbda53adda5d861df"
+    },
+    {
+      "id": "number_theory-test-228",
+      "subject": "number_theory",
+      "level": "Level 4",
+      "question_sha256": "dc2f0eb77f0f7f7ff9565e627d46921402bb431099dbf5e8e4b43d56c34f94a0"
+    },
+    {
+      "id": "intermediate_algebra-test-675",
+      "subject": "intermediate_algebra",
+      "level": "Level 2",
+      "question_sha256": "7c342938ad2d64ce7f5c2cce2729a89544d009d0bd66c70ed7594cc58b100f3c"
+    },
+    {
+      "id": "algebra-test-286",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "6a1d634360813f3ba28dc69bd69ad54b6fb5f8e46c8439ed1d358b9d0bc19bec"
+    },
+    {
+      "id": "intermediate_algebra-test-778",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "f2b6a15d09c9c3302e1fd857b2ec87b49d286175de71e9fbc161d173ee818f64"
+    },
+    {
+      "id": "number_theory-test-518",
+      "subject": "number_theory",
+      "level": "Level 1",
+      "question_sha256": "69a95da5451b11e7f74f3a91ae919b3917800f01ad79b6019396eb00dc84232b"
+    },
+    {
+      "id": "intermediate_algebra-test-44",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "4ad107ba2deda4337e620fa2f6e422eff9ea7bd1bfa5f17a56c996a8ffc9837a"
+    },
+    {
+      "id": "number_theory-test-103",
+      "subject": "number_theory",
+      "level": "Level 5",
+      "question_sha256": "bc0e023f51bb0a1619a6c30c55dcb06df9602e935a75040a1581a7c5ebec39f4"
+    },
+    {
+      "id": "intermediate_algebra-test-598",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "cf57689849047f476ad6594ced72cf854ef7a89110831a1537562146eb0d3b95"
+    },
+    {
+      "id": "intermediate_algebra-test-223",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "560c14765e2747f27037ff132798557a218f18a8c9562646fd0a0e53a8220795"
+    },
+    {
+      "id": "intermediate_algebra-test-480",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "56b0543f8986e934562b8219c9227ce49998264f335e80e18d66ef6a42e654c8"
+    },
+    {
+      "id": "algebra-test-633",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "bb26d79f966417c751351768287b05ac58715eb423d0c937bfd54bf7d2886412"
+    },
+    {
+      "id": "prealgebra-test-804",
+      "subject": "prealgebra",
+      "level": "Level 2",
+      "question_sha256": "72f03502c0cc6704aec78a1be90cbc8fb39a5ac350b517f4e07d7b067544b493"
+    },
+    {
+      "id": "intermediate_algebra-test-804",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "e65c8de16ed94b009c6b77dfe978721dcca186a16239ff6dbbf63c404494c6bf"
+    },
+    {
+      "id": "algebra-test-480",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "440e6cef8ff8a97169815c4e0c2beb8c94e908bf1fa14ac685e0b74be9e5cb63"
+    },
+    {
+      "id": "geometry-test-439",
+      "subject": "geometry",
+      "level": "Level 3",
+      "question_sha256": "7bd333a5de5404b7a36f8621298ba81335f73a70bda0f53911cabfc43795835d"
+    },
+    {
+      "id": "geometry-test-99",
+      "subject": "geometry",
+      "level": "Level 2",
+      "question_sha256": "889b36d64fe66cf664e2e7fb104cfae7b04626af22c335cce87aa5d5aef56acc"
+    },
+    {
+      "id": "precalculus-test-74",
+      "subject": "precalculus",
+      "level": "Level 3",
+      "question_sha256": "fdb20241dd5df9ad5ae190eed6bfd7d8858e7fa3aee405c28f38de4d41601347"
+    },
+    {
+      "id": "counting_and_probability-test-286",
+      "subject": "counting_and_probability",
+      "level": "Level 1",
+      "question_sha256": "94f45159e34e89df9efd391cc04617afdb231b5885764ccfa0e3298baa6a4765"
+    },
+    {
+      "id": "counting_and_probability-test-342",
+      "subject": "counting_and_probability",
+      "level": "Level 3",
+      "question_sha256": "7de39d15ffb5897734d9af34ea75397ccc8a48f5baf2e1cf548e63b406147b9d"
+    },
+    {
+      "id": "intermediate_algebra-test-48",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "8844951dd232d4798cbbbe043cf8de0bb28e7d13b57cb969a6d9a3b81d999e3b"
+    },
+    {
+      "id": "precalculus-test-116",
+      "subject": "precalculus",
+      "level": "Level 5",
+      "question_sha256": "4c68d12c495ddf0cdb1c475567d0c5c92f47c41ae0485755a2972c1976fc5a31"
+    },
+    {
+      "id": "prealgebra-test-633",
+      "subject": "prealgebra",
+      "level": "Level 2",
+      "question_sha256": "51844151525c02d3c6b356d8507bc6df5c0b4260bc5114ad2c9bd65b0c12d0a5"
+    },
+    {
+      "id": "precalculus-test-283",
+      "subject": "precalculus",
+      "level": "Level 5",
+      "question_sha256": "ac08dc8c9930b878e0c853735a235a88eea9ab4076e6550d7c990f3526cbdb98"
+    },
+    {
+      "id": "prealgebra-test-181",
+      "subject": "prealgebra",
+      "level": "Level 5",
+      "question_sha256": "973cc9c504a1444c30b3636ed3bbdd3878916bcba132b43b5d5825a6846efa0a"
+    },
+    {
+      "id": "algebra-test-78",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "5ff6c72edecda83410922a7b73e8fe34b1d0e8dc3ff7003681ae942d3dc640c5"
+    },
+    {
+      "id": "geometry-test-152",
+      "subject": "geometry",
+      "level": "Level 2",
+      "question_sha256": "1766b258c7e0b1f1f258e9da48d32062a0883dcd87da23f1f95818398b589c05"
+    },
+    {
+      "id": "prealgebra-test-466",
+      "subject": "prealgebra",
+      "level": "Level 4",
+      "question_sha256": "53cb2fa1481e2581e9050b4e60444efd7820a3a4dd4e3c0914ae8cca1cc9ab57"
+    },
+    {
+      "id": "number_theory-test-453",
+      "subject": "number_theory",
+      "level": "Level 5",
+      "question_sha256": "eece69fc179decb43a9050c40bbf55ad44e3a8f2143e44ee4eccadc09db43509"
+    },
+    {
+      "id": "precalculus-test-435",
+      "subject": "precalculus",
+      "level": "Level 3",
+      "question_sha256": "3b71caf9d8e1046cd4198e46f270f3ef6c623d2fc635453a8e96df3a03fe5755"
+    },
+    {
+      "id": "prealgebra-test-568",
+      "subject": "prealgebra",
+      "level": "Level 5",
+      "question_sha256": "f5a28099baaf7c7b3593975c4fab9f1adc9ee37a5851314102e6a88ca8c746ff"
+    },
+    {
+      "id": "algebra-test-257",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "ff580f8ed579a3a24b209b559c8865f9eba7fc694614c38707c8884e06988cc9"
+    },
+    {
+      "id": "intermediate_algebra-test-31",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "55a0364d24053118ab3cf8b68c77fc64401988070f22122a8ffc521a67de587d"
+    },
+    {
+      "id": "algebra-test-0",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "b81a7821434813193e10bedc55e3b6441a7d718c23bdee72bedef5e7d0cddfc5"
+    },
+    {
+      "id": "algebra-test-79",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "8f0b686f80a6244d36e6da8364d6372d8cc9a7696781f3ea4e40fbfc09ca0fcc"
+    },
+    {
+      "id": "intermediate_algebra-test-153",
+      "subject": "intermediate_algebra",
+      "level": "Level 5",
+      "question_sha256": "2e13b60cccaf8182bdd606f0154db6490562133c4e98648beb1a77a10fd4a10d"
+    },
+    {
+      "id": "counting_and_probability-test-67",
+      "subject": "counting_and_probability",
+      "level": "Level 4",
+      "question_sha256": "7cf121c04e67d960c4290d568e9a63dedfbbe230181e2fde377232f49d24fb40"
+    },
+    {
+      "id": "intermediate_algebra-test-614",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "1f0b9027f977b7ebf0dd800fa8c8e6f1d982e02403dd624e559baf64eb673d2a"
+    },
+    {
+      "id": "intermediate_algebra-test-708",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "5f26eb9a1e5b9203df0625bfe6b9882a46239205aaf2d74a1fce135517ad21c5"
+    },
+    {
+      "id": "algebra-test-644",
+      "subject": "algebra",
+      "level": "Level 4",
+      "question_sha256": "577090ab57f2e8033916bf626f71f04c2392b87159eccb16f3ba626c0beb5312"
+    },
+    {
+      "id": "algebra-test-624",
+      "subject": "algebra",
+      "level": "Level 5",
+      "question_sha256": "dd76c8ce2fe5dc14307379a5a7ef50044ccfaa89cbb533d47dcf37cab5b07f6a"
+    },
+    {
+      "id": "prealgebra-test-726",
+      "subject": "prealgebra",
+      "level": "Level 4",
+      "question_sha256": "040fde149369c113ec7229b46096152a5b5d99d7cf8fab76ca13ae8a97d246ae"
+    },
+    {
+      "id": "counting_and_probability-test-231",
+      "subject": "counting_and_probability",
+      "level": "Level 1",
+      "question_sha256": "975bdac9e35931de84f79f3941f9ab2a71c1c7c64cf82ba9f14b7020cc2dd5c7"
+    },
+    {
+      "id": "number_theory-test-491",
+      "subject": "number_theory",
+      "level": "Level 4",
+      "question_sha256": "3f7f18204885b80d46b998194a0b88432677c240e04c81b4b53dbdbc79a792c2"
+    },
+    {
+      "id": "algebra-test-1076",
+      "subject": "algebra",
+      "level": "Level 3",
+      "question_sha256": "8f319a9285bed1f59e27731f2a62905aacceb4b346fc28a3b470a7eda7d6f003"
+    },
+    {
+      "id": "counting_and_probability-test-90",
+      "subject": "counting_and_probability",
+      "level": "Level 4",
+      "question_sha256": "4209947316a4db48c4d34dee8d5e065c7c44c9878aae47cb9f758747fd4927d1"
+    },
+    {
+      "id": "prealgebra-test-436",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "1132eacdbb5c254caffc97c970ee13c655343e266c9ca9fca43ee547f83beb47"
+    },
+    {
+      "id": "prealgebra-test-688",
+      "subject": "prealgebra",
+      "level": "Level 3",
+      "question_sha256": "04cc7a498e4045a5c183e9e5e637f3067d4445c9f89daca871a02307bc78e5d6"
+    },
+    {
+      "id": "precalculus-test-133",
+      "subject": "precalculus",
+      "level": "Level 4",
+      "question_sha256": "5e13001ee806421f27ddd0d1f3eb1b10ec45c7f167aca6564e9674af35d68b2e"
+    },
+    {
+      "id": "algebra-test-219",
+      "subject": "algebra",
+      "level": "Level 2",
+      "question_sha256": "9f1cda45cf8ba393eab32ebcb92d3d78aa309858e0833ed27f15171c485c6a65"
+    },
+    {
+      "id": "number_theory-test-451",
+      "subject": "number_theory",
+      "level": "Level 5",
+      "question_sha256": "1c5e289bc88678d3e5dd7cda4c9a55a93c43bf6610d1ec15ab16fcd500c58d3c"
+    },
+    {
+      "id": "counting_and_probability-test-27",
+      "subject": "counting_and_probability",
+      "level": "Level 2",
+      "question_sha256": "ab9206956cfe616c831fa1584755584d3fa5757b63ec207c8b6501de87f60c59"
+    },
+    {
+      "id": "counting_and_probability-test-260",
+      "subject": "counting_and_probability",
+      "level": "Level 5",
+      "question_sha256": "55ced3a08e01dd8b2b4181a6eda4bf09ccc53a7487164206e442cbbfd224973b"
+    },
+    {
+      "id": "algebra-test-377",
+      "subject": "algebra",
+      "level": "Level 1",
+      "question_sha256": "771dc74e49eea1d57ca70e78938a8377a6ebf8cabf3333b174612d14926f682a"
+    },
+    {
+      "id": "intermediate_algebra-test-137",
+      "subject": "intermediate_algebra",
+      "level": "Level 4",
+      "question_sha256": "dd5d4369bafbad602cdc6723c7222ac44d2975d6023096528135101e10f1c4a1"
+    },
+    {
+      "id": "intermediate_algebra-test-20",
+      "subject": "intermediate_algebra",
+      "level": "Level 2",
+      "question_sha256": "89aa2324c769579a4efe55a0431cad5bd33b6f7e1b42df5112c58acc0fd539fe"
+    },
+    {
+      "id": "prealgebra-test-655",
+      "subject": "prealgebra",
+      "level": "Level 5",
+      "question_sha256": "a4c64286fa3808b24de5468c4118e8f47ac39a241e44ea0828dac20ff3c16527"
+    },
+    {
+      "id": "algebra-test-597",
+      "subject": "algebra",
+      "level": "Level 1",
+      "question_sha256": "b64c71847eb38323a538f2873b9844ad00fa92ef429e3666d974eeebcdbe2c93"
+    },
+    {
+      "id": "counting_and_probability-test-294",
+      "subject": "counting_and_probability",
+      "level": "Level 3",
+      "question_sha256": "5d4d59c8e21c8694b3f102d21190f3770edcebadab531b59c5aeebcdfc019532"
+    }
+  ]
+}

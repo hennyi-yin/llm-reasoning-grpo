@@ -66,7 +66,7 @@ def run(directory, stages):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("independent", "self-generate", "self-compare", "serving"))
+    parser.add_argument("mode", choices=("independent", "self-generate", "self-compare", "serving", "multisample"))
     args = parser.parse_args()
     if args.mode == "independent":
         module = "src.math_independent"
@@ -79,6 +79,18 @@ def main():
     elif args.mode == "serving":
         from src.math_extension_serving import stages
         directory, stages = stages()
+    elif args.mode == "multisample":
+        from src.math_multisample import ARMS, REPORT as MULTISAMPLE_REPORT, WORK as MULTISAMPLE_WORK
+        module = "src.math_multisample"
+        directory = MULTISAMPLE_WORK
+        stages = [("prepare", module, ["prepare"], MULTISAMPLE_REPORT / "protocol.json", False)]
+        for arm in ARMS:
+            stages.append((f"generate_{arm}", module, ["generate", "--arm", arm],
+                           directory / f"{arm}_complete.json", True))
+        for arm in ARMS:
+            stages.append((f"judge_{arm}", module, ["judge", "--arm", arm],
+                           directory / f"judged_{arm}.json", False))
+        stages.append(("compare", module, ["compare"], MULTISAMPLE_REPORT / "comparison.json", False))
     else:
         from src.math_self_sft import stages
         directory, stages = stages(args.mode)
