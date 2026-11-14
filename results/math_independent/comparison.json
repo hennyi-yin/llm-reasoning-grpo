@@ -1,0 +1,59 @@
+{
+  "n": 1400,
+  "comparisons": {
+    "correct": {
+      "left": 840,
+      "right": 830,
+      "delta_pp": -0.7142857142857143,
+      "gains": 62,
+      "losses": 72,
+      "ci_pp": [
+        -2.357142857142857,
+        0.9285714285714286
+      ],
+      "mcnemar_p": 0.4369905490859725
+    },
+    "previous": {
+      "left": 840,
+      "right": 830,
+      "delta_pp": -0.7142857142857143,
+      "gains": 62,
+      "losses": 72,
+      "ci_pp": [
+        -2.357142857142857,
+        0.9285714285714286
+      ],
+      "mcnemar_p": 0.4369905490859725
+    },
+    "strict": {
+      "left": 840,
+      "right": 830,
+      "delta_pp": -0.7142857142857143,
+      "gains": 62,
+      "losses": 72,
+      "ci_pp": [
+        -2.357142857142857,
+        0.9285714285714286
+      ],
+      "mcnemar_p": 0.4369905490859725
+    }
+  },
+  "counts": {
+    "base": {
+      "unresolved": 66,
+      "truncated": 61,
+      "mean_tokens": 594.3707142857143
+    },
+    "candidate": {
+      "unresolved": 75,
+      "truncated": 68,
+      "mean_tokens": 598.1571428571428
+    }
+  },
+  "noninferior": true,
+  "improved": false,
+  "inferiority_supported": false,
+  "token_reduction_fraction": -0.006370483067926536,
+  "serving_gate": false,
+  "default": "base"
+}

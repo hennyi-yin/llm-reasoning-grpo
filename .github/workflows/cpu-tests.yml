@@ -17,3 +17,5 @@ jobs:
       - run: python -m scripts.verify_math_pilot
       - run: python -m scripts.verify_math_sft
       - run: python -m src.math_sft_conservative verify
+      - run: python -m src.math_independent verify
+      - run: python -m src.math_self_sft verify

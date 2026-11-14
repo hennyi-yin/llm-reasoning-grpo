@@ -1,0 +1,187 @@
+{
+  "reference": {
+    "arm": "reference",
+    "ids": [
+      "geometry-717",
+      "intermediate_algebra-492",
+      "prealgebra-921",
+      "intermediate_algebra-1207",
+      "counting_and_probability-0",
+      "algebra-808",
+      "geometry-240",
+      "counting_and_probability-275",
+      "algebra-126",
+      "intermediate_algebra-1035",
+      "algebra-1378",
+      "number_theory-749",
+      "precalculus-235",
+      "geometry-869",
+      "algebra-1432",
+      "counting_and_probability-248",
+      "counting_and_probability-762",
+      "algebra-213",
+      "geometry-380",
+      "prealgebra-728",
+      "algebra-1143",
+      "geometry-733",
+      "precalculus-727",
+      "number_theory-341",
+      "prealgebra-274"
+    ],
+    "dataset_review": "93d48f4dc955cb532bfe355c0c6cb5ef12606f0079f88c17455baaab2e9446be",
+    "config": {
+      "seed": 73,
+      "review_pool": 56,
+      "min_approved_pairs": 24,
+      "max_approved_pairs": 32,
+      "min_completion_tokens": 80,
+      "max_sequence_tokens": 1024,
+      "generation_samples": 4,
+      "generation_max_tokens": 896,
+      "generation_temperature": 0.7,
+      "learning_rate": 5e-06,
+      "epochs": 3,
+      "gradient_accumulation": 8,
+      "dev_per_subject": 50,
+      "gate": {
+        "min_gain_pp": 2.0,
+        "max_unresolved_fraction": 0.25,
+        "max_extra_unresolved_pp": 3.0
+      }
+    },
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "versions": {
+      "torch": "2.13.0",
+      "transformers": "5.17.0",
+      "trl": "1.14.2",
+      "vllm": "0.31.0",
+      "peft": "0.21.2",
+      "datasets": "5.1.0",
+      "accelerate": "1.15.0"
+    },
+    "target_tokens_per_epoch": 4951,
+    "steps": 12,
+    "steps_completed": 12,
+    "step_seconds": [
+      5.279879246000007,
+      3.165169381000055,
+      3.5085288320000245,
+      0.3130662670000106,
+      3.4346050149999883,
+      3.1497939590000215,
+      3.7286220870000193,
+      0.31848891300001014,
+      2.6949549050000314,
+      3.148495911999987,
+      3.1892494339999757,
+      0.4448759729999665
+    ],
+    "median_step_seconds": 3.1574816700000383,
+    "mean_step_seconds": 2.697977493666675,
+    "torch_peak_allocated_bytes": 4170302464,
+    "torch_peak_reserved_bytes": 4989124608,
+    "adapter_sha256": "fea2078750152980207e34676eac1a92b44892285295d522f3a2305003503841"
+  },
+  "self": {
+    "arm": "self",
+    "ids": [
+      "geometry-717",
+      "intermediate_algebra-492",
+      "prealgebra-921",
+      "intermediate_algebra-1207",
+      "counting_and_probability-0",
+      "algebra-808",
+      "geometry-240",
+      "counting_and_probability-275",
+      "algebra-126",
+      "intermediate_algebra-1035",
+      "algebra-1378",
+      "number_theory-749",
+      "precalculus-235",
+      "geometry-869",
+      "algebra-1432",
+      "counting_and_probability-248",
+      "counting_and_probability-762",
+      "algebra-213",
+      "geometry-380",
+      "prealgebra-728",
+      "algebra-1143",
+      "geometry-733",
+      "precalculus-727",
+      "number_theory-341",
+      "prealgebra-274"
+    ],
+    "dataset_review": "93d48f4dc955cb532bfe355c0c6cb5ef12606f0079f88c17455baaab2e9446be",
+    "config": {
+      "seed": 73,
+      "review_pool": 56,
+      "min_approved_pairs": 24,
+      "max_approved_pairs": 32,
+      "min_completion_tokens": 80,
+      "max_sequence_tokens": 1024,
+      "generation_samples": 4,
+      "generation_max_tokens": 896,
+      "generation_temperature": 0.7,
+      "learning_rate": 5e-06,
+      "epochs": 3,
+      "gradient_accumulation": 8,
+      "dev_per_subject": 50,
+      "gate": {
+        "min_gain_pp": 2.0,
+        "max_unresolved_fraction": 0.25,
+        "max_extra_unresolved_pp": 3.0
+      }
+    },
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "versions": {
+      "torch": "2.13.0",
+      "transformers": "5.17.0",
+      "trl": "1.14.2",
+      "vllm": "0.31.0",
+      "peft": "0.21.2",
+      "datasets": "5.1.0",
+      "accelerate": "1.15.0"
+    },
+    "target_tokens_per_epoch": 12181,
+    "steps": 12,
+    "steps_completed": 12,
+    "step_seconds": [
+      6.200986073999957,
+      2.864147095000021,
+      3.1388651390000177,
+      0.3240861129999075,
+      2.974382010999989,
+      3.0321685599999455,
+      4.042613407999966,
+      0.28046401100004914,
+      2.747787489000075,
+      2.9761549080000123,
+      3.684792580000021,
+      0.34711940400006824
+    ],
+    "median_step_seconds": 2.9752684595000005,
+    "mean_step_seconds": 2.717797232666669,
+    "torch_peak_allocated_bytes": 4204149248,
+    "torch_peak_reserved_bytes": 4640997376,
+    "adapter_sha256": "07e6b94b750d5103f3d5be1d5ce16c7bbe5ff2686e1c1176812128feb7f57a8b"
+  },
+  "raw_sha256": {
+    "base": "52308cc5ba5926fd5da9cdf4c5c63a666d7c7c66c47c744a5949c278a8ce52f4",
+    "reference": "30c3b00903999d4bdd55e7316bb44568668ce58c63ded9995189f995f4b0372e",
+    "self": "21a4f5d6bb07e28728dcc5fcc82807d083dee22a8e1e8853d2aca0581d75245d"
+  },
+  "memory": {
+    "reference": {
+      "peak_device_memory_mib": 6748
+    },
+    "self": {
+      "peak_device_memory_mib": 6416
+    }
+  },
+  "execution": {
+    "generated_examples_sha256": "25e4c9f216c1046fb478e9e402c6666430cea6d6bc524eb167518ae3649a5fe1",
+    "review_queue_sha256": "eeb57a03830d1028fb4c39f8ca6d4dd33582496c7762b7ce3d911947895034d7"
+  }
+}

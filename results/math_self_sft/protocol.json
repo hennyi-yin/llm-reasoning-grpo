@@ -1,0 +1,1842 @@
+{
+  "config": {
+    "seed": 73,
+    "review_pool": 56,
+    "min_approved_pairs": 24,
+    "max_approved_pairs": 32,
+    "min_completion_tokens": 80,
+    "max_sequence_tokens": 1024,
+    "generation_samples": 4,
+    "generation_max_tokens": 896,
+    "generation_temperature": 0.7,
+    "learning_rate": 5e-06,
+    "epochs": 3,
+    "gradient_accumulation": 8,
+    "dev_per_subject": 50,
+    "gate": {
+      "min_gain_pp": 2.0,
+      "max_unresolved_fraction": 0.25,
+      "max_extra_unresolved_pp": 3.0
+    }
+  },
+  "dev_sha256": "28124167583df8aa55e101ca31668a4b31d7aae044d52c383bd01202ae5ad4fe",
+  "pool_sha256": "f2629f7157b698da72f52774e36d5a272347f7b8e33b7d6dcd9eb368e31586e8",
+  "dev_ids": [
+    {
+      "id": "counting_and_probability-610",
+      "question_sha256": "b5ac88fe8599c6258ec8b1ac6bed7fb4850ec8cfac64ddc32bd03081ee8baad8",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "intermediate_algebra-251",
+      "question_sha256": "6a752bd5cc518adc6658dae8373625233fee4f9cf712f8c0efff4aea5bae8505",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "intermediate_algebra-165",
+      "question_sha256": "faeff76764eb0a2aaf4309a0233b339e17dbea3906409093554d0427b2a6768d",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "geometry-364",
+      "question_sha256": "6ea4eec11f0127773c4845e2c002b4464bf27e17638f27d305f345ef8156ed0d",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-20",
+      "question_sha256": "3329de23effcc561f91f175481d535660761f9ba9a4e86da87ad02a7c79df055",
+      "subject": "precalculus"
+    },
+    {
+      "id": "geometry-194",
+      "question_sha256": "d61ad4a387dc3f1a6833be5efefb3f7e8624d1a6fd62bbc1435bef7b3822d928",
+      "subject": "geometry"
+    },
+    {
+      "id": "prealgebra-134",
+      "question_sha256": "e3ccdcd2f0cb7360de6b3cde7b9c5a9f4be12b2703e1fac349b94a40574b7bd2",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "counting_and_probability-53",
+      "question_sha256": "36e428ecff575c199d60c0b20eda39bc265b52f981258b2837e6d4ff4613f571",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "geometry-541",
+      "question_sha256": "51c5274765f35623a49d7fc2de27d393428b51328a9b23b882125ca740f90652",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-245",
+      "question_sha256": "c7334687b7ecbfd454d9a7377468c390b6fe0529bdd7a74553d6f0b7c0d82973",
+      "subject": "geometry"
+    },
+    {
+      "id": "algebra-199",
+      "question_sha256": "c41c087f25d8c1a50506597bafbd310af7e2c37d66f64976b1cf2e84819c0425",
+      "subject": "algebra"
+    },
+    {
+      "id": "geometry-787",
+      "question_sha256": "89312509b78f47f56d6ee5ce2645a15d293b1d90ddfcc9e1cfd5bc4513935452",
+      "subject": "geometry"
+    },
+    {
+      "id": "intermediate_algebra-997",
+      "question_sha256": "84c709b2058705e67bdfd58091b00dba0041ba4fa1b2979ebb781cb18d83c2c9",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "prealgebra-557",
+      "question_sha256": "35ed0f7aeaddde2496316d04c5f6d57e005e77070a08bd333aaeb7246c4849c4",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-119",
+      "question_sha256": "d4e861e96df59b67a4b66cbd88d6b6e3fdb2d8612da02bbbfa609e20ef8f7aba",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-487",
+      "question_sha256": "3298562ace7b1e05f87020ea6f79e2dc55a9890927c334b33ed86abde9652d94",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "number_theory-545",
+      "question_sha256": "66d5ad1fd9dcf86d3b7a19dfc39a98a9ab74c03b50ac9983529aeddf80454303",
+      "subject": "number_theory"
+    },
+    {
+      "id": "intermediate_algebra-62",
+      "question_sha256": "534b2a80cabd385f51c61b5bce377156ec4500983ad37b0e45a170e5c5d5fa8c",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "prealgebra-993",
+      "question_sha256": "fccf659073cb29b1c8aa7ed9a40b3d146112ad6f5c94bdb3309381aa0d399250",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-1179",
+      "question_sha256": "1c9ba94bbce7a5402fb788ce2521d9db08cd19f6d97385e6ebb1acc53abec124",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-560",
+      "question_sha256": "e8723cf5f13a119c849c0c81716df2b8afa2454da810f1e558c66533556f1d35",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-183",
+      "question_sha256": "a850365fcc77c2498c89294196e525b7eea2cbe90a93ea426f7b21eef758b823",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "algebra-381",
+      "question_sha256": "4e1223f52bc2dff8679ded61f321bd767f85101167d9c980f0123237ee4eeaf5",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-165",
+      "question_sha256": "1f843dc83fe4b46636bae601e2e958a0ded19db097dfc25cd2fa1a321404a623",
+      "subject": "number_theory"
+    },
+    {
+      "id": "number_theory-399",
+      "question_sha256": "c41920e7795657322192917047fc8b99f98bff78165e06469a0d0c5aeba5debf",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-1156",
+      "question_sha256": "14c9ed56f506eea34fc8b1d251129987956e443d7f479593e8849b57a29f4af3",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-1081",
+      "question_sha256": "eaaccc2517d58ded5dfc7ab2d7a262042c715b54ed26fb3a0616e1fc7ed05f89",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-610",
+      "question_sha256": "9cda8398175f6c7e8084d19acfdf537c048291207c355d4ae4892db426751dff",
+      "subject": "number_theory"
+    },
+    {
+      "id": "precalculus-164",
+      "question_sha256": "2aded24852e24fa89fa4e8733313d1492affb2a125043a83ee914217d0c7b9da",
+      "subject": "precalculus"
+    },
+    {
+      "id": "prealgebra-1080",
+      "question_sha256": "d2000db2c481bffda6840246524898668e786ee0234b947968959f5e87154624",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "algebra-454",
+      "question_sha256": "780f71571a4d865547ae821912c15daad876b957db6b047f0edc8e8ac0d3a7ab",
+      "subject": "algebra"
+    },
+    {
+      "id": "geometry-743",
+      "question_sha256": "dada9e69d2119d5d409793b1f7fa09940ee5da8e17dd6d84afda6fae83697a7b",
+      "subject": "geometry"
+    },
+    {
+      "id": "counting_and_probability-689",
+      "question_sha256": "778f33b08aea8ce5ea9c7745fd2993cccf1f4c76529e3ace97cd8b9aead91e7c",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-957",
+      "question_sha256": "c0f62482f47d66795d566854773dd182f842b2da202ba61290a505a758a4fb99",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "counting_and_probability-82",
+      "question_sha256": "98112b454ffcbc645433af109240dfed0b1b57517bda71583b87d81a6164c005",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "counting_and_probability-446",
+      "question_sha256": "b73c6dd8bdb6e222dd09f7c8ecdd4a5e1c89a6dd9b4a489c8f092b1475cf10b9",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "intermediate_algebra-136",
+      "question_sha256": "afb3426eb54ed1f8bc968a2b4e326b12cf8ac685d3a3192bc21117e6452d7f98",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "number_theory-570",
+      "question_sha256": "5504f159763ee4c762a106b77deba96d1577430089390bb141ed73b094836226",
+      "subject": "number_theory"
+    },
+    {
+      "id": "geometry-548",
+      "question_sha256": "a0046d796066bd7c7f3e43c2fa1988f6e8f2af084d959675911da9542aca6d16",
+      "subject": "geometry"
+    },
+    {
+      "id": "intermediate_algebra-321",
+      "question_sha256": "55cf34c6b76e726c5a2afae8d7c5da051807b07f46c1adf529b8ef425562fca9",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "prealgebra-990",
+      "question_sha256": "dd6bd5d80392e65b0318f905968f8db7211270c3dc6a8e70af6ac3963bd07b73",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "intermediate_algebra-1031",
+      "question_sha256": "020c468878cc82722c4e584cd36d449ae4d1ee751e20f619dd87ba3f535f1020",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "number_theory-826",
+      "question_sha256": "80e76b36707fc9be19bed68da798185902e347cfe1f6ba44741174a66f4da5a7",
+      "subject": "number_theory"
+    },
+    {
+      "id": "intermediate_algebra-275",
+      "question_sha256": "cfead47988a2484a9ca0ca8180404986415035405add0f23d6997eef07f56b65",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-300",
+      "question_sha256": "15357e3cf76689c882f6986346927793967a15fd525388fb900992517d41d89b",
+      "subject": "precalculus"
+    },
+    {
+      "id": "algebra-1667",
+      "question_sha256": "310b537296c8c754bf24849e9489647dd6c08d5b16bed415b1d3b7472ee9f7f0",
+      "subject": "algebra"
+    },
+    {
+      "id": "geometry-683",
+      "question_sha256": "843e946eda5d2a1ee10956df35747214951daa8f2e7a5b5992b768bb3be6118d",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-714",
+      "question_sha256": "2689d0b48b6a5ac2fb92a2845adbf9099b02c40c3c20f772697c2102096ceb4d",
+      "subject": "precalculus"
+    },
+    {
+      "id": "geometry-128",
+      "question_sha256": "279d983faea1d76855d05cfc97251e8736dc08f9029b85b3e800e0824cc74c80",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-99",
+      "question_sha256": "0fe5ead133311349e24d9800dd2c38df25e9def6a10accfc4ad6268c63a5231b",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-315",
+      "question_sha256": "913aaea39e6fed06adc83c2637aed607e7489b308658ef4da057b459e454ccf6",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "number_theory-137",
+      "question_sha256": "78bdb152a39ed0454ce4c9065d7efa2bdf280749766c1c9d4bce4ef857d2d4e6",
+      "subject": "number_theory"
+    },
+    {
+      "id": "number_theory-275",
+      "question_sha256": "55899216a40eca7e8ac1c12a1a3bf1bfef4d137cb255ee574412d24597e85af3",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-238",
+      "question_sha256": "7c82a3096c35e7e26fc9bb35e521d7c42e5dcdd323a5af52f9db7808edc2f53a",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-556",
+      "question_sha256": "8f1d8eb86f98076e29e8dfc410d9e13b3582ba4e8c8060b47c9717ec163ea643",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-602",
+      "question_sha256": "64daeca0bf333ee08cb7c66bde1598e641f52ec7ef154a261db8108b3d6d91aa",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-359",
+      "question_sha256": "2c3885493e37007c3557add9a3a786afcbf147120f7d93ecc80101b15ffd141d",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-744",
+      "question_sha256": "69eebfc56cf5bfedca7068d92c7697198789115c269be7afd30d3b68210d9385",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "algebra-377",
+      "question_sha256": "32949e92b2283c45bada952b215621c875e0effe0d00c78e5f1b39966b7a8895",
+      "subject": "algebra"
+    },
+    {
+      "id": "counting_and_probability-48",
+      "question_sha256": "f968f417071f132f5992969a84ef20467f3c39d5e11d46273d55e18a6b396452",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "precalculus-388",
+      "question_sha256": "906175a865cf141729e63986674ab89efae0ec4703d8b3ff5e0613b4b7267254",
+      "subject": "precalculus"
+    },
+    {
+      "id": "precalculus-218",
+      "question_sha256": "fdea3ddf5e322eeb0f438fdb0fc7bd8f790ecb0354ad9f395cfecc357ea10d19",
+      "subject": "precalculus"
+    },
+    {
+      "id": "algebra-922",
+      "question_sha256": "ebaa8e2cc0c83b291ffee29b4126d9ed4c6ba238a722ad990107aaed845ef613",
+      "subject": "algebra"
+    },
+    {
+      "id": "precalculus-470",
+      "question_sha256": "f8910da43ece18e01700dccf3ca794b76eb2488854adf3b636acf2b54404d61c",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-629",
+      "question_sha256": "15ab3bc1d5ad4d8e9180937e3e0498e95107cac62385686a31f06a2dd76b118b",
+      "subject": "number_theory"
+    },
+    {
+      "id": "intermediate_algebra-240",
+      "question_sha256": "4b7777c66823ebd68432ad57027eec5247087f26822a759a95c31505d5d8070f",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-11",
+      "question_sha256": "be776fd5c2615c00215f25198c77dab199c7493f522bb259da6e8262549be573",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-304",
+      "question_sha256": "fb8a6eaead8d51da3e7ae5ba4484925fcf9824e8ae56e8faaa2ceac69061015f",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-1084",
+      "question_sha256": "2fb632f036072f14130bb1d3a3d921902b175bc54d0f7f7d64cf0d7af8bf7055",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "counting_and_probability-672",
+      "question_sha256": "f353626b2af9b1e754aadb9373e8bf574afd15dcb89f8492cdc48170b6fdc8bf",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-60",
+      "question_sha256": "9c53239dd28d4d84adfcd606a90afdf19beafa5d1c802bdae3fa0e12322d47fd",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-46",
+      "question_sha256": "71ee1116000de6c99805a4319b59640b8402344c2beea149a85e46166536879c",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "number_theory-513",
+      "question_sha256": "b63453f9c77eacbaab856959dc7be7596c3d8a9c47e77d38e52550482b7a87cb",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-698",
+      "question_sha256": "b6d8c2d0c78f8bd4ecd6d030aabc6d0b6465f927339e0e615a9d972a4fe7fe80",
+      "subject": "algebra"
+    },
+    {
+      "id": "precalculus-694",
+      "question_sha256": "b9d828a4caae47a4175e7e8bcd1d46dc812090121e12997c63ac1c36d2be28b3",
+      "subject": "precalculus"
+    },
+    {
+      "id": "algebra-12",
+      "question_sha256": "a160f1752d7db43c046e5a0844f36104baa7a5f3f83c25bed98e5c9749f21076",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-917",
+      "question_sha256": "dc9f2fd14d268cc5c080c4a891abbfa4cbaff03dd71ef23cbc18b34d824e39d6",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-118",
+      "question_sha256": "1565ef6db737390248abd473e9f74d9a281c58cecf3e076479d67ca35880e223",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "precalculus-514",
+      "question_sha256": "e0c0c8ff5d3855cf46e14a54ac13ce53f4f0a452d2aa56e7eaeafa231da37db7",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-459",
+      "question_sha256": "e53f301c192c4d730658a77cc866b8613cb45fcd01240fe7df7920fdd593d063",
+      "subject": "number_theory"
+    },
+    {
+      "id": "number_theory-864",
+      "question_sha256": "41ef115ece42fa8f6c9feb9790d074c84624b2d8ecd1464959c5d8bce543f79b",
+      "subject": "number_theory"
+    },
+    {
+      "id": "prealgebra-673",
+      "question_sha256": "05b9878631d35a503fed143406e07fe4ca947bdff884e68a41d1776642ebeac6",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "geometry-347",
+      "question_sha256": "5f46a22fdcb199ec7852fb73d00ba06a793d2f618e91fe058ee5578f492e35e5",
+      "subject": "geometry"
+    },
+    {
+      "id": "algebra-1429",
+      "question_sha256": "2b5c30b32dcb32e246c553f0383bfacf4c08d447cb13c91921dbedf9c44a03fa",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-438",
+      "question_sha256": "cbe24575898c5df5ca7be6ff4e9523a5ea5d742b1ea9d38c8013aa8870131a81",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "intermediate_algebra-259",
+      "question_sha256": "a8a4e04056e9522ebb54bf03a94f9d805c92c60afc852de5ca9a1bdf3d35efda",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-559",
+      "question_sha256": "8590f9cf885407fae71ce9b866732306fac824a28ff7926ab33846e2a0c51227",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-298",
+      "question_sha256": "cc8cc11d2fbf3069417f32bf085b17041a4d6f37165e97c1d7ba65799d9ae024",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-1041",
+      "question_sha256": "e83f75477ad0fc2645475e1b3580ace2914c0109a8c34bf08faa7830aa8802f1",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-1461",
+      "question_sha256": "897d42ab80799eef0ff047dcb73555b01925a6768c4b6f68055ebd270aef88c2",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-1253",
+      "question_sha256": "15a6285f1dc727bd716d2354fb709b299a2b9e7e4beb767ee2c221333dbd8e54",
+      "subject": "algebra"
+    },
+    {
+      "id": "geometry-214",
+      "question_sha256": "9ad442fb9ce2d06c78588a7c620a85b4a32d0ae535cddc078960aca8d1768fc8",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-325",
+      "question_sha256": "59133f36585b587598bfeab11eeac908734160020a54d5c8a0b3c85ef4fc02a2",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-56",
+      "question_sha256": "fd04ff3e1dc79a3a8d78a4e6e0aca3d905a93f291acbb5ffae5fdf2e59d8f812",
+      "subject": "geometry"
+    },
+    {
+      "id": "number_theory-150",
+      "question_sha256": "d3249fe434813678e401e58e5a8273de55a897c0425e570f7d6a68a91bc9ef09",
+      "subject": "number_theory"
+    },
+    {
+      "id": "prealgebra-335",
+      "question_sha256": "b684f418e03cb8211d96ca4547fe162ace80a9f076f3e39590ec9dee5b89ce13",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-166",
+      "question_sha256": "8caa83e5fecf0936886b885790ba9aa1ff5f450a2e0b4265d380d6976dc1197a",
+      "subject": "precalculus"
+    },
+    {
+      "id": "intermediate_algebra-758",
+      "question_sha256": "9a7bcf842436be85d9d3f1c03782a8868efb64aed76f0577760106dcb502fd56",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-318",
+      "question_sha256": "723f95dc489d287450c0a5e059fae5e15fd4949e0278b7b850a5f3fdb85134ef",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-377",
+      "question_sha256": "b4c1407d5eb6076349e9ef25c1258117c096f47231c7e23a38760e86247e1848",
+      "subject": "number_theory"
+    },
+    {
+      "id": "counting_and_probability-150",
+      "question_sha256": "847e4cdad2e19d3cbedccec133c5839af43f9c7b67646994975757be7f780993",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "geometry-423",
+      "question_sha256": "99f15c7c0df9a860da7b83580e4eecae9a25a9096f4c2f99ebbdf9107dc3e261",
+      "subject": "geometry"
+    },
+    {
+      "id": "counting_and_probability-666",
+      "question_sha256": "597bc569c20008b9063fdb29348db3fd8fd87b01da623565985598f1effbd9b6",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "algebra-1175",
+      "question_sha256": "f3e8facd9633033002c4855335bcb99a492e47c87e43dac4a5393d50fb520740",
+      "subject": "algebra"
+    },
+    {
+      "id": "counting_and_probability-140",
+      "question_sha256": "d27ebba91f7545564ed4197223a53380d5c52399b4016ef7743070a22f019ba9",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-913",
+      "question_sha256": "27543889dd6eea456bd6663df4dc6975f2dc96e9ac969457761a2758a191f6dd",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "number_theory-490",
+      "question_sha256": "1c40ace5dca20dee4b3fa0a7f950b909f4455af76c1dadf829a492e3717d8551",
+      "subject": "number_theory"
+    },
+    {
+      "id": "geometry-469",
+      "question_sha256": "e8f138007f04b3477abe71baa2efb1de7fa2bdd3fdff1a329e7ab9820f264b6a",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-74",
+      "question_sha256": "b741b380f90926afcb46814e62a399726a706d3030787ed9ed24693b2c38ed8f",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-310",
+      "question_sha256": "409d64784d1712cc4d24ec6b99c272eaca60896c4c98b9ff9716361cfaf8b82c",
+      "subject": "geometry"
+    },
+    {
+      "id": "prealgebra-147",
+      "question_sha256": "746307bdd5a37c0de4b4d1577b7d369b0b98f8e4cf0b6c57a1a5e63411816940",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-777",
+      "question_sha256": "1da2225bd1dde2845cb5100b0d7b68f8a09c61909d9d5b4626adf7bab2845e18",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-784",
+      "question_sha256": "a895e3d5fe9300d41d822ac2b433093961efd498afc3d1de613378e56ed18274",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "intermediate_algebra-1065",
+      "question_sha256": "62185c26986782b85686846a85af407b5e9da079b0d38357629338c65db7aa3b",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "number_theory-533",
+      "question_sha256": "5987eb4d96bcb9d198d97b1b40bc22bcbcb053a99b367abc38b2b23924fd1982",
+      "subject": "number_theory"
+    },
+    {
+      "id": "prealgebra-288",
+      "question_sha256": "dfefdd7c7f96011669334103a9671ad9d35a4d9480b70b4922c7c2bb490a29ed",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-1060",
+      "question_sha256": "b0db3a14036db267c5749a13c4beba1e3289e5a4b5d7954b329efe1eb7dde1bc",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "number_theory-742",
+      "question_sha256": "cd4f4b77d051ab094d73e49abe4dc193b0249d510a2f6879d052086e5f53379b",
+      "subject": "number_theory"
+    },
+    {
+      "id": "counting_and_probability-490",
+      "question_sha256": "dc7ce3cc8bde05230027d380a646b1ea4f0573224c7138a6fed6388db3098a90",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "geometry-27",
+      "question_sha256": "54269b3faeca6b56276968e354ec4007abcc346fc28d2255b2d53170024e1055",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-150",
+      "question_sha256": "021effd98251c6c7ff07a827de6ca984db7ce06d58c38674b5a68654a63612f4",
+      "subject": "precalculus"
+    },
+    {
+      "id": "intermediate_algebra-1059",
+      "question_sha256": "c1c68e59e33674a3ccc15e7f582c14de4926c7bff2adf734e60cf8cf14d21d1d",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "algebra-961",
+      "question_sha256": "b58deb9f1009b3a1216791b34ba2ded9dab77ab12e28aa7b2b369c8470f41ce3",
+      "subject": "algebra"
+    },
+    {
+      "id": "geometry-306",
+      "question_sha256": "c90544c6ac74cb44872a5fc4fc5bc24eb49fa814b81991c6c491f1b10d96d5f5",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-735",
+      "question_sha256": "5812664595ebfd641102b657af6f7c05dd51d83f99755f4527cdc90b892734af",
+      "subject": "precalculus"
+    },
+    {
+      "id": "geometry-851",
+      "question_sha256": "6f824085d39cf4f4a81a26879df9e6ebeed26e3930fca03ae8cb8f0b0153c651",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-231",
+      "question_sha256": "ca6f2bc27d2df33cd04572dc8acc602c93e01934a4c38042b594e30fbd7d1c9e",
+      "subject": "geometry"
+    },
+    {
+      "id": "number_theory-12",
+      "question_sha256": "159a10b7ecdcecfe0146c6acfe8304e21b8255d1a3d369f046ed363443b738aa",
+      "subject": "number_theory"
+    },
+    {
+      "id": "prealgebra-465",
+      "question_sha256": "828211c0073a1174c9306feef7473f02da908e503fb127e8b76fe97a83e1fae4",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-487",
+      "question_sha256": "f5751877fd2ce9e25f71eb511d3805919fc14fa792979a353a9e84dc764e6184",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "intermediate_algebra-1101",
+      "question_sha256": "1a50569b68778ebc52062dcfd91441a31bf62abc2a69de439fff3c3684fc116f",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "algebra-53",
+      "question_sha256": "81678af4f09fcebd01b734c55d06af349236ee9f595ff32f1706fcfbdc337e99",
+      "subject": "algebra"
+    },
+    {
+      "id": "precalculus-105",
+      "question_sha256": "bdfe3a6dc94e752e028cf86ad94054355e3e4197a58c5559aec78a246401947e",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-218",
+      "question_sha256": "1e7ea9b7854d8a00bb97ee993b20b4f4847d9315e707294c34643d0b8013c881",
+      "subject": "number_theory"
+    },
+    {
+      "id": "geometry-79",
+      "question_sha256": "22a82b2122673cb201c63ab925262b47eb99444e2a66c1ad5a7d237093c21831",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-19",
+      "question_sha256": "47816fc89e2835068ac8cba65b12119d11f019f4af6d36d3b7d2ab287f65d02b",
+      "subject": "geometry"
+    },
+    {
+      "id": "prealgebra-143",
+      "question_sha256": "1afe4c54e66cba6a01e6142425fc3c34750399ee656f677dcb116252b378b290",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-76",
+      "question_sha256": "5bfdd1b3cc398f8e7d8e343e01e644b4cf57654bc4b29bb0e350b7f9c3029ec7",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "number_theory-657",
+      "question_sha256": "ca0fb60638b0a1b95870fe268af243f6cc7867b25284794d1e71fa8a4ba51775",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-894",
+      "question_sha256": "4940dd0fac4ec6884b9344e514f7a42c294931182c8e4b828a98d8d0ddeb8c4d",
+      "subject": "algebra"
+    },
+    {
+      "id": "counting_and_probability-31",
+      "question_sha256": "e63813270b6f96ffc558a3ca74b803d078726b7d94dd80d9c399ac55aa2f44ad",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "geometry-555",
+      "question_sha256": "1031268dfc5268499a88cbbcba4f81b53c0a2864687af9520f49e9f057004f7f",
+      "subject": "geometry"
+    },
+    {
+      "id": "prealgebra-21",
+      "question_sha256": "da80b4b7390f908d106a98c78ce1888ade03b28117566adc2a03981e2a027433",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "intermediate_algebra-195",
+      "question_sha256": "a881c082f13c83e0c59bfa80cf8ef028cbea3f36dfb239fbf1393f528e0d9354",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "intermediate_algebra-788",
+      "question_sha256": "efb8743e688ec04448f2fed4f238800daae88d88f88bb14c1fc50ac3b641dd3f",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-69",
+      "question_sha256": "d9be13511461c2b9612f541344ae2e5bf551a29521b025f465e4ed44c27041c3",
+      "subject": "precalculus"
+    },
+    {
+      "id": "prealgebra-3",
+      "question_sha256": "edeca10afe78f41a0959c799d0fd893d830df81c5937be9ad660cba879395be0",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-641",
+      "question_sha256": "e6cd873e97a89ca140b879343590c8dc5e409e13f96069153dce2b5ad562d6ef",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-147",
+      "question_sha256": "b3b34f82e31df441d9f0ff1b78567d1a8728f42271b44cb632234aff97763123",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "number_theory-662",
+      "question_sha256": "a6c7c97a2ce535f1b45027268459a0a5062272743227ea72f5e61d82d8f88baa",
+      "subject": "number_theory"
+    },
+    {
+      "id": "precalculus-178",
+      "question_sha256": "8c8386de5937c4d4d8041ef6611f80668a76d0b1d2173ca67570772cf88a2fac",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-686",
+      "question_sha256": "717918042cc483229d3cc009e851cad28804fdfbb9cd7611669b2336dff2c4b0",
+      "subject": "number_theory"
+    },
+    {
+      "id": "counting_and_probability-132",
+      "question_sha256": "1de0701d96e0986496d803744fcea89927a889e3be64eb0dbeffef87c53205af",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "algebra-642",
+      "question_sha256": "0bba325f1acf940cdbb7673441ef6b9eacc3be33542d98813da84f63ea1b72fd",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-1689",
+      "question_sha256": "7064bcd0c768746c5372473fb876b1102546a60cdcd97f88cd7d4030bad30233",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-42",
+      "question_sha256": "5154fbbb90a419480811a9c652839584437400d2896cf035d59f275a2bb574bb",
+      "subject": "number_theory"
+    },
+    {
+      "id": "counting_and_probability-691",
+      "question_sha256": "42880d6ff351748258ece9958eaeab8eb7015fc0101c876600c4cffa83360d2c",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-1053",
+      "question_sha256": "3fa9d39daa78f1c71ff6e5d9ced3e9f921239f368d26fc6b495a9f84bcad06cc",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-344",
+      "question_sha256": "d0b10152b832e4cd54874064471ac0c0aaca361d556007e9b5f096cbc2bcc3d0",
+      "subject": "precalculus"
+    },
+    {
+      "id": "prealgebra-301",
+      "question_sha256": "15bb273d1bc1a395e4b2d1431b648248d50820764020006b0ac49a643b19024c",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-661",
+      "question_sha256": "a3873cbc8c5884f2d0615ddd4de74f1ef3dbdaa8819cd32ae83246a53a4f45b3",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "number_theory-852",
+      "question_sha256": "3e29b16ddf26309dbfd62d4a80f3723484e087b2eb84769123b96e4d0c3f14f7",
+      "subject": "number_theory"
+    },
+    {
+      "id": "geometry-180",
+      "question_sha256": "c360ef4f3438bf715d80017546611feb61c63f5b72665fb24291774385aae74b",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-529",
+      "question_sha256": "31f85fb54995dc2fef8630d0362fb4f942d519f6e227ad9e64749f7a5677e64a",
+      "subject": "geometry"
+    },
+    {
+      "id": "intermediate_algebra-21",
+      "question_sha256": "5d34e967623cc2ff352f5954e3304a80808b7477a1ea23b825e11202897800b5",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-55",
+      "question_sha256": "6d54df2dd64471a505ae1c38cfb0fa030d7e7ff4cd0ee6f59c6f1383d9811e16",
+      "subject": "precalculus"
+    },
+    {
+      "id": "intermediate_algebra-1272",
+      "question_sha256": "7270140c5b9f9b27be2c8bc7c41d5cf4c173a370918af5f21db4b83a400ee3aa",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-308",
+      "question_sha256": "856ba68c254c76288b9c9fa70fa2c1e969a8c052f980b670fb8610a871eb0847",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "algebra-181",
+      "question_sha256": "5f385ee45b301ebfa8645a0801e5dd86e338d47c9944b0cc44b7c1ff7d641ab9",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-485",
+      "question_sha256": "df79d2426ca043f00438cc0e960411cca0e32aa99f6c7ad596d608ffa1f42f13",
+      "subject": "number_theory"
+    },
+    {
+      "id": "intermediate_algebra-355",
+      "question_sha256": "ad9008f9a8cee5bb257d4043554ede011393befadf84e7e0d806709be1c117f8",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-586",
+      "question_sha256": "97ae0ca25eb1f4d8af915e68ee7839cc9318b2e35d8880f5379003a86f21c496",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "geometry-565",
+      "question_sha256": "07ffd97b3518078a731131ce305215c1adcaf00eb8ff2fdedf0d55a3f8ce7fd7",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-590",
+      "question_sha256": "6644b028bd4da174d70cbcd5b46bb84adb0ea98dd1cc3d6484ff0e7a17806423",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-188",
+      "question_sha256": "4fa47a1d02bf4a302efb9075a7194ea8894955a1491ff3fd860e019c6c7095e9",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "intermediate_algebra-276",
+      "question_sha256": "bc2e8fe374232372726da5ec270272faac020e42370e61d3ef8838044531905d",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-581",
+      "question_sha256": "33af1d17a425bdb163c526bf7de4f57c1f2c6ff1b2bd746745e06bd44826bb43",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "intermediate_algebra-468",
+      "question_sha256": "76d1e703e49f6c5a7c2a15a7d8d00473c2e401bf6a95ecc5d2879a701c79184f",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-659",
+      "question_sha256": "7fdc244bf1ddc19fc8c3f1edca9d8bc15c145bfa98b306a9ef77386de05579a7",
+      "subject": "precalculus"
+    },
+    {
+      "id": "algebra-376",
+      "question_sha256": "2943f09d2621ad0dd44c11744f000d01eecc78e5fa96c4d5144520ec0e853b8f",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-671",
+      "question_sha256": "f8fb4c6cf3595246839cb488d547509aa23b5ed6e16958d402c25ff05b9674d2",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-1052",
+      "question_sha256": "985454cb58fed03569d00e6150528ff57e042b6aba94b5073ebee295de4c5a73",
+      "subject": "algebra"
+    },
+    {
+      "id": "geometry-389",
+      "question_sha256": "4f2929e87aaceedb5cc60e71966e9412f38ab03732b6cacd16a5f175076df545",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-320",
+      "question_sha256": "1ea9f981717c0d21f97d0e29a164a732fb94730f240d1d17fb00c6be6713bb33",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-528",
+      "question_sha256": "9385309bf0a53fac98e8c331608ebb7d3580fcfa4497c1ac0ae60685ba0b0b12",
+      "subject": "precalculus"
+    },
+    {
+      "id": "geometry-317",
+      "question_sha256": "08d66134f9cc826564b33b0f0714b809093835abdad0ee6d8b21b800b4b01c55",
+      "subject": "geometry"
+    },
+    {
+      "id": "prealgebra-895",
+      "question_sha256": "f00f345de61bc672560daadb0fb2b6508c820d1c7069a6211af92aad5b5a1f37",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "counting_and_probability-44",
+      "question_sha256": "ad40aa9494a9e3d398850fe1c5165144ddff2f1e16a4717f9989f9dff94590e7",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "counting_and_probability-326",
+      "question_sha256": "6e712fbcf710f44ae1428f62ecdfadb69d28711918ce7e9fc73559c5c4f32be8",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "counting_and_probability-551",
+      "question_sha256": "ac8e0157ef43a4da3fa6f535f997a29232dde68ae23485262ed7a6966e28d08b",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "number_theory-96",
+      "question_sha256": "4616c8e7bde1f67ad2c243744ac867c62f505deb737a33e5e000e50906e92d5f",
+      "subject": "number_theory"
+    },
+    {
+      "id": "intermediate_algebra-866",
+      "question_sha256": "a138c8f0e32857ee5b371172280636cb24675539081e9de37632381c70f4d918",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "prealgebra-637",
+      "question_sha256": "0b0402f0706f77329c2edb9d83095479376795a08d83ef77d8718ee6e000bb4a",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "algebra-597",
+      "question_sha256": "7bddb0844d1853be0bf4d6431b461cd1a42fa7f1143fffc0269acc1c0739ccca",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-459",
+      "question_sha256": "6e6d1b2a92530fb82134d02acf98dee5067d5725ebb8dc87dcc9ed8449adcffa",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-754",
+      "question_sha256": "e47c4cf006eeec60e1e0a476cfcf2742395acb30bb051b554b147d366a6e2bde",
+      "subject": "number_theory"
+    },
+    {
+      "id": "number_theory-709",
+      "question_sha256": "741cb5a4d1a0e1bd06c321aca251a005991f28e1578f104cd87254d93e035c13",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-1460",
+      "question_sha256": "e784813259b568ce8ea72eef61105d9fd24f2715eacf8c0f88344c921d39a750",
+      "subject": "algebra"
+    },
+    {
+      "id": "prealgebra-1089",
+      "question_sha256": "0214419d2a81797e5fbf7fd34c4172afd8ae243cfdff46d0a2fbf301c270667d",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "counting_and_probability-337",
+      "question_sha256": "e752d5490b0be731be2a3d148a513ec3ca5509180ca6edea31bc151b9647f04a",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-214",
+      "question_sha256": "ffc17d08e7b1bac938bf6a1e9c68bfecec8c3610cf10f0f4fc401393965658f7",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "intermediate_algebra-597",
+      "question_sha256": "713125f6c673538cf092986163559e73ec43b0dd9d7b105bee33c930731a5065",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-653",
+      "question_sha256": "036aed90b63df31cf16bd70107a939edba7128e55d9eef20c0ca58751da070e7",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "precalculus-435",
+      "question_sha256": "6d98146982fc4dff85a04778e489c2b189c19524c013a7969c3f364b79915104",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-347",
+      "question_sha256": "b82453c6d8734769530a2a2e8d51df1ad0066a4006089bae490bd049c60a769b",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-1630",
+      "question_sha256": "a432ae3d0f16b35c22570d44749bf58261578cfaae1c5ee5eb9f1ab312a4f207",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-966",
+      "question_sha256": "135d22203f4185304a4f9e4ac3f3f4fbb8bedc53a349f9830ee02bcfb89bd495",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "prealgebra-572",
+      "question_sha256": "120942e3b467e7e50767eba8810c7a09284c81b8abb92f6ecebd50d577198131",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-306",
+      "question_sha256": "0cd970b12220397ead7421033cf26ce002ab62e2b5cc1bbe2142d3afae78ec23",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-22",
+      "question_sha256": "5d7cec539c8822e5dc6a8b9b83c8939107a69834a22b2534c5cacc10ee3b57f5",
+      "subject": "number_theory"
+    },
+    {
+      "id": "number_theory-30",
+      "question_sha256": "cad1cd6a3210574f9a018caea1b3b9424ef5b7f546efa9bf6357523709470278",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-228",
+      "question_sha256": "2e549328a3445d97059f954f775cc70090cba15416dda9ee162c1f2274291fa5",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-407",
+      "question_sha256": "7da4066f39cc65b02c5e0be117b19a41c2b0cc00818a7f98087341afefccc5cc",
+      "subject": "number_theory"
+    },
+    {
+      "id": "precalculus-287",
+      "question_sha256": "1158bfbcc15812e2d10b057a2a70faf397b15d96ca511bae27a91c84ea0004b8",
+      "subject": "precalculus"
+    },
+    {
+      "id": "intermediate_algebra-465",
+      "question_sha256": "ca20295841e22159b9154addd66d22231812c63bfe0875c4ca64e245423bd397",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "geometry-856",
+      "question_sha256": "bfd65bd247388d1cf62588deb5564e104f99734bee0b1ea9abc0cb38455c4c03",
+      "subject": "geometry"
+    },
+    {
+      "id": "counting_and_probability-608",
+      "question_sha256": "b96f9d758e0a2c70e41912cca573dd447c6295ccdcb61e0594c83dd90c6ff592",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-166",
+      "question_sha256": "a08788200f030f78e54d0e26ad4a1bf354a6cbaee89909c994d686dd02b596ec",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-279",
+      "question_sha256": "3c99707e35b609eeb5ac97c3e58448aec3692e0d68746e3532e7631ddca0fce0",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "geometry-557",
+      "question_sha256": "7caf932312cb01d0588a54c14f6bfaf6d99882bcb6b54f064d0621054c5071f1",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-233",
+      "question_sha256": "7c39962d40481cbdc4a1cf56db7121d731c7a434e3061788a478f9572f9cbb2a",
+      "subject": "precalculus"
+    },
+    {
+      "id": "intermediate_algebra-911",
+      "question_sha256": "771b4c458b66d4e44110c0eccb93e6eafd97ebed0bd91976320e2944e8426329",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "geometry-597",
+      "question_sha256": "76bb3ac4d7987b71cd0af27e9fd38c20f4ad31b32561e13224a9d7c597a750cd",
+      "subject": "geometry"
+    },
+    {
+      "id": "intermediate_algebra-772",
+      "question_sha256": "e53b0b6789e6b87410f3faebdf06176c6ec60593dbe20d533798d656ab53f9f4",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "prealgebra-935",
+      "question_sha256": "f51093d1b8b9ab58100b5377f02c550646f8d36c5780d9781f140a054b87a967",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-406",
+      "question_sha256": "9e4aad28f2442343b429e04f22bb982ad62fd68e949602ea2401cf50d5adcc8a",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "geometry-525",
+      "question_sha256": "23dafe6bfb54b35cf375c2c71930d963af0bab9a9085eeedc890025d76355a31",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-198",
+      "question_sha256": "1458e12a602e62e7a00662527372afcdcc9dbc4cdade00c9a6c8de68e1bb5b6e",
+      "subject": "precalculus"
+    },
+    {
+      "id": "algebra-387",
+      "question_sha256": "543d846ddb984a964748e341e4950b7ac926213bc90245b5bed3c85a440f9d98",
+      "subject": "algebra"
+    },
+    {
+      "id": "counting_and_probability-253",
+      "question_sha256": "b6de52cd8c978109dcb45600ef3c3c4b17d07f8cad92e10abfba8160e7d1c734",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "algebra-1309",
+      "question_sha256": "b335d458dde8a4c7cf80b5751b9e0bae8f789c54b2110c53743efe99ac8fa64e",
+      "subject": "algebra"
+    },
+    {
+      "id": "precalculus-485",
+      "question_sha256": "dd5fbc3fa40a401a522848348c2db475e9bb9a52e5bc98ecd8ec827307ceeeff",
+      "subject": "precalculus"
+    },
+    {
+      "id": "algebra-164",
+      "question_sha256": "b22bfb6b4fe51e00bb3482a5298c2662b423bd0bc39965fa4421bfe020169191",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-598",
+      "question_sha256": "305bcab37f0947bde5c104b486c68d7f359f9d22534273b3290e8af83857c5a8",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-81",
+      "question_sha256": "7b08935348341947962913f990dcea82a88db4121d54f6781978050b15ba0eae",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "algebra-772",
+      "question_sha256": "4c6e5cba43a46811c1d2b26190d1c284e158dc762b51568818dbb66c96b256cb",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-1143",
+      "question_sha256": "014480538ee39df792a4e89f8e5531df617d1b8b54663ce30deb01777403ed80",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "intermediate_algebra-826",
+      "question_sha256": "19c566bd3986143eede792c62b315479c441300e55ad47b723522298c2eee05b",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "prealgebra-411",
+      "question_sha256": "f2c174a22a66420c5601935ceb2575238677bf9cabf90818441308cf4a538ac2",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-680",
+      "question_sha256": "cb3198d6b0c6783708fc06cd06f83caa03db7f92a89524488ebb90fabdcb4e30",
+      "subject": "precalculus"
+    },
+    {
+      "id": "intermediate_algebra-1050",
+      "question_sha256": "1d9787874714598ffbcb75201d62ce0ac585143bcd6d801a60652c0019651547",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "algebra-36",
+      "question_sha256": "8a965c89c74f39deebfe766a44323143aba2d672398e1f03d48c6c2239a2f7d7",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-96",
+      "question_sha256": "c880ddf073a0ebb290da20669afa96291efaa16549638d624fba21a5b23596ec",
+      "subject": "algebra"
+    },
+    {
+      "id": "prealgebra-339",
+      "question_sha256": "0eec083d04082357ae7a25a48a39494b43711e9c6df797d9bccee008d588112a",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "prealgebra-810",
+      "question_sha256": "6916ba11d7327846a058db44100fb53ffa1ce4f72279de731d4d87a3f0384a92",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "intermediate_algebra-107",
+      "question_sha256": "1186db8c1cadef80f980570f5325cc868c9bca7088732cd591c2f5374547ef62",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-575",
+      "question_sha256": "8a89c5ffc4e18c7cda23a5ae242f825ddd5baf8d3dfd4bfca386db81a595ed17",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-352",
+      "question_sha256": "9624043a86e6dcab3a05d979710100e01cc4a38caca114411b80712fdb58608c",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "number_theory-636",
+      "question_sha256": "ee2f6e4002e96d0536334750026343960f78fa6860654ba1ff5f37e94b026d71",
+      "subject": "number_theory"
+    },
+    {
+      "id": "prealgebra-424",
+      "question_sha256": "e0df939c06758d999db2eb0841588a887aaced96cdcb0c17d02d601bd8720140",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "geometry-693",
+      "question_sha256": "2777c0aeba378485f882b189c67c6ad3fce91698055c2764224b62cdb0fb2531",
+      "subject": "geometry"
+    },
+    {
+      "id": "counting_and_probability-534",
+      "question_sha256": "0138a9c949165611c592cc2e52d2315520f9d2d667a654a3a4da81305ba5f79d",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "precalculus-729",
+      "question_sha256": "0bbc21b5ee35121052e24952f57b1dfcce469fc2a56f2b4f52104e923ebe3f62",
+      "subject": "precalculus"
+    },
+    {
+      "id": "prealgebra-814",
+      "question_sha256": "896028845d7076e597b395896ed9dd26559df4e3be1f911218ab5b90a8c7f9cf",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "counting_and_probability-62",
+      "question_sha256": "8ff2af6c8abc004b55de4e66beef3263b206b5140fcbb9eefac6efab48062deb",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "algebra-1259",
+      "question_sha256": "f36574111741902037964602dab737c5cafd3737b4ff728d196d27223c64b3bd",
+      "subject": "algebra"
+    },
+    {
+      "id": "number_theory-393",
+      "question_sha256": "8c63c6b45c6101e3fdae5aa6485e4240a23dc2ff8292908e3fd6b0becee19650",
+      "subject": "number_theory"
+    },
+    {
+      "id": "counting_and_probability-107",
+      "question_sha256": "bdf7b95569eb6837fe1e4dc3e62cc408d2194559148b6035a10f2df85ba84b6f",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-847",
+      "question_sha256": "9002ddb9544e1cc1f69fdee3d0570101d018a6a8774c483b05e4f39be318cb29",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "geometry-793",
+      "question_sha256": "caea50f6e959fb52727c9f4179b0c2bea24569263c4b169c88e34e223ad42442",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-699",
+      "question_sha256": "a5f362ca9468d6be3de5ddcbdd0b021c810869fe45bc66c8e17d5b099f1ea6fd",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-752",
+      "question_sha256": "563c06e46d2a11bc2236daa85c087fd10cf46f7e998e77873d0b01f143ab1a17",
+      "subject": "geometry"
+    },
+    {
+      "id": "intermediate_algebra-913",
+      "question_sha256": "027c4acb9531a0b9c808d12acab8b1c5aa57d8b8311f200b4d03047383eb8858",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "algebra-437",
+      "question_sha256": "dccb76d5b60c3597bc14170267a3e2ee8c3aa379cfe34a42c78789c79dd9af84",
+      "subject": "algebra"
+    },
+    {
+      "id": "counting_and_probability-527",
+      "question_sha256": "05b3ab579990b773775d99da05fb43eb60874b4a6872e49a39ecccd3a37386c0",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "intermediate_algebra-225",
+      "question_sha256": "98eded3699f5eb91cafa4147ce03cddb653dba98b0d17297b3c67e44aab936b8",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "geometry-351",
+      "question_sha256": "14e88527748621d30feeeb78258bc4652fd93b530d1c8e7344d4188defc521f4",
+      "subject": "geometry"
+    },
+    {
+      "id": "number_theory-812",
+      "question_sha256": "e9a267aa518c1430f405dc44b31ca58049599f880131a1033bcf137bcafff8c3",
+      "subject": "number_theory"
+    },
+    {
+      "id": "precalculus-15",
+      "question_sha256": "ab53d3fcf1bc2a1a448c7b4d0bdd474e44d4f9f7578c51006e1b8d46734d103b",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-125",
+      "question_sha256": "eabf1fbee39f3a1fa2b9293368c9786ecf38a9522bb1a53f93e3ef1a96780486",
+      "subject": "number_theory"
+    },
+    {
+      "id": "intermediate_algebra-368",
+      "question_sha256": "97da9c17c4736de4fea0c481fb07225b679bee0d8077711e6da3b9e0dfe3e373",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "intermediate_algebra-371",
+      "question_sha256": "19635b99fd74017851166992c8e14ab27fb2ae0ded86d6e273cb61ef61dad13d",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-433",
+      "question_sha256": "d6c4e693bc1bc1e9ed8ce9f11bb9487f4da85dd55acb2ced4be53b61d18f168c",
+      "subject": "precalculus"
+    },
+    {
+      "id": "precalculus-212",
+      "question_sha256": "02b28fcffa7ee081a7a13ba83b9fed606b71d2fddb035bdffc86c4b0ef1aa487",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-108",
+      "question_sha256": "d7cf5ac2d7d9eed563ecd554af893fc45986a5ec7736a64635dc7f2c1b4bd91d",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-584",
+      "question_sha256": "836470cc431936cdd274135e5e36b26d7b99c7ce37e795879ee9ab4b8bde46e2",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-29",
+      "question_sha256": "7aa4efdc9c10038e2cc532a40afd4b4d88b2270ae426d54b06d16aed61c0b5b9",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-208",
+      "question_sha256": "73e2f76760b35034ae246dcd7f52b3908d72229bca7aa7b0bfd7170c189d2263",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "algebra-1244",
+      "question_sha256": "f60c4092ec3a640cbe36bf589920398868d8d0def8d4e18d0b82e571aafd848e",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-948",
+      "question_sha256": "9d5e650812abe4082c630dc5b8718665208dd18f0eada6f0a7f742f8e143bd5c",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-229",
+      "question_sha256": "fbc4de70a73b3293475879a5eee9f7cfa8ffb6ce890fd13a730febe74e3f0e45",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "intermediate_algebra-356",
+      "question_sha256": "1a3a6543bdca8fe393b83105c78078cdcffe6ff31f915ea75c92ff8d96457131",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-585",
+      "question_sha256": "981e022b141db350ac921310f49ef58925f3f9a6d7064598502f05d7faeab7d4",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "number_theory-162",
+      "question_sha256": "52d1dd64179c31ca95b8333b9b754f93f2a367338363b0bf4ae459aea59b51a1",
+      "subject": "number_theory"
+    },
+    {
+      "id": "geometry-344",
+      "question_sha256": "694b45e7385fbdc3b1e42e673fb01b2f4ffa8a1607d4534a243714981c22269f",
+      "subject": "geometry"
+    },
+    {
+      "id": "precalculus-359",
+      "question_sha256": "68fa362503146f75bc0bcd9972a3bb37bb5ae3d55d5a3f38dcc52bdd812f27db",
+      "subject": "precalculus"
+    },
+    {
+      "id": "prealgebra-183",
+      "question_sha256": "79bb9b0da87e09f466a833ffbc217c9938eee0a53fa9ee29d26e7d3b28bf3ccc",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "intermediate_algebra-739",
+      "question_sha256": "a591ac063667bb287bd8a15b5cf117aa1cc8d67a3a67b9d606e77dadb1729bdf",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-689",
+      "question_sha256": "8c666f7c5b5126fed4f6654fa8971e2fb363acced6e090b10a0a734323f75ea5",
+      "subject": "precalculus"
+    },
+    {
+      "id": "algebra-569",
+      "question_sha256": "4ef3922e78574b0c1b4e73397387d144d0df0140dfb303467aef0732bb7f6c04",
+      "subject": "algebra"
+    },
+    {
+      "id": "precalculus-384",
+      "question_sha256": "a09970e7c81cb9d03672c5260ef6c61b939c74a57447c16ceaacf3d322695cd6",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-403",
+      "question_sha256": "8ebf4ef04f64789f9167a61c4ef31a0c93b8dcefd9887f002d5f4b2683a77f06",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-240",
+      "question_sha256": "57272d2879bfccb9c3ab97b3309439ee978a799492e5fc6e1f97d57c34b8a20f",
+      "subject": "algebra"
+    },
+    {
+      "id": "prealgebra-148",
+      "question_sha256": "1af765cc15d290e899b49e67a8688ffd1e99aa243115877f9efa3d6d6d910757",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-579",
+      "question_sha256": "56c914de0a661112679d6d7d265b79e649b6e56d9d79a855b102f510afe48b00",
+      "subject": "precalculus"
+    },
+    {
+      "id": "geometry-323",
+      "question_sha256": "fb35e6e4fd7363f9729dad31cb7a124b6e4062496b5d9a434b95f9ca0d1f2261",
+      "subject": "geometry"
+    },
+    {
+      "id": "prealgebra-906",
+      "question_sha256": "8f449b7fbbd785fc884682f787a4f557c91ee7276fb0c243bada777653b3ba90",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "counting_and_probability-12",
+      "question_sha256": "6cf89bb6f5bc38344ce0e9b0c2fe3b27ca161c4c40b07ea60cca5d3ae5d25052",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "geometry-177",
+      "question_sha256": "7343297fc1a24a21402b37b1d37f19eb8514a2809bc3bdc2c8205ff163e378bc",
+      "subject": "geometry"
+    },
+    {
+      "id": "intermediate_algebra-250",
+      "question_sha256": "153b017b85d65a3d0d257eb1913654ce79148afa9278912da24b7b9de8de4459",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "intermediate_algebra-473",
+      "question_sha256": "7e9ab65ae8726bedc37bb9ecd954fcf56e2b253962cc989ace63486cab1c8b78",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-482",
+      "question_sha256": "b958e919b18f92f68deb3644a342a3e97d6e17ed4499360b6ecd33adcc962146",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-214",
+      "question_sha256": "d595bf8db147ce9cd2e95d01ff32050c0677891cc70eea16b6ce847052a03966",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "precalculus-283",
+      "question_sha256": "3a1c6094afec49950bffde628073125b0884b04f00de932caf54db54db960816",
+      "subject": "precalculus"
+    },
+    {
+      "id": "number_theory-614",
+      "question_sha256": "f5bc28061a8e6a7ddad1f5aefbb29e9adb4a281162e447d888eddffca030b56a",
+      "subject": "number_theory"
+    },
+    {
+      "id": "counting_and_probability-410",
+      "question_sha256": "e49d78a9eeaef1bd785ed48fd4fe02bd1185cfca008bb88dcd75482f2e2fd809",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "algebra-257",
+      "question_sha256": "626f0fd58cd4c5ec7c0c59a1f4763d1c2eb99d79833c8b8c5fcb6841b9004ab6",
+      "subject": "algebra"
+    },
+    {
+      "id": "prealgebra-264",
+      "question_sha256": "c8843f1d4048bc41802f67990875299796d3427571a1c36b5ceac1baaf4eea24",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "precalculus-397",
+      "question_sha256": "467dcde83d808920d19bc6066a34b0cc560d9e600cc4948f22243ba1698aae09",
+      "subject": "precalculus"
+    },
+    {
+      "id": "geometry-681",
+      "question_sha256": "250779e477cc799344e8a1b836bb6a72b816abbe52985308ed5a5ca27e0f1596",
+      "subject": "geometry"
+    },
+    {
+      "id": "algebra-1195",
+      "question_sha256": "6b3303726432c1566894807b22b5b0cd6c54ecba6580a6f16c62f01f9ae37aff",
+      "subject": "algebra"
+    },
+    {
+      "id": "geometry-95",
+      "question_sha256": "4eddc73eeb1c16d9efe8cdb76a80796ab5f630abdbfa85768ec6f828c020dc10",
+      "subject": "geometry"
+    },
+    {
+      "id": "geometry-91",
+      "question_sha256": "55a795a9640d1f8761a27dc1cdfe85a43e95739dc8a0ee4355d7f77af3cfd608",
+      "subject": "geometry"
+    },
+    {
+      "id": "number_theory-306",
+      "question_sha256": "cfcb2b72412a4415fff74849a49ba79c09f40e4bfe100c6b096a51ca008afb6b",
+      "subject": "number_theory"
+    },
+    {
+      "id": "number_theory-330",
+      "question_sha256": "d8024aa82e288e0c507bcb1ac7d5e8acc8de5bd9bb1e64b3d940e06cf6f5c344",
+      "subject": "number_theory"
+    },
+    {
+      "id": "intermediate_algebra-396",
+      "question_sha256": "2184b1bb853fb2461cb8855b53b0c1b5f83afc04b2fc84544fc94dce766e647e",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "counting_and_probability-128",
+      "question_sha256": "55d4c19d8ae33e32f0d822fdb7d3a714a324825927abad5c62bd9486496c0d80",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-680",
+      "question_sha256": "8b7a37a2147f8834385130dec7c15e8613179a60f54f31d2ee9a54b483c1e556",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "counting_and_probability-321",
+      "question_sha256": "331b50a74b40a6d803b881cc38d1695f552a218e601e319d3229881773d4163e",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "counting_and_probability-523",
+      "question_sha256": "478864102342373cd001d530ea10a27c878aaf841dab524b732b567fe94c9b61",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "precalculus-180",
+      "question_sha256": "ad0dba052d05aba11990b77220291ef005aa3eadcb6fcfc7399c26d24f3e56f6",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-4",
+      "question_sha256": "bca3ce81d2ccceb5ab250eaead2d1c90032e91c0c6b3a4a6f9ddf2c1bc2d7c7e",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "precalculus-155",
+      "question_sha256": "742b2bb833dae786790f3818ecdf67431f54dc0ca0ef903ff239c9bcdce72d38",
+      "subject": "precalculus"
+    },
+    {
+      "id": "intermediate_algebra-1100",
+      "question_sha256": "f2d0cec31b4ec27fc4684d0ea47693fdea03f4954ef44b52b3ccf7273d4354b5",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "number_theory-340",
+      "question_sha256": "fc5c54084280dbd24c00f09dafa97ee13d7f9aa8f76fb67909fd4978a5536979",
+      "subject": "number_theory"
+    },
+    {
+      "id": "algebra-1189",
+      "question_sha256": "19b9be721491ac3a55c0b03abef8f025360bb76f30f00ed65f9a6c9871270e5f",
+      "subject": "algebra"
+    },
+    {
+      "id": "geometry-279",
+      "question_sha256": "a073b8b53f6263e425812b4fd0bcf0e60e2abd042a7ba0e58f252dfcd1cb2262",
+      "subject": "geometry"
+    },
+    {
+      "id": "counting_and_probability-678",
+      "question_sha256": "527514d71d520a2af0ed6787dd008eb451f35f1dffa37283389666a76a214008",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "counting_and_probability-24",
+      "question_sha256": "ed53e040e45cd86f8b8248de4955f989e8e94d194ce92aa0d076ef53e4ad0b7c",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "number_theory-196",
+      "question_sha256": "a2525d3e33606f6c5987325090b4afd50deed7e30f63c9785abf2504db580f78",
+      "subject": "number_theory"
+    },
+    {
+      "id": "number_theory-146",
+      "question_sha256": "fe7a11a7e8d7ade54642c8db594b22d36752ae1bd98f9553e5044591d148fb1d",
+      "subject": "number_theory"
+    },
+    {
+      "id": "geometry-196",
+      "question_sha256": "685edb0ab80ac10f94815095e91c27c74444eccc2f6256ffeacbb1bbc35ee9bd",
+      "subject": "geometry"
+    },
+    {
+      "id": "prealgebra-351",
+      "question_sha256": "80ed0cbc462ec7cee0598292f617009f4e38e4e4ade7e164b7c84fb2e4918e78",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "algebra-514",
+      "question_sha256": "abffbbab5fca9c6d8d7a86535c9a21b4d16f297ba022f4b843fe8c0c6dcf3e8a",
+      "subject": "algebra"
+    },
+    {
+      "id": "prealgebra-171",
+      "question_sha256": "4ab97d69749d0fa56b2bcb5a0723001c69f9a83b4b87bc96a861d5542dae1278",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "number_theory-45",
+      "question_sha256": "32a6006e017a0d982eaadaad6c6067f9bac4052014934a9a867110de4c2893b4",
+      "subject": "number_theory"
+    },
+    {
+      "id": "geometry-399",
+      "question_sha256": "6793fdbd7bc5d7781fa97fe55f1a29c386741c87a1f975e9cf00a22cf121a5a6",
+      "subject": "geometry"
+    },
+    {
+      "id": "algebra-1685",
+      "question_sha256": "baa1bd88492f5e421f3a79bacb300cf73fceb61dfca34c3c2b300ccf5c243545",
+      "subject": "algebra"
+    },
+    {
+      "id": "algebra-828",
+      "question_sha256": "8825c08582b40a2ba24e31c657d213997db80b5c5702a1294d16f3014706e046",
+      "subject": "algebra"
+    },
+    {
+      "id": "intermediate_algebra-390",
+      "question_sha256": "b4137d79629e18271daa6530e4b724045330b08f29296d09f4e38f90c7a036b7",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "intermediate_algebra-803",
+      "question_sha256": "81267a27bcbf9a015c3e5ca6e759c7777e327922d90857fbb6c1e9223f5d2a6d",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-737",
+      "question_sha256": "46ae240592ec3ec2884fcbbfe283c8f1ed60c55a5335382d19885555a704ace1",
+      "subject": "precalculus"
+    },
+    {
+      "id": "counting_and_probability-259",
+      "question_sha256": "e86e528b32c3506b692ebebe8fa39596c68c758a13f5375943b3db5d43e6da82",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "counting_and_probability-518",
+      "question_sha256": "ce57b8034cb0c662cc5211cac4731cb3930a849e22bb0dadf98806ec16e4e638",
+      "subject": "counting_and_probability"
+    },
+    {
+      "id": "prealgebra-96",
+      "question_sha256": "f3189ac7f7b83f1d367109aead95f693a3a8d0a554fff167f644ca7b165a6e2d",
+      "subject": "prealgebra"
+    },
+    {
+      "id": "intermediate_algebra-205",
+      "question_sha256": "2e02747b9169e0cb94aa1c3011bc3f918c1112f328c2eef963b38e01a169b0e5",
+      "subject": "intermediate_algebra"
+    },
+    {
+      "id": "precalculus-156",
+      "question_sha256": "f3d20f3f1c8916f344bd1e73791805859d77a98c943037f91dcf5b1af6c39f1b",
+      "subject": "precalculus"
+    },
+    {
+      "id": "geometry-759",
+      "question_sha256": "77d9f2ccc3091bbe1633728f9c59480093cf38f21f35955bf6e64d6f7258f357",
+      "subject": "geometry"
+    },
+    {
+      "id": "number_theory-465",
+      "question_sha256": "ef1c9ba5e0fc6593d8177a4f4343e137aea2e86bda4629090c35546e7c0f100e",
+      "subject": "number_theory"
+    },
+    {
+      "id": "geometry-147",
+      "question_sha256": "3b2830396694e0dd0e8efa374c5b8b11066932e15c47150d813e0b169faa4663",
+      "subject": "geometry"
+    }
+  ],
+  "pool_ids": [
+    "counting_and_probability-582",
+    "geometry-717",
+    "intermediate_algebra-492",
+    "prealgebra-1098",
+    "prealgebra-921",
+    "intermediate_algebra-1207",
+    "counting_and_probability-0",
+    "geometry-606",
+    "precalculus-416",
+    "intermediate_algebra-1128",
+    "number_theory-665",
+    "algebra-808",
+    "counting_and_probability-493",
+    "geometry-240",
+    "algebra-1113",
+    "counting_and_probability-275",
+    "algebra-126",
+    "precalculus-671",
+    "prealgebra-49",
+    "geometry-470",
+    "intermediate_algebra-1035",
+    "precalculus-506",
+    "number_theory-594",
+    "algebra-1378",
+    "intermediate_algebra-221",
+    "number_theory-487",
+    "intermediate_algebra-406",
+    "number_theory-749",
+    "precalculus-235",
+    "geometry-869",
+    "number_theory-364",
+    "counting_and_probability-554",
+    "algebra-1432",
+    "counting_and_probability-248",
+    "precalculus-519",
+    "counting_and_probability-762",
+    "geometry-0",
+    "precalculus-599",
+    "intermediate_algebra-1198",
+    "algebra-213",
+    "geometry-380",
+    "intermediate_algebra-666",
+    "prealgebra-746",
+    "number_theory-635",
+    "prealgebra-728",
+    "prealgebra-412",
+    "prealgebra-584",
+    "algebra-1143",
+    "geometry-733",
+    "number_theory-576",
+    "precalculus-727",
+    "number_theory-341",
+    "counting_and_probability-305",
+    "precalculus-48",
+    "prealgebra-274",
+    "algebra-288"
+  ],
+  "dataset_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+  "teacher": "same pinned unadapted Qwen2.5-1.5B-Instruct, prompt only",
+  "scorer_sha256": {
+    "math_sft.py": "d283d063529ac77ebb0f0a4b10057fccefb8c4c06ac958dd8a67a9d17a6d949d",
+    "math_pilot.py": "85251d5bdd80253a82303d4ac258ecaf4ceea401334cd310e985d774bd7fb5d2",
+    "followup_answers.py": "c9c61c620bfb9696682e8c2cd3df99f6627ad0f1ec1a45aed81d74ec011ea154",
+    "prompts.py": "cd0aac9701332c290c583c193a7d928b967ea530d095d1519939c1149d4b28e0"
+  }
+}

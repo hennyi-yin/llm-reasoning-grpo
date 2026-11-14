@@ -1,0 +1,103 @@
+{
+  "n": 350,
+  "counts": {
+    "base": {
+      "correct": 233,
+      "unresolved": 21,
+      "truncated": 20,
+      "mean_tokens": 630.7942857142857
+    },
+    "reference": {
+      "correct": 236,
+      "unresolved": 16,
+      "truncated": 16,
+      "mean_tokens": 620.8657142857143
+    },
+    "self": {
+      "correct": 232,
+      "unresolved": 18,
+      "truncated": 18,
+      "mean_tokens": 629.6428571428571
+    }
+  },
+  "self_vs": {
+    "base": {
+      "correct": {
+        "left": 233,
+        "right": 232,
+        "delta_pp": -0.2857142857142857,
+        "gains": 12,
+        "losses": 13,
+        "ci_pp": [
+          -3.142857142857143,
+          2.5714285714285716
+        ],
+        "mcnemar_p": 1.0
+      },
+      "previous": {
+        "left": 233,
+        "right": 232,
+        "delta_pp": -0.2857142857142857,
+        "gains": 12,
+        "losses": 13,
+        "ci_pp": [
+          -3.142857142857143,
+          2.5714285714285716
+        ],
+        "mcnemar_p": 1.0
+      },
+      "strict": {
+        "left": 233,
+        "right": 232,
+        "delta_pp": -0.2857142857142857,
+        "gains": 12,
+        "losses": 13,
+        "ci_pp": [
+          -3.142857142857143,
+          2.5714285714285716
+        ],
+        "mcnemar_p": 1.0
+      }
+    },
+    "reference": {
+      "correct": {
+        "left": 236,
+        "right": 232,
+        "delta_pp": -1.1428571428571428,
+        "gains": 13,
+        "losses": 17,
+        "ci_pp": [
+          -4.285714285714286,
+          2.0
+        ],
+        "mcnemar_p": 0.5846647117286922
+      },
+      "previous": {
+        "left": 236,
+        "right": 232,
+        "delta_pp": -1.1428571428571428,
+        "gains": 13,
+        "losses": 17,
+        "ci_pp": [
+          -4.285714285714286,
+          2.0
+        ],
+        "mcnemar_p": 0.5846647117286922
+      },
+      "strict": {
+        "left": 236,
+        "right": 232,
+        "delta_pp": -1.1428571428571428,
+        "gains": 13,
+        "losses": 17,
+        "ci_pp": [
+          -4.285714285714286,
+          2.0
+        ],
+        "mcnemar_p": 0.5846647117286922
+      }
+    }
+  },
+  "decision": "stop",
+  "grpo_started": false
+}

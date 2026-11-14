@@ -1,0 +1,16 @@
+seed: 20261113
+questions: 1400
+expected_test_rows: 5000
+generation:
+  max_tokens: 2048
+  max_model_len: 4096
+  max_num_seqs: 96
+  gpu_memory_utilization: 0.60
+  seed: 0
+  shard_size: 200
+decision:
+  noninferiority_margin_pp: 3.0
+  worthwhile_gain_pp: 2.0
+  max_unresolved_fraction: 0.25
+  max_extra_unresolved_pp: 3.0
+  min_token_reduction_fraction: 0.03

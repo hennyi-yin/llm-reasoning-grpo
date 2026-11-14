@@ -136,6 +136,18 @@ references recovered **118/196** versus **120/196** for base (−1.02 pp; paired
 95% interval −4.59 to +2.55 pp). Neither the preservation nor improvement gate
 was met. See the [controlled follow-up](docs/conservative-sft.md).
 
+**Independent MATH test:** on 1,400 previously unused test questions, frozen
+base and lower-rate SFT scored **840/1,400** and **830/1,400** (−0.71 pp,
+paired 95% interval −2.36 to +0.93 pp). The adapter satisfied the prespecified
+−3 pp noninferiority margin, with no demonstrated accuracy gain or output
+length reduction. The default remains base. See the
+[independent test and data-source follow-up](docs/math-independent.md).
+
+On a separate 350-question dev set, a matched 25-example SFT pilot scored
+**233/350** for base, **236/350** with worked references, and **232/350** with
+reviewed self-generated solutions. The self-generated arm did not pass its
+advancement gate, so this run stopped before GRPO.
+
 Evidence: [`results/format_analysis.json`](results/format_analysis.json)
 (`posthoc_descriptive_comparisons` contains the base/ablation split;
 `comparisons` retains the ten prespecified comparisons),

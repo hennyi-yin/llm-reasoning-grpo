@@ -1,0 +1,130 @@
+{
+  "method": "Assistant manually reviewed key derivations before evaluation; final-answer pass was not sufficient.",
+  "queue_sha256": "eeb57a03830d1028fb4c39f8ca6d4dd33582496c7762b7ce3d911947895034d7",
+  "reviews": {
+    "geometry-717": {
+      "accept": true,
+      "note": "Use B=C=4A and the 180-degree angle sum."
+    },
+    "intermediate_algebra-492": {
+      "accept": true,
+      "note": "Both reciprocal substitutions are valid; eliminating yields f(2)=-20/3."
+    },
+    "prealgebra-921": {
+      "accept": true,
+      "note": "Subtract the ten-score sum and the known maximum from the original total."
+    },
+    "intermediate_algebra-1207": {
+      "accept": true,
+      "note": "The powers are conjugates; the imaginary-part difference magnitude is 512."
+    },
+    "counting_and_probability-0": {
+      "accept": true,
+      "note": "Recognize the binomial expansion of (9+1)^3."
+    },
+    "algebra-808": {
+      "accept": true,
+      "note": "Solve the arithmetic progression for position 36, then count 35 before it."
+    },
+    "geometry-240": {
+      "accept": true,
+      "note": "A square requires the horizontal line separation and vertical line separation to both equal three."
+    },
+    "algebra-1113": {
+      "accept": false,
+      "note": "Initially gives MEET three Es and includes an inconsistent rewrite, even though the later calculation uses two."
+    },
+    "counting_and_probability-275": {
+      "accept": true,
+      "note": "Count the adjacent forbidden pair as a block in both internal orders."
+    },
+    "algebra-126": {
+      "accept": true,
+      "note": "Match the constant and linear coefficients and use b<0."
+    },
+    "prealgebra-49": {
+      "accept": false,
+      "note": "The solution incorrectly asserts that one cup equals eight cups, despite recovering the right scale factor."
+    },
+    "intermediate_algebra-1035": {
+      "accept": true,
+      "note": "Squaring twice eliminates the radicals and gives the required rational monic polynomial."
+    },
+    "algebra-1378": {
+      "accept": true,
+      "note": "Injectivity reduces intersections to x^2=x^4, with three distinct roots."
+    },
+    "intermediate_algebra-406": {
+      "accept": false,
+      "note": "Restricts x=y by symmetry without deriving the required lower bound for asymmetric inputs."
+    },
+    "number_theory-749": {
+      "accept": true,
+      "note": "Convert both binary numbers by positional weights and add."
+    },
+    "precalculus-235": {
+      "accept": true,
+      "note": "Uses projection factor -204/306=-2/3 and obtains the correct vector; fractions are redundant but equivalent."
+    },
+    "geometry-869": {
+      "accept": true,
+      "note": "Solves r^2+2r=80 and discards the negative solution."
+    },
+    "algebra-1432": {
+      "accept": true,
+      "note": "The equivalent absolute-value bound yields exactly -4, -3 and -2."
+    },
+    "counting_and_probability-248": {
+      "accept": true,
+      "note": "Subtract the teacher-free committees from all committees."
+    },
+    "counting_and_probability-762": {
+      "accept": true,
+      "note": "Take the complement of a 5-5 split among 2^10 equiprobable outcomes."
+    },
+    "precalculus-599": {
+      "accept": false,
+      "note": "A rounded calculator result does not derive the requested exact angle."
+    },
+    "intermediate_algebra-1198": {
+      "accept": false,
+      "note": "Divides by R without handling the allowed case a=b=0."
+    },
+    "algebra-213": {
+      "accept": true,
+      "note": "Equate area and perimeter, solve the quadratic, and keep the positive root."
+    },
+    "geometry-380": {
+      "accept": true,
+      "note": "The middle angle is 60; the positive integer common difference runs from 1 to 59."
+    },
+    "prealgebra-728": {
+      "accept": true,
+      "note": "Use the minimum and maximum prime exponents to get 6*126."
+    },
+    "prealgebra-412": {
+      "accept": false,
+      "note": "The written digit-by-digit procedure uses the wrong columns and contradicts its own displayed sum."
+    },
+    "algebra-1143": {
+      "accept": true,
+      "note": "Both squarings have nonnegative sides; solve the resulting linear equation."
+    },
+    "geometry-733": {
+      "accept": true,
+      "note": "Under the stated upright placement, height forces a 12-inch edge, which also contains the square base."
+    },
+    "precalculus-727": {
+      "accept": true,
+      "note": "Expand the triple vector product, compare independent b/c coefficients, and take arccos."
+    },
+    "number_theory-341": {
+      "accept": true,
+      "note": "Long division returns the same remainder after 27, so the digits sum to nine."
+    },
+    "prealgebra-274": {
+      "accept": true,
+      "note": "Reduce 12/30 and subtract with denominator 35."
+    }
+  }
+}
