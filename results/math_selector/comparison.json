@@ -1,0 +1,19 @@
+{
+  "questions": 300,
+  "samples": 2400,
+  "vote_correct": 206,
+  "rank_correct": 206,
+  "coverage": 230,
+  "gains": 4,
+  "losses": 4,
+  "changed_picks": 26,
+  "delta_pp": 0.0,
+  "paired_95_ci_pp": [
+    -2.0,
+    2.0
+  ],
+  "mcnemar_p": 1.0,
+  "advancement_gate": false,
+  "generation_tokens": 1375763,
+  "truncated": 55
+}

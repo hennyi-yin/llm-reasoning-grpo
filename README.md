@@ -164,6 +164,13 @@ strict boxed scoring. Reference-blind voting scored **68.5% for base and 67.0%
 for GRPO**. The vote recovered only one of the eight questions on which GRPO alone
 produced a correct sample. See the [coverage curves, vote analysis, and output costs](docs/math-multisample.md).
 
+The **MATH answer selection test** compared plurality and a frozen,
+reference-blind ranker on the same eight GRPO samples per question. On 300 new
+test questions both scored **206/300 (68.67%)**, with a paired 95% interval of
+**−2.00 to +2.00 pp** for the difference. Even perfect tie-breaking could only
+add five correct answers on these samples. See the
+[frozen design, test result, and selection limits](docs/math-selector.md).
+
 ## Training and dev selection
 
 The actual RTX5070 passed the 20-step R12 smoke test with plan B: Qwen2.5-1.5B,

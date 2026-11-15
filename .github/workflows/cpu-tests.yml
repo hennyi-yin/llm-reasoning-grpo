@@ -20,3 +20,4 @@ jobs:
       - run: python -m src.math_independent verify
       - run: python -m src.math_self_sft verify
       - run: python -m src.math_multisample verify
+      - run: python -m src.math_selector_experiment verify

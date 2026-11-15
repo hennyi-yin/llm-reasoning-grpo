@@ -1,0 +1,74 @@
+{
+  "protocol_sha256": "2236526fa0bc072fb854fa5c6e10a540be0ab600b5b7f3b62b7d8ecda1f55da1",
+  "shards": [
+    {
+      "file": "raw_grpo_00.json",
+      "sha256": "70b05c7e0c1fe111018afda21c57326054aacded9797dab50a0c183cab4c9c0c",
+      "generation_seconds": 133.064376605
+    },
+    {
+      "file": "raw_grpo_01.json",
+      "sha256": "41d67dde61dd8b4219e08b9fc24a688c7dc7c033e95ad741d5bbb9545dac2635",
+      "generation_seconds": 95.603328947
+    },
+    {
+      "file": "raw_grpo_02.json",
+      "sha256": "9ea14865bff232349d98d217e2b2633925c937d0f2d173ad54962455bd83332a",
+      "generation_seconds": 131.440585763
+    },
+    {
+      "file": "raw_grpo_03.json",
+      "sha256": "cce7a1a81979310dc40d4329f69feda04adf5246664b72994d08697a58404747",
+      "generation_seconds": 128.79346307599997
+    },
+    {
+      "file": "raw_grpo_04.json",
+      "sha256": "8c738af4614018578c45e7a0d3f5e24b8dd51e35fa8da13043539c52fa2687de",
+      "generation_seconds": 118.48774202499999
+    },
+    {
+      "file": "raw_grpo_05.json",
+      "sha256": "8b0a43741ba362faea89131023c6f1cf060bdab6e38d22dad2620ef706c5f5cc",
+      "generation_seconds": 97.79106170400007
+    },
+    {
+      "file": "raw_grpo_06.json",
+      "sha256": "cadda706e9fd432f73ef63d073b7c233ca24aaa2eb1a69075b3ce9396611dd39",
+      "generation_seconds": 125.40400944999999
+    },
+    {
+      "file": "raw_grpo_07.json",
+      "sha256": "40530bcb7c5fe681e55f3334bdad99b904fd9cbc0ec1bf8963700c35ba13b292",
+      "generation_seconds": 115.094282335
+    },
+    {
+      "file": "raw_grpo_08.json",
+      "sha256": "ac3ba799fe9f83fa1b9c40594c1c02aa7d690aadb380427b2afc086d6fdf6444",
+      "generation_seconds": 113.56800636199989
+    },
+    {
+      "file": "raw_grpo_09.json",
+      "sha256": "0003f43c7441459ab1a9c748e10433808b3201d8158ee5f5d2478c348ad39a54",
+      "generation_seconds": 132.23251862199982
+    },
+    {
+      "file": "raw_grpo_10.json",
+      "sha256": "ab706d574cf86bfcb94aed004fb3d720a9fdd4424959dd3a8d879c0b722655e1",
+      "generation_seconds": 137.97730906700008
+    },
+    {
+      "file": "raw_grpo_11.json",
+      "sha256": "8b4d1134075772ceffcec5b582903a20d0268320b178d62eda39cae26d9f8309",
+      "generation_seconds": 119.86661073599998
+    }
+  ],
+  "peak_device_memory_mib": 9046,
+  "versions": {
+    "torch": "2.13.0",
+    "vllm": "0.31.0",
+    "transformers": "5.17.0",
+    "math-verify": "0.9.0",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  }
+}

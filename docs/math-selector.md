@@ -43,7 +43,10 @@ same eight generated outputs. The baseline uses the earlier implementation of
 
 The [frozen protocol](../results/math_selector/protocol.json) records the fitted
 coefficients, model and code hashes, fit results, inference settings, and test
-question fingerprints. Filtering left 2,130 eligible unique test rows.
+question fingerprints. It was published before test scoring. Filtering left
+2,130 eligible unique test rows. This project holdout comes from a public
+benchmark that may have appeared in pretraining. The grader measures final-answer
+correctness.
 
 ## Development result
 
@@ -60,3 +63,48 @@ weight dominates the largest possible difference from the other features for
 unequal vote counts. The rule therefore acts as a tie-breaker in this test.
 This limits the experiment to recovering correct answers among the top-voted
 groups.
+
+## Independent test result
+
+| Rule or diagnostic | Correct out of 300 | Accuracy |
+|---|---:|---:|
+| Plurality | 206 | 68.67% |
+| Frozen ranker | 206 | 68.67% |
+| Best possible only among top-voted groups | 211 | 70.33% |
+| At least one correct sample in eight | 230 | 76.67% |
+
+The ranker changed 26 selections, fixing four wrong answers and introducing
+four errors. The paired accuracy difference was **0.00 percentage points**
+(95% bootstrap interval **[−2.00, +2.00]**). The ranker fell short of the frozen
+advancement gate. Both rules used the same 2,400 completions. Generation used
+1,375,763 output tokens with 55 length-cap stops and took 24.16 minutes on the
+RTX 5070.
+
+The test contained 37 questions with multiple keys tied for most votes. For
+the post-hoc ceiling, count a question when at least one top-voted group's
+earliest sample passes the grader. The ceiling is five questions above baseline
+(+1.67 points), below the study's +2-point practical threshold on these samples.
+On another 19 questions a correct candidate group's representative existed at a
+lower vote count. A candidate verifier that can select lower-vote answers
+would test a larger part of the observed gap.
+
+See the [paired test summary](../results/math_selector/comparison.json),
+[sample-level judgments](../results/math_selector/paired.json), and
+[generation receipt](../results/math_selector/run.json).
+
+## Reproduction
+
+```bash
+python -m src.math_selector_experiment verify
+```
+
+The CPU check refits the ranker from the public development ledger, recomputes
+both selections from the public test keys and token counts, and checks the saved
+paired results. The generation stage requires the cached model, audited adapter,
+pinned dataset, and the frozen local inputs. On the experiment host, the runner
+resumes from the last completed shard.
+
+```powershell
+./scripts/run_math_extension.ps1 -Mode selector
+Get-Content results/followup/work/math_selector/status.json
+```
