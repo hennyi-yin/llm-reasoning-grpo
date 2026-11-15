@@ -1,4 +1,4 @@
-param([ValidateSet('independent','self-generate','self-compare','serving','multisample')][string]$Mode = 'independent')
+param([ValidateSet('independent','self-generate','self-compare','serving','multisample','selector')][string]$Mode = 'independent')
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath (Split-Path -Parent $PSScriptRoot)
 Add-Type -Namespace MathExtension -Name Awake -MemberDefinition @'

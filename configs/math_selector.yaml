@@ -1,0 +1,9 @@
+test_questions: 300
+selection_seed: 271828
+sampling_seed: 861731
+dev_folds: 5
+dev_split_seed: 714
+penalties: [1.0, 0.1, 0.01]
+bootstrap_seed: 563
+bootstrap_replicates: 10000
+minimum_gain_pp: 2.0

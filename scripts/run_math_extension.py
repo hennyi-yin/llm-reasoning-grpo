@@ -66,7 +66,8 @@ def run(directory, stages):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("independent", "self-generate", "self-compare", "serving", "multisample"))
+    parser.add_argument("mode", choices=("independent", "self-generate", "self-compare", "serving",
+                                         "multisample", "selector"))
     args = parser.parse_args()
     if args.mode == "independent":
         module = "src.math_independent"
@@ -91,6 +92,15 @@ def main():
             stages.append((f"judge_{arm}", module, ["judge", "--arm", arm],
                            directory / f"judged_{arm}.json", False))
         stages.append(("compare", module, ["compare"], MULTISAMPLE_REPORT / "comparison.json", False))
+    elif args.mode == "selector":
+        from src.math_selector_experiment import REPORT as SELECTOR_REPORT, WORK as SELECTOR_WORK
+        directory = SELECTOR_WORK
+        module = "src.math_selector_experiment"
+        stages = [
+            ("freeze", module, ["freeze"], SELECTOR_REPORT / "protocol.json", False),
+            ("generate_grpo", module, ["generate"], directory / "generation_complete.json", True),
+            ("test", module, ["test"], SELECTOR_REPORT / "comparison.json", False),
+        ]
     else:
         from src.math_self_sft import stages
         directory, stages = stages(args.mode)
