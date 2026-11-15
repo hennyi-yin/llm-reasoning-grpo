@@ -1,0 +1,74 @@
+{
+  "protocol_sha256": "b0d8d212738df1c01d7efd6ebc8b00545ad26232be0c0e88265128e02e2a358b",
+  "shards": [
+    {
+      "file": "raw_grpo_00.json",
+      "sha256": "21eec31bce0e399baa09775a69f2306416a5d76b9d77468fd6d4efbe732185a2",
+      "generation_seconds": 117.89906029999999
+    },
+    {
+      "file": "raw_grpo_01.json",
+      "sha256": "8dd77242f21c0e36c97d9e3c1c1e9db0c650ca704248e0cd5d7345b9d2324bc5",
+      "generation_seconds": 125.54035338400001
+    },
+    {
+      "file": "raw_grpo_02.json",
+      "sha256": "9a34d64d8c557d14d968d695b6478bb92c2704edf42a34778bbccd7bd74dbc2e",
+      "generation_seconds": 130.07704274000002
+    },
+    {
+      "file": "raw_grpo_03.json",
+      "sha256": "cec4e4ff5f7742aeaa6cd7dcfb7dfa23699b7932880969bfdb39270ac315b0db",
+      "generation_seconds": 99.691382734
+    },
+    {
+      "file": "raw_grpo_04.json",
+      "sha256": "1b2b99cd75b74a403db95f14d1ab1e718423eedc077a01617032b93d4553a9b9",
+      "generation_seconds": 129.11336179
+    },
+    {
+      "file": "raw_grpo_05.json",
+      "sha256": "24724876b3483cdc1199e45a18e444bd3c8212028f68a06b896cdbe0cdebe458",
+      "generation_seconds": 130.35123950700006
+    },
+    {
+      "file": "raw_grpo_06.json",
+      "sha256": "5464a0e4b8852045e42cf31c85293d5d029fc5043e953b42b334e02c77c3734b",
+      "generation_seconds": 111.86869474799994
+    },
+    {
+      "file": "raw_grpo_07.json",
+      "sha256": "087e9f813b0600eead5a3754376ebafd2ee6d80cb33a272d5109e2c819d4a558",
+      "generation_seconds": 115.81661961700001
+    },
+    {
+      "file": "raw_grpo_08.json",
+      "sha256": "d4788b59c41dbe1a61158205cec91975df8d47cd68ff502e2d0b49ca8ac4ac15",
+      "generation_seconds": 131.04216597599998
+    },
+    {
+      "file": "raw_grpo_09.json",
+      "sha256": "5a09072656c3643c1c9993b8b0e8c171022bb62824b5a4b7e1214a759f162866",
+      "generation_seconds": 129.06564708199994
+    },
+    {
+      "file": "raw_grpo_10.json",
+      "sha256": "937521390b8dff513a21856c4ff854bb1894ec03e6c0a3dbcb2b47ed6e66f3bf",
+      "generation_seconds": 98.55807718999995
+    },
+    {
+      "file": "raw_grpo_11.json",
+      "sha256": "65db84d7d66ae28e55a5f6c83f999b190a8cf7d419f7a1137cdb4546f47f845e",
+      "generation_seconds": 133.4302316799999
+    }
+  ],
+  "peak_device_memory_mib": 8884,
+  "versions": {
+    "torch": "2.13.0",
+    "vllm": "0.31.0",
+    "transformers": "5.17.0",
+    "math-verify": "0.9.0",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  }
+}

@@ -21,3 +21,4 @@ jobs:
       - run: python -m src.math_self_sft verify
       - run: python -m src.math_multisample verify
       - run: python -m src.math_selector_experiment verify
+      - run: python -m src.math_arithmetic_experiment verify

@@ -63,4 +63,52 @@ and the [development arithmetic features](../results/math_arithmetic/development
 | Arithmetic weight 4.0 | 195 |
 
 The frozen test rule uses weight 0.5. Test filtering left 1,830 eligible
-unique rows before drawing the 300-question holdout.
+unique rows before drawing the 300-question holdout. The protocol was published
+before test scoring.
+
+## Independent test result
+
+| Rule or diagnostic | Correct out of 300 | Accuracy |
+|---|---:|---:|
+| Plurality | 209 | 69.67% |
+| Frozen arithmetic reranker | 213 | 71.00% |
+| At least one correct sample in eight | 246 | 82.00% |
+
+The rule changed the selected answer on 16 questions. It corrected five and
+introduced one error, a net gain of **1.33 percentage points** with a paired
+95% bootstrap interval of **[0.00, +3.00]** (exact McNemar p = 0.219). The
+result fell short of the frozen advancement criterion.
+
+Two changes selected a group with fewer votes than plurality's pick. One
+corrected an error and one remained incorrect. In an exploratory count, 25
+questions had a correct candidate representative only among lower-vote groups.
+The reranker recovered one of those 25 questions.
+
+The verifier checked at least one nontrivial equality or unequal link in 1,638
+of 2,400 completions across 274 questions. It found an unequal link in 140 of
+994 wrong completions (14.1%) and in 26 of 1,406 correct completions (1.8%).
+These are descriptive counts across sampled completions. A literal equality
+check can also flag a rounded decimal written with an equals sign. Both
+selectors shared the same 1,377,010 generated tokens and 55 length-cap stops.
+Generation took 24.21 minutes on the RTX 5070.
+
+See the [paired comparison](../results/math_arithmetic/comparison.json),
+[sample evidence](../results/math_arithmetic/paired.json), and
+[generation receipt](../results/math_arithmetic/run.json).
+
+## Reproduction
+
+```bash
+python -m src.math_arithmetic_experiment verify
+```
+
+The CPU check reproduces weight selection from the development features and
+prior answer labels. It recomputes both decisions and the paired accuracy
+comparison from the per-sample test evidence. The full generated text and
+audited adapter reside on the experiment host. Resume generation there from
+the last completed shard with:
+
+```powershell
+./scripts/run_math_extension.ps1 -Mode arithmetic
+Get-Content results/followup/work/math_arithmetic/status.json
+```

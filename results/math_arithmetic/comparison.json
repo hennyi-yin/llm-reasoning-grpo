@@ -1,0 +1,28 @@
+{
+  "questions": 300,
+  "samples": 2400,
+  "vote_correct": 209,
+  "rank_correct": 213,
+  "coverage": 246,
+  "gains": 5,
+  "losses": 1,
+  "changed_picks": 16,
+  "delta_pp": 1.3333333333333335,
+  "paired_95_ci_pp": [
+    0.0,
+    3.0
+  ],
+  "mcnemar_p": 0.21875,
+  "advancement_gate": false,
+  "generation_tokens": 1377010,
+  "truncated": 55,
+  "arithmetic": {
+    "checked_samples": 1638,
+    "contradictory_samples": 166,
+    "linked_samples": 1047,
+    "checked_questions": 274,
+    "lower_vote_swaps": 2,
+    "lower_vote_gains": 1,
+    "lower_vote_losses": 0
+  }
+}

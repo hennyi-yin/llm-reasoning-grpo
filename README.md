@@ -171,6 +171,13 @@ test questions both scored **206/300 (68.67%)**, with a paired 95% interval of
 add five correct answers on these samples. See the
 [frozen design, test result, and selection limits](docs/math-selector.md).
 
+The **MATH arithmetic verification test** compared plurality and a frozen
+reranker that checks explicit numerical equalities. On 300 fresh questions
+with the same eight completions per question, it scored **213/300 (71.00%)**
+versus **209/300 (69.67%)** for plurality. The gain was **+1.33 pp** (paired
+95% interval 0.00 to +3.00 pp), below the frozen advancement criterion.
+See the [verification method and lower-vote analysis](docs/math-arithmetic.md).
+
 ## Training and dev selection
 
 The actual RTX5070 passed the 20-step R12 smoke test with plan B: Qwen2.5-1.5B,
