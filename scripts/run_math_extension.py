@@ -67,7 +67,7 @@ def run(directory, stages):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("mode", choices=("independent", "self-generate", "self-compare", "serving",
-                                         "multisample", "selector"))
+                                         "multisample", "selector", "arithmetic"))
     args = parser.parse_args()
     if args.mode == "independent":
         module = "src.math_independent"
@@ -100,6 +100,15 @@ def main():
             ("freeze", module, ["freeze"], SELECTOR_REPORT / "protocol.json", False),
             ("generate_grpo", module, ["generate"], directory / "generation_complete.json", True),
             ("test", module, ["test"], SELECTOR_REPORT / "comparison.json", False),
+        ]
+    elif args.mode == "arithmetic":
+        from src.math_arithmetic_experiment import REPORT as ARITHMETIC_REPORT, WORK as ARITHMETIC_WORK
+        directory = ARITHMETIC_WORK
+        module = "src.math_arithmetic_experiment"
+        stages = [
+            ("freeze", module, ["freeze"], ARITHMETIC_REPORT / "protocol.json", False),
+            ("generate_grpo", module, ["generate"], directory / "generation_complete.json", True),
+            ("test", module, ["test"], ARITHMETIC_REPORT / "comparison.json", False),
         ]
     else:
         from src.math_self_sft import stages

@@ -1,0 +1,7 @@
+test_questions: 300
+selection_seed: 141421
+sampling_seed: 914029
+verification_weights: [0.5, 1.0, 2.0, 4.0]
+bootstrap_seed: 173
+bootstrap_replicates: 10000
+minimum_gain_pp: 2.0
